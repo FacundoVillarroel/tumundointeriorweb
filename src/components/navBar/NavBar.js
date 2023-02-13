@@ -1,14 +1,23 @@
 import React from 'react';
 
-function NavBar() {
-
+const NavBar = () => {
 
   return (
-    <div>
-      NavBar
-      <p className='textBeautyDream'>BeautyDreams</p>
-      <p className='textLovelo'>Lovelo</p>
-      <p className='textDosis'>Dosis</p>
+    <div className='navBarContainer'>
+      <div className='navBarLinksContainer'>
+        <p className='navBarLink linkSeparator'>posuere</p>
+        <p className='navBarLink linkSeparator'>mauris</p>
+        <p className='navBarLink'>eleifend</p>
+      </div>
+      <div className='navBarTitleContainer'>
+        <p className='navBarTitle'> Tu Mundo Interior</p>
+        <p className='navBarSubTitle'>Magda y Jorge</p>
+      </div>
+      <div className='navBarLinksContainer'>
+        <p className='navBarLink linkSeparator'>posuere</p>
+        <p className='navBarLink linkSeparator'>mauris</p>
+        <p className='navBarLink'>eleifend</p>
+      </div>
     </div>
   )
 }

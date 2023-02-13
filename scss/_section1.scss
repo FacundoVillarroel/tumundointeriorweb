@@ -1,0 +1,63 @@
+.section1Container{
+  .imageTitleContainer{
+    background-image: url("../src/images/consultingRoom.jpg");
+    height: 400px;
+    display: flex;
+    .titleContainer{
+      position: absolute;
+      top: 50%;
+      right: 25%;
+      display: flex;
+      .homeTitle{
+        color: $paleDogwood;
+        font-size: 40px;
+        font-family: "loveloBlack";
+        padding-left: 15px;
+      }
+      .homeTitleBeauty{
+        font-family: "beautyDream";
+      }
+    }
+  }
+  .subtitleContainer{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .imageSubtitleContainer{
+      z-index: 100;
+      top:-250px;
+      position: absolute;
+      background-image: url(../src/images/lookingAtMirror.jpg);
+      background-size: cover;
+      height: 700px;
+      width: 33%;
+      margin-left: 100px;
+      display: flex;
+      .ImageSubtitle{
+        font-family: "beautyDream";
+        font-size: 30px;
+        margin-left: 50px;
+        margin-top: 50px;
+      }
+    }
+  }
+  .homeDescriptionContainer{
+    width: 50%;
+    .homeDescriptiontitleDecorative{
+      font-family: "beautyDream";
+      font-size: 40px;
+      padding-bottom: 20px;
+    }
+    .homeDescriptionTitle{
+      font-family: "loveloBlack";
+      padding-bottom: 20px;
+      font-size: 30px;
+    }
+    .homeDescriptionText{
+      font-family: "dosisRegular";
+      padding-bottom: 20px;
+    }
+  }
+}

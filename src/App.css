@@ -1,14 +1,88 @@
-.textBeautyDream {
-  color: #d4b2a7;
-  font-family: "beautyDream";
-  font-size: 30px; }
+.navBarContainer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-evenly; }
+  .navBarContainer .navBarLinksContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .navBarContainer .navBarLinksContainer .navBarLink {
+      font-family: "dosisRegular";
+      font-size: 20px;
+      padding-right: 20px;
+      padding-left: 20px; }
+    .navBarContainer .navBarLinksContainer .linkSeparator {
+      border-right: 1px solid #212121; }
+  .navBarContainer .navBarTitleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .navBarContainer .navBarTitleContainer .navBarTitle {
+      margin: 0;
+      font-family: LoveloBlack;
+      font-size: 30px; }
+    .navBarContainer .navBarTitleContainer .navBarSubTitle {
+      margin: 0;
+      font-family: "beautyDream"; }
 
-.textLovelo {
-  color: #ede9e3;
-  font-family: "loveloBlack";
-  font-size: 30px; }
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
 
-.textDosis {
-  color: #a38f85;
-  font-family: "dosisRegular";
-  font-size: 30px; }
+html p {
+  margin: 0; }
+
+.section1Container .imageTitleContainer {
+  background-image: url("../src/images/consultingRoom.jpg");
+  height: 400px;
+  display: flex; }
+  .section1Container .imageTitleContainer .titleContainer {
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    display: flex; }
+    .section1Container .imageTitleContainer .titleContainer .homeTitle {
+      color: #d4b2a7;
+      font-size: 40px;
+      font-family: "loveloBlack";
+      padding-left: 15px; }
+    .section1Container .imageTitleContainer .titleContainer .homeTitleBeauty {
+      font-family: "beautyDream"; }
+
+.section1Container .subtitleContainer {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .section1Container .subtitleContainer .imageSubtitleContainer {
+    z-index: 100;
+    top: -250px;
+    position: absolute;
+    background-image: url(../src/images/lookingAtMirror.jpg);
+    background-size: cover;
+    height: 700px;
+    width: 33%;
+    margin-left: 100px;
+    display: flex; }
+    .section1Container .subtitleContainer .imageSubtitleContainer .ImageSubtitle {
+      font-family: "beautyDream";
+      font-size: 30px;
+      margin-left: 50px;
+      margin-top: 50px; }
+
+.section1Container .homeDescriptionContainer {
+  width: 50%; }
+  .section1Container .homeDescriptionContainer .homeDescriptiontitleDecorative {
+    font-family: "beautyDream";
+    font-size: 40px;
+    padding-bottom: 20px; }
+  .section1Container .homeDescriptionContainer .homeDescriptionTitle {
+    font-family: "loveloBlack";
+    padding-bottom: 20px;
+    font-size: 30px; }
+  .section1Container .homeDescriptionContainer .homeDescriptionText {
+    font-family: "dosisRegular";
+    padding-bottom: 20px; }
