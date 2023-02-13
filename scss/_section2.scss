@@ -1,0 +1,35 @@
+.section2Container{
+  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: $isabeline;
+  .section2TitleContainer{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .section2Title{
+      font-family: "beautyDream";
+      font-size: 40px;
+    }
+  }
+  .section2DescriptionItemsContainer{
+    display: flex;
+    justify-content: space-evenly;
+    .section2DescriptionContainer{
+      width: 35%;
+      .section2ItemContainer{
+        display: flex;
+        margin-bottom: 20px;
+        align-items: center;
+        .section2Item{
+          font-size: 100px;
+        }
+        .section2Text{
+          margin-left: 20px;
+          font-family: "dosisRegular";
+        }
+      }
+    }
+  }
+}

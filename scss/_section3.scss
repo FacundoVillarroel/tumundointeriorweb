@@ -1,0 +1,50 @@
+.section3Container{
+  padding: 30px 50px 70px 50px;
+  .section3TitleContainer{
+    margin: 40px 100px 60px 100px;
+    .section3Title{
+      font-family: "loveloBlack";
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .section3SubTitle{
+      font-family: "dosisRegular";
+      font-size: 16px;
+    }
+  }
+  .section3OptionsContainer{
+    display: flex;
+    justify-content: space-evenly;
+    .section3OptionContainer{
+      padding: 70px 100px;
+      background-color: $paleDogwood;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .section3OptionTitle{
+        font-family: "beautyDream";
+        font-size: 40px;
+        color: $dark;
+      }
+      .section3OptionDescription{
+        font-family: "loveloBlack";
+        font-size: 20px;
+        color: $isabeline;
+      }
+      .section3OptionButton{
+        margin-top: 30px;
+        padding: 10px 50px;
+        border-radius: 5px;
+        background-color: $isabeline;
+        &:hover{
+          background-color: $light;
+          cursor: pointer;
+        }
+        .section3OptionButtonText{
+          font-family: "dosisRegular";
+        }
+      }
+    }
+  }
+}
