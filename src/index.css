@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family:"beautyDream";
+  src: url("./fonts/Beauty-Dream.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"dosisLight";
+  src: url("./fonts/Dosis-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"dosisMedium";
+  src: url("./fonts/Dosis-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"dosisRegular";
+  src: url("./fonts/Dosis-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"dosisSemiBold";
+  src: url("./fonts/Dosis-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"dosisBold";
+  src: url("./fonts/Dosis-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"loveloBlack";
+  src: url("./fonts/Lovelo-Black.otf") format("truetype");
+}
+
+@font-face {
+  font-family:"loveloBold";
+  src: url("./fonts/Lovelo-Line-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family:"loveloLight";
+  src: url("./fonts/Lovelo-Line-Light.otf") format("truetype");
+}
+
