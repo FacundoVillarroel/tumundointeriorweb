@@ -5,7 +5,7 @@ import Section3 from '../section3/Section3';
 
 const HomeContainer = () => {
   return (
-    <div>
+    <div className='homeContainer'>
       <Section1 />
       <Section2 />
       <Section3 />

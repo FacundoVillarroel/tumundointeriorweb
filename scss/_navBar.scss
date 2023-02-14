@@ -1,8 +1,13 @@
 .navBarContainer{
+  position: fixed;
+  top: 0;
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
   display: flex;
   justify-content: space-evenly;
+  background-color: $almond;
+  z-index: 10000;
   .navBarLinksContainer{
     display: flex;
     justify-content: space-between;
@@ -14,13 +19,16 @@
       padding-left: 20px;
     }
     .linkSeparator{
-      border-right: 1px solid $dark;
+      border-right: 2px solid $dark;
     }
   }
   .navBarTitleContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    &:hover{
+      color: $dark;
+    }
     .navBarTitle{
       margin: 0;
       font-family: LoveloBlack;
@@ -29,6 +37,7 @@
     .navBarSubTitle{
       margin: 0;
       font-family: "beautyDream";
+      font-size: 17px;
     }
   }
 }

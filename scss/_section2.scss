@@ -2,7 +2,7 @@
   padding: 20px;
   padding-left: 50px;
   padding-right: 50px;
-  background-color: $isabeline;
+  background-color: $light;
   .section2TitleContainer{
     display: flex;
     justify-content: center;
@@ -23,7 +23,8 @@
         margin-bottom: 20px;
         align-items: center;
         .section2Item{
-          font-size: 100px;
+          font-size: 30px;
+          color: $paleDogwood;
         }
         .section2Text{
           margin-left: 20px;
