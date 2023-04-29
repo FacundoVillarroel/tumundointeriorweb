@@ -4,8 +4,10 @@ const Section1 = () => {
   return (
     <div className='section1Container'>
       <div className='imageTitleContainer'>
-        <div className='titleContainer'>
-        </div>
+        {/* <div className='titleContainer'>
+          <h2 className='section1Title'>Psicoterapia</h2>
+          <h3 className='section1Subtitle'>Cognitivo - Posracionalista</h3>
+        </div> */}
       </div>
       <div className='subtitleContainer'>
         <div>
@@ -13,11 +15,16 @@ const Section1 = () => {
           <div className='imageSubtitleShadow'></div>
         </div>
         <div className='homeDescriptionContainer'>
-          <h3 className='homeDescriptiontitleDecorative'> Hey Boss, are you ready to...</h3>
-          <h2 className='homeDescriptionTitle'>Take your business to the next level?</h2>
-          <p className='homeDescriptionText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare aenean euismod elementum nisi quis eleifend quam. Malesuada fames ac turpis egestas sed. Pulvinar etiam non quam lacus suspendisse. Aenean et tortor at risus viverra. Libero nunc consequat interdum varius sit. Sit amet purus gravida quis. Urna condimentum mattis pellentesque id nibh.</p>
-          <p className='homeDescriptionText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Phasellus egestas tellus rutrum tellus. Id eu nisl nunc mi ipsum faucibus vitae aliquet nec. Lacus luctus accumsan tortor posuere ac ut consequat. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Ultricies tristique nulla aliquet enim tortor at auctor urna. Morbi non arcu risus quis varius. In est ante in nibh mauris cursus mattis molestie. Nunc congue nisi vitae suscipit. Libero nunc consequat interdum varius sit amet mattis. Urna molestie at elementum eu facilisis sed odio morbi. Elit eget gravida cum sociis natoque.</p>
-        </div>
+          <h3 className='homeDescriptiontitleDecorative'> Your only limit is your mind.</h3>
+          <h2 className='homeDescriptionTitle'>¿Por qué elegirnos?</h2>
+          <p className='homeDescriptionText'>Antes de otorgar una respuesta que busque entregarte la mayor y más clara descripción de nosotros como profesionales de la salud mental.</p>
+          <p className='homeDescriptionText'>Queremos invitarte a realizar un trabajo que a primeras podría parecer sencillo y bastante obvio, pero no lo es. Y esto nos lleva a cambiar la pregunta anteriormente planteada a una que te deslice a lo más profundo de tu mundo interior… ¿Por qué elegirte a ti mismo? Si estás aquí es porque de uno u otro modo, te estás eligiendo o al menos te estás aproximando a hacerlo y a nosotros nos importas, por esa razón es que nos gustaría que antes de hablarte de nosotros, hablemos de ti y que descubras porque razón eres importante.</p>
+          <p className='homeDescriptionText'>Realizar psicoterapia no es algo sencillo y requiere de valentía, autocompasión y amor propio. Esa palabra que suele estar de moda por estos tiempos pero que pocos comprenden su real significado. Pero creemos que si tú llegaste hasta aquí es porque lograste comprenderlo y ese es el primer paso.</p>
+          <p className='homeDescriptionText'>¿Por qué elegirte? Porque mereces darte una oportunidad de sanar, de crecer, de evolucionar, pero, sobre todo, mereces darte la oportunidad de sacar tu mayor potencial y de embellecer tu mundo interior. Y en ese camino queremos acompañarte y guiarte hacia tu mejor versión.</p>
+          <p className='homeDescriptionText'>“Puede que la acción no traiga la felicidad, pero no hay felicidad sin acción” (William James).</p>
+         {/*  <p className='homeDescriptionText'>Somos Magdalena y Jorge y nuestro objetivo es entregarte recursos que te permitan lidiar con situaciones adversas y adaptarte de forma más saludable a ellas, además de acompañarte en el difícil camino que puedas estar viviendo y de esta forma en conjunto disminuir tu sufrimiento, ya que serás parte activa y protagonista del proceso de cambio.</p>
+          <p className='homeDescriptionText'>“El gran descubrimiento de mi generación es que los seres humanos pueden alterar sus vidas al alterar sus actitudes mentales” (William James).</p>
+         */}</div>
       </div>
     </div>
   )

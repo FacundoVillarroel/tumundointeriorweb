@@ -31,7 +31,7 @@
       font-size: 30px; }
     .navBarContainer .navBarTitleContainer .navBarSubTitle {
       margin: 0;
-      font-family: "beautyDream";
+      font-family: "dosisRegular";
       font-size: 17px; }
 
 * {
@@ -48,7 +48,7 @@ html a {
   html a:hover {
     color: #cdc6c3; }
 
-.homeContainer {
+.App {
   margin-top: 120px; }
 
 .section1Container {
@@ -63,8 +63,19 @@ html a {
     .section1Container .imageTitleContainer .titleContainer {
       position: absolute;
       top: 50%;
-      right: 25%;
-      display: flex; }
+      right: 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .section1Container .imageTitleContainer .titleContainer .section1Title {
+        font-family: "dosisRegular";
+        color: #e7d7c9;
+        font-size: 50px; }
+      .section1Container .imageTitleContainer .titleContainer .section1Subtitle {
+        font-family: "beautyDream";
+        padding-top: 10px;
+        font-size: 30px;
+        color: #d4b2a7; }
       .section1Container .imageTitleContainer .titleContainer .homeTitle {
         color: #a38f85;
         text-shadow: 1px -1px 0px black;
@@ -85,13 +96,13 @@ html a {
       top: -20px;
       position: absolute;
       background-color: #e7d7c9;
-      height: 500px;
+      height: 620px;
       width: 28%;
       margin-left: 170px;
       border-radius: 20px; }
     .section1Container .subtitleContainer .imageSubtitleContainer {
       z-index: 100;
-      top: -220px;
+      top: -110px;
       position: absolute;
       background-image: url(../src/images/section1Image.jpg);
       background-size: contain;
@@ -115,8 +126,9 @@ html a {
       padding-bottom: 20px; }
     .section1Container .homeDescriptionContainer .homeDescriptionTitle {
       font-family: "loveloBlack";
-      padding-bottom: 20px;
-      font-size: 30px; }
+      padding-bottom: 25px;
+      padding-top: 10px;
+      font-size: 25px; }
     .section1Container .homeDescriptionContainer .homeDescriptionText {
       font-family: "dosisRegular";
       padding-bottom: 20px; }
@@ -166,30 +178,70 @@ html a {
   .section3Container .section3OptionsContainer {
     display: flex;
     justify-content: space-evenly; }
-    .section3Container .section3OptionsContainer .section3OptionContainer {
-      padding: 70px 100px;
+    .section3Container .section3OptionsContainer .section3OptionContainerMaida {
+      height: 603px;
+      border-radius: 10px;
+      padding: 50px 100px;
       background-color: #a38f85;
+      background-image: url("../src/images/Maida.jpeg");
+      background-size: contain;
+      opacity: .5;
       display: flex;
       flex-direction: column;
       align-items: center; }
-      .section3Container .section3OptionsContainer .section3OptionContainer .section3OptionTitle {
+      .section3Container .section3OptionsContainer .section3OptionContainerMaida:hover {
+        opacity: 1; }
+      .section3Container .section3OptionsContainer .section3OptionContainerMaida .section3OptionTitle {
         font-family: "beautyDream";
+        padding-top: 420px;
         font-size: 30px;
         color: #fff; }
-      .section3Container .section3OptionsContainer .section3OptionContainer .section3OptionDescription {
+      .section3Container .section3OptionsContainer .section3OptionContainerMaida .section3OptionDescription {
         font-family: "loveloBlack";
         padding-top: 5px;
         font-size: 16px;
         color: #ede9e3; }
-      .section3Container .section3OptionsContainer .section3OptionContainer .section3OptionButton {
+      .section3Container .section3OptionsContainer .section3OptionContainerMaida .section3OptionButton {
         margin-top: 30px;
         padding: 10px 50px;
         border-radius: 5px;
         background-color: #ede9e3; }
-        .section3Container .section3OptionsContainer .section3OptionContainer .section3OptionButton:hover {
+        .section3Container .section3OptionsContainer .section3OptionContainerMaida .section3OptionButton:hover {
           background-color: #fff;
           cursor: pointer; }
-        .section3Container .section3OptionsContainer .section3OptionContainer .section3OptionButton .section3OptionButtonText {
+        .section3Container .section3OptionsContainer .section3OptionContainerMaida .section3OptionButton .section3OptionButtonText {
+          font-family: "dosisRegular"; }
+    .section3Container .section3OptionsContainer .section3OptionContainerCoke {
+      padding: 50px 100px;
+      background-color: #a38f85;
+      background-image: url("../src/images/Coke.jpeg");
+      border-radius: 10px;
+      background-size: contain;
+      opacity: .5;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .section3Container .section3OptionsContainer .section3OptionContainerCoke:hover {
+        opacity: 1; }
+      .section3Container .section3OptionsContainer .section3OptionContainerCoke .section3OptionTitle {
+        font-family: "beautyDream";
+        padding-top: 420px;
+        font-size: 30px;
+        color: #fff; }
+      .section3Container .section3OptionsContainer .section3OptionContainerCoke .section3OptionDescription {
+        font-family: "loveloBlack";
+        padding-top: 5px;
+        font-size: 16px;
+        color: #ede9e3; }
+      .section3Container .section3OptionsContainer .section3OptionContainerCoke .section3OptionButton {
+        margin-top: 30px;
+        padding: 10px 50px;
+        border-radius: 5px;
+        background-color: #ede9e3; }
+        .section3Container .section3OptionsContainer .section3OptionContainerCoke .section3OptionButton:hover {
+          background-color: #fff;
+          cursor: pointer; }
+        .section3Container .section3OptionsContainer .section3OptionContainerCoke .section3OptionButton .section3OptionButtonText {
           font-family: "dosisRegular"; }
 
 .footerContainer {
@@ -201,7 +253,7 @@ html a {
   align-items: center; }
   .footerContainer .footerText {
     font-family: "dosisRegular";
-    font-size: 25px; }
+    font-size: 22px; }
   .footerContainer .footerButtonContainer {
     padding: 10px 50px;
     border-radius: 5px;
@@ -213,3 +265,30 @@ html a {
       font-family: "dosisRegular";
       font-size: 18px;
       color: #fff; }
+
+.contactContainer {
+  display: flex; }
+  .contactContainer .detailsContainer {
+    width: 50%; }
+  .contactContainer .contactFormContainer {
+    width: 50%; }
+
+.frequentQuestionsContainer {
+  background-color: #ede9e3;
+  padding: 50px; }
+  .frequentQuestionsContainer .frequentQuestionsTitle {
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: "LoveloBlack";
+    font-size: 20px; }
+  .frequentQuestionsContainer .questionContainer {
+    margin: 10px; }
+    .frequentQuestionsContainer .questionContainer .questionText {
+      font-size: 18px;
+      font-family: "dosisSemiBold"; }
+  .frequentQuestionsContainer .answerContainer {
+    margin: 10px;
+    margin-left: 30px; }
+    .frequentQuestionsContainer .answerContainer .answerText {
+      font-size: 16px;
+      font-family: "dosisRegular"; }

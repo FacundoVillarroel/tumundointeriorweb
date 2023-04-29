@@ -3,9 +3,9 @@ import React from 'react';
 const Footer = () => {
   return (
     <div className='footerContainer'>
-      <h4 className='footerText'>Want to see if we're the right fit?</h4>
+      <h4 className='footerText'>Para mayor información y/o consulta, escríbenos.</h4>
       <div className='footerButtonContainer'>
-        <h4 className='footerButtonText'>Send us a message</h4>
+        <h4 className='footerButtonText'>Enviar un mensaje</h4>
       </div>
     </div>
   )

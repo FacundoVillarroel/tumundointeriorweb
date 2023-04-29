@@ -1,0 +1,25 @@
+.frequentQuestionsContainer{
+  background-color: $isabeline;
+  padding: 50px;
+  .frequentQuestionsTitle{
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: "LoveloBlack";
+    font-size: 20px;
+  }
+  .questionContainer{
+    margin: 10px;
+    .questionText{
+      font-size: 18px;
+      font-family: "dosisSemiBold";
+    }
+  }
+  .answerContainer{
+    margin: 10px;
+    margin-left: 30px;
+    .answerText{
+      font-size: 16px;
+      font-family: "dosisRegular";
+    }
+  }
+}

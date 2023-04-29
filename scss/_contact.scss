@@ -1,0 +1,17 @@
+.contactContainer{
+  display: flex;
+  .detailsContainer{
+    width: 50%;
+    .contactTextContainer{
+      .contactTitle{
+
+      }
+      .contactText{
+
+      }
+    }
+  }
+  .contactFormContainer{
+    width: 50%;
+  }
+}
