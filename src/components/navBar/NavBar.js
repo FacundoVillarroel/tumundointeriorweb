@@ -27,7 +27,7 @@ const NavBar = ({toggleSidebar, blur}) => {
       <div className='navBarLinksContainer'>
         <a href='/#quienes' onClick={() => scrollToElement("quienesSomos", 80)} className='navBarLink linkSeparator'>Quienes Somos</a>
         <a href='/blog' className='navBarLink linkSeparator'>Blog</a>
-        <a href='/#' className='navBarLink' onClick={() => toggleSidebar("agenda")}>Agenda tu hora</a>
+        <div href='/#' className='navBarLink' onClick={() => toggleSidebar("agenda")}>Agenda tu hora</div>
       </div>
     </div>
   )

@@ -40,7 +40,7 @@ function App() {
             <Route path="*" element={ <Navigate to="/"/>}/> 
           </Routes>
         </main>
-        <Footer />
+        <Footer toggleSidebar={toggleSidebar}/>
       </div>
     </BrowserRouter>
   );

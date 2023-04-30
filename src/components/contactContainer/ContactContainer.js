@@ -19,8 +19,21 @@ const ContactContainer = () => {
     })
   }
 
+  const error = (values) => {
+    const requiredFields = ['nombre', 'apellido', 'telefono', 'email', 'mensaje'];
+
+    for (const field of requiredFields) {
+      if (!values[field]) {
+        alert(`${field} no puede estar vacío`);
+        return true;
+      }
+    }
+    return false;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (error(values)) return null
     setLoading(true);
     fetch("https://formsubmit.co/ajax/facu.villarroel96@gmail.com", {
       method: "POST",
@@ -66,7 +79,7 @@ const ContactContainer = () => {
               <input 
                 type="text" 
                 name='nombre' 
-                placeholder='Nombre' 
+                placeholder='Nombre *' 
                 value={values.nombre}
                 onChange={handleInputChange}
                 required
@@ -74,7 +87,7 @@ const ContactContainer = () => {
               <input 
                 type="text" 
                 name='apellido' 
-                placeholder='Apellido' 
+                placeholder='Apellido *' 
                 value={values.apellido}
                 onChange={handleInputChange}
                 required
@@ -83,21 +96,21 @@ const ContactContainer = () => {
             <input 
               type="tel" 
               name='telefono' 
-              placeholder='Teléfono' 
+              placeholder='Teléfono *' 
               value={values.telefono}
               onChange={handleInputChange}
               required/>
             <input 
               type="email" 
               name='email' 
-              placeholder='Email' 
+              placeholder='Email *' 
               value={values.email}
               onChange={handleInputChange}
               required/>
             <textarea 
               type="textarea" 
               name='mensaje' 
-              placeholder='Mensaje' 
+              placeholder='Mensaje *' 
               value={values.mensaje}
               onChange={handleInputChange}
               required/>

@@ -24,8 +24,21 @@ const BookingContainer = () => {
     })
   }
 
+  const error = (values) => {
+    const requiredFields = ['nombre', 'apellido', 'telefono', 'email', 'fecha'];
+
+    for (const field of requiredFields) {
+      if (!values[field]) {
+        alert(`${field} no puede estar vacío`);
+        return true;
+      }
+    }
+    return false;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (error(values)) return null
     setLoading(true);
     fetch("https://formsubmit.co/ajax/facu.villarroel96@gmail.com", {
       method: "POST",
