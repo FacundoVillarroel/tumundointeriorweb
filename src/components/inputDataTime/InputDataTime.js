@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const InputDataTime = () => {
+const InputDataTime = ({handleInputChange}) => {
   const [startDate, setStartDate] = useState(new Date());
   const isWeekday = (date) => {
     const day = date.getDay();
@@ -20,11 +20,16 @@ const InputDataTime = () => {
     );
   };
   
+  const handleChange = (date) => {
+    setStartDate(date)
+    const event = {target:{name:"fecha", value:date.toLocaleString()}}
+    handleInputChange(event)
+  }
 
   return (
     <DatePicker 
       selected={startDate} 
-      onChange={(date) => setStartDate(date)} 
+      onChange={(date) => handleChange(date)} 
       timeInputLabel="Hora:"
       dateFormat="MM/dd/yyyy h:mm aa"
       filterDate={isWeekday}

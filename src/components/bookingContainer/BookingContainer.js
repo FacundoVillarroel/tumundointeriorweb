@@ -10,10 +10,14 @@ const BookingContainer = () => {
     telefono: "",
     email:"",
     mensaje:"",
+    fecha:"",
     _captcha: false
   });
 
+  console.log("Fecha en booking container", values.fecha);
+
   const handleInputChange = (e) => {
+    console.log("inputChange",e);
     setValues({
       ...values,
       [e.target.name]: e.target.value
@@ -41,6 +45,7 @@ const BookingContainer = () => {
           telefono: "",
           email:"",
           mensaje:"",
+          fecha:"",
           _captcha: false
         })
         setLoading(false)
@@ -102,9 +107,12 @@ const BookingContainer = () => {
               value={values.mensaje}
               onChange={handleInputChange}
               required/>
-            <InputDateTime/>
+            <InputDateTime 
+              handleInputChange={handleInputChange}
+            />
             <button type='submit' className='buttonSubmit' onClick={handleSubmit}>Enviar Petición</button>
           </form>
+          <p className='bookingDescription'>Se envía una solicitud para la hora que usted elija, recibirá una respuesta en su email o teléfono</p>
         </div>
       </div>
       }

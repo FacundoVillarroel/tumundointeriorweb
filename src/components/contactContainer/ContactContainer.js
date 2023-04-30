@@ -103,6 +103,7 @@ const ContactContainer = () => {
               required/>
             <button type='submit' className='buttonSubmit' onClick={handleSubmit}>Enviar Consulta</button>
           </form>
+          <p className='contactDescription'>Se enviará un email con su mensaje, luego recibirá una respuesta en su email o teléfono</p>
         </div>
       </div>
       }

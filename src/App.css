@@ -311,6 +311,11 @@ html a {
       .contactContainer .contactFormContainer form .buttonSubmit:hover {
         background-color: #e7d7c9;
         color: #212121; }
+  .contactContainer .contactFormContainer .contactDescription {
+    padding-top: 15px;
+    text-align: center;
+    color: #fff;
+    font-family: "dosisLight"; }
 
 .frequentQuestionsContainer {
   background-color: #ede9e3;
@@ -423,6 +428,11 @@ html a {
       .bookingContainer .bookingFormContainer form .buttonSubmit:hover {
         background-color: #e7d7c9;
         color: #212121; }
+  .bookingContainer .bookingFormContainer .bookingDescription {
+    padding-top: 15px;
+    text-align: center;
+    color: #fff;
+    font-family: "dosisLight"; }
 
 .react-datetime-picker {
   background-color: #fff;
