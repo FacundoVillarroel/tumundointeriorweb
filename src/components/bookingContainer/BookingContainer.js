@@ -1,7 +1,8 @@
 import React,{useState} from 'react';
 import Loading from '../loading/Loading';
+import InputDateTime from '../inputDataTime/InputDataTime';
 
-const ContactContainer = () => {
+const BookingContainer = () => {
   const [loading, setLoading] = useState(false);
   const [ values, setValues ] = useState({
     nombre:"",
@@ -56,17 +57,17 @@ const ContactContainer = () => {
     <>
       {loading 
         ? <Loading text="Enviando..." color="#e7d7c9"/>
-        :<div className='contactContainer'>
-        <div className='contactTitleContainer' >
-          <h2 className='contactTitle'>Contacto</h2>
+        :<div className='bookingContainer'>
+        <div className='bookingTitleContainer' >
+          <h2 className='bookingTitle'>Agenda tu hora</h2>
         </div>
-        <div className='contactFormContainer'>
+        <div className='bookingFormContainer'>
           <form className='formFlex' action="#">
             <div className='nameSurnameContainer'>
               <input 
                 type="text" 
                 name='nombre' 
-                placeholder='Nombre' 
+                placeholder='Nombre *' 
                 value={values.nombre}
                 onChange={handleInputChange}
                 required
@@ -74,7 +75,7 @@ const ContactContainer = () => {
               <input 
                 type="text" 
                 name='apellido' 
-                placeholder='Apellido' 
+                placeholder='Apellido *' 
                 value={values.apellido}
                 onChange={handleInputChange}
                 required
@@ -83,25 +84,26 @@ const ContactContainer = () => {
             <input 
               type="tel" 
               name='telefono' 
-              placeholder='Teléfono' 
+              placeholder='Teléfono *' 
               value={values.telefono}
               onChange={handleInputChange}
               required/>
             <input 
               type="email" 
               name='email' 
-              placeholder='Email' 
+              placeholder='Email *' 
               value={values.email}
               onChange={handleInputChange}
               required/>
             <textarea 
               type="textarea" 
               name='mensaje' 
-              placeholder='Mensaje' 
+              placeholder='Mensaje (opcional)' 
               value={values.mensaje}
               onChange={handleInputChange}
               required/>
-            <button type='submit' className='buttonSubmit' onClick={handleSubmit}>Enviar Consulta</button>
+            <InputDateTime/>
+            <button type='submit' className='buttonSubmit' onClick={handleSubmit}>Enviar Petición</button>
           </form>
         </div>
       </div>
@@ -112,4 +114,4 @@ const ContactContainer = () => {
   )
 }
 
-export default ContactContainer
+export default BookingContainer

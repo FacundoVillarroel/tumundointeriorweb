@@ -2,7 +2,7 @@ import React from 'react';
 
 const Section3 = () => {
   return (
-    <div className='section3Container'>
+    <div className='section3Container' id='quienesSomos'>
       <div className='section3TitleContainer'>
         <h2 className='section3Title'>¿Quiénes somos?</h2>
         <p className='section3SubTitle'>Tu mundo interior es un centro de psicoterapia online orientado a otorgar un espacio de confianza y bienestar. Pero por sobre todo es un camino hacia el autoconocimiento que permite... y vivir una vida más plena. 

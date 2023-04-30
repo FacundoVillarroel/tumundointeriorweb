@@ -7,3 +7,11 @@
 @import "footer";
 @import "contact";
 @import "frequentQuestions";
+@import "sidebar";
+@import "loading";
+@import "booking";
+@import "inputDataTime";
+
+.main-content{
+  filter: blur(1px);
+}

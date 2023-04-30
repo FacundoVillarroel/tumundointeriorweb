@@ -1,0 +1,28 @@
+.loadingContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .brain-icon {
+    animation: rotate 1s linear infinite;
+  }
+  .loadingText{
+    font-family: "beautyDream";
+    font-size: 30px;
+  }
+}
+
+@keyframes rotate {
+  
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-in;
+  }
+  75% {
+    transform: rotate(360deg);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

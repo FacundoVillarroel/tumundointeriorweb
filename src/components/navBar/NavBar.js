@@ -1,22 +1,33 @@
 import React from 'react';
 
-const NavBar = () => {
+const NavBar = ({toggleSidebar, blur}) => {
+
+  const scrollToElement = (id, offset) => {
+    const element = document.getElementById(id);
+    console.log(offset);
+    const offsetTop = element.offsetTop - offset;
+    console.log(offsetTop);
+    window.scrollTo({
+      top: offsetTop,
+      behavior: "smooth"
+    }); 
+  }
 
   return (
-    <div className='navBarContainer'>
+    <div className={blur ? 'navBarContainer blur' : "navBarContainer"}>
       <div className='navBarLinksContainer'>
-        <a href='/#' className='navBarLink linkSeparator'>Inicio</a>
+        <a href='/' className='navBarLink linkSeparator'>Inicio</a>
         <a href='/preguntas-frecuentes' className='navBarLink linkSeparator'>Preguntas Frecuentes</a>
-        <a href='/#' className='navBarLink'>Contacto</a>
+        <div href='/#' className='navBarLink' onClick={() =>toggleSidebar("contacto")}>Contacto</div>
       </div>
       <a href='/' className='navBarTitleContainer'>
         <h1 className='navBarTitle'> Tu Mundo Interior</h1>
         <p className='navBarSubTitle'>Centro de Psicoterapia Online</p>
       </a>
       <div className='navBarLinksContainer'>
-        <a href='/#' className='navBarLink linkSeparator'>Quienes Somos</a>
-        <a href='/perfil' className='navBarLink linkSeparator'>Blog</a>
-        <a href='/contacto' className='navBarLink'>Agenda tu hora</a>
+        <a href='/#quienes' onClick={() => scrollToElement("quienesSomos", 80)} className='navBarLink linkSeparator'>Quienes Somos</a>
+        <a href='/blog' className='navBarLink linkSeparator'>Blog</a>
+        <a href='/#' className='navBarLink' onClick={() => toggleSidebar("agenda")}>Agenda tu hora</a>
       </div>
     </div>
   )
