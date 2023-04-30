@@ -170,7 +170,7 @@ html a {
 
 .section3Container {
   background-color: #ede9e3;
-  padding: 30px 50px 70px 50px; }
+  padding: 30px 50px 120px 50px; }
   .section3Container .section3TitleContainer {
     margin: 40px 100px 60px 100px; }
     .section3Container .section3TitleContainer .section3Title {
@@ -181,74 +181,57 @@ html a {
     .section3Container .section3TitleContainer .section3SubTitle {
       font-family: "dosisRegular";
       font-size: 16px; }
-  .section3Container .section3OptionsContainer {
+  .section3Container .professionalsContainer {
     display: flex;
     justify-content: space-evenly; }
-    .section3Container .section3OptionsContainer .section3OptionContainerMaida {
-      height: 603px;
+    .section3Container .professionalsContainer .professionalContainer {
+      position: relative;
+      display: flex;
+      justify-content: center; }
+    .section3Container .professionalsContainer .maidaContainer {
+      width: 27rem;
+      height: 36rem;
       border-radius: 10px;
       padding: 50px 100px;
-      background-color: #a38f85;
-      background-image: url("../src/images/Maida.jpeg");
+      background-image: url("../src/images/maida.jpeg");
       background-size: contain;
-      opacity: .5;
       display: flex;
       flex-direction: column;
-      align-items: center; }
-      .section3Container .section3OptionsContainer .section3OptionContainerMaida:hover {
+      align-items: center;
+      opacity: .5; }
+      .section3Container .professionalsContainer .maidaContainer:hover {
         opacity: 1; }
-      .section3Container .section3OptionsContainer .section3OptionContainerMaida .section3OptionTitle {
+    .section3Container .professionalsContainer .professionalDescriptionContainer {
+      position: absolute;
+      bottom: -100px;
+      background-color: #a38f85;
+      border-radius: 10px; }
+      .section3Container .professionalsContainer .professionalDescriptionContainer .professionalName {
         font-family: "beautyDream";
-        padding-top: 420px;
+        padding: 5px;
         font-size: 30px;
         color: #fff; }
-      .section3Container .section3OptionsContainer .section3OptionContainerMaida .section3OptionDescription {
+      .section3Container .professionalsContainer .professionalDescriptionContainer .professionalDescription {
         font-family: "loveloBlack";
         padding-top: 5px;
+        padding-bottom: 5px;
         font-size: 16px;
-        color: #ede9e3; }
-      .section3Container .section3OptionsContainer .section3OptionContainerMaida .section3OptionButton {
-        margin-top: 30px;
-        padding: 10px 50px;
-        border-radius: 5px;
-        background-color: #ede9e3; }
-        .section3Container .section3OptionsContainer .section3OptionContainerMaida .section3OptionButton:hover {
-          background-color: #fff;
-          cursor: pointer; }
-        .section3Container .section3OptionsContainer .section3OptionContainerMaida .section3OptionButton .section3OptionButtonText {
-          font-family: "dosisRegular"; }
-    .section3Container .section3OptionsContainer .section3OptionContainerCoke {
+        color: #ede9e3;
+        text-align: center; }
+    .section3Container .professionalsContainer .cokeContainer {
+      position: relative;
+      width: 27rem;
+      height: 36rem;
       padding: 50px 100px;
-      background-color: #a38f85;
-      background-image: url("../src/images/Coke.jpeg");
+      background-image: url("../src/images/coke.jpeg");
       border-radius: 10px;
       background-size: contain;
-      opacity: .5;
       display: flex;
       flex-direction: column;
-      align-items: center; }
-      .section3Container .section3OptionsContainer .section3OptionContainerCoke:hover {
+      align-items: center;
+      opacity: .5; }
+      .section3Container .professionalsContainer .cokeContainer:hover {
         opacity: 1; }
-      .section3Container .section3OptionsContainer .section3OptionContainerCoke .section3OptionTitle {
-        font-family: "beautyDream";
-        padding-top: 420px;
-        font-size: 30px;
-        color: #fff; }
-      .section3Container .section3OptionsContainer .section3OptionContainerCoke .section3OptionDescription {
-        font-family: "loveloBlack";
-        padding-top: 5px;
-        font-size: 16px;
-        color: #ede9e3; }
-      .section3Container .section3OptionsContainer .section3OptionContainerCoke .section3OptionButton {
-        margin-top: 30px;
-        padding: 10px 50px;
-        border-radius: 5px;
-        background-color: #ede9e3; }
-        .section3Container .section3OptionsContainer .section3OptionContainerCoke .section3OptionButton:hover {
-          background-color: #fff;
-          cursor: pointer; }
-        .section3Container .section3OptionsContainer .section3OptionContainerCoke .section3OptionButton .section3OptionButtonText {
-          font-family: "dosisRegular"; }
 
 .footerContainer {
   display: flex;

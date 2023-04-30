@@ -6,24 +6,23 @@ const Section3 = () => {
       <div className='section3TitleContainer'>
         <h2 className='section3Title'>¿Quiénes somos?</h2>
         <p className='section3SubTitle'>Tu mundo interior es un centro de psicoterapia online orientado a otorgar un espacio de confianza y bienestar. Pero por sobre todo es un camino hacia el autoconocimiento que permite... y vivir una vida más plena. 
-El objetivo es entregarte recursos que te permitan lidiar con situaciones adversas y adaptarte de forma saludable a ellas.
-</p>
+          El objetivo es entregarte recursos que te permitan lidiar con situaciones adversas y adaptarte de forma saludable a ellas.
+        </p>
       </div>
-      <div className='section3OptionsContainer'>
-        <div className='section3OptionContainerMaida'>
-          <p className='section3OptionTitle'>Magdalena Pinedo</p>
-          <h3 className='section3OptionDescription'>Psicóloga Clínica</h3>
-          {/* <div className='section3OptionButton'>
-            <p className='section3OptionButtonText'>Ver Perfil</p>
-          </div> */}
+      <div className='professionalsContainer'>
+        <div className='professionalContainer'>
+          <div className='maidaContainer'></div>
+          <div className='professionalDescriptionContainer'>
+            <p className='professionalName'>Magdalena Pinedo</p>
+            <h3 className='professionalDescription'>Psicóloga Clínica</h3>
+          </div>
         </div>
-        
-        <div className='section3OptionContainerCoke'>
-          <p className='section3OptionTitle'>Jorge Rosende</p>
-          <h3 className='section3OptionDescription'>Psicólogo Clínico</h3>
-          {/* <div className='section3OptionButton'>
-            <p className='section3OptionButtonText'>Ver Perfil</p>
-          </div> */}
+        <div className='professionalContainer'>
+          <div className='cokeContainer'></div>
+          <div className='professionalDescriptionContainer'>
+            <p className='professionalName'>Jorge Rosende</p>
+            <h3 className='professionalDescription'>Psicólogo Clínico</h3>
+          </div>
         </div>
       </div>
     </div>
