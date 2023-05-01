@@ -17,6 +17,10 @@ const FrequentQuestionsContainer = () => {
                     return(<FrequentQuestion question={question} key={key}/>)
                 })}
             </Accordion>
+            <div className='frequentFootContainer'>
+                <p className='frequentFootText'>Si te surge alguna inquietud que no se encentre en nuestra selección de preguntas, no dudes en ponerte en contacto con nosotros.</p>
+                <p className='frequentFootText'>Recuerda que puedes visitar nuestro blog en el inicio de nuestra pagina web, donde encontraras artículos relacionados con la psicoterapia y diferentes afecciones clínicas.</p>
+            </div>
         </div>
     )
 }

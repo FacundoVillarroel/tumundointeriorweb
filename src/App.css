@@ -223,12 +223,12 @@ html a {
     .section3Container .professionalsContainer .professionalDescriptionContainer {
       position: absolute;
       bottom: -100px;
-      background-color: #a38f85;
+      background-color: rgba(163, 143, 133, 0.5);
       border-radius: 10px; }
       .section3Container .professionalsContainer .professionalDescriptionContainer .professionalName {
         font-family: "loveloBlack";
         padding: 5px 15px;
-        font-size: 25px;
+        font-size: 19px;
         color: #fff; }
       .section3Container .professionalsContainer .professionalDescriptionContainer .professionalDescription {
         font-family: "dosisSemiBold";
@@ -331,7 +331,7 @@ html a {
     height: 100%;
     position: absolute;
     top: 0;
-    left: 33%; }
+    left: 55%; }
   .frequentQuestionsContainer .frequentQuestionsTitle {
     z-index: 2;
     padding-bottom: 20px;
@@ -358,6 +358,14 @@ html a {
     .frequentQuestionsContainer .answerContainer .answerText {
       font-size: 16px;
       font-family: "dosisRegular"; }
+  .frequentQuestionsContainer .frequentFootContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 40px 70px 10px; }
+    .frequentQuestionsContainer .frequentFootContainer .frequentFootText {
+      font-family: "dosisRegular";
+      padding-bottom: 5px; }
 
 .sidebar {
   position: fixed;

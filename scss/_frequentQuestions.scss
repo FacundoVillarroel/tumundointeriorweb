@@ -7,7 +7,7 @@
     height: 100%;
     position: absolute;
     top: 0;
-    left: 33%;
+    left: 55%;
   }
   .frequentQuestionsTitle{
     z-index: 2;
@@ -39,6 +39,16 @@
     .answerText{
       font-size: 16px;
       font-family: "dosisRegular";
+    }
+  }
+  .frequentFootContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 40px 70px 10px;
+    .frequentFootText{
+      font-family: "dosisRegular";
+      padding-bottom: 5px;
     }
   }
 }
