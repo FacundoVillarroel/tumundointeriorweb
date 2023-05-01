@@ -1,6 +1,6 @@
 .section3Container{
   background-color: $isabeline;
-  padding: 30px 50px 120px 50px;
+  padding: 30px 50px 50px 50px;
   .section3TitleContainer{
     margin: 40px 100px 60px 100px;
     .section3Title{
@@ -9,9 +9,14 @@
       text-align: center;
       margin-bottom: 15px;
     }
-    .section3SubTitle{
-      font-family: "dosisRegular";
-      font-size: 16px;
+    .subTitleContainer{
+      padding: 0px 90px;
+      .section3SubTitle{
+        font-family: "dosisRegular";
+        font-size: 16px;
+        text-align:justify;
+        margin-bottom: 10px;
+      }
     }
   }
   .professionalsContainer{
@@ -43,15 +48,14 @@
       background-color: rgba(163, 143, 133, 1);
       border-radius: 10px;
       .professionalName{
-        font-family: "beautyDream";
-        padding: 5px;
-        font-size: 30px;
+        font-family: "loveloBlack";
+        padding: 5px 15px;
+        font-size: 25px;
         color: $light;
       }
       .professionalDescription{
-        font-family: "loveloBlack";
-        padding-top: 5px;
-        padding-bottom: 5px;
+        font-family: "dosisSemiBold";
+        padding-bottom: 10px;
         font-size: 16px;
         color: $isabeline;
         text-align: center;
@@ -74,5 +78,10 @@
         opacity: 1;
       }
     }
+  }
+  .quoteContainer{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
   }
 }

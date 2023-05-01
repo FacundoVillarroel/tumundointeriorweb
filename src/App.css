@@ -19,7 +19,7 @@
       padding-left: 20px;
       cursor: pointer; }
       .navBarContainer .navBarLinksContainer .navBarLink:hover {
-        color: #d4b2a7; }
+        color: #a38f85; }
     .navBarContainer .navBarLinksContainer .linkSeparator {
       border-right: 2px solid #212121; }
   .navBarContainer .navBarTitleContainer {
@@ -27,7 +27,10 @@
     flex-direction: column;
     align-items: center; }
     .navBarContainer .navBarTitleContainer:hover {
-      color: #212121; }
+      color: #212121;
+      animation-name: scale;
+      animation-duration: .5s;
+      animation-fill-mode: forwards; }
     .navBarContainer .navBarTitleContainer .navBarTitle {
       margin: 0;
       font-family: LoveloBlack;
@@ -39,6 +42,12 @@
 
 .blur {
   filter: blur(1px); }
+
+@keyframes scale {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1.1); } }
 
 * {
   margin: 0px;
@@ -56,6 +65,12 @@ html a {
 
 .App {
   margin-top: 120px; }
+
+.dosisBold {
+  font-family: "dosisBold"; }
+
+.dosisItalic {
+  font-style: italic; }
 
 .section1Container {
   background-color: #ede9e3; }
@@ -170,7 +185,7 @@ html a {
 
 .section3Container {
   background-color: #ede9e3;
-  padding: 30px 50px 120px 50px; }
+  padding: 30px 50px 50px 50px; }
   .section3Container .section3TitleContainer {
     margin: 40px 100px 60px 100px; }
     .section3Container .section3TitleContainer .section3Title {
@@ -178,9 +193,13 @@ html a {
       font-size: 22px;
       text-align: center;
       margin-bottom: 15px; }
-    .section3Container .section3TitleContainer .section3SubTitle {
-      font-family: "dosisRegular";
-      font-size: 16px; }
+    .section3Container .section3TitleContainer .subTitleContainer {
+      padding: 0px 90px; }
+      .section3Container .section3TitleContainer .subTitleContainer .section3SubTitle {
+        font-family: "dosisRegular";
+        font-size: 16px;
+        text-align: justify;
+        margin-bottom: 10px; }
   .section3Container .professionalsContainer {
     display: flex;
     justify-content: space-evenly; }
@@ -207,14 +226,13 @@ html a {
       background-color: #a38f85;
       border-radius: 10px; }
       .section3Container .professionalsContainer .professionalDescriptionContainer .professionalName {
-        font-family: "beautyDream";
-        padding: 5px;
-        font-size: 30px;
+        font-family: "loveloBlack";
+        padding: 5px 15px;
+        font-size: 25px;
         color: #fff; }
       .section3Container .professionalsContainer .professionalDescriptionContainer .professionalDescription {
-        font-family: "loveloBlack";
-        padding-top: 5px;
-        padding-bottom: 5px;
+        font-family: "dosisSemiBold";
+        padding-bottom: 10px;
         font-size: 16px;
         color: #ede9e3;
         text-align: center; }
@@ -232,6 +250,10 @@ html a {
       opacity: .5; }
       .section3Container .professionalsContainer .cokeContainer:hover {
         opacity: 1; }
+  .section3Container .quoteContainer {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center; }
 
 .footerContainer {
   display: flex;
@@ -302,8 +324,16 @@ html a {
 
 .frequentQuestionsContainer {
   background-color: #ede9e3;
-  padding: 50px; }
+  padding: 50px;
+  position: relative; }
+  .frequentQuestionsContainer .imgBackground {
+    z-index: 1;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 33%; }
   .frequentQuestionsContainer .frequentQuestionsTitle {
+    z-index: 2;
     padding-bottom: 20px;
     text-align: center;
     font-family: "LoveloBlack";
@@ -311,11 +341,20 @@ html a {
   .frequentQuestionsContainer .questionContainer {
     margin: 10px; }
     .frequentQuestionsContainer .questionContainer .questionText {
+      position: relative;
+      z-index: 10;
       font-size: 18px;
-      font-family: "dosisSemiBold"; }
+      font-family: "dosisBold"; }
+      .frequentQuestionsContainer .questionContainer .questionText:hover {
+        color: #a38f85; }
   .frequentQuestionsContainer .answerContainer {
-    margin: 10px;
-    margin-left: 30px; }
+    position: relative;
+    z-index: 200;
+    margin: 10px 0px;
+    padding: 10px 30px;
+    background-color: #ede9e3;
+    border-top: 1px solid #e7d7c9;
+    border-bottom: 1px solid #e7d7c9; }
     .frequentQuestionsContainer .answerContainer .answerText {
       font-size: 16px;
       font-family: "dosisRegular"; }

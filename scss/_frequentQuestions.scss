@@ -1,7 +1,16 @@
 .frequentQuestionsContainer{
   background-color: $isabeline;
   padding: 50px;
+  position: relative;
+  .imgBackground{
+    z-index: 1;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 33%;
+  }
   .frequentQuestionsTitle{
+    z-index: 2;
     padding-bottom: 20px;
     text-align: center;
     font-family: "LoveloBlack";
@@ -10,13 +19,23 @@
   .questionContainer{
     margin: 10px;
     .questionText{
+      position: relative;
+      z-index: 10;
       font-size: 18px;
-      font-family: "dosisSemiBold";
+      font-family: "dosisBold";
+      &:hover{
+        color: $cinereous;
+      }
     }
   }
   .answerContainer{
-    margin: 10px;
-    margin-left: 30px;
+    position: relative;
+    z-index: 200;
+    margin: 10px 0px;
+    padding: 10px 30px;
+    background-color: $isabeline;
+    border-top: 1px solid $almond;
+    border-bottom: 1px solid $almond;
     .answerText{
       font-size: 16px;
       font-family: "dosisRegular";

@@ -19,7 +19,7 @@
       padding-left: 20px;
       cursor: pointer;
       &:hover{
-        color: $paleDogwood;
+        color: $cinereous;
       }
     }
     .linkSeparator{
@@ -32,6 +32,9 @@
     align-items: center;
     &:hover{
       color: $dark;
+      animation-name: scale;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
     }
     .navBarTitle{
       margin: 0;
@@ -48,4 +51,14 @@
 
 .blur{
   filter: blur(1px);
+}
+
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
