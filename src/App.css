@@ -70,6 +70,7 @@ html a {
   font-family: "dosisBold"; }
 
 .dosisItalic {
+  font-family: "dosisRegular";
   font-style: italic; }
 
 .section1Container {
@@ -155,15 +156,13 @@ html a {
       padding-bottom: 20px; }
 
 .section2Container {
-  padding: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 20px 50px 30px 50px;
   background-color: #fff; }
   .section2Container .section2TitleContainer {
     display: flex;
     justify-content: center;
     padding-top: 30px;
-    padding-bottom: 30px; }
+    padding-bottom: 40px; }
     .section2Container .section2TitleContainer .section2Title {
       font-family: "beautyDream";
       font-size: 40px; }
@@ -181,7 +180,8 @@ html a {
           color: #d4b2a7; }
         .section2Container .section2DescriptionItemsContainer .section2DescriptionContainer .section2ItemContainer .section2Text {
           margin-left: 20px;
-          font-family: "dosisRegular"; }
+          font-family: "dosisRegular";
+          text-align: justify; }
 
 .section3Container {
   background-color: #ede9e3;
@@ -344,7 +344,7 @@ html a {
       position: relative;
       z-index: 10;
       font-size: 18px;
-      font-family: "dosisBold"; }
+      font-family: "dosisSemiBold"; }
       .frequentQuestionsContainer .questionContainer .questionText:hover {
         color: #a38f85; }
   .frequentQuestionsContainer .answerContainer {

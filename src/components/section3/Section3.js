@@ -32,7 +32,7 @@ const Section3 = () => {
       </div>
       <div className='quoteContainer'>
         <p className='section3SubTitle'>
-          “El gran descubrimiento de mi generación es que los seres humanos pueden alterar sus vidas al alterar sus actitudes mentales”(<span className="dosisBold">William James</span>).
+          <span className='dosisItalic'>“El gran descubrimiento de mi generación es que los seres humanos pueden alterar sus vidas al alterar sus actitudes mentales”</span>(<span className="dosisBold">William James</span>).
         </p>
       </div>
     </div>

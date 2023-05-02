@@ -1,13 +1,11 @@
 .section2Container{
-  padding: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 20px 50px 30px 50px;
   background-color: $light;
   .section2TitleContainer{
     display: flex;
     justify-content: center;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     .section2Title{
       font-family: "beautyDream";
       font-size: 40px;
@@ -29,6 +27,7 @@
         .section2Text{
           margin-left: 20px;
           font-family: "dosisRegular";
+          text-align: justify;
         }
       }
     }
