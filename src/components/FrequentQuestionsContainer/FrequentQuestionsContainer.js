@@ -5,15 +5,14 @@ import FrequentQuestion from '../FrequentQuestion/FrequentQuestion';
 import handBackground from "../../images/hands.png";
 
 const FrequentQuestionsContainer = () => {
-    const [imgHeight, setImgHeight] = useState("2000")
+    const [imgHeight, setImgHeight] = useState("100%")
 
     window.onload = () => {
         const parent = document.getElementById("parent");
         const height = parent.offsetHeight;
-        if (parseInt(height) < parseInt(imgHeight)) {
-            setImgHeight(height)
-        } 
+        setImgHeight(height)
     };
+    console.log(imgHeight);
 
     return (
         <div className='frequentQuestionsContainer' id='parent'>
