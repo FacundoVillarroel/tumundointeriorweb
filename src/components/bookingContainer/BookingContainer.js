@@ -13,11 +13,8 @@ const BookingContainer = () => {
     fecha:"",
     _captcha: false
   });
-
-  console.log("Fecha en booking container", values.fecha);
-
+  
   const handleInputChange = (e) => {
-    console.log("inputChange",e);
     setValues({
       ...values,
       [e.target.name]: e.target.value

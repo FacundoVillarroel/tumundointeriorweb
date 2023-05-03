@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Accordion} from "react-bootstrap";
 import allQuestions from "../../data/frequentQuestions";
 import FrequentQuestion from '../FrequentQuestion/FrequentQuestion';
 import handBackground from "../../images/hands.png";
 
 const FrequentQuestionsContainer = () => {
+    const [imgHeight, setImgHeight] = useState("2000")
+
+    window.onload = () => {
+        const parent = document.getElementById("parent");
+        const height = parent.offsetHeight;
+        if (parseInt(height) < parseInt(imgHeight)) {
+            setImgHeight(height)
+        } 
+    };
+
     return (
-        <div className='frequentQuestionsContainer'>
-            <img className='imgBackground' src={handBackground} alt='hands Bacground'></img>
+        <div className='frequentQuestionsContainer' id='parent'>
+            <img className='imgBackground' src={handBackground} alt='hands Bacground' height={imgHeight}></img>
             <div>
                 <h2 className="frequentQuestionsTitle">Preguntas Frecuentes</h2>
             </div>

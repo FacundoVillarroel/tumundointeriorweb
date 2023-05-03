@@ -4,7 +4,6 @@
   position: relative;
   .imgBackground{
     z-index: 1;
-    height: 100%;
     position: absolute;
     top: 0;
     left: 55%;
@@ -16,13 +15,14 @@
     font-family: "LoveloBlack";
     font-size: 20px;
   }
+
   .questionContainer{
     margin: 10px;
     .questionText{
       position: relative;
       z-index: 10;
       font-size: 18px;
-      font-family: "dosisSemiBold";
+      font-family: "dosisRegular";
       &:hover{
         color: $cinereous;
       }

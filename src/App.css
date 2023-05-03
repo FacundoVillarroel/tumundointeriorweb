@@ -254,14 +254,22 @@ html a {
     margin-top: 150px;
     display: flex;
     justify-content: center; }
+  .section3Container .videoContainer {
+    padding-top: 70px;
+    display: flex;
+    justify-content: center; }
+    .section3Container .videoContainer iframe {
+      border-radius: 20px; }
 
 .footerContainer {
+  position: relative;
   display: flex;
   background-color: #e7d7c9;
   padding-top: 40px;
   padding-bottom: 40px;
   justify-content: space-evenly;
-  align-items: center; }
+  align-items: center;
+  z-index: 100; }
   .footerContainer .footerText {
     font-family: "dosisRegular";
     font-size: 22px; }
@@ -328,7 +336,6 @@ html a {
   position: relative; }
   .frequentQuestionsContainer .imgBackground {
     z-index: 1;
-    height: 100%;
     position: absolute;
     top: 0;
     left: 55%; }
@@ -344,7 +351,7 @@ html a {
       position: relative;
       z-index: 10;
       font-size: 18px;
-      font-family: "dosisSemiBold"; }
+      font-family: "dosisRegular"; }
       .frequentQuestionsContainer .questionContainer .questionText:hover {
         color: #a38f85; }
   .frequentQuestionsContainer .answerContainer {

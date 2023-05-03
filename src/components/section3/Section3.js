@@ -35,6 +35,9 @@ const Section3 = () => {
           <span className='dosisItalic'>“El gran descubrimiento de mi generación es que los seres humanos pueden alterar sus vidas al alterar sus actitudes mentales”</span>(<span className="dosisBold">William James</span>).
         </p>
       </div>
+      <div className='videoContainer'>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/KCf56Tb0CP8?start=9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
     </div>
   )
 }
