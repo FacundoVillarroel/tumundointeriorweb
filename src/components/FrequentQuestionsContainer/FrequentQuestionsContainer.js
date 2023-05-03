@@ -8,8 +8,10 @@ const FrequentQuestionsContainer = () => {
     const [imgHeight, setImgHeight] = useState("100%")
 
     const parent = document.getElementById("parent");
-    const height = parent.offsetHeight;
-    setImgHeight(height)
+    if(parent) {
+        const height = parent.offsetHeight;
+        setImgHeight(height)
+    }
 
     return (
         <div className='frequentQuestionsContainer' id='parent'>
