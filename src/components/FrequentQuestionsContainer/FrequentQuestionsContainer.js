@@ -7,12 +7,9 @@ import handBackground from "../../images/hands.png";
 const FrequentQuestionsContainer = () => {
     const [imgHeight, setImgHeight] = useState("100%")
 
-    window.onload = () => {
-        const parent = document.getElementById("parent");
-        const height = parent.offsetHeight;
-        setImgHeight(height)
-    };
-    console.log(imgHeight);
+    const parent = document.getElementById("parent");
+    const height = parent.offsetHeight;
+    setImgHeight(height)
 
     return (
         <div className='frequentQuestionsContainer' id='parent'>
