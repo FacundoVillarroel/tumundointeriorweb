@@ -44,7 +44,7 @@
     justify-content: space-between;
     padding-top: 50px;
     padding-bottom: 50px;
-    .imageSubtitleShadow{
+    /* .imageSubtitleShadow{
       z-index: 50;
       top:-20px;
       position: absolute;
@@ -53,16 +53,16 @@
       width: 28%;
       margin-left: 170px;
       border-radius: 20px;
-    }
+    } */
     .imageSubtitleContainer{
       z-index: 100;
-      top:-110px;
+      top:-100px;
       position: absolute;
-      background-image: url(../src/images/section1Image.jpg);
-      background-size: contain;
-      height: 675px;
+      background-image: url(../src/images/prueba.jpg);
+      background-size: cover;
+      height: 695px;
       width: 28%;
-      margin-left: 140px;
+      margin-left: 150px;
       border-radius: 20px;
       .ImageSubtitle{
         font-family: "beautyDream";
