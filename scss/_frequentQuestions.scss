@@ -1,5 +1,4 @@
 .frequentQuestionsContainer{
-  background-color: $isabeline;
   padding: 50px;
   position: relative;
   .imgBackground{
@@ -33,7 +32,7 @@
     z-index: 200;
     margin: 10px 0px;
     padding: 10px 30px;
-    background-color: $isabeline;
+    background-color: $light;
     border-top: 1px solid $almond;
     border-bottom: 1px solid $almond;
     .answerText{

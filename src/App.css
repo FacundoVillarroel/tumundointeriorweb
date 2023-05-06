@@ -153,7 +153,8 @@ html a {
       font-size: 25px; }
     .section1Container .homeDescriptionContainer .homeDescriptionText {
       font-family: "dosisRegular";
-      padding-bottom: 20px; }
+      padding-bottom: 20px;
+      text-align: justify; }
 
 .section2Container {
   padding: 20px 50px 30px 50px;
@@ -222,7 +223,9 @@ html a {
         opacity: 1; }
     .section3Container .professionalsContainer .professionalDescriptionContainer {
       position: absolute;
-      bottom: -100px;
+      bottom: -150px;
+      padding-left: 10px;
+      padding-right: 10px;
       background-color: rgba(163, 143, 133, 0.5);
       border-radius: 10px; }
       .section3Container .professionalsContainer .professionalDescriptionContainer .professionalName {
@@ -236,6 +239,10 @@ html a {
         font-size: 16px;
         color: #ede9e3;
         text-align: center; }
+      .section3Container .professionalsContainer .professionalDescriptionContainer .seeMore {
+        cursor: pointer; }
+        .section3Container .professionalsContainer .professionalDescriptionContainer .seeMore:hover {
+          color: #fff; }
     .section3Container .professionalsContainer .cokeContainer {
       position: relative;
       width: 27rem;
@@ -251,11 +258,11 @@ html a {
       .section3Container .professionalsContainer .cokeContainer:hover {
         opacity: 1; }
   .section3Container .quoteContainer {
-    margin-top: 150px;
+    margin-top: 50px;
     display: flex;
     justify-content: center; }
   .section3Container .videoContainer {
-    padding-top: 70px;
+    padding-top: 200px;
     display: flex;
     justify-content: center; }
     .section3Container .videoContainer iframe {
@@ -272,7 +279,7 @@ html a {
   z-index: 100; }
   .footerContainer .footerText {
     font-family: "dosisRegular";
-    font-size: 22px; }
+    font-size: 20px; }
   .footerContainer .footerButtonContainer {
     padding: 10px 50px;
     border-radius: 5px;
@@ -297,10 +304,8 @@ html a {
     margin-bottom: 50px;
     background-color: #e7d7c9; }
     .contactContainer .contactTitleContainer .contactTitle {
-      top: -25px;
-      position: absolute;
-      color: #212121;
-      font-family: "beautyDream";
+      color: #fff;
+      font-family: "loveloBlack";
       font-size: 45px; }
   .contactContainer .contactFormContainer form {
     display: flex;
@@ -331,7 +336,6 @@ html a {
     font-family: "dosisLight"; }
 
 .frequentQuestionsContainer {
-  background-color: #ede9e3;
   padding: 50px;
   position: relative; }
   .frequentQuestionsContainer .imgBackground {
@@ -359,7 +363,7 @@ html a {
     z-index: 200;
     margin: 10px 0px;
     padding: 10px 30px;
-    background-color: #ede9e3;
+    background-color: #fff;
     border-top: 1px solid #e7d7c9;
     border-bottom: 1px solid #e7d7c9; }
     .frequentQuestionsContainer .answerContainer .answerText {

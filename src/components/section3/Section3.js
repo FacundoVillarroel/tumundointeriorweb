@@ -19,24 +19,28 @@ const Section3 = () => {
           <div className='maidaContainer'></div>
           <div className='professionalDescriptionContainer'>
             <p className='professionalName'>Magdalena Pinedo</p>
+            <h3 className='professionalDescription'>Universidad Católica de Chile</h3>
             <h3 className='professionalDescription'>Psicóloga Clínica</h3>
+            <h3 className='professionalDescription seeMore'>Ver Más</h3>
           </div>
         </div>
         <div className='professionalContainer'>
           <div className='cokeContainer'></div>
           <div className='professionalDescriptionContainer'>
             <p className='professionalName'>Jorge Rosende</p>
+            <h3 className='professionalDescription'>Universidad de Valparaíso, Chile</h3>
             <h3 className='professionalDescription'>Psicólogo Clínico</h3>
+            <h3 className='professionalDescription'>Ver Más</h3>
           </div>
         </div>
+      </div>
+      <div className='videoContainer'>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/KCf56Tb0CP8?start=9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <div className='quoteContainer'>
         <p className='section3SubTitle'>
           <span className='dosisItalic'>“El gran descubrimiento de mi generación es que los seres humanos pueden alterar sus vidas al alterar sus actitudes mentales”</span>(<span className="dosisBold">William James</span>).
         </p>
-      </div>
-      <div className='videoContainer'>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/KCf56Tb0CP8?start=9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
     </div>
   )
