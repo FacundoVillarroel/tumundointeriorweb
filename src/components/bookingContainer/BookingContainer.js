@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import Loading from '../loading/Loading';
-import InputDateTime from '../inputDataTime/InputDataTime';
 
 const BookingContainer = () => {
   const [loading, setLoading] = useState(false);
@@ -10,7 +9,8 @@ const BookingContainer = () => {
     telefono: "",
     email:"",
     mensaje:"",
-    fecha:"",
+    profesional:"",
+    hora:"",
     _captcha: false
   });
   
@@ -22,8 +22,7 @@ const BookingContainer = () => {
   }
 
   const error = (values) => {
-    const requiredFields = ['nombre', 'apellido', 'telefono', 'email', 'fecha'];
-
+    const requiredFields = ['nombre', 'apellido', 'telefono', 'email', 'profesional', 'hora'];
     for (const field of requiredFields) {
       if (!values[field]) {
         alert(`${field} no puede estar vacío`);
@@ -55,7 +54,6 @@ const BookingContainer = () => {
           telefono: "",
           email:"",
           mensaje:"",
-          fecha:"",
           _captcha: false
         })
         setLoading(false)
@@ -72,59 +70,70 @@ const BookingContainer = () => {
     <>
       {loading 
         ? <Loading text="Enviando..." color="#e7d7c9"/>
-        :<div className='bookingContainer'>
-        <div className='bookingTitleContainer' >
-          <h2 className='bookingTitle'>Agenda tu hora</h2>
-        </div>
-        <div className='bookingFormContainer'>
-          <form className='formFlex' action="#">
-            <div className='nameSurnameContainer'>
+        :<div className='sidebarContainer'>
+          <div className='sidebarTitleContainer'>
+            <h2 className='sidebarTitle'>Agenda tu hora</h2>
+          </div>
+          <div className='sidebarFormContainer'>
+            <form className='formFlex' action="#">
+              <div className='nameSurnameContainer'>
+                <input 
+                  type="text" 
+                  name='nombre' 
+                  placeholder='Nombre *' 
+                  value={values.nombre}
+                  onChange={handleInputChange}
+                  required
+                />
+                <input 
+                  type="text" 
+                  name='apellido' 
+                  placeholder='Apellido *' 
+                  value={values.apellido}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
               <input 
-                type="text" 
-                name='nombre' 
-                placeholder='Nombre *' 
-                value={values.nombre}
+                type="tel" 
+                name='telefono' 
+                placeholder='Teléfono *' 
+                value={values.telefono}
                 onChange={handleInputChange}
                 required
-                />
+              />
               <input 
-                type="text" 
-                name='apellido' 
-                placeholder='Apellido *' 
-                value={values.apellido}
+                type="email" 
+                name='email' 
+                placeholder='Email *' 
+                value={values.email}
                 onChange={handleInputChange}
                 required
-                />
-            </div>
-            <input 
-              type="tel" 
-              name='telefono' 
-              placeholder='Teléfono *' 
-              value={values.telefono}
-              onChange={handleInputChange}
-              required/>
-            <input 
-              type="email" 
-              name='email' 
-              placeholder='Email *' 
-              value={values.email}
-              onChange={handleInputChange}
-              required/>
-            <textarea 
-              type="textarea" 
-              name='mensaje' 
-              placeholder='Mensaje (opcional)' 
-              value={values.mensaje}
-              onChange={handleInputChange}
-              required/>
-            <InputDateTime 
-              handleInputChange={handleInputChange}
-            />
-            <button type='submit' className='buttonSubmit' onClick={handleSubmit}>Enviar Petición</button>
-          </form>
-          <p className='bookingDescription'>Se envía una solicitud para la hora que usted elija, recibirá una respuesta en su email o teléfono</p>
+              />
+              <textarea 
+                type="textarea" 
+                name='mensaje' 
+                placeholder='Mensaje (opcional)' 
+                value={values.mensaje}
+                onChange={handleInputChange}
+                required
+              />
+              <select name="profesional" id="profesional" onChange={handleInputChange}>
+                <option value="" selected hidden>Seleccione profesional de preferencia</option>
+                <option value="Pinedo">Magdalena Pinedo</option>
+                <option value="Rosende">Jorge Rosende</option>
+              </select>
+              <select name="hora" id="hora" onChange={handleInputChange}>
+                <option value="" selected hidden>Seleccione preferencia horaria</option>
+                <option value="A.M.">A.M.</option>
+                <option value="P.M.">P.M.</option>
+                <option value="Ambos">Ambos</option>
+              </select>
+              <button type='submit' className='buttonSubmit' onClick={handleSubmit}>Enviar Petición</button>
+            </form>
+            <p className='sidebarDescription'>Se enviará la solicitud, recibirá una respuesta en su email o teléfono</p>
+          </div>
         </div>
-      </div>
       }
     </>
     

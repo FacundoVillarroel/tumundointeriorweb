@@ -296,53 +296,6 @@ html a {
       font-size: 18px;
       color: #fff; }
 
-.contactContainer {
-  display: flex;
-  flex-direction: column; }
-  .contactContainer .contactTitleContainer {
-    position: relative;
-    align-self: center;
-    margin-bottom: 50px;
-    background-color: #e7d7c9; }
-    .contactContainer .contactTitleContainer .contactTitle {
-      color: #fff;
-      font-family: "loveloBlack";
-      font-size: 45px; }
-  .contactContainer .contactFormContainer {
-    padding-left: 10%;
-    padding-right: 10%; }
-    .contactContainer .contactFormContainer form {
-      display: flex;
-      flex-direction: column; }
-      .contactContainer .contactFormContainer form .nameSurnameContainer {
-        display: flex;
-        justify-content: space-between; }
-      .contactContainer .contactFormContainer form input {
-        padding: 5px 10px;
-        margin-bottom: 10px;
-        font-family: "dosisRegular"; }
-      .contactContainer .contactFormContainer form textarea {
-        margin-bottom: 10px;
-        padding: 5px 10px;
-        height: 100px;
-        resize: none;
-        font-family: "dosisRegular"; }
-      .contactContainer .contactFormContainer form .buttonSubmit {
-        border-radius: 10px;
-        padding: 10px 5px;
-        background-color: #d4b2a7;
-        color: #fff;
-        border-color: #a38f85;
-        font-family: "dosisMedium"; }
-        .contactContainer .contactFormContainer form .buttonSubmit:hover {
-          background-color: #e7d7c9;
-          color: #212121; }
-    .contactContainer .contactFormContainer .contactDescription {
-      padding-top: 15px;
-      text-align: center;
-      color: #fff;
-      font-family: "dosisRegular"; }
-
 .frequentQuestionsContainer {
   padding: 50px;
   position: relative; }
@@ -397,10 +350,7 @@ html a {
   height: 100%;
   background-color: #a38f85;
   z-index: 10001;
-  transition: right 0.5s;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+  transition: right 0.5s; }
   .sidebar .closeBtn {
     color: #fff;
     position: absolute;
@@ -408,7 +358,75 @@ html a {
     top: 20px;
     font-family: "LoveloBlack";
     cursor: pointer;
-    font-size: 20px; }
+    font-size: 20px;
+    z-index: 200; }
+  .sidebar .sidebarContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    row-gap: 50px;
+    align-items: center; }
+    .sidebar .sidebarContainer .sidebarTitleContainer {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .sidebar .sidebarContainer .sidebarTitleContainer:before {
+        content: "";
+        background-image: url("../src/images/sidebarTitleBackground.jpg");
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.4; }
+      .sidebar .sidebarContainer .sidebarTitleContainer .sidebarTitle {
+        color: #fff;
+        font-family: "loveloBlack";
+        font-size: 45px;
+        position: relative; }
+    .sidebar .sidebarContainer .sidebarFormContainer {
+      padding-left: 10%;
+      padding-right: 10%; }
+      .sidebar .sidebarContainer .sidebarFormContainer form {
+        display: flex;
+        flex-direction: column; }
+        .sidebar .sidebarContainer .sidebarFormContainer form .nameSurnameContainer {
+          display: flex;
+          justify-content: space-between; }
+        .sidebar .sidebarContainer .sidebarFormContainer form input {
+          padding: 5px 10px;
+          margin-bottom: 10px;
+          font-family: "dosisRegular"; }
+        .sidebar .sidebarContainer .sidebarFormContainer form textarea {
+          margin-bottom: 10px;
+          padding: 5px 10px;
+          height: 100px;
+          resize: none;
+          font-family: "dosisRegular"; }
+        .sidebar .sidebarContainer .sidebarFormContainer form select {
+          padding: 5px 10px;
+          font-family: "dosisRegular";
+          margin-bottom: 10px; }
+        .sidebar .sidebarContainer .sidebarFormContainer form .buttonSubmit {
+          border-radius: 10px;
+          margin-top: 20px;
+          padding: 10px 5px;
+          background-color: #d4b2a7;
+          color: #fff;
+          border-color: #a38f85;
+          font-family: "dosisMedium"; }
+          .sidebar .sidebarContainer .sidebarFormContainer form .buttonSubmit:hover {
+            background-color: #e7d7c9;
+            color: #212121; }
+      .sidebar .sidebarContainer .sidebarFormContainer .sidebarDescription {
+        padding-top: 15px;
+        text-align: center;
+        color: #fff;
+        font-family: "dosisRegular"; }
 
 .sidebar.open {
   right: 0; }
@@ -428,8 +446,8 @@ html a {
   .loadingContainer .brain-icon {
     animation: rotate 1s linear infinite; }
   .loadingContainer .loadingText {
-    font-family: "beautyDream";
-    font-size: 30px; }
+    font-family: "dosisRegular";
+    font-size: 25px; }
 
 @keyframes rotate {
   0% {
@@ -440,55 +458,6 @@ html a {
     animation-timing-function: ease-out; }
   100% {
     transform: rotate(360deg); } }
-
-.bookingContainer {
-  display: flex;
-  flex-direction: column;
-  width: 70%; }
-  .bookingContainer .bookingTitleContainer {
-    position: relative;
-    align-self: center;
-    width: 85%;
-    height: 40px;
-    margin-bottom: 50px;
-    background-color: #e7d7c9; }
-    .bookingContainer .bookingTitleContainer .bookingTitle {
-      top: -25px;
-      position: absolute;
-      color: #fff;
-      font-family: "loveloBlack";
-      font-size: 40px; }
-  .bookingContainer .bookingFormContainer form {
-    display: flex;
-    flex-direction: column; }
-    .bookingContainer .bookingFormContainer form .nameSurnameContainer {
-      display: flex;
-      justify-content: space-between; }
-    .bookingContainer .bookingFormContainer form input {
-      padding: 5px 10px;
-      margin-bottom: 10px;
-      font-family: "dosisRegular"; }
-    .bookingContainer .bookingFormContainer form textarea {
-      margin-bottom: 10px;
-      padding: 5px 10px;
-      height: 100px;
-      resize: none;
-      font-family: "dosisRegular"; }
-    .bookingContainer .bookingFormContainer form .buttonSubmit {
-      border-radius: 10px;
-      padding: 10px 5px;
-      background-color: #d4b2a7;
-      color: #fff;
-      border-color: #a38f85;
-      font-family: "dosisMedium"; }
-      .bookingContainer .bookingFormContainer form .buttonSubmit:hover {
-        background-color: #e7d7c9;
-        color: #212121; }
-  .bookingContainer .bookingFormContainer .bookingDescription {
-    padding-top: 15px;
-    text-align: center;
-    color: #fff;
-    font-family: "dosisRegular"; }
 
 .react-datetime-picker {
   background-color: #fff;

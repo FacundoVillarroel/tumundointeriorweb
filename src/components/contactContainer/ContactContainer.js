@@ -69,11 +69,11 @@ const ContactContainer = () => {
     <>
       {loading 
         ? <Loading text="Enviando..." color="#e7d7c9"/>
-        :<div className='contactContainer'>
-          <div className='contactTitleContainer' >
-            <h2 className='contactTitle'>Contacto</h2>
+        :<div className='sidebarContainer'>
+          <div className='sidebarTitleContainer' >
+            <h2 className='sidebarTitle'>Contacto</h2>
           </div>
-          <div className='contactFormContainer'>
+          <div className='sidebarFormContainer'>
             <form className='formFlex' action="#">
               <div className='nameSurnameContainer'>
                 <input 
@@ -116,7 +116,7 @@ const ContactContainer = () => {
                 required/>
               <button type='submit' className='buttonSubmit' onClick={handleSubmit}>Enviar Consulta</button>
             </form>
-            <p className='contactDescription'>Se enviará un email con su mensaje, luego recibirá una respuesta en su email o teléfono</p>
+            <p className='sidebarDescription'>Se enviará un email con su mensaje, luego recibirá una respuesta en su email o teléfono</p>
           </div>
         </div>
       }
