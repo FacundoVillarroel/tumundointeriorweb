@@ -1,0 +1,92 @@
+.articleTextContainer{
+  margin:75px;
+  position: relative;
+  background-color: $cinereous;
+  display: flex;
+  flex-direction: column;
+  padding:30px 75px;
+  border-radius: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  &:before{
+    border-radius: 20px;
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.3;
+  }
+  h2{
+    text-align: center;
+    font-family: "dosisSemiBold";
+    padding-bottom: 30px;
+    color: $almond;
+  }
+  p{
+    font-size: 18px;
+    padding: 5px 0px;
+    text-align: justify;
+    color: &light;
+    position: relative;
+    color: $light;
+  }
+  .textFoot{
+    color: $light;
+    padding-bottom: 0;
+    text-align: end;
+  }
+}
+.article1{
+  &:before{
+    background-image: url("../src/images/article1Image.JPG");
+  }
+}
+.article2{
+  &:before{
+    background-image: url("../src/images/article2Image.jpg");
+  }
+}
+.article3{
+  &:before{
+    background-image: url("../src/images/article3Image.jpg");
+  }
+}
+.article4{
+  &:before{
+    background-image: url("../src/images/article4Image.jpg");
+  }
+}
+.article5{
+  &:before{
+    background-image: url("../src/images/article5Image.JPG");
+  }
+}
+.article6{
+  &:before{
+    background-image: url("../src/images/article6Image.jpg");
+  }
+}
+.article7{
+  &:before{
+    background-image: url("../src/images/article7Image.JPG");
+  }
+}
+.article8{
+  &:before{
+    background-image: url("../src/images/article8Image.JPG");
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

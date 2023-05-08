@@ -43,6 +43,9 @@
         font-family: "dosisSemiBold";
         position: relative;
         font-size: 28px;
+        &:hover{
+          cursor: pointer;
+        }
       }
     }
     .article1{
@@ -72,7 +75,7 @@
     }
     .article6{
       &:before{
-        background-image: url("../src/images/article6Image.JPG");
+        background-image: url("../src/images/article6Image.jpg");
       }
     }
     .article7{

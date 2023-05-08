@@ -509,6 +509,8 @@ html a {
       font-family: "dosisSemiBold";
       position: relative;
       font-size: 28px; }
+      .blogContainer .blogGrid .articleContainer h2:hover {
+        cursor: pointer; }
   .blogContainer .blogGrid .article1:before {
     background-image: url("../src/images/article1Image.JPG"); }
   .blogContainer .blogGrid .article2:before {
@@ -520,11 +522,80 @@ html a {
   .blogContainer .blogGrid .article5:before {
     background-image: url("../src/images/article5Image.JPG"); }
   .blogContainer .blogGrid .article6:before {
-    background-image: url("../src/images/article6Image.JPG"); }
+    background-image: url("../src/images/article6Image.jpg"); }
   .blogContainer .blogGrid .article7:before {
     background-image: url("../src/images/article7Image.JPG"); }
   .blogContainer .blogGrid .article8:before {
     background-image: url("../src/images/article8Image.JPG"); }
+
+.articleTextContainer {
+  margin: 75px;
+  position: relative;
+  background-color: #a38f85;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 75px;
+  border-radius: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards; }
+  .articleTextContainer:before {
+    border-radius: 20px;
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.3; }
+  .articleTextContainer h2 {
+    text-align: center;
+    font-family: "dosisSemiBold";
+    padding-bottom: 30px;
+    color: #e7d7c9; }
+  .articleTextContainer p {
+    font-size: 18px;
+    padding: 5px 0px;
+    text-align: justify;
+    color: .articleTextContainer p light;
+    position: relative;
+    color: #fff; }
+  .articleTextContainer .textFoot {
+    color: #fff;
+    padding-bottom: 0;
+    text-align: end; }
+
+.article1:before {
+  background-image: url("../src/images/article1Image.JPG"); }
+
+.article2:before {
+  background-image: url("../src/images/article2Image.jpg"); }
+
+.article3:before {
+  background-image: url("../src/images/article3Image.jpg"); }
+
+.article4:before {
+  background-image: url("../src/images/article4Image.jpg"); }
+
+.article5:before {
+  background-image: url("../src/images/article5Image.JPG"); }
+
+.article6:before {
+  background-image: url("../src/images/article6Image.jpg"); }
+
+.article7:before {
+  background-image: url("../src/images/article7Image.JPG"); }
+
+.article8:before {
+  background-image: url("../src/images/article8Image.JPG"); }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(300px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
 .main-content {
   filter: blur(2px); }
