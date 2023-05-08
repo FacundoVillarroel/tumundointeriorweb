@@ -55,7 +55,8 @@
   box-sizing: border-box; }
 
 html p, html h1, html h2, html h3, html h4 {
-  margin: 0; }
+  margin: 0;
+  font-family: "dosisRegular"; }
 
 html a {
   text-decoration: none;
@@ -467,10 +468,10 @@ html a {
     width: fit-content; }
 
 .blogContainer .title {
-  font-family: "loveloBlack";
+  font-family: "beautyDream";
   text-align: center;
   padding-top: 50px;
-  font-size: 30px;
+  font-size: 40px;
   color: #212121; }
 
 .blogContainer .blogGrid {
@@ -482,13 +483,48 @@ html a {
   padding-top: 75px;
   padding-bottom: 75px; }
   .blogContainer .blogGrid .articleContainer {
-    height: 250px;
-    width: 500px;
+    position: relative;
+    height: 275px;
+    width: 550px;
     background-color: #a38f85;
-    opacity: .8; }
-    .blogContainer .blogGrid .articleContainer:hover {
-      cursor: pointer;
-      opacity: 1; }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; }
+    .blogContainer .blogGrid .articleContainer:before {
+      border-radius: 10px;
+      content: "";
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.7; }
+    .blogContainer .blogGrid .articleContainer:hover:before {
+      opacity: 1;
+      cursor: pointer; }
+    .blogContainer .blogGrid .articleContainer h2 {
+      color: #fff;
+      font-family: "dosisSemiBold";
+      position: relative;
+      font-size: 28px; }
+  .blogContainer .blogGrid .article1:before {
+    background-image: url("../src/images/article1Image.JPG"); }
+  .blogContainer .blogGrid .article2:before {
+    background-image: url("../src/images/article2Image.jpg"); }
+  .blogContainer .blogGrid .article3:before {
+    background-image: url("../src/images/article3Image.jpg"); }
+  .blogContainer .blogGrid .article4:before {
+    background-image: url("../src/images/article4Image.jpg"); }
+  .blogContainer .blogGrid .article5:before {
+    background-image: url("../src/images/article5Image.JPG"); }
+  .blogContainer .blogGrid .article6:before {
+    background-image: url("../src/images/article6Image.JPG"); }
+  .blogContainer .blogGrid .article7:before {
+    background-image: url("../src/images/article7Image.JPG"); }
+  .blogContainer .blogGrid .article8:before {
+    background-image: url("../src/images/article8Image.JPG"); }
 
 .main-content {
-  filter: blur(1px); }
+  filter: blur(2px); }
