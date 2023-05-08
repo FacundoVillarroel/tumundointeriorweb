@@ -12,23 +12,24 @@
     }
   }
   .section2DescriptionItemsContainer{
-    display: flex;
-    justify-content: space-evenly;
-    .section2DescriptionContainer{
-      width: 35%;
-      .section2ItemContainer{
-        display: flex;
-        margin-bottom: 20px;
-        align-items: center;
-        .section2Item{
-          font-size: 30px;
-          color: $paleDogwood;
-        }
-        .section2Text{
-          margin-left: 20px;
-          font-family: "dosisRegular";
-          text-align: justify;
-        }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 50px;
+    justify-items: center;
+    padding-top: 25px;
+    .section2ItemContainer{
+      width: 75%;
+      display: flex;
+      align-items:center;
+      .section2Item{
+        font-size: 30px;
+        color: $paleDogwood;
+      }
+      .section2Text{
+        margin-left: 20px;
+        font-family: "dosisRegular";
+        text-align: justify;
       }
     }
   }

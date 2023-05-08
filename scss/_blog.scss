@@ -1,0 +1,28 @@
+.blogContainer{
+  .title{
+    font-family: "loveloBlack";
+    text-align: center;
+    padding-top: 50px;
+    font-size: 30px;
+    color: $dark;
+  }
+  .blogGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 50px;
+    justify-items: center;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    .articleContainer{
+      height: 250px;
+      width: 500px;
+      background-color: $cinereous;
+      opacity: .8;
+      &:hover{
+        cursor: pointer;
+        opacity: 1;
+      }
+    }
+  }
+}

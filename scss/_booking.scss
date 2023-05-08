@@ -12,27 +12,30 @@
     .bookingTitle{
       top: -25px;
       position: absolute;
-      color: $dark;
-      font-family: "beautyDream";
-      font-size: 45px;
+      color: $light;
+      font-family: "loveloBlack";
+      font-size: 40px;
     }
   }
   .bookingFormContainer{
     form{
       display: flex;
       flex-direction: column;
-      .nameSurnameContainer{
+      .nameSurnameContainer{  
         display: flex; 
         justify-content: space-between;
       }
       input{
-        padding: 5px 2px;
+        padding: 5px 10px;
         margin-bottom: 10px;
+        font-family: "dosisRegular";
       }
       textarea{
         margin-bottom: 10px;
+        padding: 5px 10px;
         height: 100px;
         resize: none;
+        font-family: "dosisRegular";
       }
       .buttonSubmit{
         border-radius: 10px;
@@ -40,6 +43,7 @@
         background-color: $paleDogwood;
         color: $light;
         border-color: $cinereous;
+        font-family: "dosisMedium";
         &:hover{
           background-color: $almond;
           color: $dark;
@@ -51,7 +55,7 @@
       padding-top: 15px;
       text-align: center;
       color: $light;
-      font-family: "dosisLight";
+      font-family: "dosisRegular";
     }
   }
 }

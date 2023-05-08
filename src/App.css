@@ -169,21 +169,23 @@ html a {
       font-family: "beautyDream";
       font-size: 40px; }
   .section2Container .section2DescriptionItemsContainer {
-    display: flex;
-    justify-content: space-evenly; }
-    .section2Container .section2DescriptionItemsContainer .section2DescriptionContainer {
-      width: 35%; }
-      .section2Container .section2DescriptionItemsContainer .section2DescriptionContainer .section2ItemContainer {
-        display: flex;
-        margin-bottom: 20px;
-        align-items: center; }
-        .section2Container .section2DescriptionItemsContainer .section2DescriptionContainer .section2ItemContainer .section2Item {
-          font-size: 30px;
-          color: #d4b2a7; }
-        .section2Container .section2DescriptionItemsContainer .section2DescriptionContainer .section2ItemContainer .section2Text {
-          margin-left: 20px;
-          font-family: "dosisRegular";
-          text-align: justify; }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 50px;
+    justify-items: center;
+    padding-top: 25px; }
+    .section2Container .section2DescriptionItemsContainer .section2ItemContainer {
+      width: 75%;
+      display: flex;
+      align-items: center; }
+      .section2Container .section2DescriptionItemsContainer .section2ItemContainer .section2Item {
+        font-size: 30px;
+        color: #d4b2a7; }
+      .section2Container .section2DescriptionItemsContainer .section2ItemContainer .section2Text {
+        margin-left: 20px;
+        font-family: "dosisRegular";
+        text-align: justify; }
 
 .section3Container {
   background-color: #ede9e3;
@@ -194,9 +196,9 @@ html a {
       font-family: "loveloBlack";
       font-size: 22px;
       text-align: center;
-      margin-bottom: 15px; }
+      margin-bottom: 25px; }
     .section3Container .section3TitleContainer .subTitleContainer {
-      padding: 0px 90px; }
+      padding: 0px 70px; }
       .section3Container .section3TitleContainer .subTitleContainer .section3SubTitle {
         font-family: "dosisRegular";
         font-size: 16px;
@@ -233,7 +235,8 @@ html a {
         font-family: "loveloBlack";
         padding: 5px 15px;
         font-size: 19px;
-        color: #fff; }
+        color: #fff;
+        text-align: center; }
       .section3Container .professionalsContainer .professionalDescriptionContainer .professionalDescription {
         font-family: "dosisSemiBold";
         padding-bottom: 10px;
@@ -295,51 +298,57 @@ html a {
 
 .contactContainer {
   display: flex;
-  flex-direction: column;
-  width: 70%; }
+  flex-direction: column; }
   .contactContainer .contactTitleContainer {
     position: relative;
     align-self: center;
-    width: 50%;
-    height: 40px;
     margin-bottom: 50px;
     background-color: #e7d7c9; }
     .contactContainer .contactTitleContainer .contactTitle {
       color: #fff;
       font-family: "loveloBlack";
       font-size: 45px; }
-  .contactContainer .contactFormContainer form {
-    display: flex;
-    flex-direction: column; }
-    .contactContainer .contactFormContainer form .nameSurnameContainer {
+  .contactContainer .contactFormContainer {
+    padding-left: 10%;
+    padding-right: 10%; }
+    .contactContainer .contactFormContainer form {
       display: flex;
-      justify-content: space-between; }
-    .contactContainer .contactFormContainer form input {
-      padding: 5px 2px;
-      margin-bottom: 10px; }
-    .contactContainer .contactFormContainer form textarea {
-      margin-bottom: 10px;
-      height: 100px;
-      resize: none; }
-    .contactContainer .contactFormContainer form .buttonSubmit {
-      border-radius: 10px;
-      padding: 10px 5px;
-      background-color: #d4b2a7;
+      flex-direction: column; }
+      .contactContainer .contactFormContainer form .nameSurnameContainer {
+        display: flex;
+        justify-content: space-between; }
+      .contactContainer .contactFormContainer form input {
+        padding: 5px 10px;
+        margin-bottom: 10px;
+        font-family: "dosisRegular"; }
+      .contactContainer .contactFormContainer form textarea {
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        height: 100px;
+        resize: none;
+        font-family: "dosisRegular"; }
+      .contactContainer .contactFormContainer form .buttonSubmit {
+        border-radius: 10px;
+        padding: 10px 5px;
+        background-color: #d4b2a7;
+        color: #fff;
+        border-color: #a38f85;
+        font-family: "dosisMedium"; }
+        .contactContainer .contactFormContainer form .buttonSubmit:hover {
+          background-color: #e7d7c9;
+          color: #212121; }
+    .contactContainer .contactFormContainer .contactDescription {
+      padding-top: 15px;
+      text-align: center;
       color: #fff;
-      border-color: #a38f85; }
-      .contactContainer .contactFormContainer form .buttonSubmit:hover {
-        background-color: #e7d7c9;
-        color: #212121; }
-  .contactContainer .contactFormContainer .contactDescription {
-    padding-top: 15px;
-    text-align: center;
-    color: #fff;
-    font-family: "dosisLight"; }
+      font-family: "dosisRegular"; }
 
 .frequentQuestionsContainer {
   padding: 50px;
   position: relative; }
   .frequentQuestionsContainer .imgBackground {
+    height: 1090px;
+    max-height: 100%;
     z-index: 1;
     position: absolute;
     top: 0;
@@ -377,7 +386,8 @@ html a {
     padding: 40px 70px 10px; }
     .frequentQuestionsContainer .frequentFootContainer .frequentFootText {
       font-family: "dosisRegular";
-      padding-bottom: 5px; }
+      padding-bottom: 5px;
+      width: 60%; }
 
 .sidebar {
   position: fixed;
@@ -445,9 +455,9 @@ html a {
     .bookingContainer .bookingTitleContainer .bookingTitle {
       top: -25px;
       position: absolute;
-      color: #212121;
-      font-family: "beautyDream";
-      font-size: 45px; }
+      color: #fff;
+      font-family: "loveloBlack";
+      font-size: 40px; }
   .bookingContainer .bookingFormContainer form {
     display: flex;
     flex-direction: column; }
@@ -455,18 +465,22 @@ html a {
       display: flex;
       justify-content: space-between; }
     .bookingContainer .bookingFormContainer form input {
-      padding: 5px 2px;
-      margin-bottom: 10px; }
+      padding: 5px 10px;
+      margin-bottom: 10px;
+      font-family: "dosisRegular"; }
     .bookingContainer .bookingFormContainer form textarea {
       margin-bottom: 10px;
+      padding: 5px 10px;
       height: 100px;
-      resize: none; }
+      resize: none;
+      font-family: "dosisRegular"; }
     .bookingContainer .bookingFormContainer form .buttonSubmit {
       border-radius: 10px;
       padding: 10px 5px;
       background-color: #d4b2a7;
       color: #fff;
-      border-color: #a38f85; }
+      border-color: #a38f85;
+      font-family: "dosisMedium"; }
       .bookingContainer .bookingFormContainer form .buttonSubmit:hover {
         background-color: #e7d7c9;
         color: #212121; }
@@ -474,7 +488,7 @@ html a {
     padding-top: 15px;
     text-align: center;
     color: #fff;
-    font-family: "dosisLight"; }
+    font-family: "dosisRegular"; }
 
 .react-datetime-picker {
   background-color: #fff;
@@ -482,6 +496,30 @@ html a {
   width: 100%; }
   .react-datetime-picker input {
     width: fit-content; }
+
+.blogContainer .title {
+  font-family: "loveloBlack";
+  text-align: center;
+  padding-top: 50px;
+  font-size: 30px;
+  color: #212121; }
+
+.blogContainer .blogGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
+  row-gap: 50px;
+  justify-items: center;
+  padding-top: 75px;
+  padding-bottom: 75px; }
+  .blogContainer .blogGrid .articleContainer {
+    height: 250px;
+    width: 500px;
+    background-color: #a38f85;
+    opacity: .8; }
+    .blogContainer .blogGrid .articleContainer:hover {
+      cursor: pointer;
+      opacity: 1; }
 
 .main-content {
   filter: blur(1px); }

@@ -70,55 +70,55 @@ const ContactContainer = () => {
       {loading 
         ? <Loading text="Enviando..." color="#e7d7c9"/>
         :<div className='contactContainer'>
-        <div className='contactTitleContainer' >
-          <h2 className='contactTitle'>Contacto</h2>
-        </div>
-        <div className='contactFormContainer'>
-          <form className='formFlex' action="#">
-            <div className='nameSurnameContainer'>
+          <div className='contactTitleContainer' >
+            <h2 className='contactTitle'>Contacto</h2>
+          </div>
+          <div className='contactFormContainer'>
+            <form className='formFlex' action="#">
+              <div className='nameSurnameContainer'>
+                <input 
+                  type="text" 
+                  name='nombre' 
+                  placeholder='Nombre *' 
+                  value={values.nombre}
+                  onChange={handleInputChange}
+                  required
+                  />
+                <input 
+                  type="text" 
+                  name='apellido' 
+                  placeholder='Apellido *' 
+                  value={values.apellido}
+                  onChange={handleInputChange}
+                  required
+                  />
+              </div>
               <input 
-                type="text" 
-                name='nombre' 
-                placeholder='Nombre *' 
-                value={values.nombre}
+                type="tel" 
+                name='telefono' 
+                placeholder='Teléfono *' 
+                value={values.telefono}
                 onChange={handleInputChange}
-                required
-                />
+                required/>
               <input 
-                type="text" 
-                name='apellido' 
-                placeholder='Apellido *' 
-                value={values.apellido}
+                type="email" 
+                name='email' 
+                placeholder='Email *' 
+                value={values.email}
                 onChange={handleInputChange}
-                required
-                />
-            </div>
-            <input 
-              type="tel" 
-              name='telefono' 
-              placeholder='Teléfono *' 
-              value={values.telefono}
-              onChange={handleInputChange}
-              required/>
-            <input 
-              type="email" 
-              name='email' 
-              placeholder='Email *' 
-              value={values.email}
-              onChange={handleInputChange}
-              required/>
-            <textarea 
-              type="textarea" 
-              name='mensaje' 
-              placeholder='Mensaje *' 
-              value={values.mensaje}
-              onChange={handleInputChange}
-              required/>
-            <button type='submit' className='buttonSubmit' onClick={handleSubmit}>Enviar Consulta</button>
-          </form>
-          <p className='contactDescription'>Se enviará un email con su mensaje, luego recibirá una respuesta en su email o teléfono</p>
+                required/>
+              <textarea 
+                type="textarea" 
+                name='mensaje' 
+                placeholder='Mensaje *' 
+                value={values.mensaje}
+                onChange={handleInputChange}
+                required/>
+              <button type='submit' className='buttonSubmit' onClick={handleSubmit}>Enviar Consulta</button>
+            </form>
+            <p className='contactDescription'>Se enviará un email con su mensaje, luego recibirá una respuesta en su email o teléfono</p>
+          </div>
         </div>
-      </div>
       }
     </>
     

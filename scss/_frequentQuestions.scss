@@ -2,6 +2,8 @@
   padding: 50px;
   position: relative;
   .imgBackground{
+    height: 1090px;
+    max-height: 100%;
     z-index: 1;
     position: absolute;
     top: 0;
@@ -48,6 +50,7 @@
     .frequentFootText{
       font-family: "dosisRegular";
       padding-bottom: 5px;
+      width: 60%;
     }
   }
 }

@@ -30,7 +30,7 @@ const Section3 = () => {
             <p className='professionalName'>Jorge Rosende</p>
             <h3 className='professionalDescription'>Universidad de Valparaíso, Chile</h3>
             <h3 className='professionalDescription'>Psicólogo Clínico</h3>
-            <h3 className='professionalDescription'>Ver Más</h3>
+            <h3 className='professionalDescription seeMore'>Ver Más</h3>
           </div>
         </div>
       </div>
