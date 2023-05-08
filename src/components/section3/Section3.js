@@ -1,8 +1,25 @@
-import React from 'react';
+import React,{useState} from 'react';
+import videoSection3 from "../../videos/videoSection3.mp4"
+import SeeMore from '../SeeMore/SeeMore';
 
 const Section3 = () => {
+  const [seeMore, setSeeMore] = useState(false)
+
+  const  openSeeMore = () => {
+    setSeeMore(true)
+    const offset = document.getElementsByClassName("seeMore")[0].offsetTop
+    const element = document.getElementById("quienesSomos");
+    const offsetTop = element.offsetTop - offset;
+    window.scrollTo({
+      top: offsetTop,
+      behavior: "smooth"
+    }); 
+  }
+
+  
   return (
     <div className='section3Container' id='quienesSomos'>
+      {seeMore ? <SeeMore closeSeeMore={() => setSeeMore(false)}/> : null}
       <div className='section3TitleContainer'>
         <h2 className='section3Title'>¿Quiénes somos?</h2>
         <div className='subTitleContainer'>
@@ -21,7 +38,7 @@ const Section3 = () => {
             <p className='professionalName'>Magdalena Pinedo</p>
             <h3 className='professionalDescription'>Universidad Católica de Chile</h3>
             <h3 className='professionalDescription'>Psicóloga Clínica</h3>
-            <h3 className='professionalDescription seeMore'>Ver Más</h3>
+            <h3 className='professionalDescription seeMore' onClick={openSeeMore}>Ver Más</h3>
           </div>
         </div>
         <div className='professionalContainer'>
@@ -30,12 +47,15 @@ const Section3 = () => {
             <p className='professionalName'>Jorge Rosende</p>
             <h3 className='professionalDescription'>Universidad de Valparaíso, Chile</h3>
             <h3 className='professionalDescription'>Psicólogo Clínico</h3>
-            <h3 className='professionalDescription seeMore'>Ver Más</h3>
+            <h3 className='professionalDescription seeMore' onClick={openSeeMore}>Ver Más</h3>
           </div>
         </div>
       </div>
       <div className='videoContainer'>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/KCf56Tb0CP8?start=9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <video width="400" height="250" controls style={{borderRadius:"20px"}}>
+          <source src={videoSection3} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div className='quoteContainer'>
         <p className='section3SubTitle'>

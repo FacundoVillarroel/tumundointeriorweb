@@ -119,12 +119,12 @@ const BookingContainer = () => {
                 required
               />
               <select name="profesional" id="profesional" onChange={handleInputChange}>
-                <option value="" selected hidden>Seleccione profesional de preferencia</option>
+                <option value="" hidden>Seleccione profesional de preferencia</option>
                 <option value="Pinedo">Magdalena Pinedo</option>
                 <option value="Rosende">Jorge Rosende</option>
               </select>
               <select name="hora" id="hora" onChange={handleInputChange}>
-                <option value="" selected hidden>Seleccione preferencia horaria</option>
+                <option value="" hidden>Seleccione preferencia horaria</option>
                 <option value="A.M.">A.M.</option>
                 <option value="P.M.">P.M.</option>
                 <option value="Ambos">Ambos</option>

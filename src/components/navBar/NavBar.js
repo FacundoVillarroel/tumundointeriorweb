@@ -4,9 +4,7 @@ const NavBar = ({toggleSidebar, blur}) => {
 
   const scrollToElement = (id, offset) => {
     const element = document.getElementById(id);
-    console.log(offset);
     const offsetTop = element.offsetTop - offset;
-    console.log(offsetTop);
     window.scrollTo({
       top: offsetTop,
       behavior: "smooth"
