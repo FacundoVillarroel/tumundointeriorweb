@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import Loading from '../loading/Loading';
 
 const ContactContainer = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [ values, setValues ] = useState({
     nombre:"",
     apellido:"",
@@ -72,6 +72,7 @@ const ContactContainer = () => {
         :<div className='sidebarContainer'>
           <div className='sidebarTitleContainer' >
             <h2 className='sidebarTitle'>Contacto</h2>
+            <h3 className='sidebarSubTitle'>Tu Mundo Interior</h3>
           </div>
           <div className='sidebarFormContainer'>
             <form className='formFlex' action="#">

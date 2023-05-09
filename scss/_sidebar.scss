@@ -28,6 +28,7 @@
       width: 100%;
       position: relative;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       &:before{    
@@ -44,8 +45,14 @@
       .sidebarTitle{
         color: $light;
         font-family: "loveloBlack";
-        font-size: 45px;
+        font-size: 35px;
         position: relative;
+      }
+      .sidebarSubTitle{
+        position: relative;
+        color: $light;
+        font-family: "dosisRegular";
+        font-size: 20px;
       }
     }
     .sidebarFormContainer{

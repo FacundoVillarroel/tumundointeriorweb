@@ -73,6 +73,7 @@ const BookingContainer = () => {
         :<div className='sidebarContainer'>
           <div className='sidebarTitleContainer'>
             <h2 className='sidebarTitle'>Agenda tu hora</h2>
+            <h3 className='sidebarSubTitle'>Tu Mundo Interior</h3>
           </div>
           <div className='sidebarFormContainer'>
             <form className='formFlex' action="#">
