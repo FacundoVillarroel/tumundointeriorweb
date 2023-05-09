@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import videoSection3 from "../../videos/videoSection3.mp4"
 import SeeMore from '../SeeMore/SeeMore';
+import videoPoster from "../../images/videoPoster.jpg"
 
 const Section3 = () => {
   const [seeMore, setSeeMore] = useState(false)
@@ -52,7 +53,7 @@ const Section3 = () => {
         </div>
       </div>
       <div className='videoContainer'>
-        <video width="400" height="250" controls style={{borderRadius:"20px"}}>
+        <video width="400" height="250" controls style={{borderRadius:"20px"}} poster={videoPoster}>
           <source src={videoSection3} type="video/mp4" />
           Your browser does not support the video tag.
         </video>

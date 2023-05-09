@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import Loading from '../loading/Loading';
 
 const ContactContainer = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [ values, setValues ] = useState({
     nombre:"",
     apellido:"",

@@ -82,65 +82,47 @@ html a {
     background-image: url("../src/images/section1Background.jpg");
     background-size: cover;
     height: 400px;
-    display: flex; }
-    .section1Container .imageTitleContainer .titleContainer {
+    display: flex;
+    /* .titleContainer{
       position: absolute;
       top: 50%;
       right: 10%;
       display: flex;
       flex-direction: column;
-      align-items: center; }
-      .section1Container .imageTitleContainer .titleContainer .section1Title {
+      align-items: center;
+      .section1Title{
         font-family: "dosisRegular";
-        color: #e7d7c9;
-        font-size: 50px; }
-      .section1Container .imageTitleContainer .titleContainer .section1Subtitle {
+        color: $almond;
+        font-size: 50px;
+      }
+      .section1Subtitle{
         font-family: "beautyDream";
         padding-top: 10px;
         font-size: 30px;
-        color: #d4b2a7; }
-      .section1Container .imageTitleContainer .titleContainer .homeTitle {
-        color: #a38f85;
-        text-shadow: 1px -1px 0px black;
+        color: $paleDogwood;
+      }
+      .homeTitle{
+        color: $cinereous;
+        text-shadow: 1px -1px 0px rgba(0,0,0,1);
         font-size: 40px;
         font-family: "loveloBlack";
-        padding-left: 15px; }
-      .section1Container .imageTitleContainer .titleContainer .homeTitleBeauty {
+        padding-left: 15px;
+      }
+      .homeTitleBeauty{
         font-family: "beautyDream";
-        text-shadow: 1px -1px 0px black; }
+        text-shadow: 1px -1px 0px rgba(0,0,0,1);
+      }
+    } */ }
   .section1Container .subtitleContainer {
     display: flex;
-    position: relative;
-    justify-content: space-between;
     padding-top: 50px;
-    padding-bottom: 50px;
-    /* .imageSubtitleShadow{
-      z-index: 50;
-      top:-20px;
-      position: absolute;
-      background-color: $almond;
-      height: 620px;
-      width: 28%;
-      margin-left: 170px;
-      border-radius: 20px;
-    } */ }
+    padding-bottom: 50px; }
     .section1Container .subtitleContainer .imageSubtitleContainer {
-      z-index: 100;
-      top: -100px;
-      position: absolute;
-      background-image: url(../src/images/prueba.jpg);
-      background-size: cover;
-      height: 695px;
-      width: 28%;
-      margin-left: 150px;
-      border-radius: 20px; }
-      .section1Container .subtitleContainer .imageSubtitleContainer .ImageSubtitle {
-        font-family: "beautyDream";
-        font-size: 30px;
-        margin-left: 50px;
-        margin-top: 50px;
-        color: #a38f85;
-        text-shadow: 1px -1px 0px black; }
+      min-height: 100%;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
   .section1Container .homeDescriptionContainer {
     width: 50%;
     padding-right: 120px; }

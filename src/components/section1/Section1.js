@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import image from "../../images/section1Image.png"
 
 const Section1 = () => {
   return (
@@ -6,9 +7,8 @@ const Section1 = () => {
       <div className='imageTitleContainer'>
       </div>
       <div className='subtitleContainer'>
-        <div>
-          <div className='imageSubtitleContainer'></div>
-          <div className='imageSubtitleShadow'></div>
+        <div className='imageSubtitleContainer'>
+          <img src={image} alt="Balance entre el cerebro y el corazon"/>
         </div>
         <div className='homeDescriptionContainer'>
           <h3 className='homeDescriptiontitleDecorative'> Your only limit is your mind...</h3>

@@ -7,7 +7,7 @@
     background-size: cover;
     height: 400px;
     display: flex;
-    .titleContainer{
+    /* .titleContainer{
       position: absolute;
       top: 50%;
       right: 10%;
@@ -36,42 +36,18 @@
         font-family: "beautyDream";
         text-shadow: 1px -1px 0px rgba(0,0,0,1);
       }
-    }
+    } */
   }
   .subtitleContainer{
     display: flex;
-    position: relative;
-    justify-content: space-between;
     padding-top: 50px;
     padding-bottom: 50px;
-    /* .imageSubtitleShadow{
-      z-index: 50;
-      top:-20px;
-      position: absolute;
-      background-color: $almond;
-      height: 620px;
-      width: 28%;
-      margin-left: 170px;
-      border-radius: 20px;
-    } */
     .imageSubtitleContainer{
-      z-index: 100;
-      top:-100px;
-      position: absolute;
-      background-image: url(../src/images/prueba.jpg);
-      background-size: cover;
-      height: 695px;
-      width: 28%;
-      margin-left: 150px;
-      border-radius: 20px;
-      .ImageSubtitle{
-        font-family: "beautyDream";
-        font-size: 30px;
-        margin-left: 50px;
-        margin-top: 50px;
-        color: $cinereous;
-        text-shadow: 1px -1px 0px rgba(0,0,0,1);
-      }
+      min-height: 100%;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
   .homeDescriptionContainer{
