@@ -6,26 +6,36 @@ const FrequentQuestion = ({ question }) => {
     fontStyle: 'italic'
   };
 
-  const italicizeText = (text) => {
+  const formatText = (text) => {
     const targetText = 'tu mundo interior';
-    const regex = new RegExp(targetText, 'gi');
-    return text.replace(regex, `<span style="font-style: italic;">${targetText}</span>`);
+    const parts = text.split(targetText);
+    return parts.map((part, index) => {
+      if (index !== parts.length - 1) {
+        return (
+          <span key={index}>
+            {part}
+            <span style={italicStyle}>{targetText}</span>
+          </span>
+        );
+      }
+      return <span key={index}>{part}</span>;
+    });
   };
 
-  const formattedQuestion = italicizeText(question.question);
-  const formattedAnswer = italicizeText(question.answer);
+  const formattedQuestion = formatText(question.question);
+  const formattedAnswer = formatText(question.answer);
 
   return (
     <Container>
       <Accordion.Item eventKey={question.question} bsPrefix="question">
         <Accordion.Header>
           <div className="questionContainer">
-            <p className='questionText' dangerouslySetInnerHTML={{ __html: formattedQuestion }}></p>
+            <p className='questionText'>{formattedQuestion}</p>
           </div>
         </Accordion.Header>
         <Accordion.Body>
           <div className="answerContainer">
-            <p className='answerText' dangerouslySetInnerHTML={{ __html: formattedAnswer }}></p>
+            <p className='answerText'>{formattedAnswer}</p>
           </div>
         </Accordion.Body>
       </Accordion.Item>
