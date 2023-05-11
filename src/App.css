@@ -96,7 +96,8 @@ html a {
       align-items: center; }
       .section1Container .subtitleContainer .imageSubtitleContainer .mapImage {
         opacity: .8;
-        height: 80%; }
+        height: 80%;
+        border-radius: 20px; }
       .section1Container .subtitleContainer .imageSubtitleContainer .mapQuote {
         font-family: "dosisRegular";
         font-style: italic;
