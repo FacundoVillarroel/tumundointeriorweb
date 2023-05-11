@@ -1,5 +1,5 @@
 import React from 'react';
-import image from "../../images/section1Image.png"
+import image from "../../images/mapImage.jpg"
 
 const Section1 = () => {
   return (
@@ -8,7 +8,8 @@ const Section1 = () => {
       </div>
       <div className='subtitleContainer'>
         <div className='imageSubtitleContainer'>
-          <img src={image} alt="Balance entre el cerebro y el corazon"/>
+          <img src={image} alt="Balance entre el cerebro y el corazon" className='mapImage'/>
+          <p className='mapQuote'>Sé parte de este viaje hacia tu mundo interior</p>
         </div>
         <div className='homeDescriptionContainer'>
           <h3 className='homeDescriptiontitleDecorative'> Your only limit is your mind...</h3>

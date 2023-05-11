@@ -16,8 +16,18 @@
       min-height: 100%;
       width: 50%;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: flex-start;
       align-items: center;
+      .mapImage{
+        opacity: .8;
+        height: 80%;
+      }
+      .mapQuote{
+        font-family: "dosisRegular";
+        font-style: italic;
+        padding-top: 30px;
+      }
     }
   }
   .homeDescriptionContainer{
