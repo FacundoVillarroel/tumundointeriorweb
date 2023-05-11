@@ -53,7 +53,7 @@ const Section3 = () => {
         </div>
       </div>
       <div className='videoContainer'>
-        <video width="400" height="250" controls style={{borderRadius:"20px"}} poster={videoPoster}>
+        <video width="400" height="250" controls poster={videoPoster}>
           <source src={videoSection3} type="video/mp4" />
           Your browser does not support the video tag.
         </video>

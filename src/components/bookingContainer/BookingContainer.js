@@ -128,7 +128,7 @@ const BookingContainer = () => {
                 <option value="" hidden>Seleccione preferencia horaria</option>
                 <option value="A.M.">A.M.</option>
                 <option value="P.M.">P.M.</option>
-                <option value="Ambos">Ambos</option>
+                <option value="Horario Flexible">Horario Flexible</option>
               </select>
               <button type='submit' className='buttonSubmit' onClick={handleSubmit}>Enviar Petición</button>
             </form>

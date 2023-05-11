@@ -2,6 +2,7 @@ import React from 'react';
 import {Accordion, Container} from "react-bootstrap";
 
 const FrequentQuestion = ({question}) => {
+
   return (
     <Container>
             <Accordion.Item eventKey={question.question} bsPrefix="question">

@@ -557,9 +557,9 @@ html a {
   width: 74%;
   background-color: #ede9e3;
   border-radius: 20px;
-  box-shadow: 0px 0px 13px 8px rgba(0, 0, 0, 0.42);
-  -webkit-box-shadow: 0px 0px 13px 8px rgba(0, 0, 0, 0.42);
-  -moz-box-shadow: 0px 0px 13px 8px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 0px 13px 8px rgba(163, 143, 133, 0.35);
+  -webkit-box-shadow: 0px 0px 13px 8px rgba(163, 143, 133, 0.35);
+  -moz-box-shadow: 0px 0px 13px 8px rgba(163, 143, 133, 0.35);
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
   padding: 10px; }
@@ -580,9 +580,9 @@ html a {
     color: #a38f85; }
   .seeMoreContainer h3 {
     text-align: center;
-    font-family: "dosisSemiBold";
+    font-family: "dosisRegular";
     padding: 30px 0px;
-    font-size: 30px;
+    font-size: 24px;
     color: #a38f85; }
   .seeMoreContainer .teamDescriptionContainer {
     display: grid;
