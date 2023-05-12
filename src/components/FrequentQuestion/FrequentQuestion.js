@@ -2,6 +2,7 @@ import React from 'react';
 import { Accordion, Container } from 'react-bootstrap';
 
 const FrequentQuestion = ({ question }) => {
+  
   const italicStyle = {
     fontStyle: 'italic'
   };

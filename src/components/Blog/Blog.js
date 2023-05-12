@@ -57,7 +57,7 @@ const Blog = () => {
         </div>
         <div className='articleContainer article2' onClick={() => handleClick(2)}>
           <h2>
-            ¿QUÉ ES LA PSICOLOGÍA?
+            El síntoma NO soy yo
           </h2>
         </div>
         <div className='articleContainer article3' onClick={() => handleClick(3)}>

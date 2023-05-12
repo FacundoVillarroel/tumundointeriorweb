@@ -517,6 +517,11 @@ html a {
     bottom: 0px;
     left: 0px;
     opacity: 0.3; }
+  .articleTextContainer .parragraph {
+    padding-bottom: 5px; }
+    .articleTextContainer .parragraph p {
+      margin: 0;
+      padding: 0; }
   .articleTextContainer h2 {
     text-align: center;
     font-family: "dosisSemiBold";
