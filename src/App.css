@@ -518,7 +518,7 @@ html a {
     left: 0px;
     opacity: 0.3; }
   .articleTextContainer .parragraph {
-    padding-bottom: 10px; }
+    padding: 10px 0px; }
     .articleTextContainer .parragraph p {
       margin: 0;
       padding: 0; }

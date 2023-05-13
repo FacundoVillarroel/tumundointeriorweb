@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import {BiXCircle, BiBrain} from "react-icons/bi";
+import {BiXCircle} from "react-icons/bi";
+import {RiMedalFill} from "react-icons/ri";
+import {TbHeartHandshake} from "react-icons/tb";
 import {FaGraduationCap} from "react-icons/fa";
 import {RxDot} from "react-icons/rx";
-import {FaMedal} from "react-icons/fa"
 
 const SeeMore = ({closeSeeMore}) => {
   const [isClosed, setIsClosed ] = useState(false)
@@ -31,7 +32,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         <div className='teamDescriptionItemContainer'>
           <div className='teamDescriptionItem'>
-            <BiBrain fontSize={25} color={"a38f85"}/>
+            <TbHeartHandshake fontSize={25} color={"a38f85"}/>
           </div>
           <p className='teamDescriptionText'>
             El equipo del centro de psicoterapia <span className="dosisItalic">Tu Mundo Interior</span> cuenta con <span className='dosisBold'>5 y 15 años de experiencia</span> respectivamente, en atención de pacientes en consulta particular, desde el Modelo de <span className='dosisBold'>psicoterapia cognitivo - posracionalista.</span>
@@ -53,7 +54,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         <div className='teamDescriptionItemContainer'>
           <div className='teamDescriptionItem'>
-            <BiBrain fontSize={25} color={"a38f85"}/>
+            <TbHeartHandshake fontSize={25} color={"a38f85"}/>
           </div>
           <p className='teamDescriptionText'>
             Experiencia <span className='dosisBold'>docente</span> en cátedras en el área de <span className='dosisBold'>formación</span> en <span className='dosisBold'>psicología clínica y psicoterapia</span> en la carrera de psicología en distintas universidades del país, en pregrado y posgrado, así como también formación y <span className='dosisBold'>supervisión clínica</span> a psicólogos que se encuentran titulados.
@@ -67,16 +68,15 @@ const SeeMore = ({closeSeeMore}) => {
             <FaGraduationCap fontSize={25} color={"a38f85"}/>
           </div>
           <p className='teamDescriptionText'>
-            <span className='dosisBold'>Investigaciones científicas</span> y artículos en el área de la psicología clínica y psicoterapia.
+            <span className='dosisBold'>Posgrado</span> de <span className='dosisBold'>magíster</span> en psicología clínica, con mención en psicoterapia <span className='dosisBold'>constructivista</span> y <span className='dosisBold'>construccionista</span> en la Universidad de Valparaíso <span className='dosisBold'>(UV).</span>
           </p>
         </div>
-        
         
         {/* 5 */}
         
         <div className='teamDescriptionItemContainer'>
           <div className='teamDescriptionItem'>
-            <FaMedal fontSize={25} color={"a38f85"}/>
+            <RiMedalFill fontSize={25} color={"a38f85"}/>
           </div>
           <p className='teamDescriptionText'>
             <span className='dosisBold'>Acreditación nacional</span> como <span className='dosisBold'>especialista en psicoterapia</span> por la Comisión Nacional de Psicólogos Clínicos <span className="dosisBold">(CONAPC).</span>
@@ -90,7 +90,7 @@ const SeeMore = ({closeSeeMore}) => {
             <FaGraduationCap fontSize={25} color={"a38f85"}/>
           </div>
           <p className='teamDescriptionText'>
-            <span className='dosisBold'>Posgrado</span> de <span className='dosisBold'>magíster</span> en psicología clínica, con mención en psicoterapia <span className='dosisBold'>constructivista</span> y <span className='dosisBold'>construccionista</span> en la Universidad de Valparaíso <span className='dosisBold'>(UV).</span>
+          <span className='dosisBold'>Postítulo</span> de <span className='dosisBold'>psicología</span> en la Pontificia Universidad Católica de Chile <span className='dosisBold'>(PUC).</span>
           </p>
         </div>
         
@@ -99,7 +99,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         <div className='teamDescriptionItemContainer'>
           <div className='teamDescriptionItem'>
-            <FaMedal fontSize={25} color={"a38f85"}/>
+            <RiMedalFill fontSize={25} color={"a38f85"}/>
           </div>
           <p className='teamDescriptionText'>
             <span className='dosisBold'>Acreditación internacional</span> como <span className='dosisBold'>especialista en psicoterapia</span> por la Federación Latinoamericana de Psicoterapia <span className='dosisBold'>(FLAPSI)</span>, avalado por World Council for Psychotherapy<span className='dosisBold'>(WCP).</span>
@@ -113,7 +113,7 @@ const SeeMore = ({closeSeeMore}) => {
             <FaGraduationCap fontSize={25} color={"a38f85"}/>
           </div>
           <p className='teamDescriptionText'>
-          <span className='dosisBold'>Postítulo</span> de <span className='dosisBold'>psicología</span> en la Pontificia Universidad Católica de Chile <span className='dosisBold'>(PUC).</span>
+            <span className='dosisBold'>Postítulo</span> en <span className='dosisBold'>psicoterapia cognitiva - posracionalista</span> en el Centro de Psicoterapia Posracionalista <span className='dosisBold'>CETEPO (Roma, Italia).</span>
           </p>
         </div>
         
@@ -121,7 +121,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         <div className='teamDescriptionItemContainer'>
           <div className='teamDescriptionItem'>
-            <FaMedal fontSize={25} color={"a38f85"}/>
+            <RiMedalFill fontSize={25} color={"a38f85"}/>
           </div>
           <p className='teamDescriptionText'>
             Membresía <span className='dosisBold'>Colegio de Psicólogos de Chile</span> y <span className='dosisBold'>Sociedad Chilena de Psicología Clínica y Psicoterapia (SCPC).</span>
@@ -135,7 +135,7 @@ const SeeMore = ({closeSeeMore}) => {
             <FaGraduationCap fontSize={25} color={"a38f85"}/>
           </div>
           <p className='teamDescriptionText'>
-            <span className='dosisBold'>Postítulo</span> en <span className='dosisBold'>psicoterapia cognitiva - posracionalista</span> en el Centro de Psicoterapia Posracionalista <span className='dosisBold'>CETEPO (Roma, Italia).</span>
+            <span className='dosisBold'>Diplomado</span> en <span className='dosisBold'>psicoterapia cognitiva - posracionalista</span>, en el Centro de Psicoterapia Posracionalista <span className='dosisBold'>CETEPO (Santiago, Chile).</span>
           </p>
         </div>
 
@@ -144,7 +144,7 @@ const SeeMore = ({closeSeeMore}) => {
 
         <div className='teamDescriptionItemContainer'>
           <div className='teamDescriptionItem'>
-            <FaMedal fontSize={25} color={"a38f85"}/>
+            <RiMedalFill fontSize={25} color={"a38f85"}/>
           </div>
           <p className='teamDescriptionText'>
             <span className='dosisBold'>Exposiciones en seminarios y congresos</span> en temas de psicología clínica y psicoterapia.
@@ -158,18 +158,9 @@ const SeeMore = ({closeSeeMore}) => {
             <FaGraduationCap fontSize={25} color={"a38f85"}/>
           </div>
           <p className='teamDescriptionText'>
-            <span className='dosisBold'>Diplomado</span> en <span className='dosisBold'>psicoterapia cognitiva - posracionalista</span>, en el Centro de Psicoterapia Posracionalista <span className='dosisBold'>CETEPO (Santiago, Chile).</span>
+            <span className='dosisBold'>Investigaciones científicas</span> y artículos en el área de la psicología clínica y psicoterapia.
           </p>
         </div>
-        
-        {/* 13 */}
-        
-        <div className='teamDescriptionItemContainer'>
-          <p className='teamDescriptionText'>
-            
-          </p>
-        </div>
-
         
       </div>
     </div>

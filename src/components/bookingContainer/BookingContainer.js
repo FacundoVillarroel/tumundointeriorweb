@@ -4,13 +4,13 @@ import Loading from '../loading/Loading';
 const BookingContainer = () => {
   const [loading, setLoading] = useState(false);
   const [ values, setValues ] = useState({
-    nombre:"",
-    apellido:"",
-    telefono: "",
-    email:"",
-    mensaje:"",
-    profesional:"",
-    hora:"",
+    Nombre:"",
+    Apellido:"",
+    Telefono: "",
+    Email:"",
+    Mensaje:"",
+    Profesional:"",
+    Hora:"",
     _captcha: false
   });
   
@@ -22,7 +22,7 @@ const BookingContainer = () => {
   }
 
   const error = (values) => {
-    const requiredFields = ['nombre', 'apellido', 'telefono', 'email', 'profesional', 'hora'];
+    const requiredFields = ['Nombre', 'Apellido', 'Telefono', 'Email', 'Profesional', 'Hora'];
     for (const field of requiredFields) {
       if (!values[field]) {
         alert(`${field} no puede estar vacío`);
@@ -49,11 +49,11 @@ const BookingContainer = () => {
       if(data.success === "true"){
         alert("Tu consulta fue enviada correctamente!")
         setValues({
-          nombre:"",
-          apellido:"",
-          telefono: "",
-          email:"",
-          mensaje:"",
+          Nombre:"",
+          Apellido:"",
+          Telefono: "",
+          Email:"",
+          Mensaje:"",
           _captcha: false
         })
         setLoading(false)
@@ -72,7 +72,7 @@ const BookingContainer = () => {
         ? <Loading text="Enviando..." color="#e7d7c9"/>
         :<div className='sidebarContainer'>
           <div className='sidebarTitleContainer'>
-            <h2 className='sidebarTitle'>Agenda tu hora</h2>
+            <h2 className='sidebarTitle'>Agenda tu Hora</h2>
             <h3 className='sidebarSubTitle'>Tu Mundo Interior</h3>
           </div>
           <div className='sidebarFormContainer'>
@@ -80,52 +80,52 @@ const BookingContainer = () => {
               <div className='nameSurnameContainer'>
                 <input 
                   type="text" 
-                  name='nombre' 
+                  name='Nombre' 
                   placeholder='Nombre*' 
-                  value={values.nombre}
+                  value={values.Nombre}
                   onChange={handleInputChange}
                   required
                 />
                 <input 
                   type="text" 
-                  name='apellido' 
+                  name='Apellido' 
                   placeholder='Apellido*' 
-                  value={values.apellido}
+                  value={values.Apellido}
                   onChange={handleInputChange}
                   required
                 />
               </div>
               <input 
                 type="tel" 
-                name='telefono' 
+                name='Telefono' 
                 placeholder='Teléfono*' 
-                value={values.telefono}
+                value={values.Telefono}
                 onChange={handleInputChange}
                 required
               />
               <input 
                 type="email" 
-                name='email' 
+                name='Email' 
                 placeholder='Email*' 
-                value={values.email}
+                value={values.Email}
                 onChange={handleInputChange}
                 required
               />
               <textarea 
                 type="textarea" 
-                name='mensaje' 
+                name='Mensaje' 
                 placeholder='Mensaje (opcional)' 
-                value={values.mensaje}
+                value={values.Mensaje}
                 onChange={handleInputChange}
                 required
               />
-              <select name="profesional" id="profesional" onChange={handleInputChange}>
-                <option value="" hidden>Seleccione profesional de preferencia</option>
+              <select name="Profesional" id="Profesional" onChange={handleInputChange}>
+                <option value="" hidden>Seleccione Profesional de preferencia</option>
                 <option value="Pinedo">Magdalena Pinedo</option>
                 <option value="Rosende">Jorge Rosende</option>
               </select>
-              <select name="hora" id="hora" onChange={handleInputChange}>
-                <option value="" hidden>Seleccione preferencia horaria</option>
+              <select name="Hora" id="Hora" onChange={handleInputChange}>
+                <option value="" hidden>Seleccione preferencia Horaria</option>
                 <option value="A.M.">A.M.</option>
                 <option value="P.M.">P.M.</option>
                 <option value="Horario Flexible">Horario Flexible</option>
