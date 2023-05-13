@@ -98,8 +98,9 @@
     padding-top: 200px;
     display: flex;
     justify-content: center;
-    iframe{
+    video{
       border-radius: 20px;
+      object-fit: fill;
     }
   }
 }

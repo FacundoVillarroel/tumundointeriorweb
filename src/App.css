@@ -232,8 +232,9 @@ html a {
     padding-top: 200px;
     display: flex;
     justify-content: center; }
-    .section3Container .videoContainer iframe {
-      border-radius: 20px; }
+    .section3Container .videoContainer video {
+      border-radius: 20px;
+      object-fit: fill; }
 
 .footerContainer .footerTextContainer {
   position: relative;
