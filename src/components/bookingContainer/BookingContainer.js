@@ -81,7 +81,7 @@ const BookingContainer = () => {
                 <input 
                   type="text" 
                   name='nombre' 
-                  placeholder='Nombre *' 
+                  placeholder='Nombre*' 
                   value={values.nombre}
                   onChange={handleInputChange}
                   required
@@ -89,7 +89,7 @@ const BookingContainer = () => {
                 <input 
                   type="text" 
                   name='apellido' 
-                  placeholder='Apellido *' 
+                  placeholder='Apellido*' 
                   value={values.apellido}
                   onChange={handleInputChange}
                   required
@@ -98,7 +98,7 @@ const BookingContainer = () => {
               <input 
                 type="tel" 
                 name='telefono' 
-                placeholder='Teléfono *' 
+                placeholder='Teléfono*' 
                 value={values.telefono}
                 onChange={handleInputChange}
                 required
@@ -106,7 +106,7 @@ const BookingContainer = () => {
               <input 
                 type="email" 
                 name='email' 
-                placeholder='Email *' 
+                placeholder='Email*' 
                 value={values.email}
                 onChange={handleInputChange}
                 required
@@ -130,9 +130,9 @@ const BookingContainer = () => {
                 <option value="P.M.">P.M.</option>
                 <option value="Horario Flexible">Horario Flexible</option>
               </select>
-              <button type='submit' className='buttonSubmit' onClick={handleSubmit}>Enviar Petición</button>
+              <button type='submit' className='buttonSubmit' onClick={handleSubmit}>Enviar Solicitud</button>
             </form>
-            <p className='sidebarDescription'>Se enviará la solicitud, recibirá una respuesta en su email o teléfono</p>
+            <p className='sidebarDescription'>Recibirá una respuesta en un rango de 24hs hábiles</p>
           </div>
         </div>
       }

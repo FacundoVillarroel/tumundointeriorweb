@@ -57,7 +57,7 @@ const Blog = () => {
         </div>
         <div className='articleContainer article2' onClick={() => handleClick(2)}>
           <h2>
-            El síntoma NO soy yo
+            EL SÍNTOMA <span className='dosisBold'>NO</span> SOY YO
           </h2>
         </div>
         <div className='articleContainer article3' onClick={() => handleClick(3)}>

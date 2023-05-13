@@ -80,7 +80,7 @@ const ContactContainer = () => {
                 <input 
                   type="text" 
                   name='nombre' 
-                  placeholder='Nombre *' 
+                  placeholder='Nombre*' 
                   value={values.nombre}
                   onChange={handleInputChange}
                   required
@@ -88,7 +88,7 @@ const ContactContainer = () => {
                 <input 
                   type="text" 
                   name='apellido' 
-                  placeholder='Apellido *' 
+                  placeholder='Apellido*' 
                   value={values.apellido}
                   onChange={handleInputChange}
                   required
@@ -97,27 +97,27 @@ const ContactContainer = () => {
               <input 
                 type="tel" 
                 name='telefono' 
-                placeholder='Teléfono *' 
+                placeholder='Teléfono*' 
                 value={values.telefono}
                 onChange={handleInputChange}
                 required/>
               <input 
                 type="email" 
                 name='email' 
-                placeholder='Email *' 
+                placeholder='Email*' 
                 value={values.email}
                 onChange={handleInputChange}
                 required/>
               <textarea 
                 type="textarea" 
                 name='mensaje' 
-                placeholder='Mensaje *' 
+                placeholder='Mensaje*' 
                 value={values.mensaje}
                 onChange={handleInputChange}
                 required/>
               <button type='submit' className='buttonSubmit' onClick={handleSubmit}>Enviar Consulta</button>
             </form>
-            <p className='sidebarDescription'>Se enviará un email con su mensaje, luego recibirá una respuesta en su email o teléfono</p>
+            <p className='sidebarDescription'>Recibirá su respuesta a la brevedad</p>
           </div>
         </div>
       }

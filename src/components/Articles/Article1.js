@@ -46,7 +46,7 @@ const Article1 = () => {
         No está de más decir que el proceso en psicoterapia es dinámico, y no siempre se expondrán temas dolorosos a trabajar, habrá momentos en los cuales sea mucho mas agradable una sesión, y habrá otras que serán mas difíciles de llevar, pero les garantizo que nuestro trabajo es exponerlos a sus emociones con la contención necesaria y en los tiempos que su propio sistema personal nos lo permita, con el fin de no generar un proceso iatrogénico (condición mental adversa inducida en un paciente por efectos indeseados o lesivos del tratamiento).
       </p>
       <p className='textFoot' style={{paddingTop:"50px"}}>
-        Le mando un abrazo a todos mis pacientes y lectores, 
+        Un abrazo a todos mis pacientes y lectores,
       </p>
       <p className='textFoot'>
         Magdalena Pinedo, Psicóloga Clínica,

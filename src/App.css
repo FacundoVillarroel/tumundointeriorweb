@@ -101,7 +101,7 @@ html a {
       .section1Container .subtitleContainer .imageSubtitleContainer .mapQuote {
         font-family: "dosisRegular";
         font-style: italic;
-        padding-top: 30px; }
+        padding-top: 5px; }
   .section1Container .homeDescriptionContainer {
     width: 50%;
     padding-right: 120px; }
@@ -475,7 +475,7 @@ html a {
       cursor: pointer; }
     .blogContainer .blogGrid .articleContainer h2 {
       color: #fff;
-      font-family: "dosisSemiBold";
+      font-family: "dosisMedium";
       position: relative;
       font-size: 28px; }
       .blogContainer .blogGrid .articleContainer h2:hover {
@@ -518,7 +518,7 @@ html a {
     left: 0px;
     opacity: 0.3; }
   .articleTextContainer .parragraph {
-    padding-bottom: 5px; }
+    padding-bottom: 10px; }
     .articleTextContainer .parragraph p {
       margin: 0;
       padding: 0; }
@@ -529,7 +529,7 @@ html a {
     color: #e7d7c9; }
   .articleTextContainer p {
     font-size: 18px;
-    padding: 5px 0px;
+    padding: 10px 0px;
     text-align: justify;
     color: .articleTextContainer p light;
     position: relative;

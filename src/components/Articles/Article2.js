@@ -11,7 +11,7 @@ const Article2 = () => {
           Antes de que comiences a leer este apartado, quiero recalcarte que la intención es entregar con una mirada diferente información acerca de cierta sintomatología que suele ser más frecuente al momento de consultar en psicoterapia, y no tiene la intención de ofender a nadie. Si eso llegase a ocurrir, me disculpo de antemano.
         </p>
         <p>
-          Por otra parte, el objetivo final de este escrito es otorgar un mensaje que espero sirva para terminar con los prejuicios que puedan existir acerca de nuestra salud mental y los diversos efectos que pueda llegar a presentar el ser humano.
+          Por otra parte, el objetivo final de este escrito es otorgar un mensaje que espero sirva para terminar con los prejuicios que puedan existir acerca de nuestra salud mental y los diversos efectos que pueda llegar a presentar la mente del ser humano.
         </p>
       </div>
       <p>

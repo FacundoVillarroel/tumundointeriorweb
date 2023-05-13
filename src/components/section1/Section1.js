@@ -9,7 +9,8 @@ const Section1 = () => {
       <div className='subtitleContainer'>
         <div className='imageSubtitleContainer'>
           <img src={image} alt="Balance entre el cerebro y el corazon" className='mapImage'/>
-          <p className='mapQuote'>Sé parte de este viaje hacia tu mundo interior</p>
+          <p style={{fontFamily:"beautyDream", fontSize:30, paddingTop:10}}>Hey!</p>
+          <p className='mapQuote'><span style={{fontFamily:"beautyDream", fontSize:30}}>S</span>é parte de este viaje hacia tu mundo interior</p>
         </div>
         <div className='homeDescriptionContainer'>
           <h3 className='homeDescriptiontitleDecorative'> Your only limit is your mind...</h3>
