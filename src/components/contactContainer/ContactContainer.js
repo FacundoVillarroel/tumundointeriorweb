@@ -117,7 +117,7 @@ const ContactContainer = () => {
                 required/>
               <button type='submit' className='buttonSubmit' onClick={handleSubmit}>Enviar Consulta</button>
             </form>
-            <p className='sidebarDescription'>Recibirá su respuesta a la brevedad</p>
+            <p className='sidebarDescription'>Recibirá una respuesta en un rango de 24hrs hábiles</p>
           </div>
         </div>
       }
