@@ -4,11 +4,11 @@ import Loading from '../loading/Loading';
 const ContactContainer = () => {
   const [loading, setLoading] = useState(false);
   const [ values, setValues ] = useState({
-    nombre:"",
-    apellido:"",
-    telefono: "",
-    email:"",
-    mensaje:"",
+    Nombre:"",
+    Apellido:"",
+    Telefono: "",
+    Email:"",
+    Mensaje:"",
     _captcha: false
   });
 
@@ -20,7 +20,7 @@ const ContactContainer = () => {
   }
 
   const error = (values) => {
-    const requiredFields = ['nombre', 'apellido', 'telefono', 'email', 'mensaje'];
+    const requiredFields = ['Nombre', 'Apellido', 'Telefono', 'Email', 'Mensaje'];
 
     for (const field of requiredFields) {
       if (!values[field]) {
@@ -48,11 +48,11 @@ const ContactContainer = () => {
       if(data.success === "true"){
         alert("Tu consulta fue enviada correctamente!")
         setValues({
-          nombre:"",
-          apellido:"",
-          telefono: "",
-          email:"",
-          mensaje:"",
+          Nombre:"",
+          Apellido:"",
+          Telefono: "",
+          Email:"",
+          Mensaje:"",
           _captcha: false
         })
         setLoading(false)
@@ -79,40 +79,40 @@ const ContactContainer = () => {
               <div className='nameSurnameContainer'>
                 <input 
                   type="text" 
-                  name='nombre' 
+                  name='Nombre' 
                   placeholder='Nombre*' 
-                  value={values.nombre}
+                  value={values.Nombre}
                   onChange={handleInputChange}
                   required
                   />
                 <input 
                   type="text" 
-                  name='apellido' 
+                  name='Apellido' 
                   placeholder='Apellido*' 
-                  value={values.apellido}
+                  value={values.Apellido}
                   onChange={handleInputChange}
                   required
                   />
               </div>
               <input 
                 type="tel" 
-                name='telefono' 
+                name='Telefono' 
                 placeholder='Teléfono*' 
-                value={values.telefono}
+                value={values.Telefono}
                 onChange={handleInputChange}
                 required/>
               <input 
                 type="email" 
-                name='email' 
+                name='Email' 
                 placeholder='Email*' 
-                value={values.email}
+                value={values.Email}
                 onChange={handleInputChange}
                 required/>
               <textarea 
                 type="textarea" 
-                name='mensaje' 
+                name='Mensaje' 
                 placeholder='Mensaje*' 
-                value={values.mensaje}
+                value={values.Mensaje}
                 onChange={handleInputChange}
                 required/>
               <button type='submit' className='buttonSubmit' onClick={handleSubmit}>Enviar Consulta</button>

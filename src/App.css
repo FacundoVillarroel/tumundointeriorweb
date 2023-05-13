@@ -235,7 +235,7 @@ html a {
     .section3Container .videoContainer iframe {
       border-radius: 20px; }
 
-.footerContainer {
+.footerContainer .footerTextContainer {
   position: relative;
   display: flex;
   background-color: #e7d7c9;
@@ -244,20 +244,32 @@ html a {
   justify-content: space-evenly;
   align-items: center;
   z-index: 100; }
-  .footerContainer .footerText {
+  .footerContainer .footerTextContainer .footerText {
     font-family: "dosisRegular";
     font-size: 20px; }
-  .footerContainer .footerButtonContainer {
+  .footerContainer .footerTextContainer .footerButtonContainer {
     padding: 10px 50px;
     border-radius: 5px;
     background-color: #a38f85; }
-    .footerContainer .footerButtonContainer:hover {
+    .footerContainer .footerTextContainer .footerButtonContainer:hover {
       background-color: #d4b2a7;
       cursor: pointer; }
-    .footerContainer .footerButtonContainer .footerButtonText {
+    .footerContainer .footerTextContainer .footerButtonContainer .footerButtonText {
       font-family: "dosisRegular";
       font-size: 18px;
       color: #fff; }
+
+.footerContainer .footerCopyrightContainer {
+  display: flex;
+  color: #212121;
+  background-color: #e7d7c9;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; }
+  .footerContainer .footerCopyrightContainer h4 {
+    padding-left: 5px;
+    font-family: "dosisRegular";
+    font-size: 14px; }
 
 .frequentQuestionsContainer {
   padding: 50px;

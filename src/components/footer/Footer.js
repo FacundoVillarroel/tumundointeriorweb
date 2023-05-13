@@ -1,11 +1,20 @@
 import React from 'react';
+import {MdOutlineCopyright} from "react-icons/md";
 
 const Footer = ({toggleSidebar}) => {
   return (
     <div className='footerContainer'>
-      <h4 className='footerText'>Para mayor información y/o consulta, no dudes en escribirnos.</h4>
-      <div className='footerButtonContainer' onClick={() =>toggleSidebar("contacto")}>
-        <h4 className='footerButtonText'>Enviar un mensaje</h4>
+      <div className='footerTextContainer'>
+        <h4 className='footerText'>Para mayor información y/o consulta, no dudes en contactarnos.</h4>
+        <div className='footerButtonContainer' onClick={() =>toggleSidebar("contacto")}>
+          <h4 className='footerButtonText'>Enviar un mensaje</h4>
+        </div>
+      </div>
+      <div className='footerCopyrightContainer'>
+        <MdOutlineCopyright fontSize={12} />
+        <h4>
+          2023, Chile | Centro de psicoterapia Tu Mundo Interior 
+        </h4>
       </div>
     </div>
   )

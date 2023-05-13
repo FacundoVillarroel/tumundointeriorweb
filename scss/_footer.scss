@@ -1,28 +1,43 @@
 .footerContainer{
-  position: relative;
-  display: flex;
-  background-color: $almond;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  justify-content: space-evenly;
-  align-items: center;
-  z-index: 100;
-  .footerText{
-    font-family: "dosisRegular";
-    font-size: 20px;
-  }
-  .footerButtonContainer{
-    padding: 10px 50px;
-    border-radius: 5px;
-    background-color: $cinereous;
-    &:hover{
-      background-color: $paleDogwood;
-      cursor: pointer;
-    }
-    .footerButtonText{
+  .footerTextContainer{
+    position: relative;
+    display: flex;
+    background-color: $almond;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 100;
+    .footerText{
       font-family: "dosisRegular";
-      font-size: 18px;
-      color: $light;
+      font-size: 20px;
+    }
+    .footerButtonContainer{
+      padding: 10px 50px;
+      border-radius: 5px;
+      background-color: $cinereous;
+      &:hover{
+        background-color: $paleDogwood;
+        cursor: pointer;
+      }
+      .footerButtonText{
+        font-family: "dosisRegular";
+        font-size: 18px;
+        color: $light;
+      }
+    }
+  }
+  .footerCopyrightContainer{
+    display: flex;
+    color: $dark;
+    background-color: $almond;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    h4{
+      padding-left: 5px;
+      font-family: "dosisRegular";
+      font-size: 14px;
     }
   }
 }
