@@ -701,7 +701,7 @@ html a {
         .conventionsContainer .conventionsDescriptionContainer .isapresContainer img:hover {
           transform: scale(1.2); }
 
-.seeMoreClosed {
+.conventionsContainerClosed {
   animation: fadeOut 1s ease-in-out backwards; }
 
 .main-content {

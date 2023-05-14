@@ -1,7 +1,7 @@
 import React from 'react';
 import {MdOutlineCopyright} from "react-icons/md";
 
-const Footer = ({toggleSidebar, toggleConventions}) => {
+const Footer = ({toggleSidebar, openConventions}) => {
   return (
     <div className='footerContainer'>
       <div className='footerTextContainer'>
@@ -11,7 +11,7 @@ const Footer = ({toggleSidebar, toggleConventions}) => {
         </div>
       </div>
       <div className='footerConventionsContainer'>
-        <div className='footerButtonContainer' onClick={() =>toggleConventions()}>
+        <div className='footerButtonContainer' onClick={() =>openConventions()}>
           <h4 className='footerButtonText'>Valores y convenios</h4>
         </div>
       </div>

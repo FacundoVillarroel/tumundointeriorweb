@@ -21,17 +21,20 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [sidebarContent, setSidebarContent] = useState("");
   const [isConventionOpen, setIsConventionOpen] = useState(false);
+  const [conventionClassName, setConventionClassName] = useState("")
 
   const toggleSidebar = (content) => {
     setIsOpen(!isOpen);
     setSidebarContent(content)
   };
 
-  const toggleConventions = () => {
-    setIsConventionOpen(!isConventionOpen)
+  const openConventions = () => {
+    setConventionClassName("")
+    setIsConventionOpen(true)
   }
 
   const closeAnimation = async () => {
+    setConventionClassName("conventionsContainerClosed")
     setTimeout(() => {
       setIsConventionOpen(false);
     }, 1000);
@@ -42,7 +45,7 @@ function App() {
       <div className="App">
         <NavBar toggleSidebar={toggleSidebar} blur={isOpen}/>
         
-        { isConventionOpen ? <ConventionsContainer closeAnimation={closeAnimation}/> : null}
+        { isConventionOpen ? <ConventionsContainer closeAnimation={closeAnimation} className={conventionClassName}/> : null}
         
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar}>
           {sidebarContent === "contacto" ? <ContactContainer/> : <BookingContainer/> }
@@ -55,7 +58,7 @@ function App() {
             <Route path="*" element={ <Navigate to="/"/>}/> 
           </Routes>
         </main>
-        <Footer toggleSidebar={toggleSidebar} toggleConventions={toggleConventions}/>
+        <Footer toggleSidebar={toggleSidebar} openConventions={openConventions}/>
       </div>
     </BrowserRouter>
   );

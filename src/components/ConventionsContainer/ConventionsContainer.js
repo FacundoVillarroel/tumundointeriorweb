@@ -10,10 +10,10 @@ import vidatresImage from "../../images/vidatresImage.png";
 import masvidaImage from "../../images/masvidaImage.png";
 import banmedicaImage from "../../images/banmedicaImage.png";
 
-const ConventionsContainer = ({closeAnimation}) => {
+const ConventionsContainer = ({closeAnimation, className}) => {
 
   return (
-    <div className='conventionsContainer'>
+    <div className={`conventionsContainer , ${className}`}>
       <div className="closeBtn" onClick={closeAnimation}>
         <BiXCircle fontSize={25}/>
       </div>
@@ -26,7 +26,7 @@ const ConventionsContainer = ({closeAnimation}) => {
       <div className='conventionsDescriptionContainer'>
         <div className='itemContainer'>
           <GrMoney fontSize={25} className="icon"/>
-          <p>35.000 CL, pago transferencia bancaria - 45 US más comisión, pago PayPal.</p>
+          <p>35.000 CL, pago por transferencia bancaria - 45 US más comisión, pago a través de PayPal.</p>
         </div>
         <div className='itemContainer'>
           <FaHourglassHalf fontSize={25} color={"a38f85"} />
