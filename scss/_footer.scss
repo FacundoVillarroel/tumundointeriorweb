@@ -12,20 +12,26 @@
       font-family: "dosisRegular";
       font-size: 20px;
     }
-    .footerButtonContainer{
-      padding: 10px 50px;
-      border-radius: 5px;
-      background-color: $cinereous;
-      &:hover{
-        background-color: $paleDogwood;
-        cursor: pointer;
-      }
-      .footerButtonText{
-        font-family: "dosisRegular";
-        font-size: 18px;
-        color: $light;
-      }
+  }
+  .footerButtonContainer{
+    padding: 10px 50px;
+    border-radius: 5px;
+    background-color: $cinereous;
+    &:hover{
+      background-color: $paleDogwood;
+      cursor: pointer;
     }
+    .footerButtonText{
+      font-family: "dosisRegular";
+      font-size: 18px;
+      color: $light;
+    }
+  }
+  .footerConventionsContainer{
+    display: flex;
+    background-color: $almond;
+    justify-content: center;
+    padding-bottom: 40px;
   }
   .footerCopyrightContainer{
     display: flex;

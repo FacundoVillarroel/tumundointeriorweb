@@ -248,17 +248,24 @@ html a {
   .footerContainer .footerTextContainer .footerText {
     font-family: "dosisRegular";
     font-size: 20px; }
-  .footerContainer .footerTextContainer .footerButtonContainer {
-    padding: 10px 50px;
-    border-radius: 5px;
-    background-color: #a38f85; }
-    .footerContainer .footerTextContainer .footerButtonContainer:hover {
-      background-color: #d4b2a7;
-      cursor: pointer; }
-    .footerContainer .footerTextContainer .footerButtonContainer .footerButtonText {
-      font-family: "dosisRegular";
-      font-size: 18px;
-      color: #fff; }
+
+.footerContainer .footerButtonContainer {
+  padding: 10px 50px;
+  border-radius: 5px;
+  background-color: #a38f85; }
+  .footerContainer .footerButtonContainer:hover {
+    background-color: #d4b2a7;
+    cursor: pointer; }
+  .footerContainer .footerButtonContainer .footerButtonText {
+    font-family: "dosisRegular";
+    font-size: 18px;
+    color: #fff; }
+
+.footerContainer .footerConventionsContainer {
+  display: flex;
+  background-color: #e7d7c9;
+  justify-content: center;
+  padding-bottom: 40px; }
 
 .footerContainer .footerCopyrightContainer {
   display: flex;
@@ -341,7 +348,8 @@ html a {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
     row-gap: 50px;
-    align-items: center; }
+    align-items: center;
+    height: 100%; }
     .sidebar .sidebarContainer .sidebarTitleContainer {
       height: 100%;
       width: 100%;
@@ -631,6 +639,64 @@ html a {
       font-family: "dosisRegular";
       font-size: 16px;
       text-align: justify; }
+
+.seeMoreClosed {
+  animation: fadeOut 1s ease-in-out backwards; }
+
+.conventionsContainer {
+  position: fixed;
+  z-index: 5000;
+  top: 180px;
+  left: 12%;
+  width: 76%;
+  background-color: #ede9e3;
+  border-radius: 20px;
+  box-shadow: 0px 0px 13px 8px rgba(163, 143, 133, 0.35);
+  -webkit-box-shadow: 0px 0px 13px 8px rgba(163, 143, 133, 0.35);
+  -moz-box-shadow: 0px 0px 13px 8px rgba(163, 143, 133, 0.35);
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  padding: 10px;
+  padding-bottom: 20px; }
+  .conventionsContainer .closeBtn {
+    color: #a38f85;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-family: "LoveloBlack";
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 200; }
+  .conventionsContainer h2 {
+    text-align: center;
+    font-family: "loveloBlack";
+    padding-top: 30px;
+    font-size: 30px;
+    color: #a38f85; }
+  .conventionsContainer h3 {
+    text-align: center;
+    font-family: "dosisRegular";
+    padding: 25px 0px;
+    font-size: 24px;
+    color: #a38f85; }
+  .conventionsContainer .conventionsDescriptionContainer {
+    padding: 10px 50px; }
+    .conventionsContainer .conventionsDescriptionContainer .itemContainer {
+      display: flex;
+      margin: 0px 20px 40px 20px; }
+      .conventionsContainer .conventionsDescriptionContainer .itemContainer .icon path {
+        stroke: #a38f85; }
+      .conventionsContainer .conventionsDescriptionContainer .itemContainer p {
+        margin-left: 20px;
+        font-family: "dosisRegular";
+        font-size: 18px; }
+    .conventionsContainer .conventionsDescriptionContainer .isapresContainer {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: space-evenly; }
+      .conventionsContainer .conventionsDescriptionContainer .isapresContainer img {
+        max-width: 120px; }
 
 .seeMoreClosed {
   animation: fadeOut 1s ease-in-out backwards; }

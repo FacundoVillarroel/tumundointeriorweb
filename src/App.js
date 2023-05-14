@@ -15,20 +15,29 @@ import React, { useState } from 'react';
 import Sidebar from './components/Sidebar/Sidebar';
 import ContactContainer from './components/contactContainer/ContactContainer';
 import BookingContainer from './components/bookingContainer/BookingContainer'; 
+import ConventionsContainer from "./components/ConventionsContainer/ConventionsContainer";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
-  const [sidebarContent, setSidebarContent] = useState("")
+  const [sidebarContent, setSidebarContent] = useState("");
+  const [isConventionOpen, setIsConventionOpen] = useState(false);
 
   const toggleSidebar = (content) => {
     setIsOpen(!isOpen);
     setSidebarContent(content)
   };
 
+  const toggleConventions = () => {
+    setIsConventionOpen(!isConventionOpen)
+  }
+
   return (
     <BrowserRouter>
       <div className="App">
         <NavBar toggleSidebar={toggleSidebar} blur={isOpen}/>
+        
+        { isConventionOpen ? <ConventionsContainer toggleConventions={toggleConventions}/> : null}
+        
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar}>
           {sidebarContent === "contacto" ? <ContactContainer/> : <BookingContainer/> }
         </Sidebar>
@@ -40,7 +49,7 @@ function App() {
             <Route path="*" element={ <Navigate to="/"/>}/> 
           </Routes>
         </main>
-        <Footer toggleSidebar={toggleSidebar}/>
+        <Footer toggleSidebar={toggleSidebar} toggleConventions={toggleConventions}/>
       </div>
     </BrowserRouter>
   );
