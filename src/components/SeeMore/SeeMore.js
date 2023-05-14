@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {BiXCircle} from "react-icons/bi";
-import {RiMedalFill} from "react-icons/ri";
-import {TbHeartHandshake} from "react-icons/tb";
+import {RiUserHeartLine, RiUserSettingsLine} from "react-icons/ri";
+import {TbAward } from "react-icons/tb";
 import {FaGraduationCap} from "react-icons/fa";
 import {RxDot} from "react-icons/rx";
 
@@ -32,7 +32,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         <div className='teamDescriptionItemContainer'>
           <div className='teamDescriptionItem'>
-            <TbHeartHandshake fontSize={25} color={"a38f85"}/>
+            <RiUserHeartLine fontSize={25} color={"a38f85"}/>
           </div>
           <p className='teamDescriptionText'>
             El equipo del centro de psicoterapia <span className="dosisItalic">Tu Mundo Interior</span> cuenta con <span className='dosisBold'>5 y 15 años de experiencia</span> respectivamente, en atención de pacientes en consulta particular, desde el Modelo de <span className='dosisBold'>psicoterapia cognitivo - posracionalista.</span>
@@ -54,7 +54,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         <div className='teamDescriptionItemContainer'>
           <div className='teamDescriptionItem'>
-            <TbHeartHandshake fontSize={25} color={"a38f85"}/>
+            <RiUserSettingsLine fontSize={25} color={"a38f85"}/>
           </div>
           <p className='teamDescriptionText'>
             Experiencia <span className='dosisBold'>docente</span> en cátedras en el área de <span className='dosisBold'>formación</span> en <span className='dosisBold'>psicología clínica y psicoterapia</span> en la carrera de psicología en distintas universidades del país, en pregrado y posgrado, así como también formación y <span className='dosisBold'>supervisión clínica</span> a psicólogos que se encuentran titulados.
@@ -76,7 +76,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         <div className='teamDescriptionItemContainer'>
           <div className='teamDescriptionItem'>
-            <RiMedalFill fontSize={25} color={"a38f85"}/>
+            <TbAward  fontSize={25} color={"a38f85"}/>
           </div>
           <p className='teamDescriptionText'>
             <span className='dosisBold'>Acreditación nacional</span> como <span className='dosisBold'>especialista en psicoterapia</span> por la Comisión Nacional de Psicólogos Clínicos <span className="dosisBold">(CONAPC).</span>
@@ -99,7 +99,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         <div className='teamDescriptionItemContainer'>
           <div className='teamDescriptionItem'>
-            <RiMedalFill fontSize={25} color={"a38f85"}/>
+            <TbAward  fontSize={25} color={"a38f85"}/>
           </div>
           <p className='teamDescriptionText'>
             <span className='dosisBold'>Acreditación internacional</span> como <span className='dosisBold'>especialista en psicoterapia</span> por la Federación Latinoamericana de Psicoterapia <span className='dosisBold'>(FLAPSI)</span>, avalado por World Council for Psychotherapy<span className='dosisBold'>(WCP).</span>
@@ -121,7 +121,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         <div className='teamDescriptionItemContainer'>
           <div className='teamDescriptionItem'>
-            <RiMedalFill fontSize={25} color={"a38f85"}/>
+            <TbAward fontSize={25} color={"a38f85"}/>
           </div>
           <p className='teamDescriptionText'>
             Membresía <span className='dosisBold'>Colegio de Psicólogos de Chile</span> y <span className='dosisBold'>Sociedad Chilena de Psicología Clínica y Psicoterapia (SCPC).</span>
@@ -144,7 +144,7 @@ const SeeMore = ({closeSeeMore}) => {
 
         <div className='teamDescriptionItemContainer'>
           <div className='teamDescriptionItem'>
-            <RiMedalFill fontSize={25} color={"a38f85"}/>
+            <TbAward fontSize={25} color={"a38f85"}/>
           </div>
           <p className='teamDescriptionText'>
             <span className='dosisBold'>Exposiciones en seminarios y congresos</span> en temas de psicología clínica y psicoterapia.

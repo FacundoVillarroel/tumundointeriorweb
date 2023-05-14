@@ -1,8 +1,7 @@
 import React from 'react';
 import {BiXCircle} from "react-icons/bi";
 import {GrMoney} from "react-icons/gr";
-import {FaHourglassHalf} from "react-icons/fa";
-import {GiHealthNormal} from "react-icons/gi";
+import {FaHourglassHalf , FaHeartbeat} from "react-icons/fa";
 
 import consaludImage from "../../images/consaludImage.png";
 import colmenaImage from "../../images/colmenaImage.png";
@@ -11,11 +10,11 @@ import vidatresImage from "../../images/vidatresImage.png";
 import masvidaImage from "../../images/masvidaImage.png";
 import banmedicaImage from "../../images/banmedicaImage.png";
 
-const ConventionsContainer = ({toggleConventions}) => {
+const ConventionsContainer = ({closeAnimation}) => {
 
   return (
     <div className='conventionsContainer'>
-      <div className="closeBtn" onClick={toggleConventions}>
+      <div className="closeBtn" onClick={closeAnimation}>
         <BiXCircle fontSize={25}/>
       </div>
       <h2>
@@ -31,10 +30,10 @@ const ConventionsContainer = ({toggleConventions}) => {
         </div>
         <div className='itemContainer'>
           <FaHourglassHalf fontSize={25} color={"a38f85"} />
-          <p>Cada sesión dura entre 50 y 60 minutos</p>
+          <p>La duración de cada sesión psicoterapéutica va desde los 50 a 60 minutos</p>
         </div>
         <div className='itemContainer'>
-          <GiHealthNormal fontSize={25} color={"a38f85"} />
+          <FaHeartbeat fontSize={25} color={"a38f85"} />
           <p>Contamos con convenios con todas las Isapres del país y seguros de salud complementarios.</p>
         </div>
         <div className='isapresContainer'>

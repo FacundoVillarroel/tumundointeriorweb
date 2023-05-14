@@ -31,12 +31,18 @@ function App() {
     setIsConventionOpen(!isConventionOpen)
   }
 
+  const closeAnimation = async () => {
+    setTimeout(() => {
+      setIsConventionOpen(false);
+    }, 1000);
+  }
+
   return (
     <BrowserRouter>
       <div className="App">
         <NavBar toggleSidebar={toggleSidebar} blur={isOpen}/>
         
-        { isConventionOpen ? <ConventionsContainer toggleConventions={toggleConventions}/> : null}
+        { isConventionOpen ? <ConventionsContainer closeAnimation={closeAnimation}/> : null}
         
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar}>
           {sidebarContent === "contacto" ? <ContactContainer/> : <BookingContainer/> }

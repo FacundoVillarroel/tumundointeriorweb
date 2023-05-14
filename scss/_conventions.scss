@@ -58,6 +58,10 @@
       justify-content: space-evenly;
       img{
         max-width: 120px;
+        transition: transform .5s;
+        &:hover{
+          transform: scale(1.2);
+        }
       }
     }
   }

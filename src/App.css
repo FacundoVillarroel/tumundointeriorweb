@@ -696,7 +696,10 @@ html a {
       flex-wrap: wrap;
       justify-content: space-evenly; }
       .conventionsContainer .conventionsDescriptionContainer .isapresContainer img {
-        max-width: 120px; }
+        max-width: 120px;
+        transition: transform .5s; }
+        .conventionsContainer .conventionsDescriptionContainer .isapresContainer img:hover {
+          transform: scale(1.2); }
 
 .seeMoreClosed {
   animation: fadeOut 1s ease-in-out backwards; }
