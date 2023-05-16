@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import {BiXCircle} from "react-icons/bi";
 
-const Article3 = () => {
+const Article3 = ({handleClick}) => {
   return (
     <div className='articleTextContainer article3'>
+      <div className="closeBtn" onClick={handleClick}>
+        <BiXCircle fontSize={25}/>
+      </div>
       <h2>
         MIS EXPECTATIVAS EN PSICOTERAPIA
       </h2>

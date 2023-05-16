@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {BiXCircle} from "react-icons/bi";
 import {RiUserHeartLine, RiUserSettingsLine} from "react-icons/ri";
 import {TbAward } from "react-icons/tb";
@@ -6,17 +6,38 @@ import {FaGraduationCap} from "react-icons/fa";
 import {RxDot} from "react-icons/rx";
 
 const SeeMore = ({closeSeeMore}) => {
-  const [isClosed, setIsClosed ] = useState(false)
+  const seeMoreRef = useRef(null);
+  const [isClosed, setIsClosed ] = useState(false);
 
-  const closeAnimation = async () => {
-    setIsClosed(true)
+  const closeAnimation = useCallback(async () => {
+    setIsClosed(true);
     setTimeout(() => {
       closeSeeMore();
     }, 1000);
-  }
+  }, [closeSeeMore]);
+
+  useEffect(() => {
+    const handleClickOutsideSeeMore = (event) => {
+      const button1 = document.querySelector('.openSeeMoreBtn1');
+      const button2 = document.querySelector('.openSeeMoreBtn2');
+      console.log("button 1:",button1,"button2",button2);
+      if  ( seeMoreRef.current && 
+            !seeMoreRef.current.contains(event.target) && 
+            (button1 && !button1.contains(event.target)) &&
+            (button2 && !button2.contains(event.target))
+          ) {
+        // Clicked outside .seeMoreContainer and outside the buttons to open it
+        closeAnimation();
+      }
+    };
+    document.addEventListener('click', handleClickOutsideSeeMore);
+    return () => {
+      document.removeEventListener('click', handleClickOutsideSeeMore);
+    };
+  }, [closeAnimation]);
   
   return (
-    <div className={`seeMoreContainer ${isClosed ? "seeMoreClosed" : ""}`} id='seeMoreContainer'>
+    <div ref={seeMoreRef} className={`seeMoreContainer ${isClosed ? "seeMoreClosed" : ""}`} id='seeMoreContainer'>
       <div className="closeBtn" onClick={closeAnimation}>
         <BiXCircle fontSize={25}/>
       </div>

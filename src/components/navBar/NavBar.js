@@ -16,7 +16,7 @@ const NavBar = ({toggleSidebar, blur}) => {
       <div className='navBarLinksContainer'>
         <a href='/' className='navBarLink linkSeparator'>Inicio</a>
         <a href='/preguntas-frecuentes' className='navBarLink linkSeparator'>Preguntas Frecuentes</a>
-        <div href='/#' className='navBarLink' onClick={() =>toggleSidebar("contacto")}>Contacto</div>
+        <div href='/#' className='navBarLink openContactBtn1' onClick={() =>toggleSidebar("contacto")}>Contacto</div>
       </div>
       <a href='/' className='navBarTitleContainer'>
         <h1 className='navBarTitle'> Tu Mundo Interior</h1>
@@ -25,7 +25,7 @@ const NavBar = ({toggleSidebar, blur}) => {
       <div className='navBarLinksContainer'>
         <a href='/#quienes' onClick={() => scrollToElement("quienesSomos", 80)} className='navBarLink linkSeparator'>Quienes Somos</a>
         <a href='/blog' className='navBarLink linkSeparator'>Blog</a>
-        <div href='/#' className='navBarLink' onClick={() => toggleSidebar("agenda")}>Agenda tu hora</div>
+        <div href='/#' className='navBarLink openBookingBtn' onClick={() => toggleSidebar("agenda")}>Agenda tu hora</div>
       </div>
     </div>
   )

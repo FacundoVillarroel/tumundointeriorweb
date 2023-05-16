@@ -22,21 +22,21 @@ const Blog = () => {
   const renderArticleComponent = () => {
     switch (currentArticle) {
       case 1:
-        return <Article1 />;
+        return <Article1 handleClick={handleClick}/>;
       case 2:
-        return <Article2 />;
+        return <Article2 handleClick={handleClick}/>;
       case 3:
-        return <Article3 />;
+        return <Article3 handleClick={handleClick}/>;
       case 4:
-        return <Article4 />;
+        return <Article4 handleClick={handleClick}/>;
       case 5:
-        return <Article5 />;
+        return <Article5 handleClick={handleClick}/>;
       case 6:
-        return <Article6 />;
+        return <Article6 handleClick={handleClick}/>;
       case 7:
-        return <Article7 />;
+        return <Article7 handleClick={handleClick}/>;
       case 8:
-        return <Article8 />;
+        return <Article8 handleClick={handleClick}/>;
       default:
         return null;
     }

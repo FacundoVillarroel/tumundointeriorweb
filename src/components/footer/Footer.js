@@ -6,13 +6,13 @@ const Footer = ({toggleSidebar, openConventions}) => {
     <div className='footerContainer'>
       <div className='footerTextContainer'>
         <h4 className='footerText'>Para mayor información y/o consulta, no dudes en contactarnos.</h4>
-        <div className='footerButtonContainer' onClick={() =>toggleSidebar("contacto")}>
-          <h4 className='footerButtonText'>Enviar un mensaje</h4>
-        </div>
-      </div>
-      <div className='footerConventionsContainer'>
-        <div className='footerButtonContainer' onClick={() =>openConventions()}>
-          <h4 className='footerButtonText'>Valores y convenios</h4>
+        <div>
+          <div className='footerButtonContainer openContactBtn2' onClick={() =>toggleSidebar("contacto")}>
+            <h4 className='footerButtonText'>Enviar un mensaje</h4>
+          </div>
+          <div className='footerButtonContainer openConventionsBtn' onClick={() =>openConventions()}>
+            <h4 className='footerButtonText'>Valores y convenios</h4>
+          </div>
         </div>
       </div>
       <div className='footerCopyrightContainer'>

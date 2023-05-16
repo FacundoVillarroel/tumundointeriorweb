@@ -240,8 +240,8 @@ html a {
   position: relative;
   display: flex;
   background-color: #e7d7c9;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   justify-content: space-evenly;
   align-items: center;
   z-index: 100; }
@@ -252,7 +252,9 @@ html a {
 .footerContainer .footerButtonContainer {
   padding: 10px 50px;
   border-radius: 5px;
-  background-color: #a38f85; }
+  background-color: #a38f85;
+  margin-top: 10px;
+  margin-bottom: 10px; }
   .footerContainer .footerButtonContainer:hover {
     background-color: #d4b2a7;
     cursor: pointer; }
@@ -260,12 +262,6 @@ html a {
     font-family: "dosisRegular";
     font-size: 18px;
     color: #fff; }
-
-.footerContainer .footerConventionsContainer {
-  display: flex;
-  background-color: #e7d7c9;
-  justify-content: center;
-  padding-bottom: 40px; }
 
 .footerContainer .footerCopyrightContainer {
   display: flex;
@@ -529,6 +525,15 @@ html a {
   border-radius: 20px;
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards; }
+  .articleTextContainer .closeBtn {
+    color: #fff;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-family: "LoveloBlack";
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 200; }
   .articleTextContainer:before {
     border-radius: 20px;
     content: "";
@@ -646,7 +651,7 @@ html a {
 .conventionsContainer {
   position: fixed;
   z-index: 5000;
-  top: 180px;
+  top: 150px;
   left: 12%;
   width: 76%;
   background-color: #ede9e3;

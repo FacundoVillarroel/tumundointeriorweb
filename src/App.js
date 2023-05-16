@@ -1,17 +1,20 @@
+import React, { useState } from 'react';
 // StyleSheet
 import './App.css';
 
 // Fonts
 import './fonts/Beauty-Dream.ttf';
 
+//Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+//Components
 import NavBar from './components/navBar/NavBar';
 import Footer from './components/footer/Footer';
 import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import HomeContainer from './components/homeContainer/HomeContainer';
 import FrecuentQuestionsContainer from './components/FrequentQuestionsContainer/FrequentQuestionsContainer';
 import Blog from "./components/Blog/Blog";
-import React, { useState } from 'react';
 import Sidebar from './components/Sidebar/Sidebar';
 import ContactContainer from './components/contactContainer/ContactContainer';
 import BookingContainer from './components/bookingContainer/BookingContainer'; 
@@ -47,9 +50,12 @@ function App() {
         
         { isConventionOpen ? <ConventionsContainer closeAnimation={closeAnimation} className={conventionClassName}/> : null}
         
-        <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar}>
-          {sidebarContent === "contacto" ? <ContactContainer/> : <BookingContainer/> }
-        </Sidebar>
+        { isOpen ?
+          <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar}>
+            {sidebarContent === "contacto" ? <ContactContainer/> : <BookingContainer/> }
+          </Sidebar> :
+          null
+        }
         <main className={isOpen ? 'main-content' : ''}>
           <Routes>
             <Route path='/' element={<HomeContainer/>}/>

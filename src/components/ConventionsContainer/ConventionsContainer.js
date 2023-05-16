@@ -1,7 +1,9 @@
-import React from 'react';
+import React,{ useEffect, useRef} from 'react';
+
 import {BiXCircle} from "react-icons/bi";
 import {GrMoney} from "react-icons/gr";
 import {FaHourglassHalf , FaHeartbeat} from "react-icons/fa";
+import {BiWorld} from "react-icons/bi";
 
 import consaludImage from "../../images/consaludImage.png";
 import colmenaImage from "../../images/colmenaImage.png";
@@ -11,9 +13,28 @@ import masvidaImage from "../../images/masvidaImage.png";
 import banmedicaImage from "../../images/banmedicaImage.png";
 
 const ConventionsContainer = ({closeAnimation, className}) => {
+  const conventionsRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutsideConventions = (event) => {
+      const button = document.querySelector('.openConventionsBtn');
+      if  ( conventionsRef.current && 
+            !conventionsRef.current.contains(event.target) && 
+            button &&
+            !button.contains(event.target)
+          ) {
+        // Clicked outside .conventionsContainer and outside the button to open it
+        closeAnimation();
+      }
+    };
+    document.addEventListener('click', handleClickOutsideConventions);
+    return () => {
+      document.removeEventListener('click', handleClickOutsideConventions);
+    };
+  }, [closeAnimation]);
 
   return (
-    <div className={`conventionsContainer , ${className}`}>
+    <div ref={conventionsRef} className={`conventionsContainer , ${className}`}>
       <div className="closeBtn" onClick={closeAnimation}>
         <BiXCircle fontSize={25}/>
       </div>
@@ -26,7 +47,11 @@ const ConventionsContainer = ({closeAnimation, className}) => {
       <div className='conventionsDescriptionContainer'>
         <div className='itemContainer'>
           <GrMoney fontSize={25} className="icon"/>
-          <p>35.000 CL, pago por transferencia bancaria - 45 US más comisión, pago a través de PayPal.</p>
+          <p>35.000 CL, pago por transferencia bancaria (pago nacional, Chile).</p>
+        </div>
+        <div className='itemContainer'>
+          <BiWorld fontSize={25} color={"a38f85"}/>
+          <p>45 USD más comisión, pago a través de PayPal (pago internacional).</p>
         </div>
         <div className='itemContainer'>
           <FaHourglassHalf fontSize={25} color={"a38f85"} />
@@ -34,25 +59,25 @@ const ConventionsContainer = ({closeAnimation, className}) => {
         </div>
         <div className='itemContainer'>
           <FaHeartbeat fontSize={25} color={"a38f85"} />
-          <p>Contamos con convenios con todas las Isapres del país y seguros de salud complementarios.</p>
+          <p>Convenios con todas las Isapres del país y seguros de salud complementarios.</p>
         </div>
         <div className='isapresContainer'>
-          <a href='http://www.consalud.cl/'>
+          <a href='http://www.consalud.cl/' target={"_blank"} rel={"noreferrer"}>
             <img src={consaludImage} alt="Consalud Logo"/>
           </a>
-          <a href='http://www.colmena.cl/'>
+          <a href='http://www.colmena.cl/' target={"_blank"} rel={"noreferrer"}>
             <img src={colmenaImage} alt='Colmena Logo'/>
           </a>
-          <a href='https://www.cruzblanca.cl/'>
+          <a href='https://www.cruzblanca.cl/' target={"_blank"} rel={"noreferrer"}>
             <img src={cruzblancaImage} alt='Cruz Blanca Logo'/>
           </a>
-          <a href='http://www.vidatres.cl/'>
+          <a href='http://www.vidatres.cl/' target={"_blank"} rel={"noreferrer"}>
             <img src={vidatresImage} alt='Vida Tres Logo'/>
           </a>
-          <a href='http://www.nuevamasvida.cl/'>
+          <a href='http://www.nuevamasvida.cl/' target={"_blank"} rel={"noreferrer"}>
             <img src={masvidaImage} alt='Más Vida Logo'/>
           </a>
-          <a href='https://www.banmedica.cl/'>
+          <a href='https://www.banmedica.cl/' target={"_blank"} rel={"noreferrer"}>
             <img src={banmedicaImage} alt='Ban Medica Logo'/>
           </a>
         </div>

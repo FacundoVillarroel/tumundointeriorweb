@@ -39,7 +39,7 @@ const Section3 = () => {
             <p className='professionalName'>Magdalena Pinedo</p>
             <h3 className='professionalDescription'>Universidad Católica de Chile</h3>
             <h3 className='professionalDescription'>Psicóloga Clínica</h3>
-            <h3 className='professionalDescription seeMore' onClick={openSeeMore}>Ver Más</h3>
+            <h3 className='professionalDescription seeMore openSeeMoreBtn1' onClick={openSeeMore}>Ver Más</h3>
           </div>
         </div>
         <div className='professionalContainer'>
@@ -48,7 +48,7 @@ const Section3 = () => {
             <p className='professionalName'>Jorge Rosende</p>
             <h3 className='professionalDescription'>Universidad de Valparaíso, Chile</h3>
             <h3 className='professionalDescription'>Psicólogo Clínico</h3>
-            <h3 className='professionalDescription seeMore' onClick={openSeeMore}>Ver Más</h3>
+            <h3 className='professionalDescription seeMore openSeeMoreBtn2' onClick={openSeeMore}>Ver Más</h3>
           </div>
         </div>
       </div>
