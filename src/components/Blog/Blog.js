@@ -9,34 +9,43 @@ import Article7 from '../Articles/Article7';
 import Article8 from '../Articles/Article8';
 
 const Blog = () => {
+  const [currentArticleClassName, setCurrentArticleClassName] = useState("");
   const [currentArticle, setCurrentArticle] = useState(null);
 
   const handleClick = (articleNumber) => {
-    setCurrentArticle(articleNumber);
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    })
+    if(isNaN(articleNumber)){
+      setCurrentArticleClassName("closed");
+      setTimeout(() => {
+        setCurrentArticle(articleNumber);
+      }, 1000);
+    } else {
+      setCurrentArticleClassName("")
+      setCurrentArticle(articleNumber)
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      })
+    }
   };
 
   const renderArticleComponent = () => {
     switch (currentArticle) {
       case 1:
-        return <Article1 handleClick={handleClick}/>;
+        return <Article1 handleClick={handleClick} className={currentArticleClassName}/>;
       case 2:
-        return <Article2 handleClick={handleClick}/>;
+        return <Article2 handleClick={handleClick} className={currentArticleClassName}/>;
       case 3:
-        return <Article3 handleClick={handleClick}/>;
+        return <Article3 handleClick={handleClick} className={currentArticleClassName}/>;
       case 4:
-        return <Article4 handleClick={handleClick}/>;
+        return <Article4 handleClick={handleClick} className={currentArticleClassName}/>;
       case 5:
-        return <Article5 handleClick={handleClick}/>;
+        return <Article5 handleClick={handleClick} className={currentArticleClassName}/>;
       case 6:
-        return <Article6 handleClick={handleClick}/>;
+        return <Article6 handleClick={handleClick} className={currentArticleClassName}/>;
       case 7:
-        return <Article7 handleClick={handleClick}/>;
+        return <Article7 handleClick={handleClick} className={currentArticleClassName}/>;
       case 8:
-        return <Article8 handleClick={handleClick}/>;
+        return <Article8 handleClick={handleClick} className={currentArticleClassName}/>;
       default:
         return null;
     }

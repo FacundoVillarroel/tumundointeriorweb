@@ -52,7 +52,6 @@ function App() {
     }, 600);
   }
 
-  console.log(isSidebarOpen);
   return (
     <BrowserRouter>
       <div className="App">
