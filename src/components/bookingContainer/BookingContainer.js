@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import Loading from '../loading/Loading';
 
-const BookingContainer = () => {
+const BookingContainer = ({toggleSidebar}) => {
   const [loading, setLoading] = useState(false);
   const [ values, setValues ] = useState({
     Nombre:"",
@@ -48,6 +48,7 @@ const BookingContainer = () => {
     .then((data) => {
       if(data.success === "true"){
         alert("Tu consulta fue enviada correctamente!")
+        toggleSidebar()
         setValues({
           Nombre:"",
           Apellido:"",
@@ -130,7 +131,7 @@ const BookingContainer = () => {
                 <option value="P.M.">P.M.</option>
                 <option value="Horario Flexible">Horario Flexible</option>
               </select>
-              <button type='submit' className='buttonSubmit' onClick={handleSubmit}>Enviar Solicitud</button>
+              <button type='submit' className='buttonSubmit buttonSubmitSidebar' onClick={handleSubmit}>Enviar Solicitud</button>
             </form>
             <p className='sidebarDescription'>Recibirá una respuesta en un rango de 24hrs hábiles</p>
           </div>

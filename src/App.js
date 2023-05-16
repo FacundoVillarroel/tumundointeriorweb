@@ -21,14 +21,23 @@ import BookingContainer from './components/bookingContainer/BookingContainer';
 import ConventionsContainer from "./components/ConventionsContainer/ConventionsContainer";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [sidebarClassName, setSidebarClassName] = useState("sidebarClosed")
   const [sidebarContent, setSidebarContent] = useState("");
   const [isConventionOpen, setIsConventionOpen] = useState(false);
   const [conventionClassName, setConventionClassName] = useState("")
 
   const toggleSidebar = (content) => {
-    setIsOpen(!isOpen);
-    setSidebarContent(content)
+    if (isSidebarOpen){
+      setSidebarClassName("sidebarClosed")
+      setTimeout(() => {
+        setIsSidebarOpen(false);
+      }, 480);
+    } else {
+      setSidebarClassName("sidebarOpen")
+      setSidebarContent(content)
+      setIsSidebarOpen(true);
+    }
   };
 
   const openConventions = () => {
@@ -40,23 +49,24 @@ function App() {
     setConventionClassName("conventionsContainerClosed")
     setTimeout(() => {
       setIsConventionOpen(false);
-    }, 1000);
+    }, 600);
   }
 
+  console.log(isSidebarOpen);
   return (
     <BrowserRouter>
       <div className="App">
-        <NavBar toggleSidebar={toggleSidebar} blur={isOpen}/>
+        <NavBar toggleSidebar={toggleSidebar} blur={isSidebarOpen}/>
         
         { isConventionOpen ? <ConventionsContainer closeAnimation={closeAnimation} className={conventionClassName}/> : null}
         
-        { isOpen ?
-          <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar}>
-            {sidebarContent === "contacto" ? <ContactContainer/> : <BookingContainer/> }
-          </Sidebar> :
-          null
+        { isSidebarOpen 
+          ? <Sidebar toggleSidebar={toggleSidebar} className={sidebarClassName}>
+              {sidebarContent === "contacto" ? <ContactContainer toggleSidebar={toggleSidebar}/> : <BookingContainer toggleSidebar={toggleSidebar}/> }
+            </Sidebar> 
+          : null
         }
-        <main className={isOpen ? 'main-content' : ''}>
+        <main className={isSidebarOpen ? 'main-content' : ''}>
           <Routes>
             <Route path='/' element={<HomeContainer/>}/>
             <Route path='/preguntas-frecuentes' element={<FrecuentQuestionsContainer/>} />

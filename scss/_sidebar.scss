@@ -1,12 +1,12 @@
 .sidebar {
   position: fixed;
   top: 0;
-  right: -40%;
+  right: 0;
   width: 38%;
   height: 100%;
   background-color: $cinereous;
   z-index: 10001;
-  transition: right 0.5s;
+  animation: slideInFromRight 0.5s ease-in;
   .closeBtn{
     color: $light;
     position: absolute;
@@ -108,14 +108,6 @@
   }
 }
 
-.sidebar.open {
-  right: 0;
-}
-
-.sidebar-toggle {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  z-index: 10002;
+.sidebarClosed{
+  animation: slideOutToRight .5s ease-out;
 }

@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import Loading from '../loading/Loading';
 
-const ContactContainer = () => {
+const ContactContainer = ({toggleSidebar}) => {
   const [loading, setLoading] = useState(false);
   const [ values, setValues ] = useState({
     Nombre:"",
@@ -47,6 +47,7 @@ const ContactContainer = () => {
     .then((data) => {
       if(data.success === "true"){
         alert("Tu consulta fue enviada correctamente!")
+        toggleSidebar()
         setValues({
           Nombre:"",
           Apellido:"",
@@ -115,7 +116,7 @@ const ContactContainer = () => {
                 value={values.Mensaje}
                 onChange={handleInputChange}
                 required/>
-              <button type='submit' className='buttonSubmit' onClick={handleSubmit}>Enviar Consulta</button>
+              <button type='submit' className='buttonSubmit buttonSubmitSidebar' onClick={handleSubmit}>Enviar Consulta</button>
             </form>
             <p className='sidebarDescription'>Recibirá una respuesta en un rango de 24hrs hábiles</p>
           </div>

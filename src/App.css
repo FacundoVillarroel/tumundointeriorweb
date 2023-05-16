@@ -324,12 +324,12 @@ html a {
 .sidebar {
   position: fixed;
   top: 0;
-  right: -40%;
+  right: 0;
   width: 38%;
   height: 100%;
   background-color: #a38f85;
   z-index: 10001;
-  transition: right 0.5s; }
+  animation: slideInFromRight 0.5s ease-in; }
   .sidebar .closeBtn {
     color: #fff;
     position: absolute;
@@ -415,15 +415,8 @@ html a {
         color: #fff;
         font-family: "dosisRegular"; }
 
-.sidebar.open {
-  right: 0; }
-
-.sidebar-toggle {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  z-index: 10002; }
+.sidebarClosed {
+  animation: slideOutToRight .5s ease-out; }
 
 .loadingContainer {
   display: flex;
@@ -727,3 +720,19 @@ html a {
   100% {
     opacity: 0;
     transform: scale(0.3); } }
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes slideOutToRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1; }
+  100% {
+    transform: translateX(100%);
+    opacity: 0; } }
