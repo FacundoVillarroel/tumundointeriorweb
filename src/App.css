@@ -492,7 +492,7 @@ html a {
       .blogContainer .blogGrid .articleContainer h2:hover {
         cursor: pointer; }
   .blogContainer .blogGrid .article1:before {
-    background-image: url("../src/images/article1Image.JPG"); }
+    background-image: url("../src//images/article1Image.jpg"); }
   .blogContainer .blogGrid .article2:before {
     background-image: url("../src/images/article2Image.jpg"); }
   .blogContainer .blogGrid .article3:before {
@@ -500,13 +500,21 @@ html a {
   .blogContainer .blogGrid .article4:before {
     background-image: url("../src/images/article4Image.jpg"); }
   .blogContainer .blogGrid .article5:before {
-    background-image: url("../src/images/article5Image.JPG"); }
+    background-image: url("../src/images/article5Image.jpg"); }
   .blogContainer .blogGrid .article6:before {
     background-image: url("../src/images/article6Image.jpg"); }
   .blogContainer .blogGrid .article7:before {
-    background-image: url("../src/images/article7Image.JPG"); }
+    background-image: url("../src/images/article7Image.jpg"); }
   .blogContainer .blogGrid .article8:before {
-    background-image: url("../src/images/article8Image.JPG"); }
+    background-image: url("../src/images/article8Image.jpg"); }
+  .blogContainer .blogGrid .article9:before {
+    background-image: url("../src/images/article9Image.jpg"); }
+  .blogContainer .blogGrid .article10:before {
+    background-image: url("../src/images/article10Image.jpg"); }
+  .blogContainer .blogGrid .article11:before {
+    background-image: url("../src/images/article11Image.jpg"); }
+  .blogContainer .blogGrid .article12:before {
+    background-image: url("../src/images/article12Image.jpg"); }
 
 .articleTextContainer {
   margin: 75px;
@@ -560,7 +568,7 @@ html a {
     text-align: end; }
 
 .article1:before {
-  background-image: url("../src/images/article1Image.JPG"); }
+  background-image: url("../src/images/article1Image.jpg"); }
 
 .article2:before {
   background-image: url("../src/images/article2Image.jpg"); }
@@ -572,16 +580,28 @@ html a {
   background-image: url("../src/images/article4Image.jpg"); }
 
 .article5:before {
-  background-image: url("../src/images/article5Image.JPG"); }
+  background-image: url("../src/images/article5Image.jpg"); }
 
 .article6:before {
   background-image: url("../src/images/article6Image.jpg"); }
 
 .article7:before {
-  background-image: url("../src/images/article7Image.JPG"); }
+  background-image: url("../src/images/article7Image.jpg"); }
 
 .article8:before {
-  background-image: url("../src/images/article8Image.JPG"); }
+  background-image: url("../src/images/article8Image.jpg"); }
+
+.article9:before {
+  background-image: url("../src/images/article9Image.jpg"); }
+
+.article10:before {
+  background-image: url("../src/images/article10Image.jpg"); }
+
+.article11:before {
+  background-image: url("../src/images/article11Image.jpg"); }
+
+.article12:before {
+  background-image: url("../src/images/article12Image.jpg"); }
 
 .closed {
   animation: fadeOut 1s ease-in-out forwards; }

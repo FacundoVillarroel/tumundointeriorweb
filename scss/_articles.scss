@@ -58,7 +58,7 @@
 }
 .article1{
   &:before{
-    background-image: url("../src/images/article1Image.JPG");
+    background-image: url("../src/images/article1Image.jpg");
   }
 }
 .article2{
@@ -78,7 +78,7 @@
 }
 .article5{
   &:before{
-    background-image: url("../src/images/article5Image.JPG");
+    background-image: url("../src/images/article5Image.jpg");
   }
 }
 .article6{
@@ -88,12 +88,32 @@
 }
 .article7{
   &:before{
-    background-image: url("../src/images/article7Image.JPG");
+    background-image: url("../src/images/article7Image.jpg");
   }
 }
 .article8{
   &:before{
-    background-image: url("../src/images/article8Image.JPG");
+    background-image: url("../src/images/article8Image.jpg");
+  }
+}
+.article9{
+  &:before{
+    background-image: url("../src/images/article9Image.jpg");
+  }
+}
+.article10{
+  &:before{
+    background-image: url("../src/images/article10Image.jpg");
+  }
+}
+.article11{
+  &:before{
+    background-image: url("../src/images/article11Image.jpg");
+  }
+}
+.article12{
+  &:before{
+    background-image: url("../src/images/article12Image.jpg");
   }
 }
 

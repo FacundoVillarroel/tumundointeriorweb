@@ -7,6 +7,9 @@ import Article5 from '../Articles/Article5';
 import Article6 from '../Articles/Article6';
 import Article7 from '../Articles/Article7';
 import Article8 from '../Articles/Article8';
+import Article9 from '../Articles/Article9';
+import Article10 from '../Articles/Article10';
+import Article11 from '../Articles/Article11';
 
 const Blog = () => {
   const [currentArticleClassName, setCurrentArticleClassName] = useState("");
@@ -46,6 +49,12 @@ const Blog = () => {
         return <Article7 handleClick={handleClick} className={currentArticleClassName}/>;
       case 8:
         return <Article8 handleClick={handleClick} className={currentArticleClassName}/>;
+      case 9:
+        return <Article9 handleClick={handleClick} className={currentArticleClassName}/>;
+      case 10:
+        return <Article10 handleClick={handleClick} className={currentArticleClassName}/>;
+      case 11:
+        return <Article11 handleClick={handleClick} className={currentArticleClassName}/>;
       default:
         return null;
     }
@@ -71,7 +80,7 @@ const Blog = () => {
         </div>
         <div className='articleContainer article3' onClick={() => handleClick(3)}>
           <h2>
-            ANSIEDAD: TERAPIA COGNITIVA AFECTIVA
+            LA IMPORTANCIA DEL APEGO TEMPRANO
           </h2>
         </div>
         <div className='articleContainer article4' onClick={() => handleClick(4)}>
@@ -95,6 +104,26 @@ const Blog = () => {
           </h2>
         </div>
         <div className='articleContainer article8' onClick={() => handleClick(8)}>
+          <h2>
+            RESILIENCIA: SUPERANDO TRAUMAS
+          </h2>
+        </div>
+        <div className='articleContainer article9' onClick={() => handleClick(9)}>
+          <h2>
+            RESILIENCIA: SUPERANDO TRAUMAS
+          </h2>
+        </div>
+        <div className='articleContainer article10' onClick={() => handleClick(10)}>
+          <h2>
+            RESILIENCIA: SUPERANDO TRAUMAS
+          </h2>
+        </div>
+        <div className='articleContainer article11' onClick={() => handleClick(11)}>
+          <h2>
+            RESILIENCIA: SUPERANDO TRAUMAS
+          </h2>
+        </div>
+        <div className='articleContainer article12' onClick={() => handleClick(12)}>
           <h2>
             RESILIENCIA: SUPERANDO TRAUMAS
           </h2>
