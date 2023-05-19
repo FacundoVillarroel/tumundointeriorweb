@@ -3,7 +3,7 @@ import {BiXCircle} from "react-icons/bi";
 
 const Article11 = ({handleClick, className}) => {
   return (
-    <div className={`articleTextContainer article8 ${className}`}>
+    <div className={`articleTextContainer article11 ${className}`}>
       <div className="closeBtn" onClick={handleClick}>
         <BiXCircle fontSize={25}/>
       </div>

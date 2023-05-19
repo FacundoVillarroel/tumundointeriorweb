@@ -10,6 +10,7 @@ import Article8 from '../Articles/Article8';
 import Article9 from '../Articles/Article9';
 import Article10 from '../Articles/Article10';
 import Article11 from '../Articles/Article11';
+import Article12 from '../Articles/Article12';
 
 const Blog = () => {
   const [currentArticleClassName, setCurrentArticleClassName] = useState("");
@@ -55,6 +56,8 @@ const Blog = () => {
         return <Article10 handleClick={handleClick} className={currentArticleClassName}/>;
       case 11:
         return <Article11 handleClick={handleClick} className={currentArticleClassName}/>;
+      case 12:
+        return <Article12 handleClick={handleClick} className={currentArticleClassName}/>;
       default:
         return null;
     }
@@ -85,12 +88,12 @@ const Blog = () => {
         </div>
         <div className='articleContainer article4' onClick={() => handleClick(4)}>
           <h2>
-            CRIANZA Y DESARROLLO EMOCIONAL
+            ¿QUE DICE MI CUERPO?
           </h2>
         </div>
         <div className='articleContainer article5' onClick={() => handleClick(5)}>
           <h2>
-            PSICOLOGÍA POSITIVA PARA BIENESTAR
+            EMOCIONES POSITIVAS
           </h2>
         </div>
         <div className='articleContainer article6' onClick={() => handleClick(6)}>
