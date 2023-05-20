@@ -133,7 +133,7 @@ const BookingContainer = ({toggleSidebar}) => {
               </select>
               <button type='submit' className='buttonSubmit buttonSubmitSidebar' onClick={handleSubmit}>Enviar Solicitud</button>
             </form>
-            <p className='sidebarDescription'>Recibirá una respuesta en un rango de 24hrs hábiles</p>
+            <p className='sidebarDescription'>Recibirá una respuesta en un rango de 24hrs hábiles.</p>
           </div>
         </div>
       }

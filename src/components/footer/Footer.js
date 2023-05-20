@@ -18,7 +18,7 @@ const Footer = ({toggleSidebar, openConventions}) => {
       <div className='footerCopyrightContainer'>
         <MdOutlineCopyright fontSize={12} />
         <h4>
-          2023, Chile | Centro de psicoterapia Tu Mundo Interior 
+          2023, Chile | Centro de psicoterapia Tu Mundo Interior.
         </h4>
       </div>
     </div>

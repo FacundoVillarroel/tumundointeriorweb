@@ -79,7 +79,7 @@ const Article3 = ({handleClick, className}) => {
       </div>
       <div className='parragraph'>
         <p>
-          Para finalizar, es necesario comprender que TODOS presentamos un determinado estilo de apego, dependiendo de la relación afectiva que hayamos experimentado en la infancia con nuestro cuidador. Sin embargo, cuando hablo de <span className='dosisBold'>apego inseguro/</span>, me refiero a la <span className='dosisBold'>rigidez, desorganización</span> y <span className='dosisBold'>psicopatología</span> de ese determinado estilo afectivo.
+          Para finalizar, es necesario comprender que TODOS presentamos un determinado estilo de apego, dependiendo de la relación afectiva que hayamos experimentado en la infancia con nuestro cuidador. Sin embargo, cuando hablo de <span className='dosisBold'>apego inseguro</span>, me refiero a la <span className='dosisBold'>rigidez, desorganización</span> y <span className='dosisBold'>psicopatología</span> de ese determinado estilo afectivo.
         </p>
       </div>
       

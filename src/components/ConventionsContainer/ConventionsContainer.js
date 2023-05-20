@@ -47,19 +47,19 @@ const ConventionsContainer = ({closeAnimation, className}) => {
       <div className='conventionsDescriptionContainer'>
         <div className='itemContainer'>
           <GrMoney fontSize={25} className="icon"/>
-          <p>35.000 CL, pago por transferencia bancaria (pago nacional, Chile).</p>
+          <p>35.000 CL, pago por transferencia bancaria <span className='dosisBold'>(pago nacional, Chile).</span></p>
         </div>
         <div className='itemContainer'>
           <BiWorld fontSize={25} color={"a38f85"}/>
-          <p>45 USD más comisión, pago a través de PayPal (pago internacional).</p>
+          <p>45,00 USD pago a través de PayPal, más comisión <span className='dosisBold'>(pago internacional).</span></p>
         </div>
         <div className='itemContainer'>
           <FaHourglassHalf fontSize={25} color={"a38f85"} />
-          <p>La duración de cada sesión psicoterapéutica va desde los 50 a 60 minutos</p>
+          <p>La duración de cada sesión psicoterapéutica va desde los <span className='dosisBold'>50 a 60 minutos.</span></p>
         </div>
         <div className='itemContainer'>
           <FaHeartbeat fontSize={25} color={"a38f85"} />
-          <p>Convenios con todas las Isapres del país y seguros de salud complementarios.</p>
+          <p><span className='dosisBold'>Convenios</span> con todas las <span className='dosisBold'>Isapres</span> del país y <span className='dosisBold'>seguros de salud</span> complementarios.</p>
         </div>
         <div className='isapresContainer'>
           <a href='http://www.consalud.cl/' target={"_blank"} rel={"noreferrer"}>

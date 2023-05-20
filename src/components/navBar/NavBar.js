@@ -23,7 +23,7 @@ const NavBar = ({toggleSidebar, blur}) => {
         <p className='navBarSubTitle'>Centro de Psicoterapia Online</p>
       </a>
       <div className='navBarLinksContainer'>
-        <a href='/#quienes' onClick={() => scrollToElement("quienesSomos", 80)} className='navBarLink linkSeparator'>Quienes Somos</a>
+        <a href='/#quienes' onClick={() => scrollToElement("quienesSomos", 80)} className='navBarLink linkSeparator'>Quiénes Somos</a>
         <a href='/blog' className='navBarLink linkSeparator'>Blog</a>
         <div href='/#' className='navBarLink openBookingBtn' onClick={() => toggleSidebar("agenda")}>Agenda tu hora</div>
       </div>
