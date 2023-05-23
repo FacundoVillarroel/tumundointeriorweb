@@ -123,7 +123,7 @@ const SeeMore = ({closeSeeMore}) => {
             <TbAward  fontSize={25} color={"a38f85"}/>
           </div>
           <p className='teamDescriptionText'>
-            <span className='dosisBold'>Acreditación internacional</span> como <span className='dosisBold'>especialista en psicoterapia</span> por la Federación Latinoamericana de Psicoterapia <span className='dosisBold'>(FLAPSI)</span>, avalado por World Council for Psychotherapy<span className='dosisBold'> (WCP).</span>
+            <span className='dosisBold'>Acreditación internacional</span> como <span className='dosisBold'>especialista en psicoterapia</span> por la Federación Latinoamericana de Psicoterapia <span className='dosisBold'>(FLAPSI)</span>, avalado por <span lang='en'>World Council for Psychotherapy</span><span className='dosisBold'> (WCP).</span>
           </p>
         </div>
         
