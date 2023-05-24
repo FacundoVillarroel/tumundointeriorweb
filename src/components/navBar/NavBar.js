@@ -1,4 +1,6 @@
 import React from 'react';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 const NavBar = ({toggleSidebar, blur}) => {
 
@@ -12,22 +14,29 @@ const NavBar = ({toggleSidebar, blur}) => {
   }
 
   return (
-    <div className={blur ? 'navBarContainer blur' : "navBarContainer"}>
-      <div className='navBarLinksContainer'>
-        <a href='/' className='navBarLink linkSeparator'>Inicio</a>
-        <a href='/preguntas-frecuentes' className='navBarLink linkSeparator'>Preguntas Frecuentes</a>
-        <div href='/#' className='navBarLink openContactBtn1' onClick={() =>toggleSidebar("contacto")}>Contacto</div>
-      </div>
-      <a href='/' className='navBarTitleContainer'>
-        <h1 className='navBarTitle'> Tu Mundo Interior</h1>
-        <p className='navBarSubTitle'>Centro de Psicoterapia Online</p>
-      </a>
-      <div className='navBarLinksContainer'>
-        <a href='/#quienes' onClick={() => scrollToElement("quienesSomos", 80)} className='navBarLink linkSeparator'>Quiénes Somos</a>
-        <a href='/blog' className='navBarLink linkSeparator'>Blog</a>
-        <div href='/#' className='navBarLink openBookingBtn' onClick={() => toggleSidebar("agenda")}>Agenda tu hora</div>
-      </div>
-    </div>
+    <Navbar expand="lg" fixed='top' bsPrefix ={blur ? "blur navbar" : "navbar"}>
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav>
+          <Nav.Link href="/">Inicio</Nav.Link>
+          <Nav.Link href="/preguntas-frecuentes">Preguntas Frecuentes</Nav.Link>
+          <Nav.Link href="#" onClick={() =>toggleSidebar("contacto")}><div className='openContactBtn1'>Contacto</div></Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+      <Navbar.Brand href="/" >
+        <div className='navBarTitleContainer'>
+          <h1 className='navBarTitle'> Tu Mundo Interior</h1>
+          <p className='navBarSubTitle'>Centro de Psicoterapia Online</p>
+        </div>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav>
+          <Nav.Link href="/#quienes" onClick={() => scrollToElement("quienesSomos", 80)}>Quiénes Somos</Nav.Link>
+          <Nav.Link href="/blog">Blog</Nav.Link>
+          <Nav.Link href="#" onClick={() => toggleSidebar("agenda")}><div className='openBookingBtn'>Agenda tu hora</div></Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   )
 }
 

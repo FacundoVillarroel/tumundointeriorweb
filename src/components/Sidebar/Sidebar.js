@@ -10,7 +10,7 @@ const Sidebar = ({ children, toggleSidebar, className }) => {
       const button1 = document.querySelector('.openContactBtn1');
       const button2 = document.querySelector('.openContactBtn2');
       const button3 = document.querySelector('.openBookingBtn');
-      const button4 = document.querySelector('.buttonSubmitSidebar')
+      const button4 = document.querySelector('.buttonSubmitSidebar');
       if  ( sidebarRef.current && !sidebarRef.current.contains(event.target) && 
             button1 && !button1.contains(event.target) &&
             button2 && !button2.contains(event.target) &&

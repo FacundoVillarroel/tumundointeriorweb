@@ -1,47 +1,54 @@
-.navBarContainer {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+.navBarTitleContainer {
   display: flex;
-  justify-content: space-evenly;
-  background-color: #e7d7c9;
-  z-index: 10000; }
-  .navBarContainer .navBarLinksContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    .navBarContainer .navBarLinksContainer .navBarLink {
-      font-family: "dosisRegular";
-      font-size: 20px;
-      padding-right: 20px;
-      padding-left: 20px;
-      cursor: pointer; }
-      .navBarContainer .navBarLinksContainer .navBarLink:hover {
-        color: #a38f85; }
-    .navBarContainer .navBarLinksContainer .linkSeparator {
-      border-right: 2px solid #212121; }
-  .navBarContainer .navBarTitleContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    .navBarContainer .navBarTitleContainer:hover {
-      color: #212121;
-      animation-name: scale;
-      animation-duration: .5s;
-      animation-fill-mode: forwards; }
-    .navBarContainer .navBarTitleContainer .navBarTitle {
-      margin: 0;
-      font-family: LoveloBlack;
-      font-size: 30px; }
-    .navBarContainer .navBarTitleContainer .navBarSubTitle {
-      margin: 0;
-      font-family: "dosisRegular";
-      font-size: 17px; }
+  flex-direction: column;
+  align-items: center; }
+  .navBarTitleContainer:hover {
+    color: #212121;
+    animation-name: scale;
+    animation-duration: .5s;
+    animation-fill-mode: forwards; }
+  .navBarTitleContainer .navBarTitle {
+    margin: 0;
+    font-family: LoveloBlack;
+    font-size: 30px; }
+  .navBarTitleContainer .navBarSubTitle {
+    margin: 0;
+    font-family: "dosisRegular";
+    font-size: 17px; }
+
+.navbar {
+  background-color: #e7d7c9; }
+
+.navbar-brand {
+  margin: 0 !important;
+  padding: 0 !important; }
 
 .blur {
   filter: blur(1px); }
+
+.nav-link {
+  font-family: "dosisRegular";
+  padding: 0 !important;
+  font-size: 20px !important;
+  color: #212121 !important; }
+  .nav-link:hover {
+    color: #a38f85 !important; }
+
+.nav-link:not(:last-child) {
+  border-right: 2px solid #212121;
+  padding-right: 20px !important;
+  margin-right: 20px; }
+
+.navbar-expand-lg {
+  justify-content: space-evenly; }
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    justify-content: center; } }
+
+.fixed-top {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important; }
 
 @keyframes scale {
   0% {

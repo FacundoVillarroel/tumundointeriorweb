@@ -1,58 +1,70 @@
-.navBarContainer{
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+.navBarTitleContainer{
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  &:hover{
+    color: $dark;
+    animation-name: scale;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+  }
+  .navBarTitle{
+    margin: 0;
+    font-family: LoveloBlack;
+    font-size: 30px;
+  }
+  .navBarSubTitle{
+    margin: 0;
+    font-family: "dosisRegular";
+    font-size: 17px;
+  }
+}
+
+.navbar{
   background-color: $almond;
-  z-index: 10000;
-  .navBarLinksContainer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .navBarLink{
-      font-family: "dosisRegular";
-      font-size: 20px;
-      padding-right: 20px;
-      padding-left: 20px;
-      cursor: pointer;
-      &:hover{
-        color: $cinereous;
-      }
-    }
-    .linkSeparator{
-      border-right: 2px solid $dark;
-    }
-  }
-  .navBarTitleContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    &:hover{
-      color: $dark;
-      animation-name: scale;
-      animation-duration: .5s;
-      animation-fill-mode: forwards;
-    }
-    .navBarTitle{
-      margin: 0;
-      font-family: LoveloBlack;
-      font-size: 30px;
-    }
-    .navBarSubTitle{
-      margin: 0;
-      font-family: "dosisRegular";
-      font-size: 17px;
-    }
-  }
+}
+.navbar-brand{
+  margin:0 !important;
+  padding: 0 !important;
 }
 
 .blur{
   filter: blur(1px);
 }
 
+.linkSeparator{
+}
+
+.nav-link{
+  font-family: "dosisRegular";
+  padding: 0 !important;
+  font-size: 20px !important;
+  color: $dark !important;
+  &:hover{
+    color: $cinereous !important; 
+  }
+}
+.nav-link:not(:last-child) {
+  border-right: 2px solid $dark;
+  padding-right: 20px !important; 
+  margin-right: 20px;
+}
+
+
+.navbar-expand-lg{
+  justify-content: space-evenly;
+}
+
+@media (min-width: 992px){
+  .navbar-expand-lg .navbar-collapse {
+      justify-content: center;
+  }
+}
+
+.fixed-top{
+  padding-top: 30px !important; 
+  padding-bottom: 30px !important;
+}
 
 @keyframes scale {
   0% {
