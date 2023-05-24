@@ -10,7 +10,7 @@
     z-index: 100;
     .footerText{
       font-family: "dosisRegular";
-      font-size: 20px;
+      font-size: 1.25rem;
     }
   }
   .footerButtonContainer{
@@ -25,7 +25,7 @@
     }
     .footerButtonText{
       font-family: "dosisRegular";
-      font-size: 18px;
+      font-size: 1.12rem;
       color: $light;
     }
   }
@@ -39,7 +39,7 @@
     h4{
       padding-left: 5px;
       font-family: "dosisRegular";
-      font-size: 14px;
+      font-size: 0.87rem;
     }
   }
 }

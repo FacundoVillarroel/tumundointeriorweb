@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 20px;
   &:hover{
     color: $dark;
     animation-name: scale;
@@ -11,18 +12,24 @@
   .navBarTitle{
     margin: 0;
     font-family: LoveloBlack;
-    font-size: 30px;
+    font-size: 1.85rem;
   }
   .navBarSubTitle{
     margin: 0;
     font-family: "dosisRegular";
-    font-size: 17px;
+    font-size: 1.05rem;
   }
 }
 
 .navbar{
   background-color: $almond;
 }
+.navbar-nav{
+  justify-content: flex-end;
+  text-align: end;
+  padding-right: 20px;
+}
+
 .navbar-brand{
   margin:0 !important;
   padding: 0 !important;
@@ -38,15 +45,13 @@
 .nav-link{
   font-family: "dosisRegular";
   padding: 0 !important;
-  font-size: 20px !important;
+  font-size: 1.25rem !important;
   color: $dark !important;
   &:hover{
     color: $cinereous !important; 
   }
 }
-.nav-link:not(:last-child) {
-  border-right: 2px solid $dark;
-  padding-right: 20px !important; 
+.navbar-toggler{
   margin-right: 20px;
 }
 
@@ -56,8 +61,19 @@
 }
 
 @media (min-width: 992px){
+  .navbar-nav{
+    padding: 0px;
+  }
   .navbar-expand-lg .navbar-collapse {
       justify-content: center;
+  }
+  .navBarTitleContainer{
+    padding-left: 0px;
+  }
+  .nav-link:not(:last-child) {
+    border-right: 2px solid $dark;
+    padding-right: 20px !important; 
+    margin-right: 20px;
   }
 }
 
