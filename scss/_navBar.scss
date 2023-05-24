@@ -1,85 +1,121 @@
-.navBarTitleContainer{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-left: 20px;
-  &:hover{
-    color: $dark;
-    animation-name: scale;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-  }
-  .navBarTitle{
-    margin: 0;
-    font-family: LoveloBlack;
-    font-size: 1.85rem;
-  }
-  .navBarSubTitle{
-    margin: 0;
-    font-family: "dosisRegular";
-    font-size: 1.05rem;
-  }
-}
-
-.navbar{
+.navBarContainer{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 10px;
   background-color: $almond;
-}
-.navbar-nav{
-  justify-content: flex-end;
-  text-align: end;
-  padding-right: 20px;
-}
-
-.navbar-brand{
-  margin:0 !important;
-  padding: 0 !important;
-}
-
-.blur{
-  filter: blur(1px);
-}
-
-.linkSeparator{
-}
-
-.nav-link{
-  font-family: "dosisRegular";
-  padding: 0 !important;
-  font-size: 1.25rem !important;
-  color: $dark !important;
-  &:hover{
-    color: $cinereous !important; 
+  z-index: 10000;
+  display: grid;
+  grid-template-columns: 4fr .5fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "navBarTitleContainer navBarToggler"
+  "A A"
+  "B B"
+  ;
+  row-gap: 10px;
+  align-items: center;
+  .navBarToggler{
+    grid-area: navBarToggler;
+    cursor: pointer;
+    justify-self: flex-end;
+    padding-right: 20px;
+    .menuIcon{
+      font-size: 1.3rem;
+      color: $dark;
+    }
   }
-}
-.navbar-toggler{
-  margin-right: 20px;
-}
-
-
-.navbar-expand-lg{
-  justify-content: space-evenly;
-}
-
-@media (min-width: 992px){
-  .navbar-nav{
-    padding: 0px;
+  .linksContainer{
+    display: none;
+    a,button{
+      background-color: $almond;
+      border: 0px;
+      color: $dark;
+      &:hover{
+        color: $cinereous;
+      }
+    }
   }
-  .navbar-expand-lg .navbar-collapse {
-      justify-content: center;
+  .linksOpen{
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    align-items: flex-end;
+  }
+  .A{
+    grid-area: A;
+    justify-self: end;
+  }
+  .B{
+    grid-area: B;
+    justify-self: end;
   }
   .navBarTitleContainer{
-    padding-left: 0px;
-  }
-  .nav-link:not(:last-child) {
-    border-right: 2px solid $dark;
-    padding-right: 20px !important; 
-    margin-right: 20px;
+    grid-area: navBarTitleContainer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    &:hover{
+      color: $dark;
+    }
+    .navBarTitle{
+      margin: 0;
+      font-family: LoveloBlack;
+      font-size: 1rem;
+    }
+    .navBarSubTitle{
+      margin: 0;
+      font-family: "dosisRegular";
+      font-size: .8rem;
+    }
   }
 }
 
-.fixed-top{
-  padding-top: 30px !important; 
-  padding-bottom: 30px !important;
+// PC VIEW
+@media only screen and (min-width: 1024px) {
+
+  .navBarContainer{
+    grid-template-areas: 
+    "A navBarTitleContainer B";
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    justify-items: center;
+    padding: 30px 20px;
+    .navBarToggler{
+      display: none;
+    }
+    .linksContainer{
+      display: flex;
+      align-items: flex-end;
+      justify-self: center;
+      justify-content: center;
+      a, button{
+        font-size: 1.2rem;
+        &:not(:last-child) {
+          padding-right: 10px ; 
+          border-right: 2px solid $dark;
+          margin-right: 10px;
+        }
+      }
+    }
+    .navBarTitleContainer{
+      display: flex;
+      &:hover{
+        animation-name: scale;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+      }
+      align-items: center;
+      padding: 0px;
+      .navBarTitle{
+        font-size: 1.54rem;
+      }
+      .navBarSubTitle{
+        font-size: 1rem;
+      }
+    }
+  }
 }
 
 @keyframes scale {
@@ -89,4 +125,8 @@
   100% {
     transform: scale(1.1);
   }
+}
+
+.blur{
+  filter: blur(1px);
 }

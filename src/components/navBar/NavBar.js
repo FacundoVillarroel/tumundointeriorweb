@@ -1,8 +1,8 @@
-import React from 'react';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import React, { useState } from 'react';
+import {FiMenu} from "react-icons/fi";
 
 const NavBar = ({toggleSidebar, blur}) => {
+  const [navbarOpen, setNavbarOpen] = useState(false)
 
   const scrollToElement = (id, offset) => {
     const element = document.getElementById(id);
@@ -13,30 +13,28 @@ const NavBar = ({toggleSidebar, blur}) => {
     }); 
   }
 
+  const navbarToggle = () => {
+    setNavbarOpen(!navbarOpen)
+  }
+
   return (
-    <Navbar expand="lg" fixed='top' bsPrefix ={blur ? "blur navbar" : "navbar"}>
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav>
-          <Nav.Link href="/">Inicio</Nav.Link>
-          <Nav.Link href="/preguntas-frecuentes">Preguntas Frecuentes</Nav.Link>
-          <Nav.Link href="#" onClick={() =>toggleSidebar("contacto")}><div className='openContactBtn1'>Contacto</div></Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-      <Navbar.Brand href="/" >
-        <div className='navBarTitleContainer'>
-          <h1 className='navBarTitle'> Tu Mundo Interior</h1>
-          <p className='navBarSubTitle'>Centro de Psicoterapia Online</p>
-        </div>
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav>
-          <Nav.Link href="/#quienes" onClick={() => scrollToElement("quienesSomos", 80)}>Quiénes Somos</Nav.Link>
-          <Nav.Link href="/blog">Blog</Nav.Link>
-          <Nav.Link href="#" onClick={() => toggleSidebar("agenda")}><div className='openBookingBtn'>Agenda tu hora</div></Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+    <div className={`navBarContainer ${blur ? "blur" : null}`}>
+      <div className={`linksContainer ${navbarOpen ? "linksOpen" : null} A`}>
+        <a href="/">Inicio</a>
+        <a href="/preguntas-frecuentes">Preguntas Frecuentes</a>
+        <button onClick={() =>toggleSidebar("contacto")} className="openContactBtn1">Contacto</button>
+      </div>
+      <a href="/" className='navBarTitleContainer'>
+        <h1 className='navBarTitle'> Tu Mundo Interior</h1>
+        <p className='navBarSubTitle'>Centro de Psicoterapia Online</p>
+      </a>
+      <div className={`linksContainer ${navbarOpen ? "linksOpen" : null} B`}>
+        <a href="/#quienes" onClick={() => scrollToElement("quienesSomos", 80)}>Quiénes Somos</a>
+        <a href="/blog">Blog</a>
+        <button onClick={() => toggleSidebar("agenda")} className="openBookingBtn">Agenda tu hora</button>
+      </div>
+      <div className='navBarToggler' onClick={navbarToggle}><FiMenu className='menuIcon'/></div>
+    </div>
   )
 }
 

@@ -1,72 +1,101 @@
-.navBarTitleContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-left: 20px; }
-  .navBarTitleContainer:hover {
-    color: #212121;
-    animation-name: scale;
-    animation-duration: .5s;
-    animation-fill-mode: forwards; }
-  .navBarTitleContainer .navBarTitle {
-    margin: 0;
-    font-family: LoveloBlack;
-    font-size: 1.85rem; }
-  .navBarTitleContainer .navBarSubTitle {
-    margin: 0;
-    font-family: "dosisRegular";
-    font-size: 1.05rem; }
+.navBarContainer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  background-color: #e7d7c9;
+  z-index: 10000;
+  display: grid;
+  grid-template-columns: 4fr .5fr;
+  grid-template-rows: auto;
+  grid-template-areas: "navBarTitleContainer navBarToggler" "A A" "B B";
+  row-gap: 10px;
+  align-items: center; }
+  .navBarContainer .navBarToggler {
+    grid-area: navBarToggler;
+    cursor: pointer;
+    justify-self: flex-end;
+    padding-right: 20px; }
+    .navBarContainer .navBarToggler .menuIcon {
+      font-size: 1.3rem;
+      color: #212121; }
+  .navBarContainer .linksContainer {
+    display: none; }
+    .navBarContainer .linksContainer a, .navBarContainer .linksContainer button {
+      background-color: #e7d7c9;
+      border: 0px;
+      color: #212121; }
+      .navBarContainer .linksContainer a:hover, .navBarContainer .linksContainer button:hover {
+        color: #a38f85; }
+  .navBarContainer .linksOpen {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    align-items: flex-end; }
+  .navBarContainer .A {
+    grid-area: A;
+    justify-self: end; }
+  .navBarContainer .B {
+    grid-area: B;
+    justify-self: end; }
+  .navBarContainer .navBarTitleContainer {
+    grid-area: navBarTitleContainer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px; }
+    .navBarContainer .navBarTitleContainer:hover {
+      color: #212121; }
+    .navBarContainer .navBarTitleContainer .navBarTitle {
+      margin: 0;
+      font-family: LoveloBlack;
+      font-size: 1rem; }
+    .navBarContainer .navBarTitleContainer .navBarSubTitle {
+      margin: 0;
+      font-family: "dosisRegular";
+      font-size: .8rem; }
 
-.navbar {
-  background-color: #e7d7c9; }
-
-.navbar-nav {
-  justify-content: flex-end;
-  text-align: end;
-  padding-right: 20px; }
-
-.navbar-brand {
-  margin: 0 !important;
-  padding: 0 !important; }
-
-.blur {
-  filter: blur(1px); }
-
-.nav-link {
-  font-family: "dosisRegular";
-  padding: 0 !important;
-  font-size: 1.25rem !important;
-  color: #212121 !important; }
-  .nav-link:hover {
-    color: #a38f85 !important; }
-
-.navbar-toggler {
-  margin-right: 20px; }
-
-.navbar-expand-lg {
-  justify-content: space-evenly; }
-
-@media (min-width: 992px) {
-  .navbar-nav {
-    padding: 0px; }
-  .navbar-expand-lg .navbar-collapse {
-    justify-content: center; }
-  .navBarTitleContainer {
-    padding-left: 0px; }
-  .nav-link:not(:last-child) {
-    border-right: 2px solid #212121;
-    padding-right: 20px !important;
-    margin-right: 20px; } }
-
-.fixed-top {
-  padding-top: 30px !important;
-  padding-bottom: 30px !important; }
+@media only screen and (min-width: 1024px) {
+  .navBarContainer {
+    grid-template-areas: "A navBarTitleContainer B";
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    justify-items: center;
+    padding: 30px 20px; }
+    .navBarContainer .navBarToggler {
+      display: none; }
+    .navBarContainer .linksContainer {
+      display: flex;
+      align-items: flex-end;
+      justify-self: center;
+      justify-content: center; }
+      .navBarContainer .linksContainer a, .navBarContainer .linksContainer button {
+        font-size: 1.2rem; }
+        .navBarContainer .linksContainer a:not(:last-child), .navBarContainer .linksContainer button:not(:last-child) {
+          padding-right: 10px;
+          border-right: 2px solid #212121;
+          margin-right: 10px; }
+    .navBarContainer .navBarTitleContainer {
+      display: flex;
+      align-items: center;
+      padding: 0px; }
+      .navBarContainer .navBarTitleContainer:hover {
+        animation-name: scale;
+        animation-duration: .5s;
+        animation-fill-mode: forwards; }
+      .navBarContainer .navBarTitleContainer .navBarTitle {
+        font-size: 1.54rem; }
+      .navBarContainer .navBarTitleContainer .navBarSubTitle {
+        font-size: 1rem; } }
 
 @keyframes scale {
   0% {
     transform: scale(1); }
   100% {
     transform: scale(1.1); } }
+
+.blur {
+  filter: blur(1px); }
 
 * {
   margin: 0px;
@@ -84,7 +113,7 @@ html a {
     color: #cdc6c3; }
 
 .App {
-  margin-top: 120px; }
+  margin-top: 110px; }
 
 .dosisBold {
   font-family: "dosisBold"; }
