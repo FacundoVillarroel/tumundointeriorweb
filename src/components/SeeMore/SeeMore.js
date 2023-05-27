@@ -51,7 +51,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         {/* 1 */}
         
-        <div className='teamDescriptionItemContainer'>
+        <div className='teamDescriptionItemContainer L1'>
           <div className='teamDescriptionItem'>
             <RiUserHeartLine fontSize={25} color={"a38f85"}/>
           </div>
@@ -62,7 +62,7 @@ const SeeMore = ({closeSeeMore}) => {
 
         {/* 2 */}
         
-        <div className='teamDescriptionItemContainer'>
+        <div className='teamDescriptionItemContainer R1'>
           <div className='teamDescriptionItem'>
             <RxDot fontSize={25} color={"ede9e3"}/>
           </div>
@@ -73,7 +73,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         {/* 3 */}
         
-        <div className='teamDescriptionItemContainer'>
+        <div className='teamDescriptionItemContainer L2'>
           <div className='teamDescriptionItem'>
             <RiUserSettingsLine fontSize={25} color={"a38f85"}/>
           </div>
@@ -84,7 +84,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         {/* 4 */}
 
-        <div className='teamDescriptionItemContainer'>
+        <div className='teamDescriptionItemContainer R2'>
           <div className='teamDescriptionItem'>
             <FaGraduationCap fontSize={25} color={"a38f85"}/>
           </div>
@@ -95,7 +95,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         {/* 5 */}
         
-        <div className='teamDescriptionItemContainer'>
+        <div className='teamDescriptionItemContainer L3'>
           <div className='teamDescriptionItem'>
             <TbAward  fontSize={25} color={"a38f85"}/>
           </div>
@@ -106,7 +106,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         {/* 6 */}
 
-        <div className='teamDescriptionItemContainer'>
+        <div className='teamDescriptionItemContainer R3'>
           <div className='teamDescriptionItem'>
             <FaGraduationCap fontSize={25} color={"a38f85"}/>
           </div>
@@ -118,7 +118,7 @@ const SeeMore = ({closeSeeMore}) => {
         {/* 7 */}
         
         
-        <div className='teamDescriptionItemContainer'>
+        <div className='teamDescriptionItemContainer L4'>
           <div className='teamDescriptionItem'>
             <TbAward  fontSize={25} color={"a38f85"}/>
           </div>
@@ -129,7 +129,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         {/* 8 */}
         
-        <div className='teamDescriptionItemContainer'>
+        <div className='teamDescriptionItemContainer R4'>
           <div className='teamDescriptionItem'>
             <FaGraduationCap fontSize={25} color={"a38f85"}/>
           </div>
@@ -140,7 +140,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         {/* 9 */}
         
-        <div className='teamDescriptionItemContainer'>
+        <div className='teamDescriptionItemContainer L5'>
           <div className='teamDescriptionItem'>
             <TbAward fontSize={25} color={"a38f85"}/>
           </div>
@@ -151,7 +151,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         {/* 10 */}
         
-        <div className='teamDescriptionItemContainer'>
+        <div className='teamDescriptionItemContainer R5'>
           <div className='teamDescriptionItem'>
             <FaGraduationCap fontSize={25} color={"a38f85"}/>
           </div>
@@ -163,7 +163,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         {/* 11 */}
 
-        <div className='teamDescriptionItemContainer'>
+        <div className='teamDescriptionItemContainer L6'>
           <div className='teamDescriptionItem'>
             <TbAward fontSize={25} color={"a38f85"}/>
           </div>
@@ -174,7 +174,7 @@ const SeeMore = ({closeSeeMore}) => {
         
         {/* 12 */}
         
-        <div className='teamDescriptionItemContainer'>
+        <div className='teamDescriptionItemContainer R6'>
           <div className='teamDescriptionItem'>
             <FaGraduationCap fontSize={25} color={"a38f85"}/>
           </div>

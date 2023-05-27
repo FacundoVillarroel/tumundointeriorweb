@@ -909,6 +909,7 @@ html a {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(14, align-items);
+    grid-template-areas: "L1" "L2" "L3" "L4" "L5" "L6" "R1" "R2" "R3" "R4" "R5" "R6";
     row-gap: 10px;
     padding: 10px 10px 10px 0px; }
     .seeMoreContainer .teamDescriptionContainer .teamDescriptionItemContainer {
@@ -923,6 +924,30 @@ html a {
       font-family: "dosisRegular";
       text-align: justify;
       font-size: .8rem; }
+  .seeMoreContainer .L1 {
+    grid-area: L1; }
+  .seeMoreContainer .L2 {
+    grid-area: L2; }
+  .seeMoreContainer .L3 {
+    grid-area: L3; }
+  .seeMoreContainer .L4 {
+    grid-area: L4; }
+  .seeMoreContainer .L5 {
+    grid-area: L5; }
+  .seeMoreContainer .L6 {
+    grid-area: L6; }
+  .seeMoreContainer .R1 {
+    grid-area: R1; }
+  .seeMoreContainer .R2 {
+    grid-area: R2; }
+  .seeMoreContainer .R3 {
+    grid-area: R3; }
+  .seeMoreContainer .R4 {
+    grid-area: R4; }
+  .seeMoreContainer .R5 {
+    grid-area: R5; }
+  .seeMoreContainer .R6 {
+    grid-area: R6; }
 
 @media only screen and (min-width: 1024px) {
   .seeMoreContainer {
@@ -942,6 +967,7 @@ html a {
     .seeMoreContainer .teamDescriptionContainer {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(7, align-items);
+      grid-template-areas: "L1 R1" "L2 R2" "L3 R3" "L4 R4" "L5 R5" "L6 R6";
       row-gap: 30px;
       column-gap: 100px;
       padding: 20px 50px; }

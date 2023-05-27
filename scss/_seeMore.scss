@@ -40,6 +40,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(14, align-items);
+    grid-template-areas: "L1" "L2" "L3" "L4" "L5" "L6" "R1" "R2" "R3" "R4" "R5" "R6";
     row-gap: 10px;
     padding: 10px 10px 10px 0px;
     .teamDescriptionItemContainer{
@@ -58,6 +59,18 @@
       font-size: .8rem;
     }
   }
+  .L1{grid-area: L1;}
+  .L2{grid-area: L2;}
+  .L3{grid-area: L3;}
+  .L4{grid-area: L4;}
+  .L5{grid-area: L5;}
+  .L6{grid-area: L6;}
+  .R1{grid-area: R1;}
+  .R2{grid-area: R2;}
+  .R3{grid-area: R3;}
+  .R4{grid-area: R4;}
+  .R5{grid-area: R5;}
+  .R6{grid-area: R6;}
 }
 
 
@@ -82,6 +95,7 @@
     .teamDescriptionContainer{
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(7, align-items);
+      grid-template-areas: "L1 R1" "L2 R2" "L3 R3" "L4 R4" "L5 R5" "L6 R6";
       row-gap: 30px;
       column-gap: 100px;
       padding: 20px 50px;
