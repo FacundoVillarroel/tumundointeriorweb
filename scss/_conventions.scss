@@ -2,8 +2,8 @@
   position: fixed;
   z-index: 5000;
   top: 150px;
-  left: 12%;
-  width: 76%;
+  left: 2%;
+  width: 96%;
   background-color: $isabeline;
   border-radius: 20px;
   box-shadow: 0px 0px 13px 8px rgba(163, 143, 133,.35);
@@ -11,56 +11,99 @@
   -moz-box-shadow: 0px 0px 13px 8px rgba(163, 143, 133,.35);
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
-  padding: 10px;
-  padding-bottom: 20px;
   .closeBtn{
     color: $cinereous;
     position: absolute;
-    right: 30px;
-    top: 20px;
+    right: 10px;
+    top: 5px;
     font-family: "LoveloBlack";
     cursor: pointer;
-    font-size: 1.25rem;
+    font-size: 1rem;
     z-index: 200;
   }
   h2{
     text-align: center;
     font-family: "loveloBlack";
-    padding-top: 30px;
-    font-size: 1.87rem;
     color: $cinereous;
+    padding-top: 10px;
+    font-size: 1.2rem;
   }
   h3{
     text-align: center;
     font-family: "dosisRegular";
-    padding: 25px 0px;
-    font-size: 1.5rem;
     color: $cinereous;
+    padding-top: 5px;
+    font-size: 1rem;
   }
   .conventionsDescriptionContainer{
-    padding: 10px 50px;
+    padding: 5px 10px;
     .itemContainer{
       display: flex;
-      margin: 0px 20px 40px 20px;
+      margin-bottom: 10px;
       .icon path {
         stroke: $cinereous;
       }
       p{
-        margin-left: 20px;
         font-family: "dosisRegular";
-        font-size: 1.2rem;
+        margin-left: 10px;
+        font-size: .8rem;
       }
     }
     .isapresContainer{
+      padding-top: 20px;
       display: flex;
       width: 100%;
       flex-wrap: wrap;
       justify-content: space-evenly;
       img{
+        margin-bottom: 15px;
         max-width: 120px;
         transition: transform .5s;
         &:hover{
           transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .conventionsContainer{
+    top: 150px;
+    left: 12%;
+    width: 76%;
+    padding: 10px;
+    padding-bottom: 20px;
+    .closeBtn{
+      right: 30px;
+      top: 15px;
+      font-size: 1.5rem;
+    }
+    h2{
+      padding-top: 30px;
+      font-size: 1.87rem;
+    }
+    h3{
+      padding: 25px 0px;
+      font-size: 1.5rem;
+    }
+    .conventionsDescriptionContainer{
+      padding: 10px 50px;
+      .itemContainer{
+        margin: 0px 20px 40px 20px;
+        .icon path {
+        }
+        p{
+          margin-left: 20px;
+          font-size: 1.2rem;
+        }
+      }
+      .isapresContainer{
+        padding-top: 0px;
+        img{
+          margin-bottom: 0px;
+          &:hover{
+          }
         }
       }
     }

@@ -36,7 +36,7 @@ const ConventionsContainer = ({closeAnimation, className}) => {
   return (
     <div ref={conventionsRef} className={`conventionsContainer , ${className}`}>
       <div className="closeBtn" onClick={closeAnimation}>
-        <BiXCircle fontSize={25}/>
+        <BiXCircle/>
       </div>
       <h2>
         Tu mundo interior 
