@@ -1,20 +1,19 @@
 .section3Container{
   position: relative;
   background-color: $isabeline;
-  padding: 30px 50px 50px 50px;
+  padding: 10px 0px;
   .section3TitleContainer{
-    margin: 40px 100px 60px 100px;
     .section3Title{
       font-family: "loveloBlack";
-      font-size: 1.37rem;
+      font-size: 1.2rem;
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 10px;
     }
     .subTitleContainer{
-      padding: 0px 70px;
+      padding: 0px 20px;
       .section3SubTitle{
         font-family: "dosisRegular";
-        font-size: 1rem;
+        font-size: .8rem;
         text-align:justify;
         margin-bottom: 10px;
       }
@@ -22,45 +21,54 @@
   }
   .professionalsContainer{
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     .professionalContainer{
       position: relative;
       display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
     }
     .maidaContainer{
-      width: 27rem;
-      height: 36rem;
+      width: 100%;
+      height: calc(100vw / 0.75);
       border-radius: 10px;
-      padding: 50px 100px;
       background-image: url("../src/images/magda.jpeg");
       background-size:contain;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      opacity: .5;
+      &:hover{
+        opacity: 1;
+      }
+    }
+    .cokeContainer{
+      width: 100%;
+      height: calc(100vw / 0.75);
+      background-image: url("../src/images/jorge.jpeg");
+      border-radius: 10px;
+      background-size: contain;
       opacity: .5;
       &:hover{
         opacity: 1;
       }
     }
     .professionalDescriptionContainer{
-      position: absolute;
-      bottom: -150px;
-      padding-left: 10px;
-      padding-right: 10px;
+      margin: 10px;
       background-color: rgba(163, 143, 133, .5);
       border-radius: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
       .professionalName{
         font-family: "loveloBlack";
-        padding: 5px 15px;
-        font-size: 1.18rem;
+        padding: 5px 10px;
+        font-size: 1rem;
         color: $light;
         text-align: center;
       }
       .professionalDescription{
         font-family: "dosisSemiBold";
         padding-bottom: 10px;
-        font-size: 1rem;
+        font-size: .8rem;
         color: $isabeline;
         text-align: center;
       }
@@ -71,36 +79,78 @@
         }
       }
     }
-
-    .cokeContainer{
-      position: relative;
-      width: 27rem;
-      height: 36rem;
-      padding: 50px 100px;
-      background-image: url("../src/images/jorge.jpeg");
-      border-radius: 10px;
-      background-size: contain;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      opacity: .5;
-      &:hover{
-        opacity: 1;
-      }
-    }
   }
   .quoteContainer{
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
+    margin-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
   .videoContainer{
-    padding-top: 200px;
     display: flex;
     justify-content: center;
     video{
+      width: 80%;
+      height: calc(100vw / 1.6);
       border-radius: 20px;
       object-fit: fill;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .section3Container{
+    padding: 30px 50px 50px 50px;
+    .section3TitleContainer{
+      margin: 40px 100px 60px 100px;
+      .section3Title{
+        font-size: 1.37rem;
+        margin-bottom: 25px;
+      }
+      .subTitleContainer{
+        padding: 0px 70px;
+        .section3SubTitle{
+          font-size: 1rem;
+        }
+      }
+    }
+    .professionalsContainer{
+      flex-direction: row;
+      .professionalContainer{
+        flex-direction: row;
+      }
+      .maidaContainer{
+        width: 27rem;
+        height: 36rem;
+      }
+      .cokeContainer{
+        width: 27rem;
+        height: 36rem;
+      }
+      .professionalDescriptionContainer{
+        margin: 0;
+        position: absolute;
+        bottom: -150px;
+        padding-left: 10px;
+        padding-right: 10px;
+        .professionalName{
+          padding: 5px 15px;
+          font-size: 1.18rem;
+        }
+        .professionalDescription{
+          font-size: 1rem;
+        }
+      }
+    }
+    .quoteContainer{
+      margin-top: 50px;
+      text-align: center;
+    }
+    .videoContainer{
+      padding-top: 200px; 
+      video{
+        width: 400px;
+        height: 250px;
+      }
     }
   }
 }
