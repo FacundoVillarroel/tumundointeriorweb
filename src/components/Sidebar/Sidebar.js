@@ -30,7 +30,7 @@ const Sidebar = ({ children, toggleSidebar, className }) => {
   return (
     <div ref={sidebarRef} className={`sidebar ${className}`}>
       <div className="closeBtn" onClick={toggleSidebar}>
-        <BiXCircle fontSize={25}/>
+        <BiXCircle/>
       </div>
       {children}
     </div>
