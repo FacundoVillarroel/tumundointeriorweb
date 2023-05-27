@@ -113,7 +113,7 @@ html a {
     color: #cdc6c3; }
 
 .App {
-  margin-top: 110px; }
+  margin-top: 97px; }
 
 .dosisBold {
   font-family: "dosisBold"; }
@@ -122,15 +122,45 @@ html a {
   font-family: "dosisRegular";
   font-style: italic; }
 
+@media only screen and (min-width: 1024px) {
+  .App {
+    margin-top: 110px; } }
+
 .section1Container {
   background-color: #ede9e3; }
   .section1Container .imageTitleContainer {
     position: relative;
     z-index: 99;
-    background-image: url("../src/images/section1Background.jpg");
     background-size: cover;
-    height: 400px;
+    background-image: url("../src/images/section1Background.jpg");
+    height: 170px;
     display: flex; }
+  .section1Container .subtitleContainer {
+    padding-top: 25px;
+    padding-bottom: 25px; }
+    .section1Container .subtitleContainer .imageSubtitleContainer {
+      display: none; }
+  .section1Container .homeDescriptionContainer {
+    padding: 0px 20px; }
+    .section1Container .homeDescriptionContainer .homeDescriptiontitleDecorative {
+      font-family: "beautyDream";
+      font-size: 2rem;
+      padding-bottom: 10px; }
+    .section1Container .homeDescriptionContainer .homeDescriptionTitle {
+      font-family: "loveloBlack";
+      padding-bottom: 15px;
+      padding-top: 5px;
+      font-size: 1.2rem; }
+    .section1Container .homeDescriptionContainer .homeDescriptionText {
+      font-family: "dosisRegular";
+      font-size: .8rem;
+      padding-bottom: 10px;
+      text-align: justify; }
+
+@media only screen and (min-width: 1024px) {
+  .section1Container .imageTitleContainer {
+    background-size: cover;
+    height: 400px; }
   .section1Container .subtitleContainer {
     display: flex;
     padding-top: 50px;
@@ -152,20 +182,17 @@ html a {
         padding-top: 5px; }
   .section1Container .homeDescriptionContainer {
     width: 50%;
-    padding-right: 120px; }
+    padding: 0px 120px 0px 0px; }
     .section1Container .homeDescriptionContainer .homeDescriptiontitleDecorative {
-      font-family: "beautyDream";
       font-size: 2.5rem;
       padding-bottom: 20px; }
     .section1Container .homeDescriptionContainer .homeDescriptionTitle {
-      font-family: "loveloBlack";
       padding-bottom: 25px;
       padding-top: 10px;
       font-size: 1.56rem; }
     .section1Container .homeDescriptionContainer .homeDescriptionText {
-      font-family: "dosisRegular";
-      padding-bottom: 20px;
-      text-align: justify; }
+      font-size: 1rem;
+      padding-bottom: 20px; } }
 
 .section2Container {
   padding: 20px 50px 30px 50px;

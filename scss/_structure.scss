@@ -19,7 +19,7 @@ html{
 }
 
 .App{
-    margin-top: 110px;
+    margin-top: 97px;
 }
 
 .dosisBold{
@@ -29,4 +29,10 @@ html{
 .dosisItalic{
     font-family: "dosisRegular";
     font-style: italic;
+}
+
+@media only screen and (min-width: 1024px) {
+    .App{
+        margin-top: 110px;
+    }
 }
