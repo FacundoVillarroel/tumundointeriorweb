@@ -330,7 +330,8 @@ html a {
   .section3Container .quoteContainer {
     margin-top: 10px;
     padding-right: 20px;
-    padding-left: 20px; }
+    padding-left: 20px;
+    font-size: .8rem; }
   .section3Container .videoContainer {
     display: flex;
     justify-content: center; }
@@ -375,7 +376,8 @@ html a {
           font-size: 1rem; }
     .section3Container .quoteContainer {
       margin-top: 50px;
-      text-align: center; }
+      text-align: center;
+      font-size: 1rem; }
     .section3Container .videoContainer {
       padding-top: 200px; }
       .section3Container .videoContainer video {
@@ -383,31 +385,30 @@ html a {
         height: 250px; } }
 
 .footerContainer .footerTextContainer {
-  position: relative;
   display: flex;
+  flex-direction: column;
   background-color: #e7d7c9;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 10px 20px;
   justify-content: space-evenly;
   align-items: center;
   z-index: 100; }
   .footerContainer .footerTextContainer .footerText {
     font-family: "dosisRegular";
-    font-size: 1.25rem; }
+    font-size: .9rem;
+    text-align: center; }
 
 .footerContainer .footerButtonContainer {
-  padding: 10px 50px;
-  border-radius: 5px;
   background-color: #a38f85;
-  margin-top: 10px;
-  margin-bottom: 10px; }
+  padding: 8px 25px;
+  border-radius: 5px;
+  margin-top: 7px; }
   .footerContainer .footerButtonContainer:hover {
     background-color: #d4b2a7;
     cursor: pointer; }
   .footerContainer .footerButtonContainer .footerButtonText {
     font-family: "dosisRegular";
-    font-size: 1.12rem;
-    color: #fff; }
+    color: #fff;
+    font-size: .9rem; }
 
 .footerContainer .footerCopyrightContainer {
   display: flex;
@@ -415,11 +416,28 @@ html a {
   background-color: #e7d7c9;
   justify-content: center;
   align-items: center;
-  padding: 10px; }
+  padding: 0 10px 10px 10px; }
   .footerContainer .footerCopyrightContainer h4 {
-    padding-left: 5px;
     font-family: "dosisRegular";
-    font-size: 0.87rem; }
+    font-size: 0.7rem; }
+
+@media only screen and (min-width: 1024px) {
+  .footerContainer .footerTextContainer {
+    flex-direction: row;
+    padding: 20px 0px; }
+    .footerContainer .footerTextContainer .footerText {
+      font-size: 1.25rem; }
+  .footerContainer .footerButtonContainer {
+    padding: 10px 50px;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .footerContainer .footerButtonContainer .footerButtonText {
+      font-size: 1.12rem; }
+  .footerContainer .footerCopyrightContainer {
+    padding: 10px; }
+    .footerContainer .footerCopyrightContainer h4 {
+      padding-left: 5px;
+      font-size: 0.87rem; } }
 
 .frequentQuestionsContainer {
   padding: 50px;
