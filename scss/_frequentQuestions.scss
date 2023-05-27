@@ -1,29 +1,23 @@
 .frequentQuestionsContainer{
-  padding: 50px;
+  padding-top: 20px;
   position: relative;
   .imgBackground{
-    height: 1090px;
-    max-height: 100%;
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 55%;
+    display: none;
   }
   .frequentQuestionsTitle{
     z-index: 2;
-    padding-bottom: 20px;
     text-align: center;
     font-family: "LoveloBlack";
-    font-size: 1.25rem;
+    padding-bottom: 10px;
+    font-size: 1rem;
   }
-
   .questionContainer{
-    margin: 10px;
+    margin-top: 15px;
     .questionText{
       position: relative;
       z-index: 10;
-      font-size: 1.12rem;
       font-family: "dosisRegular";
+      font-size: .9rem;
       &:hover{
         color: $cinereous;
       }
@@ -32,25 +26,69 @@
   .answerContainer{
     position: relative;
     z-index: 200;
-    margin: 10px 0px;
-    padding: 10px 30px;
     background-color: $light;
     border-top: 1px solid $almond;
     border-bottom: 1px solid $almond;
+    margin: 5px 0px;
+    padding: 5px 5px;
     .answerText{
-      font-size: 1rem;
       font-family: "dosisRegular";
+      text-align: justify;
+      font-size: .8rem;
     }
   }
   .frequentFootContainer{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 40px 70px 10px;
+    padding: 30px 10px 5px;
     .frequentFootText{
       font-family: "dosisRegular";
       padding-bottom: 5px;
-      width: 60%;
+      font-size: .8rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .frequentQuestionsContainer{
+    padding: 50px;
+    .imgBackground{
+      display: block;
+      height: 1090px;
+      max-height: 100%;
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 55%;
+    }
+    .frequentQuestionsTitle{
+      padding-bottom: 20px;
+      font-size: 1.25rem;
+    }
+    .questionContainer{
+      margin: 10px;
+      .questionText{
+        font-size: 1.12rem;
+        &:hover{
+          
+        }
+      }
+    }
+    .answerContainer{
+      margin: 10px 0px;
+      padding: 10px 30px;
+      .answerText{
+        font-size: 1rem;
+      }
+    }
+    .frequentFootContainer{
+      padding: 40px 70px 10px;
+      .frequentFootText{
+        padding-bottom: 5px;
+        width: 60%;
+        font-size: 1rem;
+      }
     }
   }
 }
