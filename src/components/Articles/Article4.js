@@ -5,7 +5,7 @@ const Article4 = ({handleClick, className}) => {
   return (
     <div className={`articleTextContainer article4 ${className}`}>
       <div className="closeBtn" onClick={handleClick}>
-        <BiXCircle fontSize={25}/>
+        <BiXCircle/>
       </div>
       <h2>
         ¿QUE DICE MI CUERPO?
@@ -33,7 +33,7 @@ const Article4 = ({handleClick, className}) => {
       <div className='parragraph'>
         <p>Finalmente, se considera relevante realizar un breve análisis en relación a la diferencia de género que se da entre niñas y niños en el porcentaje de manifestación de la sintomatología de somatización, donde <span className='dosisBold'>las niñas tienen un mayor índice que los niños</span>, y esto se encuentra asociado a las conductas de los padres en el efecto reforzador en este tipo de conductas. Sin ser concluyentes en una postura definitiva, podría pensarse que la diferencia, en este caso, en cuanto a la estadística asociada a la variable de género, podría tener relación con un elemento sociocultural, dado a que a las mujeres se les permite expresar más lo que les ocurre y/o presentarse más vulnerables que los hombres, ya que existen creencias en la sociedad como, por ejemplo; “las mujeres son más vulnerables que los hombres”, “los hombres deben ser fuertes y no mostrar debilidad”, “el hombre está para proteger a la mujer”, entre otras. De este modo, al existir este tipo de creencias, la actitud de los padres va a presentar una tendencia a ser más comprensiva frente a las niñas cuando somaticen que al momento que esto mismo lo manifiesten los niños.</p>
       </div>
-      <p className='textFoot' style={{paddingTop:"50px"}}>
+      <p className='textFoot' style={{paddingTop:"20px"}}>
         Un abrazo a todos mis pacientes y lectores,
       </p>
       <p className='textFoot'>

@@ -5,7 +5,7 @@ const Article5 = ({handleClick, className}) => {
   return (
     <div className={`articleTextContainer article5 ${className}`}>
       <div className="closeBtn" onClick={handleClick}>
-        <BiXCircle fontSize={25}/>
+        <BiXCircle/>
       </div>
       <h2>
         EMOCIONES POSITIVAS
@@ -42,7 +42,7 @@ const Article5 = ({handleClick, className}) => {
       <div className='parragraph'>
         <p>Finalmente, respecto a la variable de edad, los resultados indican que los niños de menor edad, obtienen puntuaciones más altas en simpatía. Con respecto a las atribuciones causales de <span className='dosisBold'>alegría y de gratitud</span>, se encontró que los niños más pequeños mostraron una mayor tendencia a valorar y a atribuir su alegría a la posibilidad de jugar, recibir visitas, ser cuidados, pasear y tener juguetes, mientras que los niños más grandes señalan mayormente las relaciones afectivas, especialmente las establecidas con padres y hermanos, y la posesión de objetos materiales útiles.</p>
       </div>
-      <p className='textFoot' style={{paddingTop:"50px"}}>
+      <p className='textFoot' style={{paddingTop:"20px"}}>
         Un abrazo a todos mis pacientes y lectores,
       </p>
       <p className='textFoot'>

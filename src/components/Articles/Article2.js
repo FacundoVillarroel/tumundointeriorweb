@@ -5,7 +5,7 @@ const Article2 = ({handleClick, className}) => {
   return (
     <div className={`articleTextContainer article2 ${className}`}>
       <div className="closeBtn" onClick={handleClick}>
-        <BiXCircle fontSize={25}/>
+        <BiXCircle/>
       </div>
       <h2>
         El síntoma NO soy yo
@@ -77,7 +77,7 @@ const Article2 = ({handleClick, className}) => {
       <p>
         Si presentas o conoces a alguien que presente algún tipo de sintomatología como la anteriormente expuesta, o bien otra que no haya referido anteriormente, te invito a que consultes con un especialista capacitado para abordarla y así consigas un mayor bienestar en tu vida.
       </p>
-      <p className='textFoot' style={{paddingTop:"50px"}}>
+      <p className='textFoot' style={{paddingTop:"20px"}}>
         Un abrazo a todos mis pacientes y lectores,
       </p>
       <p className='textFoot'>

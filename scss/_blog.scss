@@ -2,27 +2,27 @@
   .title{
     font-family: "beautyDream";
     text-align: center;
-    padding-top: 50px;
-    font-size: 2.5rem;
     color: $dark;
+    padding-top: 20px;
+    font-size: 2rem;    
   }
   .blogGrid{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, auto);
-    row-gap: 50px;
     justify-items: center;
-    padding-top: 75px;
-    padding-bottom: 75px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, auto);
+    row-gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     .articleContainer{
       position: relative;
-      height: 275px;
-      width: 550px;
       background-color: $cinereous;
       display: flex;
       justify-content: center;
       align-items: center;
       border-radius: 10px;
+      width: 96%;
+      height: calc(96vw / 2);
       &:before{    
         border-radius: 10px;
         content: "";
@@ -42,7 +42,8 @@
         color: $light;
         font-family: "dosisMedium";
         position: relative;
-        font-size: 1.75rem;
+        font-size: 1.2rem;
+        text-align: center;
         &:hover{
           cursor: pointer;
         }
@@ -106,6 +107,29 @@
     .article12{
       &:before{
         background-image: url("../src/images/article12Image.jpg");
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .blogContainer{
+    .title{
+      padding-top: 50px;
+      font-size: 2.5rem;
+    }
+    .blogGrid{
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, auto);
+      row-gap: 50px;
+      padding-top: 75px;
+      padding-bottom: 75px;
+      .articleContainer{
+        height: 275px;
+        width: 550px;
+        h2{
+          font-size: 1.75rem;
+        }
       }
     }
   }

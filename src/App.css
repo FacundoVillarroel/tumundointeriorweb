@@ -677,27 +677,27 @@ html a {
 .blogContainer .title {
   font-family: "beautyDream";
   text-align: center;
-  padding-top: 50px;
-  font-size: 2.5rem;
-  color: #212121; }
+  color: #212121;
+  padding-top: 20px;
+  font-size: 2rem; }
 
 .blogContainer .blogGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4, auto);
-  row-gap: 50px;
   justify-items: center;
-  padding-top: 75px;
-  padding-bottom: 75px; }
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, auto);
+  row-gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px; }
   .blogContainer .blogGrid .articleContainer {
     position: relative;
-    height: 275px;
-    width: 550px;
     background-color: #a38f85;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px; }
+    border-radius: 10px;
+    width: 96%;
+    height: calc(96vw / 2); }
     .blogContainer .blogGrid .articleContainer:before {
       border-radius: 10px;
       content: "";
@@ -715,7 +715,8 @@ html a {
       color: #fff;
       font-family: "dosisMedium";
       position: relative;
-      font-size: 1.75rem; }
+      font-size: 1.2rem;
+      text-align: center; }
       .blogContainer .blogGrid .articleContainer h2:hover {
         cursor: pointer; }
   .blogContainer .blogGrid .article1:before {
@@ -743,25 +744,41 @@ html a {
   .blogContainer .blogGrid .article12:before {
     background-image: url("../src/images/article12Image.jpg"); }
 
+@media only screen and (min-width: 1024px) {
+  .blogContainer .title {
+    padding-top: 50px;
+    font-size: 2.5rem; }
+  .blogContainer .blogGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 50px;
+    padding-top: 75px;
+    padding-bottom: 75px; }
+    .blogContainer .blogGrid .articleContainer {
+      height: 275px;
+      width: 550px; }
+      .blogContainer .blogGrid .articleContainer h2 {
+        font-size: 1.75rem; } }
+
 .articleTextContainer {
-  margin: 75px;
   position: relative;
   background-color: #a38f85;
   display: flex;
   flex-direction: column;
-  padding: 30px 75px;
-  border-radius: 20px;
   opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards; }
+  animation: fadeIn 1s ease-in-out forwards;
+  border-radius: 20px;
+  margin: 4px;
+  padding: 10px 15px; }
   .articleTextContainer .closeBtn {
     color: #fff;
     position: absolute;
-    right: 30px;
-    top: 20px;
+    right: 10px;
+    top: 5px;
     font-family: "LoveloBlack";
     cursor: pointer;
-    font-size: 1.25rem;
-    z-index: 200; }
+    z-index: 200;
+    font-size: 1rem; }
   .articleTextContainer:before {
     border-radius: 20px;
     content: "";
@@ -773,26 +790,27 @@ html a {
     left: 0px;
     opacity: 0.3; }
   .articleTextContainer .parragraph {
-    padding: 10px 0px; }
+    padding: 3px 0px; }
     .articleTextContainer .parragraph p {
       margin: 0;
       padding: 0; }
   .articleTextContainer h2 {
     text-align: center;
     font-family: "dosisSemiBold";
-    padding-bottom: 30px;
-    color: #e7d7c9; }
+    color: #e7d7c9;
+    padding-bottom: 10px;
+    font-size: 1.2rem; }
   .articleTextContainer p {
-    font-size: 1.12rem;
-    padding: 10px 0px;
     text-align: justify;
     color: .articleTextContainer p light;
     position: relative;
-    color: #fff; }
+    color: #fff;
+    padding: 5px 0px;
+    font-size: .8rem; }
   .articleTextContainer .textFoot {
     color: #fff;
-    padding-bottom: 0;
-    text-align: end; }
+    text-align: end;
+    padding-bottom: 0; }
 
 .article1:before {
   background-image: url("../src/images/article1Image.jpg"); }
@@ -829,6 +847,25 @@ html a {
 
 .article12:before {
   background-image: url("../src/images/article12Image.jpg"); }
+
+@media only screen and (min-width: 1024px) {
+  .articleTextContainer {
+    margin: 75px;
+    padding: 30px 75px; }
+    .articleTextContainer .closeBtn {
+      right: 30px;
+      top: 15px;
+      font-size: 1.5rem; }
+    .articleTextContainer .parragraph {
+      padding: 10px 0px; }
+      .articleTextContainer .parragraph p {
+        font-size: 1.12rem;
+        padding: 10px 0px; }
+    .articleTextContainer h2 {
+      padding-bottom: 30px;
+      font-size: 2rem; }
+    .articleTextContainer p {
+      font-size: 1rem; } }
 
 .closed {
   animation: fadeOut 1s ease-in-out forwards; }

@@ -5,7 +5,7 @@ const Article3 = ({handleClick, className}) => {
   return (
     <div className={`articleTextContainer article3 ${className}`}>
       <div className="closeBtn" onClick={handleClick}>
-        <BiXCircle fontSize={25}/>
+        <BiXCircle/>
       </div>
       <h2>
         LA IMPORTANCIA DEL APEGO TEMPRANO
@@ -84,7 +84,7 @@ const Article3 = ({handleClick, className}) => {
       </div>
       
       
-      <p className='textFoot' style={{paddingTop:"50px"}}>
+      <p className='textFoot' style={{paddingTop:"20px"}}>
         Un abrazo a todos mis pacientes y lectores,
       </p>
       <p className='textFoot'>
