@@ -8,7 +8,7 @@ const Section2 = () => {
         <h2 className='section2Title'>Nuestro Enfoque</h2>
       </div>
       <div className='section2DescriptionItemsContainer'>
-          <div className='section2ItemContainer'>
+          <div className='section2ItemContainer A'>
             <div className='section2Item'><BiBrain/></div>
             <div className='section2Text'>
               <p>
@@ -16,7 +16,7 @@ const Section2 = () => {
               </p>
             </div>
           </div>
-          <div className='section2ItemContainer'>
+          <div className='section2ItemContainer B'>
             <div className='section2Item'><BiDonateHeart/></div>
             <div className='section2Text'>
               <p>
@@ -24,7 +24,7 @@ const Section2 = () => {
               </p>
             </div>
           </div>
-          <div className='section2ItemContainer'>
+          <div className='section2ItemContainer C'>
             <div className='section2Item'><BiDonateHeart/></div>
             <div className='section2Text'>
               <p>
@@ -32,7 +32,7 @@ const Section2 = () => {
               </p>
             </div>
           </div>
-          <div className='section2ItemContainer'>
+          <div className='section2ItemContainer D'>
             <div className='section2Item'><BiBrain/></div>
             <div className='section2Text'>
               <p>
@@ -40,7 +40,7 @@ const Section2 = () => {
               </p>
             </div>
           </div>
-          <div className='section2ItemContainer'>
+          <div className='section2ItemContainer E'>
             <div className='section2Item'><BiBrain/></div>
             <div className='section2Text'>
               <p>
@@ -48,7 +48,7 @@ const Section2 = () => {
               </p>
             </div>
           </div>
-          <div className='section2ItemContainer'>
+          <div className='section2ItemContainer F'>
             <div className='section2Item'><BiDonateHeart/></div>
             <div className='section2Text'>
               <p>

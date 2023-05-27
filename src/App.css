@@ -195,35 +195,69 @@ html a {
       padding-bottom: 20px; } }
 
 .section2Container {
-  padding: 20px 50px 30px 50px;
+  padding: 10px 20px 15px 20px;
   background-color: #fff; }
   .section2Container .section2TitleContainer {
     display: flex;
     justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 40px; }
+    padding-top: 10px;
+    padding-bottom: 10px; }
     .section2Container .section2TitleContainer .section2Title {
       font-family: "beautyDream";
-      font-size: 2.5rem; }
+      font-size: 2rem; }
   .section2Container .section2DescriptionItemsContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, auto);
-    row-gap: 50px;
-    justify-items: center;
-    padding-top: 25px; }
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "A" "C" "E" "B" "D" "F";
+    row-gap: 20px;
+    padding-top: 15px;
+    justify-items: center; }
     .section2Container .section2DescriptionItemsContainer .section2ItemContainer {
-      width: 75%;
-      display: flex;
-      align-items: center; }
+      width: 100%;
+      align-items: center;
+      display: flex; }
       .section2Container .section2DescriptionItemsContainer .section2ItemContainer .section2Item {
-        font-size: 1.87rem;
+        font-size: 1.4rem;
         color: #d4b2a7; }
       .section2Container .section2DescriptionItemsContainer .section2ItemContainer .section2Text {
-        margin-left: 20px;
+        margin-left: 10px;
         font-family: "dosisRegular";
-        text-align: justify;
-        justify-self: flex-start; }
+        text-align: justify; }
+    .section2Container .section2DescriptionItemsContainer .A {
+      grid-area: A; }
+    .section2Container .section2DescriptionItemsContainer .B {
+      grid-area: B; }
+    .section2Container .section2DescriptionItemsContainer .C {
+      grid-area: C; }
+    .section2Container .section2DescriptionItemsContainer .D {
+      grid-area: D; }
+    .section2Container .section2DescriptionItemsContainer .E {
+      grid-area: E; }
+    .section2Container .section2DescriptionItemsContainer .F {
+      grid-area: F; }
+
+@media only screen and (min-width: 1024px) {
+  .section2Container {
+    padding: 20px 50px 50px 50px; }
+    .section2Container .section2TitleContainer {
+      padding-top: 30px;
+      padding-bottom: 40px; }
+      .section2Container .section2TitleContainer .section2Title {
+        font-size: 2.5rem; }
+    .section2Container .section2DescriptionItemsContainer {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas: "A B" "C D" "E F";
+      row-gap: 50px;
+      padding-top: 25px; }
+      .section2Container .section2DescriptionItemsContainer .section2ItemContainer {
+        width: 75%;
+        align-items: center; }
+        .section2Container .section2DescriptionItemsContainer .section2ItemContainer .section2Item {
+          font-size: 1.87rem; }
+        .section2Container .section2DescriptionItemsContainer .section2ItemContainer .section2Text {
+          margin-left: 20px; } }
 
 .section3Container {
   position: relative;

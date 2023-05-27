@@ -1,36 +1,84 @@
 .section2Container{
-  padding: 20px 50px 30px 50px;
+  padding: 10px 20px 15px 20px;
   background-color: $light;
   .section2TitleContainer{
     display: flex;
     justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     .section2Title{
       font-family: "beautyDream";
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
   }
   .section2DescriptionItemsContainer{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, auto);
-    row-gap: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "A" "C" "E" "B" "D" "F";
+    row-gap: 20px;
+    padding-top: 15px;
     justify-items: center;
-    padding-top: 25px;
     .section2ItemContainer{
-      width: 75%;
-      display: flex;
+      width: 100%;
       align-items:center;
+      display: flex;
       .section2Item{
-        font-size: 1.87rem;
+        font-size: 1.4rem;
         color: $paleDogwood;
       }
       .section2Text{
-        margin-left: 20px;
+        margin-left: 10px;
         font-family: "dosisRegular";
         text-align: justify;
-        justify-self: flex-start;
+      }
+    }
+    .A{
+      grid-area: A;
+    }
+    .B{
+      grid-area: B;
+    }
+    .C{
+      grid-area: C;
+    }
+    .D{
+      grid-area: D;
+    }
+    .E{
+      grid-area: E;
+    }
+    .F{
+      grid-area: F;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .section2Container{
+    padding: 20px 50px 50px 50px;
+    .section2TitleContainer{
+      padding-top: 30px;
+      padding-bottom: 40px;
+      .section2Title{
+        font-size: 2.5rem;
+      }
+    }
+    .section2DescriptionItemsContainer{
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas: "A B" "C D" "E F";
+      row-gap: 50px;
+      padding-top: 25px;
+      .section2ItemContainer{
+        width: 75%;
+        align-items:center;
+        .section2Item{
+          font-size: 1.87rem;
+        }
+        .section2Text{
+          margin-left: 20px;
+        }
       }
     }
   }
