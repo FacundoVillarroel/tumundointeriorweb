@@ -10,7 +10,7 @@ const Section3 = () => {
     setSeeMore(true)
     const offset = document.getElementsByClassName("seeMore")[0].offsetTop
     const element = document.getElementById("quienesSomos");
-    const offsetTop = element.offsetTop - offset;
+    const offsetTop = element.offsetTop - 100;
     window.scrollTo({
       top: offsetTop,
       behavior: "smooth"

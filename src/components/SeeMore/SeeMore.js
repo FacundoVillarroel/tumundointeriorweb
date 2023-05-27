@@ -39,7 +39,7 @@ const SeeMore = ({closeSeeMore}) => {
   return (
     <div ref={seeMoreRef} className={`seeMoreContainer ${isClosed ? "seeMoreClosed" : ""}`} id='seeMoreContainer'>
       <div className="closeBtn" onClick={closeAnimation}>
-        <BiXCircle fontSize={25}/>
+        <BiXCircle/>
       </div>
       <h2>
         Tu mundo interior 
