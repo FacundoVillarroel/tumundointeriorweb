@@ -21,16 +21,16 @@ const NavBar = ({toggleSidebar, blur}) => {
     <div className={`navBarContainer ${blur ? "blur" : null}`}>
       <div className={`linksContainer ${navbarOpen ? "linksOpen" : null} A`}>
         <a href="/">Inicio</a>
+        <a href="/#quienes" onClick={() => scrollToElement("quienesSomos", 80)}>Quiénes Somos</a>
         <a href="/preguntas-frecuentes">Preguntas Frecuentes</a>
-        <button onClick={() =>toggleSidebar("contacto")} className="openContactBtn1">Contacto</button>
       </div>
       <a href="/" className='navBarTitleContainer'>
         <h1 className='navBarTitle'> Tu Mundo Interior</h1>
         <p className='navBarSubTitle'>Centro de Psicoterapia Online</p>
       </a>
       <div className={`linksContainer ${navbarOpen ? "linksOpen" : null} B`}>
-        <a href="/#quienes" onClick={() => scrollToElement("quienesSomos", 80)}>Quiénes Somos</a>
         <a href="/blog">Blog</a>
+        <button onClick={() =>toggleSidebar("contacto")} className="openContactBtn1">Contacto</button>
         <button onClick={() => toggleSidebar("agenda")} className="openBookingBtn">Agenda tu hora</button>
       </div>
       <div className='navBarToggler' onClick={navbarToggle}><FiMenu className='menuIcon'/></div>

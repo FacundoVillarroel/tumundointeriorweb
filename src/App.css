@@ -1,4 +1,5 @@
 .navBarContainer {
+  font-family: "dosisRegular";
   position: fixed;
   top: 0;
   width: 100%;
@@ -278,8 +279,7 @@ html a {
       margin-bottom: 10px; }
   .section3Container .professionalsContainer {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly; }
+    justify-content: space-around; }
     .section3Container .professionalsContainer .professionalContainer {
       position: relative;
       display: flex;
@@ -287,8 +287,8 @@ html a {
       align-items: center;
       justify-content: center; }
     .section3Container .professionalsContainer .maidaContainer {
-      width: 100%;
-      height: calc(100vw / 0.75);
+      width: 47vw;
+      height: calc(47vw / 0.75);
       border-radius: 10px;
       background-image: url("../src/images/magda.jpeg");
       background-size: contain;
@@ -296,8 +296,8 @@ html a {
       .section3Container .professionalsContainer .maidaContainer:hover {
         opacity: 1; }
     .section3Container .professionalsContainer .cokeContainer {
-      width: 100%;
-      height: calc(100vw / 0.75);
+      width: 47vw;
+      height: calc(47vw / 0.75);
       background-image: url("../src/images/jorge.jpeg");
       border-radius: 10px;
       background-size: contain;
@@ -336,7 +336,7 @@ html a {
     justify-content: center; }
     .section3Container .videoContainer video {
       width: 80%;
-      height: calc(100vw / 1.6);
+      height: 50vw;
       border-radius: 20px;
       object-fit: fill; }
 
