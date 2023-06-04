@@ -1012,7 +1012,7 @@ html a {
     text-align: center;
     font-family: "dosisRegular";
     color: #a38f85;
-    padding-top: 5px;
+    padding: 10px 0px;
     font-size: 1rem; }
   .conventionsContainer .conventionsDescriptionContainer {
     padding: 5px 10px; }
@@ -1032,8 +1032,8 @@ html a {
       flex-wrap: wrap;
       justify-content: space-evenly; }
       .conventionsContainer .conventionsDescriptionContainer .isapresContainer img {
-        margin-bottom: 15px;
-        max-width: 120px;
+        margin: 10px 5px;
+        max-width: 100px;
         transition: transform .5s; }
         .conventionsContainer .conventionsDescriptionContainer .isapresContainer img:hover {
           transform: scale(1.2); }
