@@ -5,16 +5,18 @@ const NavBar = ({toggleSidebar, blur}) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   const scrollToElement = (id, offset) => {
+    setNavbarOpen(false)
     const element = document.getElementById(id);
-    const offsetTop = element.offsetTop - offset;
+    const offsetTop = element.offsetTop - offset - 18;
     window.scrollTo({
       top: offsetTop,
       behavior: "smooth"
     }); 
   }
 
-  const navbarToggle = () => {
+  const navbarToggle = ( content ) => {
     setNavbarOpen(!navbarOpen)
+    if (content === "contacto" || content === "agenda") toggleSidebar(content);
   }
 
   return (
@@ -30,8 +32,8 @@ const NavBar = ({toggleSidebar, blur}) => {
       </a>
       <div className={`linksContainer ${navbarOpen ? "linksOpen" : null} B`}>
         <a href="/blog">Blog</a>
-        <button onClick={() =>toggleSidebar("contacto")} className="openContactBtn1">Contacto</button>
-        <button onClick={() => toggleSidebar("agenda")} className="openBookingBtn">Agenda tu hora</button>
+        <button onClick={() =>navbarToggle("contacto")} className="openContactBtn1">Contacto</button>
+        <button onClick={() => navbarToggle("agenda")} className="openBookingBtn">Agenda tu hora</button>
       </div>
       <div className='navBarToggler' onClick={navbarToggle}><FiMenu className='menuIcon'/></div>
     </div>
