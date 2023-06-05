@@ -157,9 +157,12 @@ html a {
       padding-bottom: 10px;
       text-align: justify; }
 
+@media only screen and (min-width: 768px) {
+  .section1Container .imageTitleContainer {
+    height: 300px; } }
+
 @media only screen and (min-width: 1024px) {
   .section1Container .imageTitleContainer {
-    background-size: cover;
     height: 400px; }
   .section1Container .subtitleContainer {
     display: flex;
@@ -329,6 +332,7 @@ html a {
         .section3Container .professionalsContainer .professionalDescriptionContainer .seeMore:hover {
           color: #fff; }
   .section3Container .quoteContainer {
+    text-align: center;
     margin-top: 10px;
     padding-right: 20px;
     padding-left: 20px;
@@ -341,6 +345,11 @@ html a {
       height: 50vw;
       border-radius: 20px;
       object-fit: fill; }
+
+@media only screen and (min-width: 768px) {
+  .section3Container .videoContainer video {
+    width: 320px;
+    height: 200px; } }
 
 @media only screen and (min-width: 1024px) {
   .section3Container {
@@ -378,7 +387,6 @@ html a {
           font-size: 1rem; }
     .section3Container .quoteContainer {
       margin-top: 50px;
-      text-align: center;
       font-size: 1rem; }
     .section3Container .videoContainer {
       padding-top: 200px; }
@@ -610,6 +618,16 @@ html a {
         font-family: "dosisRegular";
         padding-top: 10px;
         font-size: .8rem; }
+
+@media only screen and (min-width: 768px) {
+  .sidebar {
+    width: 55%; }
+    .sidebar .closeBtn {
+      right: 20px;
+      top: 10px;
+      font-size: 1.4rem; }
+    .sidebar .sidebarContainer {
+      grid-template-rows: 1fr 1.8fr; } }
 
 @media only screen and (min-width: 1024px) {
   .sidebar {

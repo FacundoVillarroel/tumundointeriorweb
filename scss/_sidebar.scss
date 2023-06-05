@@ -112,6 +112,20 @@
   }
 }
 
+@media only screen and (min-width:768px) {
+  .sidebar { 
+    width: 55%;
+    .closeBtn{
+      right: 20px;
+      top: 10px;
+      font-size: 1.4rem;
+    }
+    .sidebarContainer{
+      grid-template-rows: 1fr 1.8fr;
+    }
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   .sidebar { 
     width: 38%;

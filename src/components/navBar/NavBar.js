@@ -14,9 +14,13 @@ const NavBar = ({toggleSidebar, blur}) => {
     }); 
   }
 
-  const navbarToggle = ( content ) => {
-    setNavbarOpen(!navbarOpen)
+  const navBarClose = ( content ) => {
+    setNavbarOpen(false)
     if (content === "contacto" || content === "agenda") toggleSidebar(content);
+  }
+
+  const navbarToggle = () => {
+    setNavbarOpen(!navbarOpen)
   }
 
   return (
@@ -32,8 +36,8 @@ const NavBar = ({toggleSidebar, blur}) => {
       </a>
       <div className={`linksContainer ${navbarOpen ? "linksOpen" : null} B`}>
         <a href="/blog">Blog</a>
-        <button onClick={() =>navbarToggle("contacto")} className="openContactBtn1">Contacto</button>
-        <button onClick={() => navbarToggle("agenda")} className="openBookingBtn">Agenda tu hora</button>
+        <button onClick={() =>navBarClose("contacto")} className="openContactBtn1">Contacto</button>
+        <button onClick={() => navBarClose("agenda")} className="openBookingBtn">Agenda tu hora</button>
       </div>
       <div className='navBarToggler' onClick={navbarToggle}><FiMenu className='menuIcon'/></div>
     </div>

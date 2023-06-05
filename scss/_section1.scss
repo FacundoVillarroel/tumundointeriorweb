@@ -37,11 +37,18 @@
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .section1Container{
+    .imageTitleContainer{
+      height: 300px;
+    }
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   .section1Container{
     .imageTitleContainer{
-    background-size: cover;
-    height: 400px;
+      height: 400px;
     }
     .subtitleContainer{
       display: flex;
