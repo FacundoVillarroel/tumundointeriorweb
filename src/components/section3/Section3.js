@@ -8,9 +8,8 @@ const Section3 = () => {
 
   const  openSeeMore = () => {
     setSeeMore(true)
-    const offset = document.getElementsByClassName("seeMore")[0].offsetTop
     const element = document.getElementById("quienesSomos");
-    const offsetTop = element.offsetTop - 100;
+    const offsetTop = element.offsetTop;
     window.scrollTo({
       top: offsetTop,
       behavior: "smooth"

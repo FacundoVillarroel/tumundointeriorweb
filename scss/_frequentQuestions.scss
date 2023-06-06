@@ -50,6 +50,12 @@
   }
 }
 
+@media only screen and (min-width: 768px) {
+.frequentQuestionsContainer{
+  padding: 30px 20px;
+}
+}
+
 @media only screen and (min-width: 1024px) {
   .frequentQuestionsContainer{
     padding: 50px;

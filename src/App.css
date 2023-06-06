@@ -491,6 +491,10 @@ html a {
       padding-bottom: 5px;
       font-size: .8rem; }
 
+@media only screen and (min-width: 768px) {
+  .frequentQuestionsContainer {
+    padding: 30px 20px; } }
+
 @media only screen and (min-width: 1024px) {
   .frequentQuestionsContainer {
     padding: 50px; }
@@ -621,17 +625,19 @@ html a {
 
 @media only screen and (min-width: 768px) {
   .sidebar {
-    width: 55%; }
+    width: 55%;
+    height: 70%; }
     .sidebar .closeBtn {
       right: 20px;
       top: 10px;
       font-size: 1.4rem; }
     .sidebar .sidebarContainer {
-      grid-template-rows: 1fr 1.8fr; } }
+      grid-template-rows: 1fr 2fr; } }
 
 @media only screen and (min-width: 1024px) {
   .sidebar {
-    width: 38%; }
+    width: 38%;
+    height: 100%; }
     .sidebar .closeBtn {
       right: 30px;
       top: 15px;
