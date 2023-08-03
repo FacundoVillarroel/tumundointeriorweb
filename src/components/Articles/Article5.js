@@ -15,14 +15,14 @@ const Article5 = ({handleClick, className}) => {
         <p>A modo general, la emoción es un complejo entramado de valoraciones cognitivas, experiencias subjetivas, cambios fisiológicos, expresiones corporales y tendencias conductuales.</p>
       </div>
       <div className='parragraph'>
-        <p>Cuando se habla de <span className='dosisBold'>emociones positivas (felicidad, alegría, interés, serenidad, simpatía y gratitud)</span> la valencia que se le da es placentera y los cambios que se producen (cognitivos, fisiológicos y comportamentales) dejan un resultado favorable para el individuo.</p>
+        <p>Cuando se habla de <span className='dosisBold'>emociones positivas (felicidad, alegría, interés, serenidad, simpatía y gratitud)</span>, la valencia que se le da es placentera y los cambios que se producen (cognitivos, fisiológicos y comportamentales) dejan un resultado favorable para el individuo.</p>
       </div>
       <div className='parragraph'>
         <p>La experiencia frecuente de emociones positivas, aumenta la resistencia y fortalece ciertas capacidades humanas en las diferentes etapas de la vida. También, predicen las conductas asertivas y <span className='dosisBold'>minimizan las reacciones agresivas</span>, favorecen un afrontamiento funcional de la amenaza y se relacionan positivamente con el bienestar subjetivo.</p>
       </div>
       <div className='parragraph'>
         <p>En el ámbito del desempeño social, las emociones positivas de <span className='dosisBold'>simpatía, serenidad y gratitud, inducen pensamientos más flexibles</span>, creatividad y un repertorio más amplio de acciones conductuales que repercuten en poseer soluciones más asertivas a los problemas de interacción con nuestros pares, <span className='dosisBold'>disminuyendo los comportamientos agresivos.</span></p>
-        <p>También se ha demostrado que las conductas sociales pasivas (incapacidad para manifestar los propios deseos, opiniones y preferencias, asumiendo una actitud derrotista y una actitud de huida y de evitación), no estarían influidas por las emociones empáticas.</p>
+        <p>También se ha demostrado que las conductas sociales pasivas (incapacidad para manifestar los propios deseos, opiniones y preferencias, asumiendo una actitud derrotista y una actitud de huída y de evitación), no estarían influidas por las emociones empáticas.</p>
       </div>
       <div className='parragraph'>
         <p>Particularmente los niños que son más serenos, muestran mayor predisposición a consolar al que está triste, a ayudar a los compañeros para hacer sus tareas, a prestar los juguetes, a compartir sus golosinas y hacer compañía a los amigos, entre otras conductas positivas. <span className='dosisBold'>La serenidad también inhibe la agresividad física y verbal de los niños.</span> Los niños más serenos se ven menos inclinados a pegar patadas y puñetazos, a morder a otros, a empujarlos, a decir mentiras, a burlarse o a proferir insultos.</p>

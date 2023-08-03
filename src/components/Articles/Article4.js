@@ -8,7 +8,7 @@ const Article4 = ({handleClick, className}) => {
         <BiXCircle/>
       </div>
       <h2>
-        ¿QUE DICE MI CUERPO?
+        ¿QUÉ DICE MI CUERPO?
       </h2>
       <div className='parragraph'>
         <p>En el presente escrito, expondré sobre la problemática asociada a la somatización que sufren niños y adolescentes, por diversas causas, dando a conocer distintas variables que desencadenan este tipo de sintomatología, además del rango etario al que abarca.</p>
@@ -18,10 +18,10 @@ const Article4 = ({handleClick, className}) => {
         <p>Bajo la premisa anterior, se cree que la etiología de los problemas psicosomáticos en infantes y adolescentes, está directamente relacionada a factores de índole psicosociales, genéticos y biológicos; con gran predominancia de poseer antecedentes familiares a la base, que incluyen problemas de salud, modelo parental, refuerzo de la enfermedad, temperamento y complicaciones psicológicas.</p>
       </div>
       <div className='parragraph'>
-        <p>Por otra parte, es válido agregar que la somatización tiene un alto grado de reforzamiento por parte de los padres, cuando el sujeto que la presenta es un niño. Dicho de otra forma, los padres suelen sobreproteger a sus hijos, generando así, un patrón de conducta a futuro que se base en la somatización para conseguir lo que desean, <span className='dosisBold'>SIN ser una forma consciente de manipulación</span>, como podría ser considerado. Sin embargo, lo anterior, sólo abarca un porcentaje de la población que presenta estos síntomas. Existen otras causales que podrían explicarlo como, por ejemplo, la presencia de dolencia física como forma inconsciente del individuo para <span className='dosisBold'>disociar una emoción no procesada</span> que lo amenazaría de forma significativa. <span className='dosisBold'>La mente centra su atención en la expresión de dolor corporal para no centrarse en la verdadera afección.</span></p>
+        <p>Por otra parte, es válido agregar que la somatización tiene un alto grado de reforzamiento por parte de los padres cuando el sujeto que la presenta es un niño. Dicho de otra forma, los padres suelen sobreproteger a sus hijos, generando así, un patrón de conducta a futuro que se base en la somatización para conseguir lo que desean, <span className='dosisBold'>SIN ser una forma consciente de manipulación</span>, como podría ser considerado. Sin embargo, lo anterior, sólo abarca un porcentaje de la población que presenta estos síntomas. Existen otras causales que podrían explicarlo, como por ejemplo, la presencia de dolencia física como forma inconsciente del individuo para <span className='dosisBold'>disociar una emoción no procesada</span> que lo amenazaría de forma significativa. <span className='dosisBold'>La mente centra su atención en la expresión de dolor corporal para no centrarse en la verdadera afección.</span></p>
       </div>
       <div className='parragraph'>
-        <p>Dentro de la sintomatología más común en estos casos, se puede considerar, dolor abdominal, cefaleas, molestias musculares, cansancio físico, entre otras. Generalmente <span className='dosisBold'>las quejas por somatización suelen presentarse entre los 10 y 20 años de edad, pudiendo incrementarse con el paso del tiempo.</span></p>
+        <p>Dentro de la sintomatología más común en estos casos se puede considerar: dolor abdominal, cefaleas, molestias musculares, cansancio físico, entre otras. Generalmente <span className='dosisBold'>las quejas por somatización suelen presentarse entre los 10 y 20 años de edad, pudiendo incrementarse con el paso del tiempo.</span></p>
         <p>Otro punto importante a tener en consideración, es que, en algunos casos, la somatización puede ser presentada por el niño o adolescente, gracias a la presencia de alguna enfermedad que afecte a alguno de los padres o cuidadores, imitando de manera inconsciente la sintomatología observada.</p>
       </div>
       <div className='parragraph'>

@@ -12,7 +12,7 @@ const Article3 = ({handleClick, className}) => {
       </h2>
       <div className='parragraph'>
         <p>
-          Al momento del nacimiento, el infante es cien por cien inmaduro, y se encuentra en la etapa de mayor indefensión que presentará a lo largo de toda su vida. Y todos, ambolutamente todos, creamos y necesitamos establecer un vínculo <span className="dosisBold">seguro</span> con nuestra figura cuidadora.
+          Al momento del nacimiento, el infante es cien por cien inmaduro, y se encuentra en la etapa de mayor indefensión que presentará a lo largo de toda su vida. Y todos, absolutamente todos, creamos y necesitamos establecer un vínculo <span className="dosisBold">seguro</span> con nuestra figura cuidadora.
         </p>
         <p>
           En todos los casos siempre existirá alguien a quien nos vincularemos, y la importancia de esto, es propiciar que ese vínculo sea firme y estable sobre todo en nuestros primeros años de vida (0-5 años).
@@ -43,18 +43,15 @@ const Article3 = ({handleClick, className}) => {
       </div>
       <div className='parragraph'>
         <p>
-          <span className='dosisBold'>Protección:</span> en este punto es necesario considerar que el menor desde muy pequeño siente una inmensa necesidad y curiosidad de conocer el mundo que lo rodea. Para ello se requiere propiciar un espacio seguro que le permita expandir su capacidad exploratoria. Sin embargo, no debemos confundir la protección que es necesaria y saludable, con la sobreprotección hacia el menor, que de algún modo limitaría sus capacidades y podría generar frustración e inseguridad en él mismo, generando así lo contrario a lo que se desea.
+          <span className='dosisBold'>Protección:</span> en este punto es necesario considerar que el menor desde muy pequeño siente una inmensa necesidad y curiosidad de conocer el mundo que lo rodea. Para ello se requiere propiciar un espacio seguro que le permita expandir su capacidad exploratoria, sin embargo, no debemos confundir la protección que es necesaria y saludable, con la sobreprotección hacia el menor, que de algún modo limitaría sus capacidades y podría generar frustración e inseguridad en él mismo, generando así lo contrario a lo que se desea.
         </p>
       </div>
       <div className='parragraph'>
         <p>
-          Ahora bien <span className='dosisBold'>¿qué ocurre si no se logra establecer un apego seguro en la infancia?</span>
+          Ahora bien, <span className='dosisBold'>¿qué ocurre si no se logra establecer un apego seguro en la infancia?</span> Según diversas investigaciones científicas, se ha logrado evidenciar que existe un alto porcentaje de sujetos evaluados, que en su edad adulta, presentan problemáticas tales como; una baja <span className='dosisBold'>autoestima, inseguridad en sus capacidades, conflictos relacionales, inmadurez emocional, falta de empatía, escasa reciprocidad afectiva y/o dependencia emocional, psicopatologías de orden mental, trastornos de personalidad,</span> entre otros.
         </p>
         <p>
-          Según diversas investigaciones científicas, se ha logrado evidenciar que existe un alto porcentaje de sujetos evaluados, que en su edad adulta, presentan problemáticas tales como; una baja <span className='dosisBold'>autoestima, inseguridad en sus capacidades, conflictos relacionales, inmadurez emocional, falta de empatía, escasa reciprocidad afectiva y/o dependencia emocional, psicopatologías de orden mental, trastornos de personalidad,</span> entre otros.
-        </p>
-        <p>
-          Por otra parte debemos comprender que el <span className='dosisBold'>estilo de apego</span> que formemos en nuestra infancia con nuestra figura principal (persona a la cual nos vinculamos), será el estilo afectivo que utilizaremos en nuestra vida adulta al momento de establecer relación con un otro.
+          Por otra parte, debemos comprender que el <span className='dosisBold'>estilo de apego</span> que formemos en nuestra infancia con nuestra figura principal (persona a la cual nos vinculamos), será el estilo afectivo que utilizaremos en nuestra vida adulta al momento de establecer relación con un otro.
         </p>
       </div>
       <div className='parragraph'>
@@ -69,7 +66,7 @@ const Article3 = ({handleClick, className}) => {
       </div>
       <div className='parragraph'>
         <p>
-          <span className='dosisBold'>Estilo de apego coercitivo:</span> los adultos que se formaron bajo este estilo de apego, suelen ser personas con una alta necesidad de atención, protección y cuidado del otro. Bajo este estilo, sienten que es el otro quien debe hacerse cargo de sus emociones negativas y resolverlas, sientiendo una alta incapacidad en sí mismos para enfrentarse a situaciones adversas por si solos. A diferencia del estilo de apego evitante, los llamados “coercitivos”, suelen funcionar de forma extrovertida, haciendo parte al otro permanentemente de sus estados emocionales, sintiendo constantemente la necesidad de ser altamente importante en su vida.
+          <span className='dosisBold'>Estilo de apego coercitivo:</span> los adultos que se formaron bajo este estilo de apego, suelen ser personas con una alta necesidad de atención, protección y cuidado del otro. Bajo este estilo, sienten que es el otro quien debe hacerse cargo de sus emociones negativas y resolverlas, sientiendo una alta incapacidad en sí mismos para enfrentarse a situaciones adversas por sí solos. A diferencia del estilo de apego evitante, los llamados “coercitivos”, suelen funcionar de forma extrovertida, haciendo parte al otro permanentemente de sus estados emocionales, sintiendo constantemente la necesidad de ser altamente importante en su vida.
         </p>
       </div>
       <div className='parragraph'>
@@ -79,7 +76,7 @@ const Article3 = ({handleClick, className}) => {
       </div>
       <div className='parragraph'>
         <p>
-          Para finalizar, es necesario comprender que TODOS presentamos un determinado estilo de apego, dependiendo de la relación afectiva que hayamos experimentado en la infancia con nuestro cuidador. Sin embargo, cuando hablo de <span className='dosisBold'>apego inseguro</span>, me refiero a la <span className='dosisBold'>rigidez, desorganización</span> y <span className='dosisBold'>psicopatología</span> de ese determinado estilo afectivo.
+          Para finalizar, es necesario comprender que TODOS presentamos un determinado estilo de apego, dependiendo de la relación afectiva que hayamos experimentado en la infancia con nuestro cuidador; Sin embargo, cuando hablo de <span className='dosisBold'>apego inseguro</span>, me refiero a la <span className='dosisBold'>rigidez, desorganización</span> y <span className='dosisBold'>psicopatología</span> de ese determinado estilo afectivo.
         </p>
       </div>
       
