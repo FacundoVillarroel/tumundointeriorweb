@@ -11,7 +11,7 @@ const Footer = ({toggleSidebar, openConventions}) => {
             <h4 className='footerButtonText'>Enviar un mensaje</h4>
           </div>
           <div className='footerButtonContainer openConventionsBtn' onClick={() =>openConventions()}>
-            <h4 className='footerButtonText'>Valores y convenios</h4>
+            <h4 className='footerButtonText'>Pagos y convenios</h4>
           </div>
         </div>
       </div>

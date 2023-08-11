@@ -1,9 +1,7 @@
 import React,{ useEffect, useRef} from 'react';
 
-import {BiXCircle} from "react-icons/bi";
-import {GrMoney} from "react-icons/gr";
+import {BiXCircle, BiTransfer, BiWorld} from "react-icons/bi";
 import {FaHourglassHalf , FaHeartbeat} from "react-icons/fa";
-import {BiWorld} from "react-icons/bi";
 
 import consaludImage from "../../images/consaludImage.png";
 import colmenaImage from "../../images/colmenaImage.png";
@@ -42,16 +40,16 @@ const ConventionsContainer = ({closeAnimation, className}) => {
         Tu mundo interior 
       </h2>
       <h3>
-        Valores y convenios
+        Pagos y convenios
       </h3>
       <div className='conventionsDescriptionContainer'>
         <div className='itemContainer'>
-          <GrMoney fontSize={25} className="icon"/>
-          <p>35.000 CL, pago por transferencia bancaria <span className='dosisBold'>(pago nacional, Chile).</span></p>
+          <BiTransfer fontSize={25} className="icon" color={"a38f85"}/>
+          <p>Pago por transferencia bancaria <span className='dosisBold'>(pago nacional, Chile).</span></p>
         </div>
         <div className='itemContainer'>
           <BiWorld fontSize={25} color={"a38f85"}/>
-          <p>45,00 USD pago a través de PayPal, más comisión <span className='dosisBold'>(pago internacional).</span></p>
+          <p>Pago a través de PayPal, más comisión <span className='dosisBold'>(pago internacional).</span></p>
         </div>
         <div className='itemContainer'>
           <FaHourglassHalf fontSize={25} color={"a38f85"} />
