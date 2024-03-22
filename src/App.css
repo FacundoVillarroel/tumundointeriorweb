@@ -814,8 +814,8 @@ html a {
     row-gap: 0;
     border-bottom: 1px solid #e7d7c9; }
     .blogContainer .introductoryArticlesGrid .articleContainer {
-      height: 200px;
-      width: 400px; } }
+      height: 180px;
+      width: 300px; } }
 
 .articleTextContainer {
   position: relative;
