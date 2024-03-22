@@ -132,7 +132,7 @@ html a {
     position: relative;
     z-index: 99;
     background-size: cover;
-    background-image: url("../src/images/matiasArticle.jpg");
+    background-image: url("../src/images/section1Background.jpg");
     height: 170px;
     display: flex; }
   .section1Container .subtitleContainer {
