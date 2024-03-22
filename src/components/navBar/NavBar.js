@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {FiMenu} from "react-icons/fi";
+import { NavLink } from 'react-router-dom';
 
 const NavBar = ({toggleSidebar, blur}) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
@@ -26,16 +27,16 @@ const NavBar = ({toggleSidebar, blur}) => {
   return (
     <div className={`navBarContainer ${blur ? "blur" : null}`}>
       <div className={`linksContainer ${navbarOpen ? "linksOpen" : null} A`}>
-        <a href="/">Inicio</a>
-        <a href="/#quienes" onClick={() => scrollToElement("quienesSomos", 80)}>Quiénes Somos</a>
-        <a href="/preguntas-frecuentes">Preguntas Frecuentes</a>
+        <NavLink to="/">Inicio</NavLink>
+        <NavLink to="/#quienes" onClick={() => scrollToElement("quienesSomos", 80)}>Quiénes Somos</NavLink>
+        <NavLink to="/preguntas-frecuentes">Preguntas Frecuentes</NavLink>
       </div>
-      <a href="/" className='navBarTitleContainer'>
+      <NavLink to="/" className='navBarTitleContainer'>
         <h1 className='navBarTitle'> Tu Mundo Interior</h1>
         <p className='navBarSubTitle'>Centro de Psicoterapia Online</p>
-      </a>
+      </NavLink>
       <div className={`linksContainer ${navbarOpen ? "linksOpen" : null} B`}>
-        <a href="/blog">Blog</a>
+        <NavLink to="/blog">Blog</NavLink>
         <button onClick={() =>navBarClose("contacto")} className="openContactBtn1">Contacto</button>
         <button onClick={() => navBarClose("agenda")} className="openBookingBtn">Agenda tu hora</button>
       </div>

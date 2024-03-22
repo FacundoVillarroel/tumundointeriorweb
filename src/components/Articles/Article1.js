@@ -1,91 +1,178 @@
-import React from 'react';
-import {BiXCircle} from "react-icons/bi";
+import React from "react";
+import { BiXCircle } from "react-icons/bi";
 
-const Article1 = ({handleClick, className}) => {
+const Article1 = ({ handleClick, className }) => {
   return (
     <div className={`articleTextContainer article1 ${className}`}>
       <div className="closeBtn" onClick={handleClick}>
-        <BiXCircle/>
+        <BiXCircle />
       </div>
-      <h2>
-        MIS EXPECTATIVAS EN PSICOTERAPIA
-      </h2>
-      <div className='parragraph'>
+      <h2>LA IMPORTANCIA DEL APEGO TEMPRANO</h2>
+      <div className="parragraph">
         <p>
-          Hace unos días atendía a una paciente como es costumbre y me plantea algo que me pareció importante de evidenciar, y es el hecho de hablar de nuestras expectativas en psicoterapia, del modo que yo espero o creo que me voy a sentir al realizar el proceso psicoterapéutico.
+          Al momento del nacimiento, el infante es cien por cien inmaduro, y se
+          encuentra en la etapa de mayor indefensión que presentará a lo largo
+          de toda su vida. Y todos, absolutamente todos, creamos y necesitamos
+          establecer un vínculo <span className="dosisBold">seguro</span> con
+          nuestra figura cuidadora.
+        </p>
+        <p>
+          En todos los casos siempre existirá alguien a quien nos vincularemos,
+          y la importancia de esto, es propiciar que ese vínculo sea firme y
+          estable sobre todo en nuestros primeros años de vida (0-5 años).
         </p>
       </div>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          Muchas veces como psicólogos/as pensamos que nuestros pacientes saben a lo que se van a enfrentar cuando deciden comenzar el tratamiento, sin embargo, a modo personal me he dado cuenta que no ocurre en todos los casos y eso me lleva a cuestionar la importancia de referirme a esto.
+          Por <span className="dosisBold">apego</span> comprendemos la cercanía
+          afectiva que existe entre cuidador e infante (madre, padre, abuelos,
+          tíos, o quien se encuentre a cargo del lactante desde su nacimiento,
+          según sea el caso y las circunstancias) y la relación que se establece
+          entre ambos. Ahora bien, la importancia de esto es comprender que no
+          sólo es necesario que exista un apego seguro entre ambos, sino que es
+          vital para un desarrollo saludable que así sea.
+        </p>
+        <p>
+          Por otra parte, es muy necesario tener en consideración que el apego
+          que se establezca entre estos debe ser{" "}
+          <span className="dosisBold">seguro</span> y basarse en una relación de{" "}
+          <span className="dosisBold">
+            confianza, cuidado, empatía y protección
+          </span>{" "}
+          hacia el menor.
         </p>
       </div>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          Esta paciente de la cual les hablaba, a la que por temas de confidencialidad no expondré su nombre, refiere que su madre una tarde le comenta: “que estás sensible, todo lo que digo te afecta, no sé para qué vas al psicólogo si no te está ayudando”; y esa frase removió muchas cosas en mi interior, que como expuse anteriormente, pensé que podían ser de conocimiento frecuente, pero que tal vez, no siempre es así.
+          <span className="dosisBold">Confianza:</span> el menor debe sentir que
+          es capaz de confiar en su figura cuidadora, debe saber que en dicha
+          figura encontrará un espacio de contención, seguridad y reciprocidad.
+          Dicho cuidador debe otorgar ese espacio en la relación existente para
+          que sea propicio el adecuado desarrollo afectivo de éste.
         </p>
       </div>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          Cabe recalcar que la paciente de la cual estoy haciendo referencia, ha tenido problemas con su madre, y ese ha sido principalmente el motivo de consulta, pero dichos problemas no se habían evidenciado sino hasta después de comenzar el proceso de psicoterapia.
+          <span className="dosisBold">Cuidado:</span> es importante que el
+          cuidador sea capaz de suplir todas las necesidades del infante, ya
+          sean afectivas, físicas y fisiológicas.
         </p>
       </div>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          Efectivamente la paciente ha estado viviendo un proceso en el cual ha estado experimentando emociones que se encuentran más a flor de piel, y evidentemente ha hecho mucho más consciente lo que le ocurre con su madre y esto lleva naturalmente a una reacción distinta a la que posiblemente presentaba antes de comenzar el tratamiento. 
+          <span className="dosisBold">Empatía:</span> en esta categoría se
+          espera que el cuidador cuente con habilidades básicas de cuidados de
+          atención al menor, tales como; comprensión ante sus demandas, atención
+          a sus necesidades y además ser capaz de sintonizar con sus
+          estructuras, según corresponda su edad.
         </p>
       </div>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          A lo que quiero llegar puntualmente, es que este tipo de comentarios suelen ser más habituales de lo que yo pensaba, porque la expectativa que ponen los/as pacientes es de que cuando inicien el tratamiento rápidamente se van a sentir mejor, evidente, ¿para qué voy a buscar algo que me hará más “daño”, no? Y aquí nos acercamos al meollo del asunto.
+          <span className="dosisBold">Protección:</span> en este punto es
+          necesario considerar que el menor desde muy pequeño siente una inmensa
+          necesidad y curiosidad de conocer el mundo que lo rodea. Para ello se
+          requiere propiciar un espacio seguro que le permita expandir su
+          capacidad exploratoria, sin embargo, no debemos confundir la
+          protección que es necesaria y saludable, con la sobreprotección hacia
+          el menor, que de algún modo limitaría sus capacidades y podría generar
+          frustración e inseguridad en él mismo, generando así lo contrario a lo
+          que se desea.
         </p>
       </div>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          En psicoterapia se expone una problemática, dolor, sufrimiento, etc., con el fin de resolverlo y atenuar esa experiencia desagradable que hemos venido sintiendo, sin embargo, una de las cosas que hacemos en psicoterapia, es exponer y trabajar en ese dolor con el fin de ir “desbloqueando” niveles de conciencia en el/la paciente, para que así sea capaz de ampliar su experiencia y pueda sentir el evento de un modo distinto. El punto está, en que para llegar a ese momento deseado, existen una serie de etapas por las cuales transitará el/la paciente, que no siempre serán gratas, y que efectivamente podrían experimentarse como que el proceso no está sirviendo, pero es justamente ahí donde se generan la mayor cantidad de cambios. 
-        </p>        
-      </div>
-      <div className='parragraph'>
+          Ahora bien,{" "}
+          <span className="dosisBold">
+            ¿qué ocurre si no se logra establecer un apego seguro en la
+            infancia?
+          </span>{" "}
+          Según diversas investigaciones científicas, se ha logrado evidenciar
+          que existe un alto porcentaje de sujetos evaluados, que en su edad
+          adulta, presentan problemáticas tales como; una baja{" "}
+          <span className="dosisBold">
+            autoestima, inseguridad en sus capacidades, conflictos relacionales,
+            inmadurez emocional, falta de empatía, escasa reciprocidad afectiva
+            y/o dependencia emocional, psicopatologías de orden mental,
+            trastornos de personalidad,
+          </span>{" "}
+          entre otros.
+        </p>
         <p>
-          Me gustaría explicar esto con un ejemplo que surge muchísimo en la práctica clínica.
-        </p>        
-      </div>
-      <div className='parragraph'>
-        <p>
-          Un/a paciente consulta porque acaba de terminar una relación de pareja y se siente devastado/a. Refiere que no sabe cómo sobreponerse, que no tiene ganas de ir a trabajar, que apenas puede levantarse de la cama en la mañana, y quiere que todo ese malestar desaparezca lo mas rápidamente posible porque necesita retomar su vida.
+          Por otra parte, debemos comprender que el{" "}
+          <span className="dosisBold">estilo de apego</span> que formemos en
+          nuestra infancia con nuestra figura principal (persona a la cual nos
+          vinculamos), será el estilo afectivo que utilizaremos en nuestra vida
+          adulta al momento de establecer relación con un otro.
         </p>
       </div>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          Ahora bien, ¿cómo hago yo, como psicoterapeuta, para quitarle ese dolor sin exponerlo/a a sus verdaderas emociones, que evidentemente serán ingratas, para modificar una experiencia dolorosa? Yo DEBO llevar al paciente a que revisemos juntos/as lo más profundo de sus emociones y sentimientos, que reitero, si consulta por un duelo, no esperemos encontrarnos con emociones gratificantes, porque los duelos cuestan y duelen.
-        </p>        
-      </div>
-      <div className='parragraph'>
-        <p>
-          Lamentablemente y muchas veces esta parte del proceso, cuando se está accediendo al dolor que se encuentra a la base y a lo que la conciencia se resistía a enfrentar, es cuando más deserciones existen en el proceso psicoterapéutico, porque el sistema de ese/a paciente no se encuentra del todo preparado para ampliar aún sus esquemas y así poder generar el cambio deseado.
+          Existen diversos estilos de apego, sin embargo, en este escrito, sólo
+          me referiré a algunos de ellos:
         </p>
       </div>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          Cambiar esquemas, crecer, sanar y evolucionar, no es un proceso fácil y a veces duele, pero quiero transmitirles que ese dolor no será eterno. Debe existir como parte del cambio, pero pasa, y la recompensa al final de ese camino habrá valido absolutamente la pena. 
+          <span className="dosisBold">Estilo de apego evitante:</span> los
+          adultos que se formaron bajo este tipo de apego, son personas a las
+          cuales les cuesta o rechazan la idea de mostrar y expresar sus
+          emociones al resto. Suelen ser solitarios, sienten que es mejor no
+          mostrar su sufrimiento, suelen considerarse personas poco dignas der
+          ser queridas o apreciadas y tienden a desarrollar una falsa imagen de
+          fortaleza y frialdad. Una de las carcaterísticas principales de este
+          estilo, es que suelen sentir que pueden con todo, y que sólo se
+          necesitan a sí mismos para lograr sus objetivos, presentando baja
+          capacidad de incorporar al otro en su toma de decisiones y
+          dificultades vitales.
         </p>
       </div>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          No está de más decir que el proceso en psicoterapia es dinámico, y no siempre se expondrán temas dolorosos a trabajar; habrá momentos en los cuales sea mucho más agradable una sesión, y habrá otras que serán más difíciles de llevar, pero les garantizo que nuestro trabajo es exponerlos a sus emociones con la contención necesaria y en los tiempos que su propio sistema personal nos lo permita, con el fin de no generar un proceso iatrogénico (condición mental adversa inducida en un paciente por efectos indeseados o lesivos del tratamiento).
+          <span className="dosisBold">Estilo de apego coercitivo:</span> los
+          adultos que se formaron bajo este estilo de apego, suelen ser personas
+          con una alta necesidad de atención, protección y cuidado del otro.
+          Bajo este estilo, sienten que es el otro quien debe hacerse cargo de
+          sus emociones negativas y resolverlas, sientiendo una alta incapacidad
+          en sí mismos para enfrentarse a situaciones adversas por sí solos. A
+          diferencia del estilo de apego evitante, los llamados “coercitivos”,
+          suelen funcionar de forma extrovertida, haciendo parte al otro
+          permanentemente de sus estados emocionales, sintiendo constantemente
+          la necesidad de ser altamente importante en su vida.
         </p>
       </div>
-      <p className='textFoot' style={{paddingTop:"20px"}}>
+      <div className="parragraph">
+        <p>
+          <span className="dosisBold">Estilo de apego ambivalente:</span> son
+          adultos que tal como su nombre indica, viven relaciones ambivalentes,
+          de amor y odio. Son personas que temen tremendamente la idea de
+          abandono en una relación, les cuesta confiar en el otro y se
+          encuentran en constante duda ante la relación afectiva. Presentan
+          dificultades para entregar su corazón a un otro por miedo a que puedan
+          lastimarlo y perciben la relación como una constante amenaza, ya que
+          no saben cuando podrán entregarse completamente.
+        </p>
+      </div>
+      <div className="parragraph">
+        <p>
+          Para finalizar, es necesario comprender que TODOS presentamos un
+          determinado estilo de apego, dependiendo de la relación afectiva que
+          hayamos experimentado en la infancia con nuestro cuidador; Sin
+          embargo, cuando hablo de{" "}
+          <span className="dosisBold">apego inseguro</span>, me refiero a la{" "}
+          <span className="dosisBold">rigidez, desorganización</span> y{" "}
+          <span className="dosisBold">psicopatología</span> de ese determinado
+          estilo afectivo.
+        </p>
+      </div>
+
+      <p className="textFoot" style={{ paddingTop: "20px" }}>
         Un abrazo a todos mis pacientes y lectores,
       </p>
-      <p className='textFoot'>
-        Magdalena Pinedo, Psicóloga Clínica,
-      </p>
-      <p className='textFoot'>
-        7 de mayo, 2023.
-      </p>
+      <p className="textFoot">Magdalena Pinedo, Psicóloga Clínica,</p>
+      <p className="textFoot">17 de mayo, 2023.</p>
     </div>
-  )
-}
+  );
+};
 
-export default Article1
+export default Article1;

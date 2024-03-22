@@ -1,6 +1,6 @@
-.section1Container{
+.section1Container {
   background-color: $isabeline;
-  .imageTitleContainer{
+  .imageTitleContainer {
     position: relative;
     z-index: 99;
     background-size: cover;
@@ -8,29 +8,29 @@
     height: 170px;
     display: flex;
   }
-  .subtitleContainer{
+  .subtitleContainer {
     padding-top: 25px;
     padding-bottom: 25px;
-    .imageSubtitleContainer{
+    .imageSubtitleContainer {
       display: none;
     }
   }
-  .homeDescriptionContainer{
+  .homeDescriptionContainer {
     padding: 0px 20px;
-    .homeDescriptiontitleDecorative{
+    .homeDescriptiontitleDecorative {
       font-family: "beautyDream";
       font-size: 2rem;
       padding-bottom: 10px;
     }
-    .homeDescriptionTitle{
+    .homeDescriptionTitle {
       font-family: "loveloBlack";
       padding-bottom: 15px;
       padding-top: 5px;
       font-size: 1.2rem;
     }
-    .homeDescriptionText{
+    .homeDescriptionText {
       font-family: "dosisRegular";
-      font-size: .8rem;
+      font-size: 0.8rem;
       padding-bottom: 10px;
       text-align: justify;
     }
@@ -38,54 +38,54 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .section1Container{
-    .imageTitleContainer{
+  .section1Container {
+    .imageTitleContainer {
       height: 300px;
     }
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .section1Container{
-    .imageTitleContainer{
+  .section1Container {
+    .imageTitleContainer {
       height: 400px;
     }
-    .subtitleContainer{
+    .subtitleContainer {
       display: flex;
       padding-top: 50px;
       padding-bottom: 50px;
-      .imageSubtitleContainer{
+      .imageSubtitleContainer {
         min-height: 100%;
         width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        .mapImage{
-          opacity: .8;
+        .mapImage {
+          opacity: 0.8;
           height: 80%;
           border-radius: 20px;
         }
-        .mapQuote{
+        .mapQuote {
           font-family: "dosisRegular";
           font-style: italic;
           padding-top: 5px;
         }
       }
     }
-    .homeDescriptionContainer{
+    .homeDescriptionContainer {
       width: 50%;
       padding: 0px 120px 0px 0px;
-      .homeDescriptiontitleDecorative{
+      .homeDescriptiontitleDecorative {
         font-size: 2.5rem;
         padding-bottom: 20px;
       }
-      .homeDescriptionTitle{
+      .homeDescriptionTitle {
         padding-bottom: 25px;
         padding-top: 10px;
         font-size: 1.56rem;
       }
-      .homeDescriptionText{
+      .homeDescriptionText {
         font-size: 1rem;
         padding-bottom: 20px;
       }

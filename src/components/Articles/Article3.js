@@ -1,97 +1,185 @@
-import React from 'react';
-import {BiXCircle} from "react-icons/bi";
+import React from "react";
+import { BiXCircle } from "react-icons/bi";
 
-const Article3 = ({handleClick, className}) => {
+const Article3 = ({ handleClick, className }) => {
   return (
     <div className={`articleTextContainer article3 ${className}`}>
       <div className="closeBtn" onClick={handleClick}>
-        <BiXCircle/>
+        <BiXCircle />
       </div>
-      <h2>
-        LA IMPORTANCIA DEL APEGO TEMPRANO
-      </h2>
-      <div className='parragraph'>
+      <h2>EMOCIONES POSITIVAS</h2>
+      <div className="parragraph">
         <p>
-          Al momento del nacimiento, el infante es cien por cien inmaduro, y se encuentra en la etapa de mayor indefensión que presentará a lo largo de toda su vida. Y todos, absolutamente todos, creamos y necesitamos establecer un vínculo <span className="dosisBold">seguro</span> con nuestra figura cuidadora.
+          Hablemos de la{" "}
+          <span className="dosisBold">
+            importancia e influencia que tienen las emociones positivas en el
+            ser humano
+          </span>
+          , especialmente en la infancia, ya que se plantea que tiene una
+          repercusión directa en la adultez.
         </p>
         <p>
-          En todos los casos siempre existirá alguien a quien nos vincularemos, y la importancia de esto, es propiciar que ese vínculo sea firme y estable sobre todo en nuestros primeros años de vida (0-5 años).
-        </p>
-      </div>
-      <div className='parragraph'>
-        <p>
-          Por <span className='dosisBold'>apego</span> comprendemos la cercanía afectiva que existe entre cuidador e infante (madre, padre, abuelos, tíos, o quien se encuentre a cargo del lactante desde su nacimiento, según sea el caso y las circunstancias) y la relación que se establece entre ambos. Ahora bien, la importancia de esto es comprender que no sólo es necesario que exista un apego seguro entre ambos, sino que es vital para un desarrollo saludable que así sea.
-        </p>
-        <p>
-          Por otra parte, es muy necesario tener en consideración que el apego que se establezca entre estos debe ser <span className='dosisBold'>seguro</span> y basarse en una relación de <span className='dosisBold'>confianza, cuidado, empatía y protección</span> hacia el menor.
+          A modo general, la emoción es un complejo entramado de valoraciones
+          cognitivas, experiencias subjetivas, cambios fisiológicos, expresiones
+          corporales y tendencias conductuales.
         </p>
       </div>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          <span className='dosisBold'>Confianza:</span> el menor debe sentir que es capaz de confiar en su figura cuidadora, debe saber que en dicha figura encontrará un espacio de contención, seguridad y reciprocidad. Dicho cuidador debe otorgar ese espacio en la relación existente para que sea propicio el adecuado desarrollo afectivo de éste.
+          Cuando se habla de{" "}
+          <span className="dosisBold">
+            emociones positivas (felicidad, alegría, interés, serenidad,
+            simpatía y gratitud)
+          </span>
+          , la valencia que se le da es placentera y los cambios que se producen
+          (cognitivos, fisiológicos y comportamentales) dejan un resultado
+          favorable para el individuo.
         </p>
       </div>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          <span className='dosisBold'>Cuidado:</span> es importante que el cuidador sea capaz de suplir todas las necesidades del infante, ya sean afectivas, físicas y fisiológicas.
+          La experiencia frecuente de emociones positivas, aumenta la
+          resistencia y fortalece ciertas capacidades humanas en las diferentes
+          etapas de la vida. También, predicen las conductas asertivas y{" "}
+          <span className="dosisBold">minimizan las reacciones agresivas</span>,
+          favorecen un afrontamiento funcional de la amenaza y se relacionan
+          positivamente con el bienestar subjetivo.
         </p>
       </div>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          <span className='dosisBold'>Empatía:</span> en esta categoría se espera que el cuidador cuente con habilidades básicas de cuidados de atención al menor, tales como; comprensión ante sus demandas, atención a sus necesidades y además ser capaz de sintonizar con sus estructuras, según corresponda su edad.
+          En el ámbito del desempeño social, las emociones positivas de{" "}
+          <span className="dosisBold">
+            simpatía, serenidad y gratitud, inducen pensamientos más flexibles
+          </span>
+          , creatividad y un repertorio más amplio de acciones conductuales que
+          repercuten en poseer soluciones más asertivas a los problemas de
+          interacción con nuestros pares,{" "}
+          <span className="dosisBold">
+            disminuyendo los comportamientos agresivos.
+          </span>
+        </p>
+        <p>
+          También se ha demostrado que las conductas sociales pasivas
+          (incapacidad para manifestar los propios deseos, opiniones y
+          preferencias, asumiendo una actitud derrotista y una actitud de huída
+          y de evitación), no estarían influidas por las emociones empáticas.
         </p>
       </div>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          <span className='dosisBold'>Protección:</span> en este punto es necesario considerar que el menor desde muy pequeño siente una inmensa necesidad y curiosidad de conocer el mundo que lo rodea. Para ello se requiere propiciar un espacio seguro que le permita expandir su capacidad exploratoria, sin embargo, no debemos confundir la protección que es necesaria y saludable, con la sobreprotección hacia el menor, que de algún modo limitaría sus capacidades y podría generar frustración e inseguridad en él mismo, generando así lo contrario a lo que se desea.
+          Particularmente los niños que son más serenos, muestran mayor
+          predisposición a consolar al que está triste, a ayudar a los
+          compañeros para hacer sus tareas, a prestar los juguetes, a compartir
+          sus golosinas y hacer compañía a los amigos, entre otras conductas
+          positivas.{" "}
+          <span className="dosisBold">
+            La serenidad también inhibe la agresividad física y verbal de los
+            niños.
+          </span>{" "}
+          Los niños más serenos se ven menos inclinados a pegar patadas y
+          puñetazos, a morder a otros, a empujarlos, a decir mentiras, a
+          burlarse o a proferir insultos.
         </p>
       </div>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          Ahora bien, <span className='dosisBold'>¿qué ocurre si no se logra establecer un apego seguro en la infancia?</span> Según diversas investigaciones científicas, se ha logrado evidenciar que existe un alto porcentaje de sujetos evaluados, que en su edad adulta, presentan problemáticas tales como; una baja <span className='dosisBold'>autoestima, inseguridad en sus capacidades, conflictos relacionales, inmadurez emocional, falta de empatía, escasa reciprocidad afectiva y/o dependencia emocional, psicopatologías de orden mental, trastornos de personalidad,</span> entre otros.
+          Las <span className="dosisBold">emociones positivas</span>,
+          especialmente la alegría y la simpatía,{" "}
+          <span className="dosisBold">
+            reducen significativamente la probabilidad de ser rechazados
+          </span>{" "}
+          por los pares y suelen ser percibidos por éstos como amigables, poco
+          tristes, no solitarios, confiables y buenos compañeros.
         </p>
         <p>
-          Por otra parte, debemos comprender que el <span className='dosisBold'>estilo de apego</span> que formemos en nuestra infancia con nuestra figura principal (persona a la cual nos vinculamos), será el estilo afectivo que utilizaremos en nuestra vida adulta al momento de establecer relación con un otro.
+          Las emociones positivas también ayudan a ampliar y construir recursos
+          psicológicos que{" "}
+          <span className="dosisBold">
+            facilitan el afrontamiento del estrés.
+          </span>{" "}
+          Los niños más simpáticos, serenos y con satisfacción personal de sus
+          logros y capacidades, tienen una mayor tendencia a reestructurar,
+          positivamente, el significado de las situaciones estresantes, buscar
+          apoyo externo para solucionar el problema o conseguir contención
+          afectiva y realizar acciones eficientes para resolver la situación
+          problemática. Además, la{" "}
+          <span className="dosisBold">
+            simpatía disminuye la probabilidad de que se produzca un descontrol
+            de las emociones
+          </span>
+          , caracterizado por golpear, llorar o gritar, tirar cosas por el aire
+          y otras conductas violentas.
+        </p>
+        <p>
+          Por otra parte, las emociones positivas se encuentran sumamente
+          relacionadas al contexto familiar, puesto que se ha demostrado que{" "}
+          <span className="dosisBold">
+            la interacción padres-hijos tiene un impacto significativo sobre la
+            salud mental de los niños.
+          </span>{" "}
+          El vínculo que se establece entre padres e hijos puede facilitar el
+          desarrollo afectivo de estos últimos, o bien dificultar su
+          florecimiento y expresión. Por ejemplo, la emoción positiva de la
+          alegría, está influida significativamente por el vínculo de apego que
+          desarrollan con su madre. Los niños que perciben un{" "}
+          <span className="dosisBold">apego seguro</span>, caracterizado por una
+          elevada confianza y disponibilidad de su figura de apego, además de
+          sentir protección, cuidado y amor, manifiestan mayor alegría que los
+          niños que identifican a sus padres como poco sensibles a sus
+          necesidades. (Si te interesa conocer más sobre el{" "}
+          <span className="dosisBold">apego seguro</span> y su importancia en
+          edades tempranas, te invito a revisar nuestro blog, donde encontrarás
+          un articulo referido a ello).
         </p>
       </div>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          Existen diversos estilos de apego, sin embargo, en este escrito, sólo me referiré a algunos de ellos:
+          Cuando los padres imponen un control patológico en sus relaciones con
+          sus hijos, o bien, cuando otorgan una autonomía extrema, la
+          tranquilidad, la satisfacción con la vida y la gratitud de los hijos
+          se ve disminuida significativamente.
+        </p>
+        <p>
+          En cuanto a las{" "}
+          <span className="dosisBold">emociones de gratitud</span>, los niños
+          que la presentan, se encuentran agradecidos de tener una familia, de
+          poder contar con uno o los dos padres, tener hermanos y/o abuelos.
         </p>
       </div>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          <span className='dosisBold'>Estilo de apego evitante:</span> los adultos que se formaron bajo este tipo de apego, son personas a las cuales les cuesta o rechazan la idea de mostrar y expresar sus emociones al resto. Suelen ser solitarios, sienten que es mejor no mostrar su sufrimiento, suelen considerarse personas poco dignas der ser queridas o apreciadas y tienden a desarrollar una falsa imagen de fortaleza y frialdad. Una de las carcaterísticas principales de este estilo, es que suelen sentir que pueden con todo, y que sólo se necesitan a sí mismos para lograr sus objetivos, presentando baja capacidad de incorporar al otro en su toma de decisiones y dificultades vitales.
+          Por otra parte, las emociones positivas se han relacionado a otras
+          variables como, por ejemplo, el género, donde los resultados de las
+          investigaciones han señalado que las niñas tienden a ser más
+          simpáticas y más alegres que los niños. Los varones mencionan con
+          mayor frecuencia, como causa de su alegría, las actividades lúdicas y
+          deportivas, mientras las niñas atribuyen la alegría a los vínculos
+          familiares, específicamente a los sentimientos de amor, cuidado y
+          protección por parte de adultos significativos.
         </p>
       </div>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          <span className='dosisBold'>Estilo de apego coercitivo:</span> los adultos que se formaron bajo este estilo de apego, suelen ser personas con una alta necesidad de atención, protección y cuidado del otro. Bajo este estilo, sienten que es el otro quien debe hacerse cargo de sus emociones negativas y resolverlas, sientiendo una alta incapacidad en sí mismos para enfrentarse a situaciones adversas por sí solos. A diferencia del estilo de apego evitante, los llamados “coercitivos”, suelen funcionar de forma extrovertida, haciendo parte al otro permanentemente de sus estados emocionales, sintiendo constantemente la necesidad de ser altamente importante en su vida.
+          Finalmente, respecto a la variable de edad, los resultados indican que
+          los niños de menor edad, obtienen puntuaciones más altas en simpatía.
+          Con respecto a las atribuciones causales de{" "}
+          <span className="dosisBold">alegría y de gratitud</span>, se encontró
+          que los niños más pequeños mostraron una mayor tendencia a valorar y a
+          atribuir su alegría a la posibilidad de jugar, recibir visitas, ser
+          cuidados, pasear y tener juguetes, mientras que los niños más grandes
+          señalan mayormente las relaciones afectivas, especialmente las
+          establecidas con padres y hermanos, y la posesión de objetos
+          materiales útiles.
         </p>
       </div>
-      <div className='parragraph'>
-        <p>
-          <span className='dosisBold'>Estilo de apego ambivalente:</span> son adultos que tal como su nombre indica, viven relaciones ambivalentes, de amor y odio. Son personas que temen tremendamente la idea de abandono en una relación, les cuesta confiar en el otro y se encuentran en constante duda ante la relación afectiva. Presentan dificultades para entregar su corazón a un otro por miedo a que puedan lastimarlo y perciben la relación como una constante amenaza, ya que no saben cuando podrán entregarse completamente.
-        </p>
-      </div>
-      <div className='parragraph'>
-        <p>
-          Para finalizar, es necesario comprender que TODOS presentamos un determinado estilo de apego, dependiendo de la relación afectiva que hayamos experimentado en la infancia con nuestro cuidador; Sin embargo, cuando hablo de <span className='dosisBold'>apego inseguro</span>, me refiero a la <span className='dosisBold'>rigidez, desorganización</span> y <span className='dosisBold'>psicopatología</span> de ese determinado estilo afectivo.
-        </p>
-      </div>
-      
-      
-      <p className='textFoot' style={{paddingTop:"20px"}}>
+      <p className="textFoot" style={{ paddingTop: "20px" }}>
         Un abrazo a todos mis pacientes y lectores,
       </p>
-      <p className='textFoot'>
-        Magdalena Pinedo, Psicóloga Clínica,
-      </p>
-      <p className='textFoot'>
-        17 de mayo, 2023.
-      </p>
+      <p className="textFoot">Magdalena Pinedo, Psicóloga Clínica,</p>
+      <p className="textFoot">20 de mayo, 2023.</p>
     </div>
-  )
-}
+  );
+};
 
-export default Article3
+export default Article3;

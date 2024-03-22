@@ -1,4 +1,4 @@
-.articleTextContainer{
+.articleTextContainer {
   position: relative;
   background-color: $cinereous;
   display: flex;
@@ -6,9 +6,9 @@
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
   border-radius: 20px;
-  margin:4px;
-  padding:10px 15px;
-  .closeBtn{
+  margin: 4px;
+  padding: 10px 15px;
+  .closeBtn {
     color: $light;
     position: absolute;
     right: 10px;
@@ -18,7 +18,7 @@
     z-index: 200;
     font-size: 1rem;
   }
-  &:before{
+  &:before {
     border-radius: 20px;
     content: "";
     background-size: cover;
@@ -29,123 +29,113 @@
     left: 0px;
     opacity: 0.3;
   }
-  .parragraph{
+  .parragraph {
     padding: 3px 0px;
-    p{
+    p {
       margin: 0;
       padding: 0;
     }
   }
-  h2{
+  h2 {
     text-align: center;
     font-family: "dosisSemiBold";
     color: $almond;
     padding-bottom: 10px;
     font-size: 1.2rem;
   }
-  p{
+  p {
     text-align: justify;
     color: &light;
     position: relative;
     color: $light;
     padding: 5px 0px;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
-  .textFoot{
+  .textFoot {
     color: $light;
     text-align: end;
     padding-bottom: 0;
   }
 }
-.article1{
-  &:before{
+.article1 {
+  &:before {
     background-image: url("../src/images/article1Image.jpg");
   }
 }
-.article2{
-  &:before{
+.article2 {
+  &:before {
     background-image: url("../src/images/article2Image.jpg");
   }
 }
-.article3{
-  &:before{
+.article3 {
+  &:before {
     background-image: url("../src/images/article3Image.jpg");
   }
 }
-.article4{
-  &:before{
+.article4 {
+  &:before {
     background-image: url("../src/images/article4Image.jpg");
   }
 }
-.article5{
-  &:before{
+.article5 {
+  &:before {
     background-image: url("../src/images/article5Image.jpg");
   }
 }
-.article6{
-  &:before{
+.article6 {
+  &:before {
     background-image: url("../src/images/article6Image.jpg");
   }
 }
-.article7{
-  &:before{
+.article7 {
+  &:before {
     background-image: url("../src/images/article7Image.jpg");
   }
 }
-.article8{
-  &:before{
+.article8 {
+  &:before {
     background-image: url("../src/images/article8Image.jpg");
   }
 }
-.article9{
-  &:before{
+.article9 {
+  &:before {
     background-image: url("../src/images/article9Image.jpg");
   }
 }
-.article10{
-  &:before{
+.article10 {
+  &:before {
     background-image: url("../src/images/article10Image.jpg");
-  }
-}
-.article11{
-  &:before{
-    background-image: url("../src/images/article11Image.jpg");
-  }
-}
-.article12{
-  &:before{
-    background-image: url("../src/images/article12Image.jpg");
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .articleTextContainer{
-    margin:75px;
-    padding:30px 75px;
-    .closeBtn{
+  .articleTextContainer {
+    margin: 75px;
+    padding: 30px 75px;
+    .closeBtn {
       right: 30px;
       top: 15px;
       font-size: 1.5rem;
     }
-    &:before{
+    &:before {
     }
-    .parragraph{
+    .parragraph {
       padding: 10px 0px;
-      p{
+      p {
         font-size: 1.12rem;
         padding: 10px 0px;
       }
     }
-    h2{
+    h2 {
       padding-bottom: 30px;
       font-size: 2rem;
     }
-    p{
+    p {
       font-size: 1rem;
     }
   }
 }
 
-.closed{
+.closed {
   animation: fadeOut 1s ease-in-out forwards;
 }

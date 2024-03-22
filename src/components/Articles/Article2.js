@@ -1,93 +1,156 @@
-import React from 'react';
-import {BiXCircle} from "react-icons/bi";
+import React from "react";
+import { BiXCircle } from "react-icons/bi";
 
-const Article2 = ({handleClick, className}) => {
+const Article2 = ({ handleClick, className }) => {
   return (
-    <div className={`articleTextContainer article2 ${className}`}>
+    <div className={`articleTextContainer article3 ${className}`}>
       <div className="closeBtn" onClick={handleClick}>
-        <BiXCircle/>
+        <BiXCircle />
       </div>
-      <h2>
-        El síntoma NO soy yo
-      </h2>
-      <div className='parragraph'>
+      <h2>¿QUÉ DICE MI CUERPO?</h2>
+      <div className="parragraph">
         <p>
-          Antes de que comiences a leer este apartado, quiero recalcarte que la intención es entregar con una mirada diferente información acerca de cierta sintomatología que suele ser más frecuente al momento de consultar en psicoterapia, y no tiene la intención de ofender a nadie. Si eso llegase a ocurrir, me disculpo de antemano.
-        </p>
-        <p>
-          Por otra parte, el objetivo final de este escrito, es otorgar un mensaje que espero sirva para terminar con los prejuicios que puedan existir acerca de nuestra salud mental y los diversos efectos que pueda llegar a presentar la mente del ser humano.
+          En el presente escrito, expondré sobre la problemática asociada a la
+          somatización que sufren niños y adolescentes, por diversas causas,
+          dando a conocer distintas variables que desencadenan este tipo de
+          sintomatología, además del rango etario al que abarca.
         </p>
       </div>
-      <p>
-        Lo que a continuación se expresa son algunos tipos de sintomatología, que como expuse anteriormente, suelen ser más frecuentes al momento de consultar en psicoterapia. Y si a ti te representa alguno, me interesa que sepas que el síntoma <span className='dosisBold'>NO</span> eres tú y que no debes avergonzarte por experimentarlo.
-      </p>
-      <p>
-        ¿Alguna vez te has avergonzado de tener un resfriado, tos, dolor de garganta o malestar estomacal? ¿Por qué entonces avergonzarte de la sintomatología que sufres a otro nivel de la salud, como lo es la mente? Te invito a reflexionar sobre esto y que seas parte activa en divulgar esta información, que estoy segura a muchos podrá serles de ayuda, sobre todo, quienes sufren de afecciones asociadas a la mente.
-      </p>
-      <p>
-        Dicho lo anterior, te dejo con esta historia, que espero te sirva, te alivie, te haga sonreír o simplemente te haga reflexionar acerca de la salud mental y la implicancia e importancia de su adecuado funcionamiento en nuestra vida.
-      </p>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          En un pequeño pueblo oculto en los recónditos recovecos de la mente de una chica llamada V.P. quien tiene 29 años de edad, se encuentran unos pequeños y peculiares amigos que no son de su agrado, pero que conviven a diario a su lado haciéndose presentes en su vida impidiendo su tranquilidad.
+          Para contextualizar, hay que tener claro lo que se entenderá por
+          somatización. Para la psicología, como estudio de la salud mental,{" "}
+          <span className="dosisBold">
+            la somatización hace referencia a la expresión de malestar emocional
+            manifestado a través de síntomas físicos, NO explicados por ninguna
+            enfermedad biológica que los valide.
+          </span>
         </p>
         <p>
-          Ellos se empeñan en acompañarla donde ella se encuentre, y por más que V.P. haga todos sus esfuerzos en que desaparezcan de su vida, estos permanecen con más fuerza a su lado y hoy han venido a contarnos su historia.
-        </p>
-      </div>
-      <p>
-        V.P. siempre ha sido una chica tranquila, tiene una vida que podría considerarse común y sin alteraciones <span className='dosisBold'>aparentes</span>, sin embargo, de un día a otro se hicieron presente una serie de “sujetos” que decidieron ser parte de su historia.
-      </p>
-      <p>
-        No todos se hacen presentes a la vez, a veces se hacen relucir unos y a veces otros. La mayor parte del tiempo aparece una señorita que habita en su pueblo, quien no tiene muchos amigos y le agrada estar en soledad. Se satura de los espacios concurridos de gente, se ahoga y la hace presentar alteraciones en su ritmo cardiaco. Esta amiga recibe el nombre de <span className='dosisBold'>“crisis de pánico”</span>, que V.P. representó como una mujer adulta, solterona y un poco histérica, que la lleva a aterrarse cuando sospecha que se hará presente.
-      </p>
-      <p>
-        De repente aparece una señora de edad que emerge cuando nadie la llama, incomodando con su presencia. Es absolutamente intrusa, impertinente, invasiva e insistente. En el pueblo es la típica vecina que “chismea” por la ventana. Bueno, ella, es la señora <span className='dosisBold'>“angustia”</span>, V.P. comenta que a veces siente que aparece para advertirla de algo, pero que no sabe muy bien qué pudiera llegar a ser.
-      </p>
-      <div className='parragraph'>
-        <p>
-          En el pueblo también nos encontramos con un propietario de contextura gruesa, grande y pesada. Está la mayor parte del tiempo cabizbajo y que cuando aparece destruye todo a su paso, introduciendo a V.P. en un vacío existencial de tristeza y desolación. Éste se siente como llevar un bulto en su espalda y con 20 kg en sus pies al caminar.
-        </p>
-        <p>
-          Este sujeto recibe el nombre de <span className='dosisBold'>“depresión”</span>, puede aparecer con mayor intensidad algunos días y otros no tanto. Hay algunos días que puede verse muy pesimista y de mal humor, nada le hace sentido y pierde el gusto por cosas que antes eran de su agrado. A éste es importante mantenerlo a raya.
+          Bajo la premisa anterior, se cree que la etiología de los problemas
+          psicosomáticos en infantes y adolescentes, está directamente
+          relacionada a factores de índole psicosociales, genéticos y
+          biológicos; con gran predominancia de poseer antecedentes familiares a
+          la base, que incluyen problemas de salud, modelo parental, refuerzo de
+          la enfermedad, temperamento y complicaciones psicológicas.
         </p>
       </div>
-      <p>
-        Por otra parte, de vez en cuando, aparecen unos fantasmas intrusos que revolotean dentro de la mente de V.P. con pensamientos e ideas que parecen estar atascadas dentro de sí y se presentan con una alta carga de angustia, con ideas tales como: lastimar a un ser querido, cometer un acto violento hacia alguien, autolesionarse, ideas de actos sexuales inapropiados, etc. Estos revoltosos reciben el nombre de <span className='dosisBold'>“pensamientos intrusivos”</span>.
-      </p>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          Después nos encontramos con unos pequeños duendes que son bien revoltosos y hacen de las suyas a su forma. Estos pequeños despliegan rituales que los mantienen con vida, como por ejemplo: rituales de limpieza, rituales de orden, rituales de corroboración, rituales de repetición, rituales de acumulación, entre otros.
-        </p>
-        <p>
-          Estos chicos reciben el nombre de <span className='dosisBold'>“TOC”</span> que obligan a V.P. a concluir con una determinada acción y así disminuir su ansiedad.
+          Por otra parte, es válido agregar que la somatización tiene un alto
+          grado de reforzamiento por parte de los padres cuando el sujeto que la
+          presenta es un niño. Dicho de otra forma, los padres suelen
+          sobreproteger a sus hijos, generando así, un patrón de conducta a
+          futuro que se base en la somatización para conseguir lo que desean,{" "}
+          <span className="dosisBold">
+            SIN ser una forma consciente de manipulación
+          </span>
+          , como podría ser considerado. Sin embargo, lo anterior, sólo abarca
+          un porcentaje de la población que presenta estos síntomas. Existen
+          otras causales que podrían explicarlo, como por ejemplo, la presencia
+          de dolencia física como forma inconsciente del individuo para{" "}
+          <span className="dosisBold">disociar una emoción no procesada</span>{" "}
+          que lo amenazaría de forma significativa.{" "}
+          <span className="dosisBold">
+            La mente centra su atención en la expresión de dolor corporal para
+            no centrarse en la verdadera afección.
+          </span>
         </p>
       </div>
-      <div className='parragraph'>
+      <div className="parragraph">
         <p>
-          En este apartado me pareció interesante la idea de tomarnos con humor (entendiendo y respetando la gravedad de quien lo sufre), algunos de los síntomas que más de alguno ha presentado y que sin duda interrumpen nuestra cotidianidad y tranquilidad.
+          Dentro de la sintomatología más común en estos casos se puede
+          considerar: dolor abdominal, cefaleas, molestias musculares, cansancio
+          físico, entre otras. Generalmente{" "}
+          <span className="dosisBold">
+            las quejas por somatización suelen presentarse entre los 10 y 20
+            años de edad, pudiendo incrementarse con el paso del tiempo.
+          </span>
         </p>
         <p>
-          Claro está que dentro de la práctica clínica existen innumerables afecciones que no se encontraron referidas en la descripción anteriormente planteada, sin embargo, serán abordadas en diversos artículos que encontrarás en nuestro blog.
+          Otro punto importante a tener en consideración, es que, en algunos
+          casos, la somatización puede ser presentada por el niño o adolescente,
+          gracias a la presencia de alguna enfermedad que afecte a alguno de los
+          padres o cuidadores, imitando de manera inconsciente la sintomatología
+          observada.
         </p>
       </div>
-      <p>
-        Antes de finalizar, quisiera explicar brevemente la concepción de referirnos a estos molestos síntomas como <span className='dosisBold'>“amigos ingratos”</span>. Si bien todos deberíamos estar de acuerdo en que este tipo de sintomatología es tremendamente desagradable y que a nadie le gustaría presentarla. <span className='dosisBold'>En psicología, y más específicamente desde nuestro enfoque de psicoterapia, consideramos al síntoma como un intento fallido para solucionar un problema</span>, sin embargo, no resulta adaptativo y saludable. Es justamente ahí cuando deberíamos consultar con un profesional, ya que en psicoterapia se entregan recursos adaptativos para enfrentar conflictos no resueltos.
-      </p>
-      <p>
-        Si presentas o conoces a alguien que presente algún tipo de sintomatología como la anteriormente expuesta, o bien otra que no haya referido anteriormente, te invito a que consultes con un especialista capacitado para abordarla y así consigas un mayor bienestar en tu vida.
-      </p>
-      <p className='textFoot' style={{paddingTop:"20px"}}>
+      <div className="parragraph">
+        <p>
+          Por otra parte, es importante y resulta muy necesario profundizar en
+          la temática de somatización, sobre todo al momento de abordarla frente
+          a un paciente, ya que se debe contar con una base teórica sólida que
+          respalde la intervención psicológica. Esto dado a que como la
+          manifestación de la sintomatología, al ser corporal y desde una
+          expresión que se relaciona más cercanamente al ámbito médico, resulta
+          complejo que las personas asocien y validen que lo que les está
+          ocurriendo es producto de un{" "}
+          <span className="dosisBold">conflicto intrapsíquico</span>, sobre todo
+          porque al tratarse de un conflicto que presenta la persona en niveles
+          inconscientes, donde la mente se encuentra disociando contenidos
+          amenazantes para la conciencia de la persona, la experiencia que
+          percibe de lo que le ocurre es extraña. Solamente cuando los exámenes
+          médicos comienzan a descartar que no hay un diagnóstico biológico, los
+          pacientes recién dan indicios de comenzar a abrirse a la posibilidad
+          de que lo que les ocurre es algo correspondiente al ámbito de la
+          psicología.
+        </p>
+      </div>
+      <div className="parragraph">
+        <p>
+          La mente es muy compleja, y por más que suele asociarse a algo
+          exclusivamente cognitivo, es más que esto. Recordando los análisis y
+          visión teórica que tenía W. James (1890), en su libro:{" "}
+          <span className="dosisBold">“Principios de psicología”</span>,
+          postulaba que la mente era considerada como un todo en el ser humano,
+          es decir, el cuerpo (soma), era entendido como una parte de la mente,
+          por lo que a través de su propio lenguaje, como lo realiza mediante
+          los síntomas, <span className="dosisBold">“el cuerpo habla”</span>,
+          pero en sus propios códigos y simbolismos que necesitan ser
+          descifrados, ya que entrega una información muy valiosa al terapeuta
+          para ir más allá y comprender en mayor profundidad la problemática que
+          se encuentra presentando el paciente. Por lo mismo, se considera que
+          aplicar únicamente técnicas psicológicas centradas exclusivamente en
+          la eliminación del síntoma, por más que resulten eficaces bajo el
+          criterio de que no se encuentre presente, queda en algún nivel no
+          comprendido lo que le pasa a la persona, habiendo una alta
+          probabilidad de que el síntoma pueda manifestarse en el futuro de la
+          misma forma o de otra, ya que el conflicto sigue existiendo en el
+          sujeto en algún lugar de su psiquis.
+        </p>
+      </div>
+      <div className="parragraph">
+        <p>
+          Finalmente, se considera relevante realizar un breve análisis en
+          relación a la diferencia de género que se da entre niñas y niños en el
+          porcentaje de manifestación de la sintomatología de somatización,
+          donde{" "}
+          <span className="dosisBold">
+            las niñas tienen un mayor índice que los niños
+          </span>
+          , y esto se encuentra asociado a las conductas de los padres en el
+          efecto reforzador en este tipo de conductas. Sin ser concluyentes en
+          una postura definitiva, podría pensarse que la diferencia, en este
+          caso, en cuanto a la estadística asociada a la variable de género,
+          podría tener relación con un elemento sociocultural, dado a que a las
+          mujeres se les permite expresar más lo que les ocurre y/o presentarse
+          más vulnerables que los hombres, ya que existen creencias en la
+          sociedad como, por ejemplo; “las mujeres son más vulnerables que los
+          hombres”, “los hombres deben ser fuertes y no mostrar debilidad”, “el
+          hombre está para proteger a la mujer”, entre otras. De este modo, al
+          existir este tipo de creencias, la actitud de los padres va a
+          presentar una tendencia a ser más comprensiva frente a las niñas
+          cuando somaticen que al momento que esto mismo lo manifiesten los
+          niños.
+        </p>
+      </div>
+      <p className="textFoot" style={{ paddingTop: "20px" }}>
         Un abrazo a todos mis pacientes y lectores,
       </p>
-      <p className='textFoot'>
-        Magdalena Pinedo, Psicóloga Clínica,
-      </p>
-      <p className='textFoot'>
-        10 de mayo, 2023.
-      </p>
+      <p className="textFoot">Magdalena Pinedo, Psicóloga Clínica,</p>
+      <p className="textFoot">20 de mayo, 2023.</p>
     </div>
-  )
-}
+  );
+};
 
-export default Article2
+export default Article2;

@@ -1,97 +1,112 @@
-.section3Container{
+.section3Container {
   position: relative;
   background-color: $isabeline;
   padding: 10px 0px;
-  .section3TitleContainer{
-    .section3Title{
+  .section3TitleContainer {
+    .section3Title {
       font-family: "loveloBlack";
       font-size: 1.2rem;
       text-align: center;
       margin-bottom: 10px;
     }
-    .subTitleContainer{
+    .subTitleContainer {
       padding: 0px 20px;
-      .section3SubTitle{
+      .section3SubTitle {
         font-family: "dosisRegular";
-        font-size: .8rem;
-        text-align:justify;
+        font-size: 0.8rem;
+        text-align: justify;
         margin-bottom: 10px;
       }
     }
   }
-  .professionalsContainer{
+  .professionalsContainer {
     display: flex;
-    justify-content: space-around;  
-    .professionalContainer{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .professionalContainer {
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
     }
-    .maidaContainer{
+    .professionalContainer:first-child {
+      width: 100%;
+    }
+    .magdaContainer {
       width: 47vw;
       height: calc(47vw / 0.75);
       border-radius: 10px;
       background-image: url("../src/images/magda.jpeg");
-      background-size:contain;
-      opacity: .5;
-      &:hover{
+      background-size: contain;
+      opacity: 0.5;
+      &:hover {
         opacity: 1;
       }
     }
-    .cokeContainer{
+    .jorgeContainer {
       width: 47vw;
       height: calc(47vw / 0.75);
       background-image: url("../src/images/jorge.jpeg");
       border-radius: 10px;
       background-size: contain;
-      opacity: .5;
-      &:hover{
+      opacity: 0.5;
+      &:hover {
         opacity: 1;
       }
     }
-    .professionalDescriptionContainer{
+    .matiasContainer {
+      width: 47vw;
+      height: calc(47vw / 0.75);
+      background-image: url("../src/images/matias.jpg");
+      border-radius: 10px;
+      background-size: contain;
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .professionalDescriptionContainer {
       margin: 10px;
-      background-color: rgba(163, 143, 133, .5);
+      background-color: rgba(163, 143, 133, 0.5);
       border-radius: 10px;
       padding-left: 5px;
       padding-right: 5px;
       padding-bottom: 5px;
       margin-bottom: 50px;
-      .professionalName{
+      .professionalName {
         font-family: "loveloBlack";
         padding: 5px;
-        font-size: .8rem;
+        font-size: 0.8rem;
         color: $light;
         text-align: center;
       }
-      .professionalDescription{
+      .professionalDescription {
         font-family: "dosisSemiBold";
         padding-bottom: 2px;
-        font-size: .7rem;
+        font-size: 0.7rem;
         color: $isabeline;
         text-align: center;
       }
-      .seeMore{
+      .seeMore {
         cursor: pointer;
-        &:hover{
+        &:hover {
           color: $light;
         }
       }
     }
   }
-  .quoteContainer{
+  .quoteContainer {
     text-align: center;
     margin-top: 10px;
     padding-right: 20px;
     padding-left: 20px;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
-  .videoContainer{
+  .videoContainer {
     display: flex;
     justify-content: center;
-    video{
+    video {
       width: 80%;
       height: 50vw;
       border-radius: 20px;
@@ -101,9 +116,9 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .section3Container{
-    .videoContainer{
-      video{
+  .section3Container {
+    .videoContainer {
+      video {
         width: 320px;
         height: 200px;
       }
@@ -112,57 +127,64 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .section3Container{
+  .section3Container {
     padding: 30px 50px 50px 50px;
-    .section3TitleContainer{
+    .section3TitleContainer {
       margin: 40px 100px 60px 100px;
-      .section3Title{
+      .section3Title {
         font-size: 1.37rem;
         margin-bottom: 25px;
       }
-      .subTitleContainer{
+      .subTitleContainer {
         padding: 0px 70px;
-        .section3SubTitle{
+        .section3SubTitle {
           font-size: 1rem;
         }
       }
     }
-    .professionalsContainer{
+    .professionalsContainer {
       flex-direction: row;
-      .professionalContainer{
+      .professionalContainer {
         flex-direction: row;
       }
-      .maidaContainer{
+      .professionalContainer:first-child {
+        margin-bottom: 200px;
+      }
+      .magdaContainer {
         width: 27rem;
         height: 36rem;
       }
-      .cokeContainer{
+      .jorgeContainer {
         width: 27rem;
         height: 36rem;
       }
-      .professionalDescriptionContainer{
+      .matiasContainer {
+        width: 27rem;
+        height: 36rem;
+      }
+      .professionalDescriptionContainer {
         margin: 0;
         position: absolute;
         bottom: -150px;
         padding-left: 10px;
         padding-right: 10px;
-        .professionalName{
+        .professionalName {
           padding: 5px 15px;
           font-size: 1.18rem;
         }
-        .professionalDescription{
-        padding-bottom: 5px;
-        font-size: 1rem;
+        .professionalDescription {
+          padding-bottom: 5px;
+          font-size: 1rem;
         }
       }
     }
-    .quoteContainer{
+    .quoteContainer {
       margin-top: 50px;
-      font-size: 1rem
+      font-size: 1rem;
     }
-    .videoContainer{
-      padding-top: 200px; 
-      video{
+    .videoContainer {
+      padding-top: 200px;
+      video {
         width: 400px;
         height: 250px;
       }
