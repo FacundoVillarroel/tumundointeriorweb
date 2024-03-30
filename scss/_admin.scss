@@ -1,0 +1,30 @@
+.adminContainer {
+  width: 100%;
+  .formContainer {
+    margin: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .inputRow {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    label {
+      margin-right: 10px;
+    }
+    input {
+      flex: 1;
+      height: 50px;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    textarea {
+      flex: 1;
+      padding: 20px;
+      min-height: 200px;
+    }
+  }
+}

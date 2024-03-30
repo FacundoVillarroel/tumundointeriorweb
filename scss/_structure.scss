@@ -1,38 +1,42 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-html{
-    p, h1 , h2, h3, h4 {
-        margin: 0;
-        font-family: "dosisRegular";
-    }
-    a{
-        text-decoration: none;
-        color: $dark;
-        &:hover{
-            color: $silver;
-        }
-    }
-}
-
-.App{
-    margin-top: 97px;
-}
-
-.dosisBold{
-    font-family: "dosisBold";
-}
-
-.dosisItalic{
+html {
+  p,
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
     font-family: "dosisRegular";
-    font-style: italic;
+  }
+  a {
+    text-decoration: none;
+    color: $dark;
+    &:hover {
+      color: $silver;
+    }
+  }
+}
+
+.App {
+  margin-top: 97px;
+}
+
+.dosisBold {
+  font-family: "dosisBold" !important;
+}
+
+.dosisItalic {
+  font-family: "dosisRegular";
+  font-style: italic;
 }
 
 @media only screen and (min-width: 1024px) {
-    .App{
-        margin-top: 110px;
-    }
+  .App {
+    margin-top: 110px;
+  }
 }

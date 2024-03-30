@@ -31,10 +31,6 @@
   }
   .parragraph {
     padding: 3px 0px;
-    p {
-      margin: 0;
-      padding: 0;
-    }
   }
   h2 {
     text-align: center;
@@ -44,6 +40,8 @@
     font-size: 1.2rem;
   }
   p {
+    margin: 0;
+    padding: 0;
     text-align: justify;
     color: &light;
     position: relative;
@@ -121,17 +119,14 @@
     }
     .parragraph {
       padding: 10px 0px;
-      p {
-        font-size: 1.12rem;
-        padding: 10px 0px;
-      }
+    }
+    p {
+      font-size: 1.12rem;
+      padding: 10px 0px;
     }
     h2 {
       padding-bottom: 30px;
       font-size: 2rem;
-    }
-    p {
-      font-size: 1rem;
     }
   }
 }

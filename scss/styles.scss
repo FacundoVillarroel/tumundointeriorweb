@@ -13,8 +13,9 @@
 @import "articles";
 @import "seeMore";
 @import "conventions";
+@import "admin";
 
-.main-content{
+.main-content {
   filter: blur(2px);
 }
 
@@ -36,7 +37,7 @@
   }
   100% {
     opacity: 0;
-    transform: scale(.3);
+    transform: scale(0.3);
   }
 }
 

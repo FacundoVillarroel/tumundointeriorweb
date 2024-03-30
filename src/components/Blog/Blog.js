@@ -1,31 +1,26 @@
-import React, { useState } from "react";
-import JorgeArticle from "../Articles/JorgeArticle";
-import MagdalenaArticle from "../Articles/MagdalenaArticle";
-import MatiasArticle from "../Articles/MatiasArticle";
-import Article1 from "../Articles/Article1";
-import Article2 from "../Articles/Article2";
-import Article3 from "../Articles/Article3";
-import Article4 from "../Articles/Article4";
-import Article5 from "../Articles/Article5";
-import Article6 from "../Articles/Article6";
-import Article7 from "../Articles/Article7";
-import Article8 from "../Articles/Article8";
-import Article9 from "../Articles/Article9";
-import Article10 from "../Articles/Article10";
+import React, { useEffect, useState } from "react";
+import { getDocs, collection } from "firebase/firestore";
+
+import { db } from "../../firebase/config";
+
+import Article from "../Articles/Article";
 
 const Blog = () => {
-  const [currentArticleClassName, setCurrentArticleClassName] = useState("");
-  const [currentArticle, setCurrentArticle] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [articles, setArticles] = useState([]);
+  const [selectedArticle, setSelectedArticle] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleClick = (articleNumber) => {
-    if (isNaN(articleNumber)) {
-      setCurrentArticleClassName("closed");
+  const handleClick = (articleId) => {
+    const articleFound = articles.find((article) => article.id === articleId);
+    if (!articleFound) {
+      setIsOpen(false);
       setTimeout(() => {
-        setCurrentArticle(articleNumber);
+        setSelectedArticle("");
       }, 1000);
     } else {
-      setCurrentArticleClassName("");
-      setCurrentArticle(articleNumber);
+      setIsOpen(true);
+      setSelectedArticle(articleFound);
       window.scrollTo({
         top: 0,
         behavior: "smooth",
@@ -34,6 +29,156 @@ const Blog = () => {
   };
 
   const renderArticleComponent = () => {
+    if (selectedArticle) {
+      return (
+        <Article
+          data={selectedArticle}
+          handleClick={() => handleClick("close")}
+          isOpen={isOpen}
+        />
+      );
+    }
+  };
+
+  useEffect(() => {
+    setLoading(true);
+
+    const articlesRef = collection(db, "articles");
+    getDocs(articlesRef)
+      .then((resp) => {
+        const articlesArray = resp.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        articlesArray.sort((a, b) => {
+          if (typeof a.index === "number" && typeof b.index === "number") {
+            return a.index - b.index;
+          } else {
+            return typeof a.index === "number" ? 1 : -1;
+          }
+        });
+        console.log(articlesArray);
+        setArticles(articlesArray);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
+  const introductoryGridContent = articles.map((article) => {
+    if (isNaN(article.index)) {
+      return (
+        <div
+          key={article.id}
+          className={`articleContainer article${article.index}`}
+          onClick={() => handleClick(article.id)}
+        >
+          <h2>{article.author}</h2>
+        </div>
+      );
+    }
+    return null;
+  });
+
+  const articlesGridContent = articles.map((article) => {
+    if (!isNaN(article.index)) {
+      return (
+        <div
+          key={article.id}
+          className={`articleContainer article${article.index}`}
+          onClick={() => handleClick(article.id)}
+        >
+          <h2>{article.title}</h2>
+        </div>
+      );
+    }
+    return null;
+  });
+
+  return (
+    <>
+      {loading ? (
+        <div>LOADING</div>
+      ) : (
+        <div className="blogContainer">
+          <p className="title">Nuestro Blog</p>
+          {renderArticleComponent()}
+          <div className="blogGrid introductoryArticlesGrid">
+            {introductoryGridContent}
+          </div>
+          <div className="blogGrid">{articlesGridContent}</div>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default Blog;
+
+{
+  /* <div
+              className="articleContainer article1"
+              onClick={() => handleClick(1)}
+            >
+              <h2>LA IMPORTANCIA DEL APEGO TEMPRANO</h2>
+            </div>
+            <div
+              className="articleContainer article2"
+              onClick={() => handleClick(2)}
+            >
+              <h2>¿QUE DICE MI CUERPO?</h2>
+            </div>
+            <div
+              className="articleContainer article3"
+              onClick={() => handleClick(3)}
+            >
+              <h2>EMOCIONES POSITIVAS</h2>
+            </div>
+            <div
+              className="articleContainer article4"
+              onClick={() => handleClick(4)}
+            >
+              <h2>RESILIENCIA: SUPERAR TRAUMAS</h2>
+            </div>
+            <div
+              className="articleContainer article5"
+              onClick={() => handleClick(5)}
+            >
+              <h2>DEPRESIÓN: ENFOQUES PSICOLÓGICOS</h2>
+            </div>
+            <div
+              className="articleContainer article6"
+              onClick={() => handleClick(6)}
+            >
+              <h2>RESILIENCIA: SUPERANDO TRAUMAS</h2>
+            </div>
+            <div
+              className="articleContainer article7"
+              onClick={() => handleClick(7)}
+            >
+              <h2>RESILIENCIA: SUPERANDO TRAUMAS</h2>
+            </div>
+            <div
+              className="articleContainer article8"
+              onClick={() => handleClick(8)}
+            >
+              <h2>RESILIENCIA: SUPERANDO TRAUMAS</h2>
+            </div>
+            <div
+              className="articleContainer article9"
+              onClick={() => handleClick(9)}
+            >
+              <h2>RESILIENCIA: SUPERANDO TRAUMAS</h2>
+            </div>
+            <div
+              className="articleContainer article10"
+              onClick={() => handleClick(10)}
+            >
+              <h2>RESILIENCIA: SUPERANDO TRAUMAS</h2>
+            </div> */
+}
+
+/* const renderArticleComponent = () => {
     switch (currentArticle) {
       case "jorge":
         return (
@@ -129,96 +274,4 @@ const Blog = () => {
       default:
         return null;
     }
-  };
-
-  return (
-    <div className="blogContainer">
-      <p className="title">Nuestro Blog</p>
-      {renderArticleComponent()}
-      <div className="blogGrid introductoryArticlesGrid">
-        <div
-          className="articleContainer jorgeArticle"
-          onClick={() => handleClick("jorge")}
-        >
-          <h2>JORGE ROSENDE</h2>
-        </div>
-        <div
-          className="articleContainer magdalenaArticle"
-          onClick={() => handleClick("magdalena")}
-        >
-          <h2>MAGDALENA PINEDO</h2>
-        </div>
-        <div
-          className="articleContainer matiasArticle"
-          onClick={() => handleClick("matias")}
-        >
-          <h2>MATÍAS VINOT</h2>
-        </div>
-      </div>
-      <div className="blogGrid">
-        <div
-          className="articleContainer article1"
-          onClick={() => handleClick(1)}
-        >
-          <h2>LA IMPORTANCIA DEL APEGO TEMPRANO</h2>
-        </div>
-        <div
-          className="articleContainer article2"
-          onClick={() => handleClick(2)}
-        >
-          <h2>¿QUE DICE MI CUERPO?</h2>
-        </div>
-        <div
-          className="articleContainer article3"
-          onClick={() => handleClick(3)}
-        >
-          <h2>EMOCIONES POSITIVAS</h2>
-        </div>
-        <div
-          className="articleContainer article4"
-          onClick={() => handleClick(4)}
-        >
-          <h2>RESILIENCIA: SUPERAR TRAUMAS</h2>
-        </div>
-        <div
-          className="articleContainer article5"
-          onClick={() => handleClick(5)}
-        >
-          <h2>DEPRESIÓN: ENFOQUES PSICOLÓGICOS</h2>
-        </div>
-        <div
-          className="articleContainer article6"
-          onClick={() => handleClick(6)}
-        >
-          <h2>RESILIENCIA: SUPERANDO TRAUMAS</h2>
-        </div>
-        <div
-          className="articleContainer article7"
-          onClick={() => handleClick(7)}
-        >
-          <h2>RESILIENCIA: SUPERANDO TRAUMAS</h2>
-        </div>
-        <div
-          className="articleContainer article8"
-          onClick={() => handleClick(8)}
-        >
-          <h2>RESILIENCIA: SUPERANDO TRAUMAS</h2>
-        </div>
-        <div
-          className="articleContainer article9"
-          onClick={() => handleClick(9)}
-        >
-          <h2>RESILIENCIA: SUPERANDO TRAUMAS</h2>
-        </div>
-        <div
-          className="articleContainer article10"
-          onClick={() => handleClick(10)}
-        >
-          <h2>RESILIENCIA: SUPERANDO TRAUMAS</h2>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Blog;
+  }; */

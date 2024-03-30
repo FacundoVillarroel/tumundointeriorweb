@@ -102,7 +102,11 @@
   padding: 0px;
   box-sizing: border-box; }
 
-html p, html h1, html h2, html h3, html h4 {
+html p,
+html h1,
+html h2,
+html h3,
+html h4 {
   margin: 0;
   font-family: "dosisRegular"; }
 
@@ -116,7 +120,7 @@ html a {
   margin-top: 97px; }
 
 .dosisBold {
-  font-family: "dosisBold"; }
+  font-family: "dosisBold" !important; }
 
 .dosisItalic {
   font-family: "dosisRegular";
@@ -848,9 +852,6 @@ html a {
     opacity: 0.3; }
   .articleTextContainer .parragraph {
     padding: 3px 0px; }
-    .articleTextContainer .parragraph p {
-      margin: 0;
-      padding: 0; }
   .articleTextContainer h2 {
     text-align: center;
     font-family: "dosisSemiBold";
@@ -858,6 +859,8 @@ html a {
     padding-bottom: 10px;
     font-size: 1.2rem; }
   .articleTextContainer p {
+    margin: 0;
+    padding: 0;
     text-align: justify;
     color: .articleTextContainer p light;
     position: relative;
@@ -909,14 +912,12 @@ html a {
       font-size: 1.5rem; }
     .articleTextContainer .parragraph {
       padding: 10px 0px; }
-      .articleTextContainer .parragraph p {
-        font-size: 1.12rem;
-        padding: 10px 0px; }
+    .articleTextContainer p {
+      font-size: 1.12rem;
+      padding: 10px 0px; }
     .articleTextContainer h2 {
       padding-bottom: 30px;
-      font-size: 2rem; }
-    .articleTextContainer p {
-      font-size: 1rem; } }
+      font-size: 2rem; } }
 
 .closed {
   animation: fadeOut 1s ease-in-out forwards; }
@@ -1117,6 +1118,31 @@ html a {
 
 .conventionsContainerClosed {
   animation: fadeOut 1s ease-in-out backwards; }
+
+.adminContainer {
+  width: 100%; }
+  .adminContainer .formContainer {
+    margin: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .adminContainer .formContainer .inputRow {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 10px; }
+    .adminContainer .formContainer label {
+      margin-right: 10px; }
+    .adminContainer .formContainer input {
+      flex: 1;
+      height: 50px;
+      padding-left: 50px;
+      padding-right: 50px; }
+    .adminContainer .formContainer textarea {
+      flex: 1;
+      padding: 20px;
+      min-height: 200px; }
 
 .main-content {
   filter: blur(2px); }
