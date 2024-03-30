@@ -23,19 +23,19 @@ const Section3 = () => {
         <h2 className="section3Title">¿Quiénes somos?</h2>
         <div className="subTitleContainer">
           <p className="section3SubTitle">
-            <span className="dosisItalic">Tu mundo interior</span> es un centro
-            de psicoterapia online orientado a otorgar un espacio de confianza y
-            bienestar. Pero por sobre todo es un camino hacia el
+            <span className="dosisItalic">Tu mundo interior</span>, es un centro
+            de psicoterapia online, orientado a otorgar un espacio de confianza
+            y bienestar. Pero por sobre todo es un camino hacia el
             autoconocimiento que permite abrirte paso a enfrentar de un modo
             distinto nuevas experiencias y así vivir una vida más plena.
           </p>
           <p className="section3SubTitle">
-            Somos Magdalena y Jorge y nuestro objetivo es entregarte recursos
-            que te permitan lidiar con situaciones adversas y adaptarte de forma
-            más saludable a ellas, además de acompañarte en el difícil camino
-            que puedas estar viviendo y de esta forma en conjunto disminuir tu
-            sufrimiento, ya que serás parte activa y protagonista del proceso de
-            cambio.
+            Somos Magdalena, Jorge y Matías, y nuestro objetivo es entregarte
+            soluciones que te permitan lidiar con situaciones adversas y
+            adaptarte de forma más saludable a ellas, además de acompañarte en
+            el difícil camino que puedas estar viviendo, y de esta forma en
+            conjunto disminuir tu sufrimiento, ya que serás parte activa y
+            protagonista del proceso de cambio.
           </p>
         </div>
       </div>
@@ -45,7 +45,8 @@ const Section3 = () => {
           <div className="professionalDescriptionContainer">
             <p className="professionalName">Jorge Rosende</p>
             <h3 className="professionalDescription">
-              Universidad de Valparaíso, Chile
+              Director del centro
+              <span className="dosisItalic"> Tu Mundo Interior</span>
             </h3>
             <h3 className="professionalDescription">Psicólogo Clínico</h3>
             <h3
@@ -60,9 +61,6 @@ const Section3 = () => {
           <div className="magdaContainer"></div>
           <div className="professionalDescriptionContainer">
             <p className="professionalName">Magdalena Pinedo</p>
-            <h3 className="professionalDescription">
-              Universidad Católica de Chile
-            </h3>
             <h3 className="professionalDescription">Psicóloga Clínica</h3>
             <h3
               className="professionalDescription seeMore openSeeMoreBtn1"
@@ -76,9 +74,6 @@ const Section3 = () => {
           <div className="matiasContainer"></div>
           <div className="professionalDescriptionContainer">
             <p className="professionalName">Matías Vinot</p>
-            <h3 className="professionalDescription">
-              Universidad Católica de Chile
-            </h3>
             <h3 className="professionalDescription">Psicólogo Clínico</h3>
             <h3
               className="professionalDescription seeMore openSeeMoreBtn2"
