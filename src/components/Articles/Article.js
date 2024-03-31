@@ -6,9 +6,8 @@ import formatText from "../../helper/formatText";
 const Article = ({ data, handleClick, isOpen }) => {
   return (
     <div
-      className={`articleTextContainer article${data.index} ${
-        isOpen ? "" : "closed"
-      }`}
+      style={{ "--image-url": `url(${data.image})` }}
+      className={`articleTextContainer ${isOpen ? "" : "closed"}`}
     >
       <div className="closeBtn" onClick={handleClick}>
         <BiXCircle />

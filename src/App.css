@@ -747,6 +747,8 @@ html a {
     width: 96%;
     height: calc(96vw / 2); }
     .blogContainer .blogGrid .articleContainer:before {
+      background-image: var(--image-url); }
+    .blogContainer .blogGrid .articleContainer:before {
       border-radius: 10px;
       content: "";
       background-size: cover;
@@ -767,32 +769,6 @@ html a {
       text-align: center; }
       .blogContainer .blogGrid .articleContainer h2:hover {
         cursor: pointer; }
-  .blogContainer .blogGrid .jorgeArticle:before {
-    background-image: url("../src/images/jorgeArticle.jpg"); }
-  .blogContainer .blogGrid .magdalenaArticle:before {
-    background-image: url("../src/images/magdalenaArticle.jpg"); }
-  .blogContainer .blogGrid .matiasArticle:before {
-    background-image: url("../src/images/matiasArticle.jpg"); }
-  .blogContainer .blogGrid .article1:before {
-    background-image: url("../src/images/article1Image.jpg"); }
-  .blogContainer .blogGrid .article2:before {
-    background-image: url("../src/images/article2Image.jpg"); }
-  .blogContainer .blogGrid .article3:before {
-    background-image: url("../src/images/article3Image.jpg"); }
-  .blogContainer .blogGrid .article4:before {
-    background-image: url("../src/images/article4Image.jpg"); }
-  .blogContainer .blogGrid .article5:before {
-    background-image: url("../src/images/article5Image.jpg"); }
-  .blogContainer .blogGrid .article6:before {
-    background-image: url("../src/images/article6Image.jpg"); }
-  .blogContainer .blogGrid .article7:before {
-    background-image: url("../src/images/article7Image.jpg"); }
-  .blogContainer .blogGrid .article8:before {
-    background-image: url("../src/images/article8Image.jpg"); }
-  .blogContainer .blogGrid .article9:before {
-    background-image: url("../src/images/article9Image.jpg"); }
-  .blogContainer .blogGrid .article10:before {
-    background-image: url("../src/images/article10Image.jpg"); }
 
 .blogContainer .introductoryArticlesGrid {
   padding-bottom: 0px;
@@ -831,6 +807,8 @@ html a {
   border-radius: 20px;
   margin: 4px;
   padding: 10px 15px; }
+  .articleTextContainer:before {
+    background-image: var(--image-url); }
   .articleTextContainer .closeBtn {
     color: #fff;
     position: absolute;
@@ -871,36 +849,6 @@ html a {
     color: #fff;
     text-align: end;
     padding-bottom: 0; }
-
-.article1:before {
-  background-image: url("../src/images/article1Image.jpg"); }
-
-.article2:before {
-  background-image: url("../src/images/article2Image.jpg"); }
-
-.article3:before {
-  background-image: url("../src/images/article3Image.jpg"); }
-
-.article4:before {
-  background-image: url("../src/images/article4Image.jpg"); }
-
-.article5:before {
-  background-image: url("../src/images/article5Image.jpg"); }
-
-.article6:before {
-  background-image: url("../src/images/article6Image.jpg"); }
-
-.article7:before {
-  background-image: url("../src/images/article7Image.jpg"); }
-
-.article8:before {
-  background-image: url("../src/images/article8Image.jpg"); }
-
-.article9:before {
-  background-image: url("../src/images/article9Image.jpg"); }
-
-.article10:before {
-  background-image: url("../src/images/article10Image.jpg"); }
 
 @media only screen and (min-width: 1024px) {
   .articleTextContainer {
@@ -1137,8 +1085,9 @@ html a {
     .adminContainer .formContainer input {
       flex: 1;
       height: 50px;
-      padding-left: 50px;
-      padding-right: 50px; }
+      padding-left: 25px;
+      padding-right: 25px;
+      margin: 10px; }
     .adminContainer .formContainer textarea {
       flex: 1;
       padding: 20px;

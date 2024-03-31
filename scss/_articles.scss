@@ -8,6 +8,9 @@
   border-radius: 20px;
   margin: 4px;
   padding: 10px 15px;
+  &:before {
+    background-image: var(--image-url);
+  }
   .closeBtn {
     color: $light;
     position: absolute;
@@ -53,56 +56,6 @@
     color: $light;
     text-align: end;
     padding-bottom: 0;
-  }
-}
-.article1 {
-  &:before {
-    background-image: url("../src/images/article1Image.jpg");
-  }
-}
-.article2 {
-  &:before {
-    background-image: url("../src/images/article2Image.jpg");
-  }
-}
-.article3 {
-  &:before {
-    background-image: url("../src/images/article3Image.jpg");
-  }
-}
-.article4 {
-  &:before {
-    background-image: url("../src/images/article4Image.jpg");
-  }
-}
-.article5 {
-  &:before {
-    background-image: url("../src/images/article5Image.jpg");
-  }
-}
-.article6 {
-  &:before {
-    background-image: url("../src/images/article6Image.jpg");
-  }
-}
-.article7 {
-  &:before {
-    background-image: url("../src/images/article7Image.jpg");
-  }
-}
-.article8 {
-  &:before {
-    background-image: url("../src/images/article8Image.jpg");
-  }
-}
-.article9 {
-  &:before {
-    background-image: url("../src/images/article9Image.jpg");
-  }
-}
-.article10 {
-  &:before {
-    background-image: url("../src/images/article10Image.jpg");
   }
 }
 

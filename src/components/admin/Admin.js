@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
-import { db } from "../../firebase/config";
+import { db, uploadImage } from "../../firebase/config";
 
 import Article from "../Articles/Article";
 
@@ -11,40 +11,65 @@ const Admin = () => {
     footer1: "",
     footer2: "",
     footer3: "",
+    image: "",
   });
 
   const handleInputChange = (e) => {
-    setValues({
-      ...values,
-      [e.target.name]: e.target.value,
-    });
+    if (e.target.name === "image") {
+      const [file] = e.target.files;
+      setValues({
+        ...values,
+        image: file,
+      });
+    } else {
+      setValues({
+        ...values,
+        [e.target.name]: e.target.value,
+      });
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result = window.confirm(
-      "¿Estás seguro que quieres guardar el Artículo?"
-    );
-    console.log("result", result);
-    if (result) {
-      const articlesRef = collection(db, "articles");
-      const res = await addDoc(articlesRef, values);
-      console.log(res.id);
-      setValues({
-        title: "",
-        text: "",
-        footer1: "",
-        footer2: "",
-        footer3: "",
-      });
+    if (!values.title || !values.text || !values.image) {
+      alert("Faltan Títuto, Texto o Imagen");
     } else {
-      return;
+      const result = window.confirm(
+        "¿Estás seguro que quieres guardar el Artículo?"
+      );
+      if (result) {
+        const imageStoredUrl = await uploadImage(values.image);
+        if (!imageStoredUrl) {
+          return;
+        } else {
+          const articlesRef = collection(db, "articles");
+          const res = await addDoc(articlesRef, {
+            ...values,
+            image: imageStoredUrl,
+          });
+          console.log(res.id);
+          setValues({
+            title: "",
+            text: "",
+            footer1: "",
+            footer2: "",
+            footer3: "",
+            image: "",
+          });
+        }
+      } else {
+        return;
+      }
     }
   };
 
   return (
     <div className="adminContainer">
-      <form className="formContainer" onSubmit={handleSubmit}>
+      <form
+        className="formContainer"
+        onSubmit={handleSubmit}
+        encType="multipart/form-data"
+      >
         <div className="inputRow">
           <label htmlFor="title">Título:</label>
           <input
@@ -56,7 +81,7 @@ const Admin = () => {
           />
         </div>
         <div className="inputRow">
-          <label htmlFor="text">Párrafo:</label>
+          <label htmlFor="text">Texto:</label>
           <textarea
             id="text"
             name="text"
@@ -96,10 +121,30 @@ const Admin = () => {
             onChange={handleInputChange}
           />
         </div>
-
+        <label htmlFor="image">Adjuntar Imagen</label>
+        <input
+          type="file"
+          id="image"
+          name="image"
+          accept="image/*"
+          onChange={handleInputChange}
+        />
+        {values.image && (
+          <img
+            src={URL.createObjectURL(values.image)}
+            alt="Preview"
+            style={{
+              maxWidth: "100%",
+              marginTop: "10px",
+              marginBottom: "10px",
+            }}
+          />
+        )}
         <input type="submit" value="Guardar Artículo" />
       </form>
-      {values.title && values.text ? <Article data={values} /> : null}
+      {values.title && values.text ? (
+        <Article data={values} handleClick={() => {}} isOpen={true} />
+      ) : null}
     </div>
   );
 };
