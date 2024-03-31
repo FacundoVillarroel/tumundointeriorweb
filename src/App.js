@@ -82,7 +82,7 @@ function App() {
               element={<FrecuentQuestionsContainer />}
             />
             <Route path="/blog" element={<Blog />} />
-            <Route path="admin" element={<Admin />} />
+            <Route path="/blog/admin" element={<Admin />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </main>

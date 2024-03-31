@@ -4,6 +4,7 @@ import { getDocs, collection } from "firebase/firestore";
 import { db } from "../../firebase/config";
 
 import Article from "../Articles/Article";
+import Loading from "../loading/Loading";
 
 const Blog = () => {
   const [loading, setLoading] = useState(true);
@@ -21,10 +22,12 @@ const Blog = () => {
     } else {
       setIsOpen(true);
       setSelectedArticle(articleFound);
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+      setTimeout(() => {
+        window.scrollTo({
+          top: 50,
+          behavior: "smooth",
+        });
+      }, 150);
     }
   };
 
@@ -99,7 +102,9 @@ const Blog = () => {
   return (
     <>
       {loading ? (
-        <div>LOADING</div>
+        <div className="loadingContainer">
+          <Loading text={"Cargando Artículos..."} color={"#e7d7c9"} />
+        </div>
       ) : (
         <div className="blogContainer">
           <p className="title">Nuestro Blog</p>

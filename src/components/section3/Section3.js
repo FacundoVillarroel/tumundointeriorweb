@@ -7,6 +7,7 @@ const Section3 = () => {
   const [seeMore, setSeeMore] = useState(false);
 
   const openSeeMore = () => {
+    console.log("clicked !");
     setSeeMore(true);
     const element = document.getElementById("quienesSomos");
     const offsetTop = element.offsetTop;
@@ -76,7 +77,7 @@ const Section3 = () => {
             <p className="professionalName">Matías Vinot</p>
             <h3 className="professionalDescription">Psicólogo Clínico</h3>
             <h3
-              className="professionalDescription seeMore openSeeMoreBtn2"
+              className="professionalDescription seeMore openSeeMoreBtn3"
               onClick={openSeeMore}
             >
               Ver Más

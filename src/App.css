@@ -722,6 +722,10 @@ html a {
   .react-datetime-picker input {
     width: fit-content; }
 
+.loadingContainer {
+  flex: 1;
+  min-height: 90vh; }
+
 .blogContainer .title {
   font-family: "beautyDream";
   text-align: center;
