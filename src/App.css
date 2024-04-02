@@ -1074,10 +1074,27 @@ html a {
 .adminContainer {
   width: 100%; }
   .adminContainer .formContainer {
-    margin: 160px;
+    margin: 100px 150px;
     display: flex;
     flex-direction: column;
     align-items: center; }
+    .adminContainer .formContainer .saveButton {
+      background-color: #0be20b;
+      border-radius: 10px;
+      padding: 10px 15px; }
+    .adminContainer .formContainer .resetButton {
+      background-color: #fb995c;
+      border: 2px solid #000;
+      border-radius: 10px;
+      padding: 10px 15px;
+      cursor: pointer; }
+    .adminContainer .formContainer .deleteButton {
+      background-color: red;
+      border: 2px solid #000;
+      border-radius: 10px;
+      padding: 10px 15px;
+      margin-top: 10px;
+      cursor: pointer; }
     .adminContainer .formContainer .inputRow {
       width: 100%;
       display: flex;
@@ -1092,10 +1109,53 @@ html a {
       padding-left: 25px;
       padding-right: 25px;
       margin: 10px; }
+    .adminContainer .formContainer input[type="file"]::-webkit-file-upload-button {
+      border-radius: 10px;
+      padding: 5px 7px; }
     .adminContainer .formContainer textarea {
       flex: 1;
       padding: 20px;
       min-height: 200px; }
+  .adminContainer .blogGrid {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 50px;
+    padding-top: 75px;
+    padding-bottom: 75px; }
+    .adminContainer .blogGrid .articleContainer {
+      position: relative;
+      background-color: #a38f85;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      height: 275px;
+      width: 550px; }
+      .adminContainer .blogGrid .articleContainer:before {
+        background-image: var(--image-url); }
+      .adminContainer .blogGrid .articleContainer:before {
+        border-radius: 10px;
+        content: "";
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.7; }
+      .adminContainer .blogGrid .articleContainer:hover:before {
+        opacity: 1;
+        cursor: pointer; }
+      .adminContainer .blogGrid .articleContainer h2 {
+        color: #fff;
+        font-family: "dosisMedium";
+        position: relative;
+        font-size: 1.75rem;
+        text-align: center; }
+        .adminContainer .blogGrid .articleContainer h2:hover {
+          cursor: pointer; }
 
 .main-content {
   filter: blur(2px); }

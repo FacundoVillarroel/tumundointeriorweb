@@ -1,10 +1,30 @@
 .adminContainer {
   width: 100%;
   .formContainer {
-    margin: 160px;
+    margin: 100px 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    .saveButton {
+      background-color: rgb(11, 226, 11);
+      border-radius: 10px;
+      padding: 10px 15px;
+    }
+    .resetButton {
+      background-color: rgb(251, 153, 92);
+      border: 2px solid #000;
+      border-radius: 10px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    .deleteButton {
+      background-color: rgb(255, 0, 0);
+      border: 2px solid #000;
+      border-radius: 10px;
+      padding: 10px 15px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
     .inputRow {
       width: 100%;
       display: flex;
@@ -22,10 +42,61 @@
       padding-right: 25px;
       margin: 10px;
     }
+    input[type="file"]::-webkit-file-upload-button {
+      border-radius: 10px;
+      padding: 5px 7px;
+    }
     textarea {
       flex: 1;
       padding: 20px;
       min-height: 200px;
+    }
+  }
+  .blogGrid {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 50px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    .articleContainer {
+      &:before {
+        background-image: var(--image-url);
+      }
+      position: relative;
+      background-color: $cinereous;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      height: 275px;
+      width: 550px;
+      &:before {
+        border-radius: 10px;
+        content: "";
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.7;
+      }
+      &:hover:before {
+        opacity: 1;
+        cursor: pointer;
+      }
+      h2 {
+        color: $light;
+        font-family: "dosisMedium";
+        position: relative;
+        font-size: 1.75rem;
+        text-align: center;
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 }

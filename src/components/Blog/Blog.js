@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { getDocs, collection } from "firebase/firestore";
-
-import { db } from "../../firebase/config";
 
 import Article from "../Articles/Article";
 import Loading from "../loading/Loading";
+import fetchArticles from "../../helper/fetchArticles";
 
 const Blog = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [articles, setArticles] = useState([]);
   const [selectedArticle, setSelectedArticle] = useState("");
   const [isOpen, setIsOpen] = useState(false);
@@ -45,26 +43,13 @@ const Blog = () => {
 
   useEffect(() => {
     setLoading(true);
+    const fetchData = async () => {
+      const articlesArray = await fetchArticles();
+      setArticles(articlesArray);
+    };
 
-    const articlesRef = collection(db, "articles");
-    getDocs(articlesRef)
-      .then((resp) => {
-        const articlesArray = resp.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        articlesArray.sort((a, b) => {
-          if (typeof a.index === "number" && typeof b.index === "number") {
-            return a.index - b.index;
-          } else {
-            return typeof a.index === "number" ? 1 : -1;
-          }
-        });
-        setArticles(articlesArray);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    fetchData();
+    setLoading(false);
   }, []);
 
   const introductoryGridContent = articles.map((article) => {
