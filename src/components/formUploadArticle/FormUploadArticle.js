@@ -60,54 +60,53 @@ const FormUploadArticle = ({
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
-      setLoading(true);
       if (!values.title || !values.text || !values.image) {
         alert("Faltan Títuto, Texto o Imagen");
-      } else {
-        const result = window.confirm(
-          "¿Estás seguro que quieres guardar el Artículo?"
-        );
-
-        if (result) {
-          if (values.id) {
-            //Update Existing Article
-            const articleRef = doc(db, "articles", values.id);
-            const imageStored = await (await getDoc(articleRef)).data().image;
-            if (values.image === imageStored) {
-              updateDoc(articleRef, values);
-            } else {
-              //Upload new Image and deleting old one
-              const imageStoredUrl = await uploadImage(values.image);
-              if (!imageStoredUrl) {
-                return alert("Ocurrió un error al guardar el artículo");
-              } else {
-                await deleteImage(values.image.name);
-                updateDoc(articleRef, {
-                  ...values,
-                  imageName: values.image.name,
-                  image: imageStoredUrl,
-                });
-              }
-            }
+        return;
+      }
+      const result = window.confirm(
+        "¿Estás seguro que quieres guardar el Artículo?"
+      );
+      if (result) {
+        setLoading(true);
+        if (values.id) {
+          //Update Existing Article
+          const articleRef = doc(db, "articles", values.id);
+          const imageStored = await (await getDoc(articleRef)).data().image;
+          if (values.image === imageStored) {
+            updateDoc(articleRef, values);
           } else {
-            //Create a New Article
+            //Upload new Image and deleting old one
             const imageStoredUrl = await uploadImage(values.image);
             if (!imageStoredUrl) {
               return alert("Ocurrió un error al guardar el artículo");
             } else {
-              const articlesRef = collection(db, "articles");
-              const index = await findIndex(articlesRef);
-              await addDoc(articlesRef, {
+              await deleteImage(values.image.name);
+              updateDoc(articleRef, {
                 ...values,
                 imageName: values.image.name,
                 image: imageStoredUrl,
-                index: index,
               });
             }
           }
-          setValues(initialValues);
-          alert("Artículo guardado correctamente");
+        } else {
+          //Create a New Article
+          const imageStoredUrl = await uploadImage(values.image);
+          if (!imageStoredUrl) {
+            return alert("Ocurrió un error al guardar el artículo");
+          } else {
+            const articlesRef = collection(db, "articles");
+            const index = await findIndex(articlesRef);
+            await addDoc(articlesRef, {
+              ...values,
+              imageName: values.image.name,
+              image: imageStoredUrl,
+              index: index,
+            });
+          }
         }
+        setValues(initialValues);
+        alert("Artículo guardado correctamente");
         setLoading(false);
       }
     } catch (error) {
@@ -132,9 +131,11 @@ const FormUploadArticle = ({
       await deleteDoc(articleRef);
       await deleteImage(values.imageName);
       alert("Artículo eliminado correctamente");
+      setValues(initialValues);
+      resetSelectedArticle();
+    } else {
+      return;
     }
-    setValues(initialValues);
-    resetSelectedArticle();
     setLoading(false);
   };
 

@@ -6,7 +6,6 @@ import {
   uploadBytes,
   getDownloadURL,
   deleteObject,
-  refFromURL,
 } from "firebase/storage";
 
 const firebaseConfig = {
