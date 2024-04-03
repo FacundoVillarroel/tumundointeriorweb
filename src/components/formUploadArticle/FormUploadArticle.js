@@ -74,15 +74,16 @@ const FormUploadArticle = ({
           const articleRef = doc(db, "articles", values.id);
           const imageStored = await (await getDoc(articleRef)).data().image;
           if (values.image === imageStored) {
-            updateDoc(articleRef, values);
+            await updateDoc(articleRef, values);
           } else {
             //Upload new Image and deleting old one
             const imageStoredUrl = await uploadImage(values.image);
             if (!imageStoredUrl) {
-              return alert("Ocurrió un error al guardar el artículo");
+              alert("Ocurrió un error al guardar el artículo");
+              return;
             } else {
-              await deleteImage(values.image.name);
-              updateDoc(articleRef, {
+              await deleteImage(values.imageName);
+              await updateDoc(articleRef, {
                 ...values,
                 imageName: values.image.name,
                 image: imageStoredUrl,
@@ -110,7 +111,6 @@ const FormUploadArticle = ({
         setLoading(false);
       }
     } catch (error) {
-      console.log(error);
       alert("Ocurrió un problema guardando el artículo, intente nuevamente");
     }
   };
@@ -133,8 +133,6 @@ const FormUploadArticle = ({
       alert("Artículo eliminado correctamente");
       setValues(initialValues);
       resetSelectedArticle();
-    } else {
-      return;
     }
     setLoading(false);
   };
@@ -210,8 +208,8 @@ const FormUploadArticle = ({
         {values.image && (
           <img
             src={
-              selectedArticle
-                ? selectedArticle.image
+              typeof values.image === "string"
+                ? values.image
                 : URL.createObjectURL(values.image)
             }
             alt="Preview"
@@ -242,9 +240,10 @@ const FormUploadArticle = ({
           <Article
             data={{
               ...values,
-              image: selectedArticle
-                ? selectedArticle.image
-                : URL.createObjectURL(values.image),
+              image:
+                typeof values.image === "string"
+                  ? values.image
+                  : URL.createObjectURL(values.image),
             }}
             handleClick={() => {}}
             isOpen={true}
