@@ -33,7 +33,7 @@ const FormUploadArticle = ({
   const findIndex = async (articlesRef) => {
     const docsRef = (await getDocs(articlesRef)).docs;
     const array = docsRef.map((doc) => ({ id: doc.id, ...doc.data() }));
-    return array.length - 1;
+    return array.length - 3;
   };
 
   useEffect(() => {

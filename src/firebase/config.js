@@ -25,10 +25,8 @@ const storage = getStorage(app);
 export const deleteImage = async (imageName) => {
   try {
     const imageRef = ref(storage, `images/${imageName}`);
-    const result = await deleteObject(imageRef);
-    console.log("Resultado deleteImage:", result);
+    await deleteObject(imageRef);
   } catch (error) {
-    console.log("resultado Error DeleteImage", error);
     return error;
   }
 };
