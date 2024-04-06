@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { BiXCircle } from "react-icons/bi";
-import { RiUserHeartLine, RiUserSettingsLine } from "react-icons/ri";
-import { TbAward } from "react-icons/tb";
-import { FaGraduationCap } from "react-icons/fa";
-import { RxDot } from "react-icons/rx";
+
+import DescriptionContainer from "./DescriptionContainer";
 
 const SeeMore = ({ closeSeeMore }) => {
   const seeMoreRef = useRef(null);
@@ -55,185 +53,112 @@ const SeeMore = ({ closeSeeMore }) => {
       <h3>Experiencia profesional y formación académica</h3>
       <div className="teamDescriptionContainer">
         {/* 1 */}
-
-        <div className="teamDescriptionItemContainer L1">
-          <div className="teamDescriptionItem">
-            <RiUserHeartLine fontSize={25} color={"a38f85"} />
-          </div>
-          <p className="teamDescriptionText">
-            El equipo del centro de psicoterapia{" "}
-            <span className="dosisItalic">Tu Mundo Interior</span> cuenta con{" "}
-            <span className="dosisBold">5 y 15 años de experiencia</span>{" "}
-            respectivamente, en atención de pacientes en consulta particular,
-            desde el Modelo de{" "}
-            <span className="dosisBold">
-              psicoterapia cognitivo - posracionalista.
-            </span>
-          </p>
-        </div>
-
-        {/* 2 */}
-
-        <div className="teamDescriptionItemContainer R1">
-          <div className="teamDescriptionItem">
-            <RxDot fontSize={25} color={"ede9e3"} />
-          </div>
-          <p className="teamDescriptionText">
-            El equipo cuenta con la siguiente{" "}
-            <span className="dosisBold">formación académica</span> posterior a
-            la obtención de la licenciatura y titulación en psicología:
-          </p>
-        </div>
-
-        {/* 3 */}
-
-        <div className="teamDescriptionItemContainer L2">
-          <div className="teamDescriptionItem">
-            <RiUserSettingsLine fontSize={25} color={"a38f85"} />
-          </div>
-          <p className="teamDescriptionText">
-            Experiencia <span className="dosisBold">docente</span> en cátedras
-            en el área de <span className="dosisBold">formación</span> en{" "}
-            <span className="dosisBold">psicología clínica y psicoterapia</span>{" "}
-            en la carrera de psicología en distintas universidades del país, en
-            pregrado y posgrado, así como también formación y{" "}
-            <span className="dosisBold">supervisión clínica</span> a psicólogos
-            que se encuentran titulados.
-          </p>
-        </div>
-
-        {/* 4 */}
-
-        <div className="teamDescriptionItemContainer R2">
-          <div className="teamDescriptionItem">
-            <FaGraduationCap fontSize={25} color={"a38f85"} />
-          </div>
-          <p className="teamDescriptionText">
-            <span className="dosisBold">Posgrado</span> de{" "}
-            <span className="dosisBold">magíster</span> en psicología clínica,
-            con mención en psicoterapia{" "}
-            <span className="dosisBold">constructivista</span> y{" "}
-            <span className="dosisBold">construccionista</span> en la
-            Universidad de Valparaíso <span className="dosisBold">(UV).</span>
-          </p>
-        </div>
-
-        {/* 5 */}
-
-        <div className="teamDescriptionItemContainer L3">
-          <div className="teamDescriptionItem">
-            <TbAward fontSize={25} color={"a38f85"} />
-          </div>
-          <p className="teamDescriptionText">
-            <span className="dosisBold">Acreditación nacional</span> como{" "}
-            <span className="dosisBold">especialista en psicoterapia</span> por
-            la Comisión Nacional de Psicólogos Clínicos{" "}
-            <span className="dosisBold">(CONAPC).</span>
-          </p>
-        </div>
-
-        {/* 6 */}
-
-        <div className="teamDescriptionItemContainer R3">
-          <div className="teamDescriptionItem">
-            <FaGraduationCap fontSize={25} color={"a38f85"} />
-          </div>
-          <p className="teamDescriptionText">
-            <span className="dosisBold">Postítulo</span> de{" "}
-            <span className="dosisBold">psicología</span> en la Pontificia
-            Universidad Católica de Chile{" "}
-            <span className="dosisBold">(PUC).</span>
-          </p>
-        </div>
-
-        {/* 7 */}
-
-        <div className="teamDescriptionItemContainer L4">
-          <div className="teamDescriptionItem">
-            <TbAward fontSize={25} color={"a38f85"} />
-          </div>
-          <p className="teamDescriptionText">
-            <span className="dosisBold">Acreditación internacional</span> como{" "}
-            <span className="dosisBold">especialista en psicoterapia</span> por
-            la Federación Latinoamericana de Psicoterapia{" "}
-            <span className="dosisBold">(FLAPSI)</span>, avalado por{" "}
-            <span lang="en">World Council for Psychotherapy</span>
-            <span className="dosisBold"> (WCP).</span>
-          </p>
-        </div>
-
-        {/* 8 */}
-
-        <div className="teamDescriptionItemContainer R4">
-          <div className="teamDescriptionItem">
-            <FaGraduationCap fontSize={25} color={"a38f85"} />
-          </div>
-          <p className="teamDescriptionText">
-            <span className="dosisBold">Postítulo</span> en{" "}
-            <span className="dosisBold">
-              psicoterapia cognitiva - posracionalista
-            </span>{" "}
-            en el Centro de Psicoterapia Posracionalista{" "}
-            <span className="dosisBold">CETEPO (Roma, Italia).</span>
-          </p>
-        </div>
-
-        {/* 9 */}
-
-        <div className="teamDescriptionItemContainer L5">
-          <div className="teamDescriptionItem">
-            <TbAward fontSize={25} color={"a38f85"} />
-          </div>
-          <p className="teamDescriptionText">
-            Membresía{" "}
-            <span className="dosisBold">Colegio de Psicólogos de Chile</span> y{" "}
-            <span className="dosisBold">
-              Sociedad Chilena de Psicología Clínica y Psicoterapia (SCPC).
-            </span>
-          </p>
-        </div>
-
-        {/* 10 */}
-
-        <div className="teamDescriptionItemContainer R5">
-          <div className="teamDescriptionItem">
-            <FaGraduationCap fontSize={25} color={"a38f85"} />
-          </div>
-          <p className="teamDescriptionText">
-            <span className="dosisBold">Diplomado</span> en{" "}
-            <span className="dosisBold">
-              psicoterapia cognitiva - posracionalista
-            </span>
-            , en el Centro de Psicoterapia Posracionalista{" "}
-            <span className="dosisBold">CETEPO (Santiago, Chile).</span>
-          </p>
-        </div>
-
-        {/* 11 */}
-
-        <div className="teamDescriptionItemContainer L6">
-          <div className="teamDescriptionItem">
-            <TbAward fontSize={25} color={"a38f85"} />
-          </div>
-          <p className="teamDescriptionText">
-            <span className="dosisBold">
-              Exposiciones en seminarios y congresos
-            </span>{" "}
-            en temas de psicología clínica y psicoterapia.
-          </p>
-        </div>
-
-        {/* 12 */}
-
-        <div className="teamDescriptionItemContainer R6">
-          <div className="teamDescriptionItem">
-            <FaGraduationCap fontSize={25} color={"a38f85"} />
-          </div>
-          <p className="teamDescriptionText">
-            <span className="dosisBold">Investigaciones científicas</span> y
-            artículos en el área de la psicología clínica y psicoterapia.
-          </p>
-        </div>
+        <DescriptionContainer
+          iconName={"RiUserHeartLine"}
+          text={
+            "Magdalena Pinedo Psicóloga clínica con cinco años de experiencia en el área de atención de pacientes en consulta particular, desde el *Modelo de Psicoterapia cognitivo-posracionalista.*"
+          }
+        />
+        <DescriptionContainer
+          iconName={"RiUserSettingsLine"}
+          text={
+            "Experiencia académica como ayudante en el ámbito de la psicoterapia."
+          }
+        />
+        <DescriptionContainer
+          iconName={"RiUserSettingsLine"}
+          text={
+            "Supervisora clínica de estudiantes en formación y titulados en el área de psicología clínica."
+          }
+        />
+        <DescriptionContainer
+          iconName={"RiUserFollowLine"}
+          text={"Empatica y comprensiva. "}
+        />
+        <DescriptionContainer
+          iconName={"RiUserFollowLine"}
+          text={"Dispuesta a escuchar y resolver en todo momento."}
+        />
+        <DescriptionContainer
+          iconName={"RiUserFollowLine"}
+          text={"Comprometida y responsable con mi trabajo."}
+        />
+        <DescriptionContainer
+          iconName={"RiUserFollowLine"}
+          text={
+            "Cuento con habilidades de responsabilidad afectiva necesarias para el trabajo con pacientes."
+          }
+        />
+        <DescriptionContainer
+          iconName={"RiUserFollowLine"}
+          text={
+            "Exenta de realización de juicios de valor en cualquier ámbito."
+          }
+        />
+        <DescriptionContainer
+          iconName={"RiUserFollowLine"}
+          text={
+            "Especializada particularmente en la atención de adultos y adolescentes."
+          }
+        />
+        <DescriptionContainer
+          iconName={"RiUserFollowLine"}
+          text={
+            "Dispuesta a entregar un espacio seguro y de confianza a mis pacientes en todo momento."
+          }
+        />
+        <DescriptionContainer
+          iconName={"TbAward"}
+          text={
+            "Membresía colegio de psicólogos de chile y sociedad chilena de psicología clínica y psicoterapia *(SCPC)*."
+          }
+        />
+      </div>
+      <h3>
+        Magdalena cuenta con la siguiente formación académica posterior a la
+        obtención de la licenciatura y titulación en psicología:
+      </h3>
+      <div className="teamDescriptionContainer">
+        <DescriptionContainer
+          iconName={"FaGraduationCap"}
+          text={
+            "Licenciada en psicología y titulada de psicóloga en *Universidad Autónoma* de chile, sede Santiago providencia."
+          }
+        />
+        <DescriptionContainer
+          iconName={"FaGraduationCap"}
+          text={
+            "Practica profesional en clínica de atención psicológica *(CAPS)* Providencia."
+          }
+        />
+        <DescriptionContainer
+          iconName={"FaGraduationCap"}
+          text={
+            "Tesis; *creación y validación de instrumento que evalúa la normalización de la violencia de parejas adolescentes*."
+          }
+        />
+        <DescriptionContainer
+          iconName={"FaGraduationCap"}
+          text={
+            "*Investigaciones científicas* en el área de psicología y creación de artículos de psicología clínica y psicoterapia."
+          }
+        />
+        <DescriptionContainer
+          iconName={"FaGraduationCap"}
+          text={
+            "*Diplomado de postítulo en el área de psicología forense* en la Pontifica Universidad Católica de Chile *(PUC)*."
+          }
+        />
+        <DescriptionContainer
+          iconName={"FaGraduationCap"}
+          text={
+            "Cursos de psicoterapia en formación en el área de psicología, posterior al titulo de psicóloga."
+          }
+        />
+        <DescriptionContainer
+          iconName={"FaGraduationCap"}
+          text={"Supervisión constante de casos clínicos."}
+        />
       </div>
     </div>
   );

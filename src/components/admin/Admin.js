@@ -3,8 +3,15 @@ import fetchArticles from "../../helper/fetchArticles";
 
 import FormUploadArticle from "../formUploadArticle/FormUploadArticle";
 import Loading from "../loading/Loading";
+import LoginForm from "./LoginForm";
+
+console.log(
+  process.env.REACT_APP_ADMIN_USERNAME,
+  process.env.REACT_APP_ADMIN_PASSWORD
+);
 
 const Admin = () => {
+  const [isAuth, setIsAuth] = useState(true);
   const [loading, setLoading] = useState(false);
   const [articles, setArticles] = useState("");
   const [selectedArticle, setSelectedArticle] = useState("");
@@ -30,9 +37,15 @@ const Admin = () => {
     setSelectedArticle("");
   };
 
+  const handleLogin = () => {
+    setIsAuth(true);
+  };
+
   return (
     <>
-      {loading ? (
+      {!isAuth ? (
+        <LoginForm />
+      ) : loading ? (
         <Loading text={"Guardando el Artículo"} color={"#e7d7c9"} />
       ) : (
         <div className="adminContainer">
