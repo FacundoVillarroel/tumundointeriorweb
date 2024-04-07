@@ -28,6 +28,7 @@ const NavBar = ({ toggleSidebar, blur }) => {
 
   const handleClick = () => {
     window.scrollTo(0, 0);
+    setNavbarOpen(false);
   };
 
   return (
@@ -46,7 +47,7 @@ const NavBar = ({ toggleSidebar, blur }) => {
           Preguntas Frecuentes
         </NavLink>
       </div>
-      <NavLink to="/" className="navBarTitleContainer">
+      <NavLink to="/" className="navBarTitleContainer" onClick={handleClick}>
         <h1 className="navBarTitle"> Tu Mundo Interior</h1>
         <p className="navBarSubTitle">Centro de Psicoterapia Online</p>
       </NavLink>
