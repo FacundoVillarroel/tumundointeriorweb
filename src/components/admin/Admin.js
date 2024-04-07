@@ -11,7 +11,7 @@ console.log(
 );
 
 const Admin = () => {
-  const [isAuth, setIsAuth] = useState(true);
+  const [isAuth, setIsAuth] = useState(false);
   const [loading, setLoading] = useState(false);
   const [articles, setArticles] = useState("");
   const [selectedArticle, setSelectedArticle] = useState("");
@@ -37,14 +37,21 @@ const Admin = () => {
     setSelectedArticle("");
   };
 
-  const handleLogin = () => {
-    setIsAuth(true);
+  const handleLogin = (username, password) => {
+    if (
+      (username === process.env.REACT_APP_ADMIN_USERNAME) &
+      (password === process.env.REACT_APP_ADMIN_PASSWORD)
+    ) {
+      setIsAuth(true);
+    } else {
+      alert("Usuario y/o Contraseña incorrectos");
+    }
   };
 
   return (
     <>
       {!isAuth ? (
-        <LoginForm />
+        <LoginForm handleLogin={handleLogin} />
       ) : loading ? (
         <Loading text={"Guardando el Artículo"} color={"#e7d7c9"} />
       ) : (

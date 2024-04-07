@@ -4,11 +4,12 @@ import SeeMore from "../SeeMore/SeeMore";
 import videoPoster from "../../images/videoPoster.jpg";
 
 const Section3 = () => {
+  const [professionalSelected, setProfessionalSelected] = useState("");
   const [seeMore, setSeeMore] = useState(false);
 
-  const openSeeMore = () => {
-    console.log("clicked !");
+  const openSeeMore = (professionalName) => {
     setSeeMore(true);
+    setProfessionalSelected(professionalName);
     const element = document.getElementById("quienesSomos");
     const offsetTop = element.offsetTop;
     window.scrollTo({
@@ -19,7 +20,12 @@ const Section3 = () => {
 
   return (
     <div className="section3Container" id="quienesSomos">
-      {seeMore ? <SeeMore closeSeeMore={() => setSeeMore(false)} /> : null}
+      {seeMore ? (
+        <SeeMore
+          closeSeeMore={() => setSeeMore(false)}
+          professionalName={professionalSelected}
+        />
+      ) : null}
       <div className="section3TitleContainer">
         <h2 className="section3Title">¿Quiénes somos?</h2>
         <div className="subTitleContainer">
@@ -51,8 +57,8 @@ const Section3 = () => {
             </h3>
             <h3 className="professionalDescription">Psicólogo Clínico</h3>
             <h3
-              className="professionalDescription seeMore openSeeMoreBtn2"
-              onClick={openSeeMore}
+              className="professionalDescription seeMore openSeeMoreBtn1"
+              onClick={() => openSeeMore("jorge")}
             >
               Ver Más
             </h3>
@@ -64,8 +70,8 @@ const Section3 = () => {
             <p className="professionalName">Magdalena Pinedo</p>
             <h3 className="professionalDescription">Psicóloga Clínica</h3>
             <h3
-              className="professionalDescription seeMore openSeeMoreBtn1"
-              onClick={openSeeMore}
+              className="professionalDescription seeMore openSeeMoreBtn2"
+              onClick={() => openSeeMore("magdalena")}
             >
               Ver Más
             </h3>
@@ -78,7 +84,7 @@ const Section3 = () => {
             <h3 className="professionalDescription">Psicólogo Clínico</h3>
             <h3
               className="professionalDescription seeMore openSeeMoreBtn3"
-              onClick={openSeeMore}
+              onClick={() => openSeeMore("matias")}
             >
               Ver Más
             </h3>
