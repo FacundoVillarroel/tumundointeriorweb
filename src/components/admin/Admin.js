@@ -5,11 +5,6 @@ import FormUploadArticle from "../formUploadArticle/FormUploadArticle";
 import Loading from "../loading/Loading";
 import LoginForm from "./LoginForm";
 
-console.log(
-  process.env.REACT_APP_ADMIN_USERNAME,
-  process.env.REACT_APP_ADMIN_PASSWORD
-);
-
 const Admin = () => {
   const [isAuth, setIsAuth] = useState(false);
   const [loading, setLoading] = useState(false);

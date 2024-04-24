@@ -70,38 +70,40 @@ const SeeMore = ({ closeSeeMore, professionalName }) => {
   }
 
   return (
-    <div
-      ref={seeMoreRef}
-      className={`seeMoreContainer ${isClosed ? "seeMoreClosed" : ""}`}
-      id="seeMoreContainer"
-    >
-      <div className="closeBtn" onClick={closeAnimation}>
-        <BiXCircle />
-      </div>
-      <h2>Tu mundo interior</h2>
-      <h3>Experiencia profesional y formación académica</h3>
-      <div className="teamDescriptionContainer">
-        {itemsExperience.map((item, index) => (
-          <div
-            key={index}
-            className={`teamDescriptionItem ${
-              index < mid ? "leftColumn" : "rightColumn"
-            }`}
-          >
-            <DescriptionContainer {...item} />
-          </div>
-        ))}
-      </div>
-      <h3>
-        {capitalizeFirstLetter(professionalName)} cuenta con la siguiente
-        formación académica:
-      </h3>
-      <div className="teamDescriptionContainer">
-        {itemsStudies.map((item, index) => (
-          <div key={index} className={"teamDescriptionItem"}>
-            <DescriptionContainer {...item} />
-          </div>
-        ))}
+    <div className="seeMoreContainerWrapper">
+      <div
+        ref={seeMoreRef}
+        className={`seeMoreContainer ${isClosed ? "seeMoreClosed" : ""}`}
+        id="seeMoreContainer"
+      >
+        <div className="closeBtn" onClick={closeAnimation}>
+          <BiXCircle />
+        </div>
+        <h2>Tu mundo interior</h2>
+        <h3>Experiencia profesional y formación académica</h3>
+        <div className="teamDescriptionContainer">
+          {itemsExperience.map((item, index) => (
+            <div
+              key={index}
+              className={`teamDescriptionItem ${
+                index < mid ? "leftColumn" : "rightColumn"
+              }`}
+            >
+              <DescriptionContainer {...item} />
+            </div>
+          ))}
+        </div>
+        <h3>
+          {capitalizeFirstLetter(professionalName)} cuenta con la siguiente
+          formación académica:
+        </h3>
+        <div className="teamDescriptionContainer">
+          {itemsStudies.map((item, index) => (
+            <div key={index} className={"teamDescriptionItem"}>
+              <DescriptionContainer {...item} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

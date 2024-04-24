@@ -1,100 +1,119 @@
-.seeMoreContainer {
+.seeMoreContainerWrapper {
   position: absolute;
   z-index: 2000;
   top: 45px;
   left: 2%;
   width: 96%;
-  background-color: $isabeline;
   border-radius: 20px;
   box-shadow: 0px 0px 13px 8px rgba(163, 143, 133, 0.35);
   -webkit-box-shadow: 0px 0px 13px 8px rgba(163, 143, 133, 0.35);
   -moz-box-shadow: 0px 0px 13px 8px rgba(163, 143, 133, 0.35);
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-  padding: 10px;
-  .closeBtn {
-    color: $cinereous;
-    position: absolute;
-    font-family: "LoveloBlack";
-    cursor: pointer;
-    z-index: 200;
-    right: 10px;
-    top: 10px;
-    font-size: 1.1rem;
-  }
-  h2 {
-    text-align: center;
-    font-family: "loveloBlack";
-    color: $cinereous;
-    padding-top: 5px;
-    font-size: 1.3rem;
-  }
-  h3 {
-    text-align: center;
-    font-family: "dosisRegular";
-    color: $cinereous;
-    padding: 10px 50px;
-    font-size: 1rem;
-  }
-  .teamDescriptionContainer {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(14, align-items);
-    row-gap: 10px;
-    padding: 10px 10px 10px 0px;
-    align-items: center;
-    .teamDescriptionItemContainer {
-      display: flex;
-      align-items: center;
-      .teamDescriptionItem {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-      }
+  overflow: hidden;
+  .seeMoreContainer {
+    background-color: $isabeline;
+    border-radius: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: calc(var(--section3Height) - 100px);
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      width: 5px; /* Ancho de la barra de scroll */
     }
-    .teamDescriptionText {
-      padding-left: 10px;
-      color: $dark;
+    &::-webkit-scrollbar-track {
+      background-color: $isabeline; /* Color de fondo de la pista de la barra de scroll */
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $paleDogwood; /* Color del pulgar de la barra de scroll */
+      border-radius: 100px; /* Borde redondeado del pulgar */
+    }
+    .closeBtn {
+      color: $cinereous;
+      position: absolute;
+      font-family: "LoveloBlack";
+      cursor: pointer;
+      z-index: 200;
+      right: 10px;
+      top: 10px;
+      font-size: 1.1rem;
+    }
+    h2 {
+      text-align: center;
+      font-family: "loveloBlack";
+      color: $cinereous;
+      padding-top: 5px;
+      font-size: 1.3rem;
+    }
+    h3 {
+      text-align: center;
       font-family: "dosisRegular";
-      text-align: justify;
-      font-size: 0.8rem;
+      color: $cinereous;
+      padding: 10px 50px;
+      font-size: 1rem;
+    }
+    .teamDescriptionContainer {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(14, align-items);
+      row-gap: 10px;
+      padding: 10px 10px 10px 0px;
+      align-items: center;
+      .teamDescriptionItemContainer {
+        display: flex;
+        align-items: center;
+        .teamDescriptionItem {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+        }
+      }
+      .teamDescriptionText {
+        padding-left: 10px;
+        color: $dark;
+        font-family: "dosisRegular";
+        text-align: justify;
+        font-size: 0.8rem;
+      }
     }
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .seeMoreContainer {
+  .seeMoreContainerWrapper {
     top: 120px;
     left: 13%;
     width: 74%;
-    .closeBtn {
-      right: 25px;
-      top: 15px;
-      font-size: 1.5rem;
-    }
-    h2 {
-      padding-top: 30px;
-      font-size: 1.87rem;
-    }
-    h3 {
-      padding: 30px 120px;
-      font-size: 1.5rem;
-    }
-    .teamDescriptionContainer {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto;
-      row-gap: 30px;
-      column-gap: 100px;
-      padding: 20px 50px;
-      grid-auto-flow: dense;
-      .leftColumn {
-        grid-column: 1;
+    .seeMoreContainer {
+      .closeBtn {
+        right: 25px;
+        top: 15px;
+        font-size: 1.5rem;
       }
-      .rightColumn {
-        grid-column: 2;
+      h2 {
+        padding-top: 30px;
+        font-size: 1.87rem;
       }
-      .teamDescriptionText {
-        font-size: 1rem;
+      h3 {
+        padding: 30px 120px;
+        font-size: 1.5rem;
+      }
+      .teamDescriptionContainer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        row-gap: 30px;
+        column-gap: 100px;
+        padding: 20px 50px;
+        grid-auto-flow: dense;
+        .leftColumn {
+          grid-column: 1;
+        }
+        .rightColumn {
+          grid-column: 2;
+        }
+        .teamDescriptionText {
+          font-size: 1rem;
+        }
       }
     }
   }

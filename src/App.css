@@ -415,42 +415,42 @@ html a {
         width: 400px;
         height: 250px; } }
 
-.footerContainer .footerTextContainer {
-  display: flex;
-  flex-direction: column;
-  background-color: #e7d7c9;
-  padding: 10px 20px;
-  justify-content: space-evenly;
-  align-items: center;
-  z-index: 100; }
-  .footerContainer .footerTextContainer .footerText {
-    font-family: "dosisRegular";
-    font-size: .9rem;
-    text-align: center; }
-
-.footerContainer .footerButtonContainer {
-  background-color: #a38f85;
-  padding: 8px 25px;
-  border-radius: 5px;
-  margin-top: 7px; }
-  .footerContainer .footerButtonContainer:hover {
-    background-color: #d4b2a7;
-    cursor: pointer; }
-  .footerContainer .footerButtonContainer .footerButtonText {
-    font-family: "dosisRegular";
-    color: #fff;
-    font-size: .9rem; }
-
-.footerContainer .footerCopyrightContainer {
-  display: flex;
-  color: #212121;
-  background-color: #e7d7c9;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px 10px 10px; }
-  .footerContainer .footerCopyrightContainer h4 {
-    font-family: "dosisRegular";
-    font-size: 0.7rem; }
+.footerContainer {
+  position: relative; }
+  .footerContainer .footerTextContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #e7d7c9;
+    padding: 10px 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 100; }
+    .footerContainer .footerTextContainer .footerText {
+      font-family: "dosisRegular";
+      font-size: 0.9rem;
+      text-align: center; }
+  .footerContainer .footerButtonContainer {
+    background-color: #a38f85;
+    padding: 8px 25px;
+    border-radius: 5px;
+    margin-top: 7px; }
+    .footerContainer .footerButtonContainer:hover {
+      background-color: #d4b2a7;
+      cursor: pointer; }
+    .footerContainer .footerButtonContainer .footerButtonText {
+      font-family: "dosisRegular";
+      color: #fff;
+      font-size: 0.9rem; }
+  .footerContainer .footerCopyrightContainer {
+    display: flex;
+    color: #212121;
+    background-color: #e7d7c9;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px 10px 10px; }
+    .footerContainer .footerCopyrightContainer h4 {
+      font-family: "dosisRegular";
+      font-size: 0.7rem; }
 
 @media only screen and (min-width: 1024px) {
   .footerContainer .footerTextContainer {
@@ -874,89 +874,106 @@ html a {
 .closed {
   animation: fadeOut 1s ease-in-out forwards; }
 
-.seeMoreContainer {
+.seeMoreContainerWrapper {
   position: absolute;
   z-index: 2000;
   top: 45px;
   left: 2%;
   width: 96%;
-  background-color: #ede9e3;
   border-radius: 20px;
   box-shadow: 0px 0px 13px 8px rgba(163, 143, 133, 0.35);
   -webkit-box-shadow: 0px 0px 13px 8px rgba(163, 143, 133, 0.35);
   -moz-box-shadow: 0px 0px 13px 8px rgba(163, 143, 133, 0.35);
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-  padding: 10px; }
-  .seeMoreContainer .closeBtn {
-    color: #a38f85;
-    position: absolute;
-    font-family: "LoveloBlack";
-    cursor: pointer;
-    z-index: 200;
-    right: 10px;
-    top: 10px;
-    font-size: 1.1rem; }
-  .seeMoreContainer h2 {
-    text-align: center;
-    font-family: "loveloBlack";
-    color: #a38f85;
-    padding-top: 5px;
-    font-size: 1.3rem; }
-  .seeMoreContainer h3 {
-    text-align: center;
-    font-family: "dosisRegular";
-    color: #a38f85;
-    padding: 10px 50px;
-    font-size: 1rem; }
-  .seeMoreContainer .teamDescriptionContainer {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(14, align-items);
-    row-gap: 10px;
-    padding: 10px 10px 10px 0px;
-    align-items: center; }
-    .seeMoreContainer .teamDescriptionContainer .teamDescriptionItemContainer {
-      display: flex;
-      align-items: center; }
-      .seeMoreContainer .teamDescriptionContainer .teamDescriptionItemContainer .teamDescriptionItem {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start; }
-    .seeMoreContainer .teamDescriptionContainer .teamDescriptionText {
-      padding-left: 10px;
-      color: #212121;
+  overflow: hidden; }
+  .seeMoreContainerWrapper .seeMoreContainer {
+    background-color: #ede9e3;
+    border-radius: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: calc(var(--section3Height) - 100px);
+    -webkit-overflow-scrolling: touch; }
+    .seeMoreContainerWrapper .seeMoreContainer::-webkit-scrollbar {
+      width: 5px;
+      /* Ancho de la barra de scroll */ }
+    .seeMoreContainerWrapper .seeMoreContainer::-webkit-scrollbar-track {
+      background-color: #ede9e3;
+      /* Color de fondo de la pista de la barra de scroll */ }
+    .seeMoreContainerWrapper .seeMoreContainer::-webkit-scrollbar-thumb {
+      background-color: #d4b2a7;
+      /* Color del pulgar de la barra de scroll */
+      border-radius: 100px;
+      /* Borde redondeado del pulgar */ }
+    .seeMoreContainerWrapper .seeMoreContainer .closeBtn {
+      color: #a38f85;
+      position: absolute;
+      font-family: "LoveloBlack";
+      cursor: pointer;
+      z-index: 200;
+      right: 10px;
+      top: 10px;
+      font-size: 1.1rem; }
+    .seeMoreContainerWrapper .seeMoreContainer h2 {
+      text-align: center;
+      font-family: "loveloBlack";
+      color: #a38f85;
+      padding-top: 5px;
+      font-size: 1.3rem; }
+    .seeMoreContainerWrapper .seeMoreContainer h3 {
+      text-align: center;
       font-family: "dosisRegular";
-      text-align: justify;
-      font-size: 0.8rem; }
+      color: #a38f85;
+      padding: 10px 50px;
+      font-size: 1rem; }
+    .seeMoreContainerWrapper .seeMoreContainer .teamDescriptionContainer {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(14, align-items);
+      row-gap: 10px;
+      padding: 10px 10px 10px 0px;
+      align-items: center; }
+      .seeMoreContainerWrapper .seeMoreContainer .teamDescriptionContainer .teamDescriptionItemContainer {
+        display: flex;
+        align-items: center; }
+        .seeMoreContainerWrapper .seeMoreContainer .teamDescriptionContainer .teamDescriptionItemContainer .teamDescriptionItem {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start; }
+      .seeMoreContainerWrapper .seeMoreContainer .teamDescriptionContainer .teamDescriptionText {
+        padding-left: 10px;
+        color: #212121;
+        font-family: "dosisRegular";
+        text-align: justify;
+        font-size: 0.8rem; }
 
 @media only screen and (min-width: 1024px) {
-  .seeMoreContainer {
+  .seeMoreContainerWrapper {
     top: 120px;
     left: 13%;
     width: 74%; }
-    .seeMoreContainer .closeBtn {
+    .seeMoreContainerWrapper .seeMoreContainer .closeBtn {
       right: 25px;
       top: 15px;
       font-size: 1.5rem; }
-    .seeMoreContainer h2 {
+    .seeMoreContainerWrapper .seeMoreContainer h2 {
       padding-top: 30px;
       font-size: 1.87rem; }
-    .seeMoreContainer h3 {
+    .seeMoreContainerWrapper .seeMoreContainer h3 {
       padding: 30px 120px;
       font-size: 1.5rem; }
-    .seeMoreContainer .teamDescriptionContainer {
+    .seeMoreContainerWrapper .seeMoreContainer .teamDescriptionContainer {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto;
       row-gap: 30px;
       column-gap: 100px;
       padding: 20px 50px;
       grid-auto-flow: dense; }
-      .seeMoreContainer .teamDescriptionContainer .leftColumn {
+      .seeMoreContainerWrapper .seeMoreContainer .teamDescriptionContainer .leftColumn {
         grid-column: 1; }
-      .seeMoreContainer .teamDescriptionContainer .rightColumn {
+      .seeMoreContainerWrapper .seeMoreContainer .teamDescriptionContainer .rightColumn {
         grid-column: 2; }
-      .seeMoreContainer .teamDescriptionContainer .teamDescriptionText {
+      .seeMoreContainerWrapper .seeMoreContainer .teamDescriptionContainer .teamDescriptionText {
         font-size: 1rem; } }
 
 .seeMoreClosed {

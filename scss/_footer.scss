@@ -1,5 +1,6 @@
-.footerContainer{
-  .footerTextContainer{
+.footerContainer {
+  position: relative;
+  .footerTextContainer {
     display: flex;
     flex-direction: column;
     background-color: $almond;
@@ -7,35 +8,35 @@
     justify-content: space-evenly;
     align-items: center;
     z-index: 100;
-    .footerText{
+    .footerText {
       font-family: "dosisRegular";
-      font-size: .9rem;
+      font-size: 0.9rem;
       text-align: center;
     }
   }
-  .footerButtonContainer{
+  .footerButtonContainer {
     background-color: $cinereous;
     padding: 8px 25px;
     border-radius: 5px;
     margin-top: 7px;
-    &:hover{
+    &:hover {
       background-color: $paleDogwood;
       cursor: pointer;
     }
-    .footerButtonText{
+    .footerButtonText {
       font-family: "dosisRegular";
       color: $light;
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
   }
-  .footerCopyrightContainer{
+  .footerCopyrightContainer {
     display: flex;
     color: $dark;
     background-color: $almond;
     justify-content: center;
     align-items: center;
     padding: 0 10px 10px 10px;
-    h4{
+    h4 {
       font-family: "dosisRegular";
       font-size: 0.7rem;
     }
@@ -43,27 +44,27 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .footerContainer{
-    .footerTextContainer{
+  .footerContainer {
+    .footerTextContainer {
       flex-direction: row;
       padding: 20px 0px;
-      .footerText{
+      .footerText {
         font-size: 1.25rem;
       }
     }
-    .footerButtonContainer{
+    .footerButtonContainer {
       padding: 10px 50px;
       margin-top: 10px;
       margin-bottom: 10px;
-      &:hover{
+      &:hover {
       }
-      .footerButtonText{
+      .footerButtonText {
         font-size: 1.12rem;
       }
     }
-    .footerCopyrightContainer{
+    .footerCopyrightContainer {
       padding: 10px;
-      h4{
+      h4 {
         padding-left: 5px;
         font-size: 0.87rem;
       }
