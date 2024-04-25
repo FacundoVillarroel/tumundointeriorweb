@@ -8,25 +8,25 @@
   box-shadow: 0px 0px 13px 8px rgba(163, 143, 133, 0.35);
   -webkit-box-shadow: 0px 0px 13px 8px rgba(163, 143, 133, 0.35);
   -moz-box-shadow: 0px 0px 13px 8px rgba(163, 143, 133, 0.35);
+  animation: fadeIn 1s ease-in-out forwards;
   overflow: hidden;
   .seeMoreContainer {
     background-color: $isabeline;
     border-radius: 20px;
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 100;
     padding: 10px;
     overflow-y: auto;
     max-height: calc(var(--section3Height) - 100px);
     -webkit-overflow-scrolling: touch;
     &::-webkit-scrollbar {
-      width: 5px; /* Ancho de la barra de scroll */
+      width: 5px;
     }
     &::-webkit-scrollbar-track {
-      background-color: $isabeline; /* Color de fondo de la pista de la barra de scroll */
+      background-color: $isabeline;
     }
     &::-webkit-scrollbar-thumb {
-      background-color: $paleDogwood; /* Color del pulgar de la barra de scroll */
-      border-radius: 100px; /* Borde redondeado del pulgar */
+      background-color: $paleDogwood;
+      border-radius: 100px;
     }
     .closeBtn {
       color: $cinereous;

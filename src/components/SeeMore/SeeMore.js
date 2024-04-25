@@ -70,10 +70,12 @@ const SeeMore = ({ closeSeeMore, professionalName }) => {
   }
 
   return (
-    <div className="seeMoreContainerWrapper">
+    <div
+      className={`seeMoreContainerWrapper ${isClosed ? "seeMoreClosed" : ""}`}
+    >
       <div
         ref={seeMoreRef}
-        className={`seeMoreContainer ${isClosed ? "seeMoreClosed" : ""}`}
+        className={`seeMoreContainer`}
         id="seeMoreContainer"
       >
         <div className="closeBtn" onClick={closeAnimation}>
