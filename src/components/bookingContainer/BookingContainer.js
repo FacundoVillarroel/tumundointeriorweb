@@ -138,9 +138,9 @@ const BookingContainer = ({ toggleSidebar }) => {
                 <option value="" hidden>
                   Seleccione Profesional de preferencia
                 </option>
-                <option value="Rosende">Jorge Rosende</option>
-                <option value="Pinedo">Magdalena Pinedo</option>
-                <option value="Rosende">Matías Vinot</option>
+                <option value="Jorge Rosende">Jorge Rosende</option>
+                <option value="Magdalena Pinedo">Magdalena Pinedo</option>
+                <option value="Matías Vinot">Matías Vinot</option>
               </select>
               <select name="Hora" id="Hora" onChange={handleInputChange}>
                 <option value="" hidden>
