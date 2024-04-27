@@ -82,7 +82,7 @@ const SeeMore = ({ closeSeeMore, professionalName }) => {
           <BiXCircle />
         </div>
         <h2>Tu mundo interior</h2>
-        <h3>Experiencia profesional y formación académica</h3>
+        <h3>Experiencia profesional y habilidades psicoterapéuticas:</h3>
         <div className="teamDescriptionContainer">
           {itemsExperience.map((item, index) => (
             <div
@@ -96,7 +96,7 @@ const SeeMore = ({ closeSeeMore, professionalName }) => {
           ))}
         </div>
         <h3>
-          {capitalizeFirstLetter(professionalName)} cuenta con la siguiente
+          {capitalizeFirstLetter(professionalName)}, cuenta con la siguiente
           formación académica:
         </h3>
         <div className="teamDescriptionContainer">

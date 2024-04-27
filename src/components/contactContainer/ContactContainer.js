@@ -1,26 +1,32 @@
-import React,{useState} from 'react';
-import Loading from '../loading/Loading';
+import React, { useState } from "react";
+import Loading from "../loading/Loading";
 
-const ContactContainer = ({toggleSidebar}) => {
+const ContactContainer = ({ toggleSidebar }) => {
   const [loading, setLoading] = useState(false);
-  const [ values, setValues ] = useState({
-    Nombre:"",
-    Apellido:"",
+  const [values, setValues] = useState({
+    Nombre: "",
+    Apellido: "",
     Telefono: "",
-    Email:"",
-    Mensaje:"",
-    _captcha: false
+    Email: "",
+    Mensaje: "",
+    _captcha: false,
   });
 
   const handleInputChange = (e) => {
     setValues({
       ...values,
-      [e.target.name]: e.target.value
-    })
-  }
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const error = (values) => {
-    const requiredFields = ['Nombre', 'Apellido', 'Telefono', 'Email', 'Mensaje'];
+    const requiredFields = [
+      "Nombre",
+      "Apellido",
+      "Telefono",
+      "Email",
+      "Mensaje",
+    ];
 
     for (const field of requiredFields) {
       if (!values[field]) {
@@ -32,100 +38,113 @@ const ContactContainer = ({toggleSidebar}) => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    if (error(values)) return null
-    setLoading(true);
+    e.preventDefault();
+    if (error(values)) return null;
+    setLoading(true); //psicoterapia.tumundointerior@gmail.com
     fetch("https://formsubmit.co/ajax/facu.villarroel96@gmail.com", {
       method: "POST",
-      headers: { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
       },
-      body: JSON.stringify(values)
+      body: JSON.stringify(values),
     })
-    .then(response => response.json())
-    .then((data) => {
-      if(data.success === "true"){
-        alert("Tu consulta fue enviada correctamente!")
-        toggleSidebar()
-        setValues({
-          Nombre:"",
-          Apellido:"",
-          Telefono: "",
-          Email:"",
-          Mensaje:"",
-          _captcha: false
-        })
-        setLoading(false)
-      }
-    })
-    .catch(error => {
-      alert("ocurrió un error al enviar tu consulta, intenta nuevamente por favor!")
-      console.log(error);
-      setLoading(false)
-    });
-  }
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        if (data.success === "true") {
+          alert("Tu consulta fue enviada correctamente!");
+          toggleSidebar();
+          setValues({
+            Nombre: "",
+            Apellido: "",
+            Telefono: "",
+            Email: "",
+            Mensaje: "",
+            _captcha: false,
+          });
+          setLoading(false);
+        }
+      })
+      .catch((error) => {
+        alert(
+          "ocurrió un error al enviar tu consulta, intenta nuevamente por favor!"
+        );
+        console.log(error);
+        setLoading(false);
+      });
+  };
 
   return (
     <>
-      {loading 
-        ? <Loading text="Enviando..." color="#e7d7c9"/>
-        :<div className='sidebarContainer'>
-          <div className='sidebarTitleContainer' >
-            <h2 className='sidebarTitle'>Contacto</h2>
-            <h3 className='sidebarSubTitle'>Tu Mundo Interior</h3>
+      {loading ? (
+        <Loading text="Enviando..." color="#e7d7c9" />
+      ) : (
+        <div className="sidebarContainer">
+          <div className="sidebarTitleContainer">
+            <h2 className="sidebarTitle">Contacto</h2>
+            <h3 className="sidebarSubTitle">Tu Mundo Interior</h3>
           </div>
-          <div className='sidebarFormContainer'>
-            <form className='formFlex' action="#">
-              <div className='nameSurnameContainer'>
-                <input 
-                  type="text" 
-                  name='Nombre' 
-                  placeholder='Nombre*' 
+          <div className="sidebarFormContainer">
+            <form className="formFlex" action="#">
+              <div className="nameSurnameContainer">
+                <input
+                  type="text"
+                  name="Nombre"
+                  placeholder="Nombre*"
                   value={values.Nombre}
                   onChange={handleInputChange}
                   required
-                  />
-                <input 
-                  type="text" 
-                  name='Apellido' 
-                  placeholder='Apellido*' 
+                />
+                <input
+                  type="text"
+                  name="Apellido"
+                  placeholder="Apellido*"
                   value={values.Apellido}
                   onChange={handleInputChange}
                   required
-                  />
+                />
               </div>
-              <input 
-                type="tel" 
-                name='Telefono' 
-                placeholder='Teléfono*' 
+              <input
+                type="tel"
+                name="Telefono"
+                placeholder="Teléfono*"
                 value={values.Telefono}
                 onChange={handleInputChange}
-                required/>
-              <input 
-                type="email" 
-                name='Email' 
-                placeholder='Email*' 
+                required
+              />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Email*"
                 value={values.Email}
                 onChange={handleInputChange}
-                required/>
-              <textarea 
-                type="textarea" 
-                name='Mensaje' 
-                placeholder='Mensaje*' 
+                required
+              />
+              <textarea
+                type="textarea"
+                name="Mensaje"
+                placeholder="Mensaje*"
                 value={values.Mensaje}
                 onChange={handleInputChange}
-                required/>
-              <button type='submit' className='buttonSubmit buttonSubmitSidebar' onClick={handleSubmit}>Enviar Consulta</button>
+                required
+              />
+              <button
+                type="submit"
+                className="buttonSubmit buttonSubmitSidebar"
+                onClick={handleSubmit}
+              >
+                Enviar Consulta
+              </button>
             </form>
-            <p className='sidebarDescription'>Recibirá una respuesta en un rango de 24hrs hábiles.</p>
+            <p className="sidebarDescription">
+              Recibirá una respuesta en un rango de 24hrs hábiles.
+            </p>
           </div>
         </div>
-      }
+      )}
     </>
-    
-    
-  )
-}
+  );
+};
 
-export default ContactContainer
+export default ContactContainer;

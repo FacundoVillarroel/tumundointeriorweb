@@ -123,11 +123,15 @@ const jorgeData = {
     },
     {
       iconName: "FaGraduationCap",
-      text: "*Postítulo Internacional en Psicoterapia Cognitiva - Posracionalista*, Centro de Psicoterapia Posracionalista, *CETEPO Roma, Italia*. 470 horas de formación. Dirigido por el *Doctor Juan Balbi*. (Actualmente).",
+      text: "*Postítulo Internacional en Psicoterapia Cognitiva - Posracionalista*, Centro de Terapia Posracionalista, *CETEPO Roma, Italia*. 470 horas de formación. Dirigido por el *Doctor Juan Balbi*. (Actualmente).",
     },
     {
       iconName: "FaGraduationCap",
-      text: "*Diplomado en Psicoterapia Cognitiva - Posracionalista (actualizaciones en la teoría y el método)*, Centro de Psicoterapia Posracionalista, *CETEPO Chile*, 200 horas de formación. Dirigido por el *Doctor Juan Balbi*. ",
+      text: "*Diplomado en Psicoterapia Cognitiva - Posracionalista (actualizaciones en la teoría y el método)*, Centro de Terapia Posracionalista, *CETEPO Chile*, 200 horas de formación. Dirigido por el *Doctor Juan Balbi*. ",
+    },
+    {
+      iconName: "FaGraduationCap",
+      text: "Workshop: *“La práctica clínica en la terapia posracionalista”. *Doctor Juan Balbi.* Centro de Terapia Posracionalista (CETEPO, Chile).",
     },
     {
       iconName: "FaGraduationCap",

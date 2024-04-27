@@ -43,7 +43,7 @@ const BookingContainer = ({ toggleSidebar }) => {
     e.preventDefault();
     if (error(values)) return null;
     setLoading(true);
-    fetch("https://formsubmit.co/ajax/facu.villarroel96@gmail.com", {
+    fetch("https://formsubmit.co/ajax/psicoterapia.tumundointerior@gmail.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
