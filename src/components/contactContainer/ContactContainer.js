@@ -40,8 +40,8 @@ const ContactContainer = ({ toggleSidebar }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (error(values)) return null;
-    setLoading(true); //psicoterapia.tumundointerior@gmail.com
-    fetch("https://formsubmit.co/ajax/facu.villarroel96@gmail.com", {
+    setLoading(true);
+    fetch("https://formsubmit.co/ajax/ec4a801838954ab7b039d3eae58c9173", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -51,7 +51,6 @@ const ContactContainer = ({ toggleSidebar }) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         if (data.success === "true") {
           alert("Tu consulta fue enviada correctamente!");
           toggleSidebar();
