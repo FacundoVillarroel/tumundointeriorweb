@@ -73,7 +73,7 @@ const magdalenaData = {
     },
     {
       iconName: "FaGraduationCap",
-      text: "Workshop: *“La práctica clínica en la terapia posracionalista”. *Doctor Juan Balbi.* Centro de Terapia Posracionalista (CETEPO, Chile).",
+      text: "Workshop: *“La práctica clínica en la terapia posracionalista”. Doctor Juan Balbi.* Centro de Terapia Posracionalista (CETEPO, Chile).",
     },
     {
       iconName: "FaGraduationCap",
