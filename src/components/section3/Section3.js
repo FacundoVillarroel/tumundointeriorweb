@@ -72,7 +72,7 @@ const Section3 = () => {
                 className="professionalDescription seeMore openSeeMoreBtn1"
                 onClick={() => openSeeMore("jorge")}
               >
-                Ver Más
+                Ver CV
               </h3>
             </div>
           </div>
@@ -85,7 +85,7 @@ const Section3 = () => {
                 className="professionalDescription seeMore openSeeMoreBtn2"
                 onClick={() => openSeeMore("magdalena")}
               >
-                Ver Más
+                Ver CV
               </h3>
             </div>
           </div>
@@ -98,7 +98,7 @@ const Section3 = () => {
                 className="professionalDescription seeMore openSeeMoreBtn3"
                 onClick={() => openSeeMore("matias")}
               >
-                Ver Más
+                Ver CV
               </h3>
             </div>
           </div>

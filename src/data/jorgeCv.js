@@ -2,7 +2,7 @@ const jorgeData = {
   experience: [
     {
       iconName: "RiUserHeartLine",
-      text: "Jorge Rosende, *Psicólogo Clínico* y *Psicoterapeuta*, con más de *15 años de experiencia* atendiendo pacientes en consulta particular, desde el *Modelo de Psicoterapia Cognitivo - Posracionalista*.",
+      text: "Jorge Rosende, *Psicólogo Clínico* y *Psicoterapeuta*, con más de *15 años de experiencia* atendiendo pacientes en consulta particular, desde el *Modelo de Psicoterapia Posracionalista Ontológico*.",
     },
     {
       iconName: "RiUserSettingsLine",
@@ -97,7 +97,7 @@ const jorgeData = {
     },
     {
       iconName: "TbAward",
-      text: "*Expositor en el Seminario Clínico Académico*, realizado en la Facultad de Ciencias Sociales de la Universidad Central de Chile, presentando el tema: *El Modelo Postracionalista en Psicoterapia*.",
+      text: "*Expositor en el Seminario Clínico Académico*, realizado en la Facultad de Ciencias Sociales de la Universidad Central de Chile, presentando el tema: *El Modelo Posracionalista en Psicoterapia*.",
     },
     {
       iconName: "TbAward",
@@ -123,11 +123,11 @@ const jorgeData = {
     },
     {
       iconName: "FaGraduationCap",
-      text: "*Postítulo Internacional en Psicoterapia Cognitiva - Posracionalista*, Centro de Terapia Posracionalista, *CETEPO Roma, Italia*. 470 horas de formación. Dirigido por el *Doctor Juan Balbi*. (Actualmente).",
+      text: "*Postítulo Internacional en Psicoterapia Posracionalista Ontológico*, Centro de Terapia Posracionalista, *CETEPO Roma, Italia*. 470 horas de formación. Dirigido por el *Doctor Juan Balbi*. (Actualmente).",
     },
     {
       iconName: "FaGraduationCap",
-      text: "*Diplomado en Psicoterapia Cognitiva - Posracionalista (actualizaciones en la teoría y el método)*, Centro de Terapia Posracionalista, *CETEPO Chile*, 200 horas de formación. Dirigido por el *Doctor Juan Balbi*. ",
+      text: "*Diplomado en Psicoterapia Posracionalista Ontológico (actualizaciones en la teoría y el método)*, Centro de Terapia Posracionalista, *CETEPO Chile*, 200 horas de formación. Dirigido por el *Doctor Juan Balbi*. ",
     },
     {
       iconName: "FaGraduationCap",
@@ -135,11 +135,11 @@ const jorgeData = {
     },
     {
       iconName: "FaGraduationCap",
-      text: "Curso: *Terapia focalizada en la emoción: El efecto transformador del afecto, Doctor Leslie Greenberg*. Centro de Terapia Cognitiva Postracionalista (Cetepo, Argentina) y Universidad de Buenos Aires.",
+      text: "Curso: *Terapia focalizada en la emoción: El efecto transformador del afecto, Doctor Leslie Greenberg*. Centro de Terapia Posracionalista (Cetepo, Argentina) y Universidad de Buenos Aires.",
     },
     {
       iconName: "FaGraduationCap",
-      text: "Curso: Entrenamiento intensivo en psicoterapia: *El uso creativo de la estrategia postracionalista en la reconstrucción de la trama narrativa*. Sociedad Chilena de Psicología y Psicoterapia Constructivista.",
+      text: "Curso: Entrenamiento intensivo en psicoterapia: *El uso creativo de la estrategia posracionalista en la reconstrucción de la trama narrativa*. Sociedad Chilena de Psicología y Psicoterapia Constructivista.",
     },
     {
       iconName: "FaGraduationCap",
@@ -147,7 +147,7 @@ const jorgeData = {
     },
     {
       iconName: "FaGraduationCap",
-      text: "Curso práctico de psicoterapia: *Personalidad con tendencia a las obsesiones - compulsiones. Abordaje desde el modelo postracionalista*, Doctor David Trujillo. Sociedad de Terapia Cognitiva Postracionalista (STCP) y Universidad Adolfo Ibáñez.",
+      text: "Curso práctico de psicoterapia: *Personalidad con tendencia a las obsesiones - compulsiones. Abordaje desde el modelo posracionalista*, Doctor David Trujillo. Sociedad de Terapia Cognitiva Posracionalista (STCP) y Universidad Adolfo Ibáñez.",
     },
     {
       iconName: "FaGraduationCap",
@@ -207,7 +207,7 @@ const jorgeData = {
     },
     {
       iconName: "FaGraduationCap",
-      text: "I Congreso internacional de terapias cognitivas constructivistas y postracionalistas: *Apego temprano, identidad personal y psicopatología*. Organizado por el Centro de Psicoterapia Cognitiva - Postracionalista (Cetepo, Argentina). Realizado en la Universidad de Buenos Aires. (Buenos Aires, Argentina).",
+      text: "I Congreso internacional de terapias cognitivas constructivistas y posracionalistas: *Apego temprano, identidad personal y psicopatología*. Organizado por el Centro de Psicoterapia Cognitiva - Posracionalista (Cetepo, Argentina). Realizado en la Universidad de Buenos Aires. (Buenos Aires, Argentina).",
     },
     {
       iconName: "FaGraduationCap",
