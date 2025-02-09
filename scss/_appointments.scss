@@ -1,0 +1,101 @@
+.loadingContainer {
+  flex: 1;
+  min-height: 90vh;
+}
+.calendarContainer {
+  min-height: 90vh;
+  padding: 1rem;
+  margin-top: 2rem;
+  .title {
+    z-index: 2;
+    text-align: center;
+    font-family: "LoveloBlack";
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 1rem;
+  }
+  .dateSelectorContainer{
+    margin-top: 2rem;
+    padding: 2rem;
+    flex:1;
+    display: flex;
+    justify-content: space-evenly;
+    .react-calendar__tile--now {
+      background-color: $almond; /* Elimina el color amarillo */
+    }
+    .react-calendar__tile--now:hover{
+      background-color: $isabeline
+    }
+    .event-day {
+      position: relative; 
+    }
+    .event-day::after {
+      content: '';
+      position: absolute;
+      bottom: 5px; 
+      left: 50%;
+      transform: translateX(-50%);
+      width: 6px;  
+      height: 6px;
+      background-color: $silver; 
+      border-radius: 50%;
+    }
+    .dateSelectorTitle{
+      z-index: 2;
+      text-align: center;
+      font-family: "LoveloBlack";
+      padding-top: 20px;
+      padding-bottom: 10px;
+      font-size: 1rem;
+    }
+    .timesAvailableContainer{
+      .timesAvailableTitle{
+        z-index: 2;
+        text-align: center;
+        font-family: "LoveloBlack";
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-size: 1rem;
+      }
+      .timesItemsContainer{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        .noAppointments{
+            padding-top: 1rem;  
+        }
+        .timeItem {
+          border: 1px solid #aaa; /* Borde más gris para el estado normal */
+          flex: 0 1 calc(50% - 10px);
+          box-sizing: border-box;
+          text-align: center;
+          padding: 10px;
+          background-color: white;
+          cursor: pointer;
+        }
+        .timeItem:hover {
+          border: 1px solid black; 
+          background-color: #f4f4f4; 
+        }
+        .selected{
+          background-color: #006edc;
+          color: white;
+        }
+        .selected:hover{
+          background-color: #006edc;
+          color: white;
+        }
+      }
+    }
+  }
+  .button{
+    margin-top: 1rem;
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    background-color: $paleDogwood;
+    color: white;
+  }
+  .button:hover{
+    background-color: $cinereous;
+  }
+}

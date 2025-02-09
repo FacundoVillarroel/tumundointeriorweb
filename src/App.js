@@ -20,6 +20,7 @@ import ContactContainer from "./components/contactContainer/ContactContainer";
 import BookingContainer from "./components/bookingContainer/BookingContainer";
 import ConventionsContainer from "./components/ConventionsContainer/ConventionsContainer";
 import Admin from "./components/admin/Admin";
+import Appointments from "./components/appointments/Appointments";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -83,6 +84,7 @@ function App() {
             />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/admin" element={<Admin />} />
+            <Route path="/citas" element={<Appointments />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </main>
