@@ -4,6 +4,7 @@ import AppointmentList from '../appointmentList/AppointmentList';
 
 import Loading from '../loading/Loading';
 import AppointmentDetails from '../appointmentDetails/AppointmentDetails';
+import WhatsAppButton from '../whatsappButton/WhatsappButton';
 
 const Appointments = () => {
   const [events, setEvents] = useState([])
@@ -15,15 +16,9 @@ const Appointments = () => {
   const getCalendar = async() => {
     try {
       setLoading(true)
-      const myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
-      const requestOptions = {
-        method: "get",
-        headers: myHeaders,
-        redirect: "follow",
-      };
-      const response = await fetch(`${process.env.REACT_APP_NO_CODE_API_URL}/listEvents?calendarId=${process.env.REACT_APP_CALENDAR_ID}`, requestOptions)
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/events`)
       const data = await response.json();
+      console.log("DATA: ",data);
       if(data.items){
         setEvents(data.items)
       } else {
@@ -85,6 +80,7 @@ const Appointments = () => {
               </div>
             </div>
             <AppointmentDetails appointmentSelected={appointmentSelected} sendBooking={sendBooking}/>
+            {/* <WhatsAppButton phoneNumber={} message={"Hola como estas?"}/> */}
           </div>
         </div>
       }
