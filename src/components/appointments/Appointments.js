@@ -4,14 +4,16 @@ import AppointmentList from '../appointmentList/AppointmentList';
 
 import Loading from '../loading/Loading';
 import AppointmentDetails from '../appointmentDetails/AppointmentDetails';
+import fetchSavedAppointments from '../../helper/fetchAppointments';
 // import WhatsAppButton from '../whatsappButton/WhatsappButton';
 
 const Appointments = () => {
-  const [events, setEvents] = useState([])
+  const [events, setEvents] = useState([]);
   const [selectedDate, setSelectedDate] = useState(new Date());
-  const [appointmentsAvailable, setAppointmentsAvailable] = useState([])
-  const [appointmentSelected, setAppointmentSelected] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const [appointmentsAvailable, setAppointmentsAvailable] = useState([]);
+  const [appointmentSelected, setAppointmentSelected] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [savedAppointments, setSavedAppointments] = useState([]);
 
   const getCalendar = async() => {
     try {
@@ -30,8 +32,14 @@ const Appointments = () => {
       console.log(error);
     }
   }
-  
+
   useEffect(() => {
+    const fetchData = async () => {
+      const savedAppointmentsArray = await fetchSavedAppointments();
+      setSavedAppointments(savedAppointmentsArray);
+    };
+
+    fetchData();
     getCalendar()
   },[])
 
@@ -44,8 +52,13 @@ const Appointments = () => {
         eventDate.getDate() === selectedDate.getDate()
       );
     });
-    setAppointmentsAvailable(eventsForTheDay)
-  },[selectedDate, events])
+    //filter events already taken.
+    const filteredEvents = eventsForTheDay.filter(event =>
+      !savedAppointments.some(appointment => appointment.eventId === event.id)
+    );
+  
+    setAppointmentsAvailable(filteredEvents);
+  },[selectedDate, events, savedAppointments])
 
   const formattedDate = selectedDate.toLocaleDateString('es-ES', {
     weekday: 'long',   // Día de la semana
@@ -86,7 +99,7 @@ const Appointments = () => {
                   </div> 
                 }
               </div>
-              <AppointmentDetails appointmentSelected={appointmentSelected}/>
+              <AppointmentDetails appointmentSelected={appointmentSelected} setSelectedDate={setSelectedDate} setAppointmentSelected={setAppointmentSelected}/>
               {/* <WhatsAppButton phoneNumber={} message={"Hola como estas?"}/> */}
             </div>
           </div>

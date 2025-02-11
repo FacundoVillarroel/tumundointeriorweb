@@ -1,7 +1,9 @@
+import { addDoc, collection } from 'firebase/firestore'
 import React, { useState } from 'react'
 import Loading from '../loading/Loading'
+import { db } from '../../firebase/config'
 
-const AppointmentDetails = ({appointmentSelected}) => {
+const AppointmentDetails = ({appointmentSelected, setSelectedDate, setAppointmentSelected}) => {
   const [isLoading, setIsLoading] = useState(false)
   const [fullName, setFullName] = useState("")
 
@@ -9,9 +11,9 @@ const AppointmentDetails = ({appointmentSelected}) => {
     if(appointmentSelected){
       const date = new Date(appointmentSelected.start.dateTime)
       const formattedAppointment = date.toLocaleDateString("es-ES", {
-        weekday: 'long',   // Día de la semana
-        day: 'numeric',    // Día del mes
-        month: 'long'      // Nombre completo del mes
+        weekday: 'long',  
+        day: 'numeric',   
+        month: 'long'     
       })
       return formattedAppointment
     } 
@@ -40,12 +42,33 @@ const AppointmentDetails = ({appointmentSelected}) => {
     }
   }
 
-  const sendBooking = () => {
-    setIsLoading(true) 
-    //enviar mail a psicologo
-    //almacenar en db la cita
-    setIsLoading(false)
-    //si todo es correcto invitar al usuario a enviar whatsapp al psicologo
+  const sendBooking = async () => {
+    try {
+      setIsLoading(true)
+      const appointment = {
+        Fecha: getAppointmentDate(),
+        Hora: getAppointmentTime(),
+        Paciente: fullName
+      } 
+      console.log(appointment);
+      const appointmentsRef = collection(db, "appointments");
+      await addDoc(appointmentsRef, {
+        eventId:appointmentSelected.id,
+        start:appointmentSelected.start.dateTime,
+        end:appointmentSelected.end.dateTime,
+        updated: new Date().toLocaleString(),
+        takenBy: fullName
+      })
+      //Send email to Professional
+      setIsLoading(false)
+      setSelectedDate(new Date())
+      setAppointmentSelected(null)
+      window.alert("La cita fue reservada correctamente!")
+      //if no errors invite user to wsp link
+    } catch (error) {
+      console.log("ERROR BOOKING: ",error);
+      alert("Ocurrió un error al reservar la cita, por favor recargue la página e intentelo nuevamente.")
+    }
   }
 
   return (
