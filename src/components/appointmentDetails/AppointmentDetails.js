@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Loading from '../loading/Loading'
 
-const AppointmentDetails = ({appointmentSelected, sendBooking}) => {
+const AppointmentDetails = ({appointmentSelected}) => {
+  const [isLoading, setIsLoading] = useState(false)
+  const [fullName, setFullName] = useState("")
 
   const getAppointmentDate = () => {
     if(appointmentSelected){
@@ -26,30 +29,53 @@ const AppointmentDetails = ({appointmentSelected, sendBooking}) => {
   }
 
   const handleSubmit = () => {
-    const confirmAction = window.confirm("¿Seguro quieres reservar esta cita?");
-    
-    if (confirmAction) {
-      sendBooking()
+    if (!fullName) {
+      window.alert("Debes ingresar nombre del paciente para la reserva.")
     } else {
-      console.log("Acción cancelada");
+      const confirmAction = window.confirm(`¿Seguro quieres reservar esta cita para ${fullName}?`);
+      
+      if (confirmAction) {
+        sendBooking()
+      } 
     }
   }
 
+  const sendBooking = () => {
+    setIsLoading(true) 
+    //enviar mail a psicologo
+    //almacenar en db la cita
+    setIsLoading(false)
+    //si todo es correcto invitar al usuario a enviar whatsapp al psicologo
+  }
+
   return (
-    <div className='detailsContainer'>
-      <h3>Detalles de la reserva</h3>
-      <hr></hr>
-      {appointmentSelected 
-        ? <>
-            <p>Psicólogo Jorge Rosende.</p>
-            <p>{getAppointmentDate()}</p>
-            <p>{getAppointmentTime()}</p>
-            <hr></hr>
-            <button className='button' onClick={handleSubmit}>Reservar.</button>  
-          </>
-        : <p>No hay cita seleccionada.</p>      
-      }
-    </div>
+    <>
+    {isLoading 
+      ?
+        <Loading/>
+      :
+      <div className='detailsContainer'>
+        <h3>Detalles de la reserva</h3>
+        <hr></hr>
+        {appointmentSelected 
+          ? <>
+              <p>Psicólogo Jorge Rosende.</p>
+              <p>{getAppointmentDate()}</p>
+              <p>{getAppointmentTime()}</p>
+              <hr></hr>
+              <div className='inputContainer'>
+                <label htmlFor='name'>Nombre del paciente: </label>
+                <input type={"text"} name="fullName" onChange={e => setFullName(e.target.value)} value={fullName}/>
+              </div>
+              <hr></hr>
+              <button className='button' onClick={handleSubmit}>Reservar.</button>  
+            </>
+          : <p>No hay cita seleccionada.</p>      
+        }
+      </div>
+    }
+    </>
+    
   )
 }
 

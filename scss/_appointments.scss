@@ -17,9 +17,8 @@
   .dateSelectorContainer{
     margin-top: 2rem;
     padding: 2rem;
-    flex:1;
     display: flex;
-    justify-content: space-evenly;
+    gap: 50px;
     .react-calendar__tile--now {
       background-color: $almond; /* Elimina el color amarillo */
     }
@@ -49,6 +48,7 @@
       font-size: 1rem;
     }
     .timesAvailableContainer{
+      width: 30rem;
       .timesAvailableTitle{
         z-index: 2;
         text-align: center;
@@ -65,8 +65,8 @@
             padding-top: 1rem;  
         }
         .timeItem {
-          border: 1px solid #aaa; /* Borde más gris para el estado normal */
-          flex: 0 1 calc(50% - 10px);
+          border: 1px solid #aaa;
+          flex: 0 0 calc(50% - 10px);
           box-sizing: border-box;
           text-align: center;
           padding: 10px;
@@ -84,6 +84,18 @@
         .selected:hover{
           background-color: #006edc;
           color: white;
+        }
+      }
+    }
+    .detailsContainer{
+      .inputContainer{
+        display: flex;
+        flex-direction: column;
+        input{
+          margin-top: .2rem;
+          padding: .1rem .4rem;
+          border: 1px solid $cinereous;
+          border-radius: .4rem;
         }
       }
     }

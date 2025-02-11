@@ -1,28 +1,11 @@
 import React from "react";
 import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css"; // Importa los estilos de react-calendar
+import "react-calendar/dist/Calendar.css";
 
-const CalendarView = ({ events, setAppointmentsAvailable, selectedDate, setSelectedDate }) => {
-
-  // Función para manejar el clic en un día del calendario
+const CalendarView = ({ events, selectedDate, setSelectedDate }) => {
+  
   const handleDayClick = (date) => {
     setSelectedDate(date);
-    const day = date.getDate(); // Número del día clickeado
-    console.log(`Día seleccionado: ${day}`);
-
-    // Filtrar los eventos para este día
-    const eventsForTheDay = events.filter(event => {
-      const eventDate = new Date(event.start.dateTime);
-      return (
-        eventDate.getFullYear() === date.getFullYear() &&
-        eventDate.getMonth() === date.getMonth() &&
-        eventDate.getDate() === date.getDate()
-      );
-    });
-
-    console.log("Eventos para este día:", eventsForTheDay);
-    setAppointmentsAvailable(eventsForTheDay)
-    // Aquí puedes ejecutar cualquier función que reciba `day` o `eventsForTheDay` como prop
   };
 
   return (
@@ -45,7 +28,7 @@ const CalendarView = ({ events, setAppointmentsAvailable, selectedDate, setSelec
           return hasEvent ? "event-day" : null;
         }}
       />
-      <p>Días con turnos disponibles aparecen con color amarillo</p>
+      <p>Días con turnos disponibles aparecen con un círculo debajo</p>
     </div>
   );
 };

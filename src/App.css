@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .navBarContainer {
   font-family: "dosisRegular";
   position: fixed;
@@ -1191,9 +1190,8 @@ html a {
   .calendarContainer .dateSelectorContainer {
     margin-top: 2rem;
     padding: 2rem;
-    flex: 1;
     display: flex;
-    justify-content: space-evenly; }
+    gap: 50px; }
     .calendarContainer .dateSelectorContainer .react-calendar__tile--now {
       background-color: #e7d7c9;
       /* Elimina el color amarillo */ }
@@ -1218,37 +1216,46 @@ html a {
       padding-top: 20px;
       padding-bottom: 10px;
       font-size: 1rem; }
-    .calendarContainer .dateSelectorContainer .timesAvailableContainer .timesAvailableTitle {
-      z-index: 2;
-      text-align: center;
-      font-family: "LoveloBlack";
-      padding-top: 20px;
-      padding-bottom: 10px;
-      font-size: 1rem; }
-    .calendarContainer .dateSelectorContainer .timesAvailableContainer .timesItemsContainer {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px; }
-      .calendarContainer .dateSelectorContainer .timesAvailableContainer .timesItemsContainer .noAppointments {
-        padding-top: 1rem; }
-      .calendarContainer .dateSelectorContainer .timesAvailableContainer .timesItemsContainer .timeItem {
-        border: 1px solid #aaa;
-        /* Borde más gris para el estado normal */
-        flex: 0 1 calc(50% - 10px);
-        box-sizing: border-box;
+    .calendarContainer .dateSelectorContainer .timesAvailableContainer {
+      width: 30rem; }
+      .calendarContainer .dateSelectorContainer .timesAvailableContainer .timesAvailableTitle {
+        z-index: 2;
         text-align: center;
-        padding: 10px;
-        background-color: white;
-        cursor: pointer; }
-      .calendarContainer .dateSelectorContainer .timesAvailableContainer .timesItemsContainer .timeItem:hover {
-        border: 1px solid black;
-        background-color: #f4f4f4; }
-      .calendarContainer .dateSelectorContainer .timesAvailableContainer .timesItemsContainer .selected {
-        background-color: #006edc;
-        color: white; }
-      .calendarContainer .dateSelectorContainer .timesAvailableContainer .timesItemsContainer .selected:hover {
-        background-color: #006edc;
-        color: white; }
+        font-family: "LoveloBlack";
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-size: 1rem; }
+      .calendarContainer .dateSelectorContainer .timesAvailableContainer .timesItemsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; }
+        .calendarContainer .dateSelectorContainer .timesAvailableContainer .timesItemsContainer .noAppointments {
+          padding-top: 1rem; }
+        .calendarContainer .dateSelectorContainer .timesAvailableContainer .timesItemsContainer .timeItem {
+          border: 1px solid #aaa;
+          flex: 0 0 calc(50% - 10px);
+          box-sizing: border-box;
+          text-align: center;
+          padding: 10px;
+          background-color: white;
+          cursor: pointer; }
+        .calendarContainer .dateSelectorContainer .timesAvailableContainer .timesItemsContainer .timeItem:hover {
+          border: 1px solid black;
+          background-color: #f4f4f4; }
+        .calendarContainer .dateSelectorContainer .timesAvailableContainer .timesItemsContainer .selected {
+          background-color: #006edc;
+          color: white; }
+        .calendarContainer .dateSelectorContainer .timesAvailableContainer .timesItemsContainer .selected:hover {
+          background-color: #006edc;
+          color: white; }
+    .calendarContainer .dateSelectorContainer .detailsContainer .inputContainer {
+      display: flex;
+      flex-direction: column; }
+      .calendarContainer .dateSelectorContainer .detailsContainer .inputContainer input {
+        margin-top: .2rem;
+        padding: .1rem .4rem;
+        border: 1px solid #a38f85;
+        border-radius: .4rem; }
   .calendarContainer .button {
     margin-top: 1rem;
     border-radius: 1rem;
