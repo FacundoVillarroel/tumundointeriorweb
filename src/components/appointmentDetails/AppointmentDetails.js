@@ -2,10 +2,13 @@ import { addDoc, collection } from 'firebase/firestore'
 import React, { useState } from 'react'
 import Loading from '../loading/Loading'
 import { db } from '../../firebase/config'
+import WhatsAppModal from '../modalWhatsapp/ModalWhatsapp'
 
 const AppointmentDetails = ({appointmentSelected, setSelectedDate, setAppointmentSelected}) => {
-  const [isLoading, setIsLoading] = useState(false)
-  const [fullName, setFullName] = useState("")
+  const [isLoading, setIsLoading] = useState(false);
+  const [fullName, setFullName] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [message, setMessage] = useState("")
 
   const getAppointmentDate = () => {
     if(appointmentSelected){
@@ -42,15 +45,13 @@ const AppointmentDetails = ({appointmentSelected, setSelectedDate, setAppointmen
     }
   }
 
+  const getMessage = () => {
+    return `Hola Jorge, Me gustaría reservar hora para el dia ${getAppointmentDate()} a las ${getAppointmentTime()}hs, gracias, ${fullName}.`
+  }
+
   const sendBooking = async () => {
     try {
       setIsLoading(true)
-      const appointment = {
-        Fecha: getAppointmentDate(),
-        Hora: getAppointmentTime(),
-        Paciente: fullName
-      } 
-      console.log(appointment);
       const appointmentsRef = collection(db, "appointments");
       await addDoc(appointmentsRef, {
         eventId:appointmentSelected.id,
@@ -64,7 +65,8 @@ const AppointmentDetails = ({appointmentSelected, setSelectedDate, setAppointmen
       setSelectedDate(new Date())
       setAppointmentSelected(null)
       window.alert("La cita fue reservada correctamente!")
-      //if no errors invite user to wsp link
+      setMessage(getMessage())
+      setIsModalOpen(true)
     } catch (error) {
       console.log("ERROR BOOKING: ",error);
       alert("Ocurrió un error al reservar la cita, por favor recargue la página e intentelo nuevamente.")
@@ -97,6 +99,8 @@ const AppointmentDetails = ({appointmentSelected, setSelectedDate, setAppointmen
         }
       </div>
     }
+    <WhatsAppModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} message={message}/>
+
     </>
     
   )

@@ -1179,7 +1179,45 @@ html a {
 .calendarContainer {
   min-height: 90vh;
   padding: 1rem;
-  margin-top: 2rem; }
+  margin-top: 2rem;
+  position: relative; }
+  .calendarContainer .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; }
+    .calendarContainer .modal-overlay .modal-content {
+      background: #ede9e3;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%; }
+      .calendarContainer .modal-overlay .modal-content .modal-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px; }
+      .calendarContainer .modal-overlay .modal-content .modal-description {
+        font-size: 16px;
+        margin-bottom: 20px; }
+      .calendarContainer .modal-overlay .modal-content .button-container {
+        display: flex;
+        justify-content: center; }
+        .calendarContainer .modal-overlay .modal-content .button-container .whatsapp-button {
+          border-radius: 1rem;
+          padding: .6rem 1rem;
+          background-color: #fff;
+          color: #212121;
+          border: 2px solid #a38f85; }
+        .calendarContainer .modal-overlay .modal-content .button-container .whatsapp-button:hover {
+          background-color: #a38f85; }
   .calendarContainer .title {
     z-index: 2;
     text-align: center;

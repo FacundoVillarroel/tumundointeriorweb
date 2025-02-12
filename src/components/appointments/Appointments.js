@@ -5,7 +5,6 @@ import AppointmentList from '../appointmentList/AppointmentList';
 import Loading from '../loading/Loading';
 import AppointmentDetails from '../appointmentDetails/AppointmentDetails';
 import fetchSavedAppointments from '../../helper/fetchAppointments';
-// import WhatsAppButton from '../whatsappButton/WhatsappButton';
 
 const Appointments = () => {
   const [events, setEvents] = useState([]);
@@ -100,7 +99,6 @@ const Appointments = () => {
                 }
               </div>
               <AppointmentDetails appointmentSelected={appointmentSelected} setSelectedDate={setSelectedDate} setAppointmentSelected={setAppointmentSelected}/>
-              {/* <WhatsAppButton phoneNumber={} message={"Hola como estas?"}/> */}
             </div>
           </div>
         </div>
