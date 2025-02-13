@@ -4,7 +4,7 @@ import Loading from '../loading/Loading'
 import { db } from '../../firebase/config'
 import WhatsAppModal from '../modalWhatsapp/ModalWhatsapp'
 
-const AppointmentDetails = ({appointmentSelected, setSelectedDate, setAppointmentSelected}) => {
+const AppointmentDetails = ({appointmentSelected, setSelectedDate, setAppointmentSelected, addSavedAppointment}) => {
   const [isLoading, setIsLoading] = useState(false);
   const [fullName, setFullName] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -45,6 +45,28 @@ const AppointmentDetails = ({appointmentSelected, setSelectedDate, setAppointmen
     }
   }
 
+  const sendConfirmationEmail = async() => {
+    const values = {
+      Paciente: fullName,
+      Fecha:getAppointmentDate(),
+      Hora:getAppointmentTime()
+    }
+    const response = await fetch("https://formsubmit.co/ajax/ec4a801838954ab7b039d3eae58c9173", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(values),
+    })
+    const data = await response.json();
+    if (data.success === "true") {
+      console.log("Mail de confirmación enviado correctamente.");
+    } else {
+      throw new Error("Ocurrió un error al enviar mail de confirmación.")
+    }
+  }
+
   const getMessage = () => {
     return `Hola Jorge, Me gustaría reservar hora para el dia ${getAppointmentDate()} a las ${getAppointmentTime()}hs, gracias, ${fullName}.`
   }
@@ -53,14 +75,16 @@ const AppointmentDetails = ({appointmentSelected, setSelectedDate, setAppointmen
     try {
       setIsLoading(true)
       const appointmentsRef = collection(db, "appointments");
-      await addDoc(appointmentsRef, {
+      await sendConfirmationEmail()
+      const appointmentToSave = {
         eventId:appointmentSelected.id,
         start:appointmentSelected.start.dateTime,
         end:appointmentSelected.end.dateTime,
         updated: new Date().toLocaleString(),
         takenBy: fullName
-      })
-      //Send email to Professional
+      }
+      await addDoc(appointmentsRef, appointmentToSave)
+      addSavedAppointment(appointmentToSave)
       setIsLoading(false)
       setSelectedDate(new Date())
       setAppointmentSelected(null)
@@ -68,6 +92,7 @@ const AppointmentDetails = ({appointmentSelected, setSelectedDate, setAppointmen
       setMessage(getMessage())
       setIsModalOpen(true)
     } catch (error) {
+      setIsLoading(false)
       console.log("ERROR BOOKING: ",error);
       alert("Ocurrió un error al reservar la cita, por favor recargue la página e intentelo nuevamente.")
     }
@@ -77,7 +102,7 @@ const AppointmentDetails = ({appointmentSelected, setSelectedDate, setAppointmen
     <>
     {isLoading 
       ?
-        <Loading/>
+        <Loading text={"Enviando la reserva.."} color={"#d4b2a7"}/>
       :
       <div className='detailsContainer'>
         <h3>Detalles de la reserva</h3>

@@ -33,12 +33,12 @@ const Appointments = () => {
   }
 
   useEffect(() => {
-    const fetchData = async () => {
+    const getSavedAppointments = async () => {
       const savedAppointmentsArray = await fetchSavedAppointments();
       setSavedAppointments(savedAppointmentsArray);
     };
 
-    fetchData();
+    getSavedAppointments();
     getCalendar()
   },[])
 
@@ -58,7 +58,7 @@ const Appointments = () => {
   
     setAppointmentsAvailable(filteredEvents);
   },[selectedDate, events, savedAppointments])
-
+  console.log("APPOINTMENTS SAVED: ", savedAppointments);
   const formattedDate = selectedDate.toLocaleDateString('es-ES', {
     weekday: 'long',   // Día de la semana
     day: 'numeric',    // Día del mes
@@ -71,6 +71,10 @@ const Appointments = () => {
     setSelectedDate(nextAppointmentDate)
     setAppointmentSelected(events[0])
   }
+
+  const addSavedAppointment = (newAppointment) => {
+    setSavedAppointments((prev) => [...prev, newAppointment]);
+  };
 
   return (
     <>
@@ -98,7 +102,7 @@ const Appointments = () => {
                   </div> 
                 }
               </div>
-              <AppointmentDetails appointmentSelected={appointmentSelected} setSelectedDate={setSelectedDate} setAppointmentSelected={setAppointmentSelected}/>
+              <AppointmentDetails appointmentSelected={appointmentSelected} setSelectedDate={setSelectedDate} setAppointmentSelected={setAppointmentSelected} addSavedAppointment={addSavedAppointment}/>
             </div>
           </div>
         </div>

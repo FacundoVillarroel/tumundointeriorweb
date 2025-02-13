@@ -1,20 +1,18 @@
 import React from "react";
 import { RiWhatsappFill } from "react-icons/ri";
-
+const phoneNumber = process.env.REACT_APP_PHONE_NUMBER
 
 const WhatsAppModal = ({isModalOpen,setIsModalOpen, message}) => {
 
-  console.log(process.env.REACT_APP_PHONE_NUMBER);
-
   const handleWhatsAppClick = () => {
-    const whatsappLink = `https://wa.me/${"56964880972"}?text=${encodeURIComponent(message)}`
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(whatsappLink, "_blank")
     setIsModalOpen(false)
   }
 
   return (
     <>
-      {true && (
+      {isModalOpen && (
         <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <h2 className="modal-title">Envía confirmacion a Jorge.</h2>
