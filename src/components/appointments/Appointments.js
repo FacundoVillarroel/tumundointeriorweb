@@ -13,7 +13,7 @@ const Appointments = () => {
   const [appointmentSelected, setAppointmentSelected] = useState(null);
   const [loading, setLoading] = useState(true);
   const [savedAppointments, setSavedAppointments] = useState([]);
-
+  
   const getCalendar = async() => {
     try {
       setLoading(true)
@@ -91,7 +91,7 @@ const Appointments = () => {
           </h2>
           <div style={{display:'flex', justifyContent:"center", width:"100%"}}>
             <div className='dateSelectorContainer'>
-              <Calendar selectedDate={selectedDate} setSelectedDate={setSelectedDate} events={events} appointmentSelected={appointmentSelected} setAppointmentsAvailable={setAppointmentsAvailable} set/>
+              <Calendar selectedDate={selectedDate} setSelectedDate={setSelectedDate} events={events} savedAppointments={savedAppointments}/>
               <div className='timesAvailableContainer'> 
                 <h3 className='timesAvailableTitle'> Horas disponibles:  {formattedDate}</h3>
                 {appointmentsAvailable.length ?  
