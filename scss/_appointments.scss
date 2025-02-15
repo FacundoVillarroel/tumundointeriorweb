@@ -4,9 +4,8 @@
 }
 .calendarContainer {
   min-height: 90vh;
-  padding: 1rem;
-  margin-top: 2rem;
   position: relative;
+  padding-bottom: 2rem;
   .modal-overlay{
     position: fixed;
     top: 0;
@@ -55,17 +54,18 @@
     z-index: 2;
     text-align: center;
     font-family: "LoveloBlack";
-    padding-top: 20px;
+    padding-top: 3rem;
     padding-bottom: 10px;
     font-size: 1rem;
   }
+  // conatainer of calendar, appointments and appointments details
   .dateSelectorContainer{
-    margin-top: 2rem;
-    padding: 2rem;
     display: flex;
-    gap: 50px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
     .react-calendar__tile--now {
-      background-color: $almond; /* Elimina el color amarillo */
+      background-color: $almond; 
     }
     .react-calendar__tile--now:hover{
       background-color: $isabeline
@@ -92,26 +92,25 @@
       padding-bottom: 10px;
       font-size: 1rem;
     }
+    //container of time pickers
     .timesAvailableContainer{
-      width: 30rem;
       .timesAvailableTitle{
         z-index: 2;
-        text-align: center;
         font-family: "LoveloBlack";
-        padding-top: 20px;
-        padding-bottom: 10px;
-        font-size: 1rem;
+        font-size: .8rem;
+        padding-bottom: 1rem;
       }
       .timesItemsContainer{
         display: flex;
         flex-wrap: wrap;
+        flex: 1;
         gap: 10px;
         .noAppointments{
             padding-top: 1rem;  
         }
         .timeItem {
           border: 1px solid #aaa;
-          flex: 0 0 calc(50% - 10px);
+          flex: 0 0 calc(33% - 10px);
           box-sizing: border-box;
           text-align: center;
           padding: 10px;
@@ -132,6 +131,7 @@
         }
       }
     }
+    //container of appointment details.
     .detailsContainer{
       .inputContainer{
         display: flex;
@@ -154,5 +154,55 @@
   }
   .button:hover{
     background-color: $cinereous;
+  }
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  .calendarContainer {
+    .dateSelectorContainer{
+      .timesAvailableContainer{
+        width: 15rem;
+        .timesAvailableTitle{
+          font-size: .9rem;
+        }
+        .timesItemsContainer{
+          .timeItem{
+            flex: 0 0 calc(50% - 10px);
+          }
+        }  
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .calendarContainer {
+    margin-top: 2rem;
+    .dateSelectorContainer{
+      margin-top: 2rem;
+      padding: 2rem;
+      gap:20px;
+      flex-direction: row;
+      .timesAvailableContainer{
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-size: 1rem;
+        width: 20rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .calendarContainer {
+    .dateSelectorContainer{
+      gap:50px;
+      .timesAvailableContainer{
+        width: 25rem;
+      }
+    }
   }
 }

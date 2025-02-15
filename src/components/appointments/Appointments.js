@@ -58,7 +58,6 @@ const Appointments = () => {
   
     setAppointmentsAvailable(filteredEvents);
   },[selectedDate, events, savedAppointments])
-  console.log("APPOINTMENTS SAVED: ", savedAppointments);
   const formattedDate = selectedDate.toLocaleDateString('es-ES', {
     weekday: 'long',   // Día de la semana
     day: 'numeric',    // Día del mes
