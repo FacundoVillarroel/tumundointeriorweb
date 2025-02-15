@@ -17,7 +17,7 @@ const CalendarView = ({ events, selectedDate, setSelectedDate }) => {
         minDate={new Date()}
         tileClassName={({ date }) => {
           // Verifica si hay eventos en esta fecha para añadir una clase especial
-          const hasEvent = events?.some(event => {
+          const hasEvent = events.some(event => {
             const eventDate = new Date(event.start.dateTime);
             return (
               eventDate.getFullYear() === date.getFullYear() &&

@@ -66,9 +66,11 @@ const Appointments = () => {
 
   const nextAppointment = (e) => {
     e.preventDefault()
-    const nextAppointmentDate = new Date(events[0].start.dateTime);
-    setSelectedDate(nextAppointmentDate)
-    setAppointmentSelected(events[0])
+    if (events.length){
+      const nextAppointmentDate = new Date(events[0].start.dateTime);
+      setSelectedDate(nextAppointmentDate)
+      setAppointmentSelected(events[0])
+    }
   }
 
   const addSavedAppointment = (newAppointment) => {
