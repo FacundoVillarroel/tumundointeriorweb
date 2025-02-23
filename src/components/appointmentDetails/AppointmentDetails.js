@@ -68,7 +68,7 @@ const AppointmentDetails = ({appointmentSelected, setSelectedDate, setAppointmen
   }
 
   const getMessage = () => {
-    return `Hola Jorge, Me gustaría reservar hora para el dia ${getAppointmentDate()} a las ${getAppointmentTime()}hs, gracias, ${fullName}.`
+    return `Hola, Me gustaría realizar una reserva para una sesión de psicoterapia el día ${getAppointmentDate()} a las ${getAppointmentTime()}hs, con el profesional Jorge Rosende.`
   }
 
   const sendBooking = async () => {

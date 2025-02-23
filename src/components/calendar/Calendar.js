@@ -19,7 +19,7 @@ const CalendarView = ({ events, selectedDate, setSelectedDate, savedAppointments
           // Verifica si hay eventos en esta fecha para añadir una clase especial
           const hasEvent = events.some(event => {
             if (savedAppointments.length && savedAppointments.some(appointment => appointment.eventId === event.id)){
-              return
+              return null
             }
             const eventDate = new Date(event.start.dateTime);
             return (
