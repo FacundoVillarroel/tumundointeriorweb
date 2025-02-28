@@ -15,6 +15,8 @@ const CalendarView = ({ events = [], selectedDate, setSelectedDate, savedAppoint
         onClickDay={handleDayClick}
         value={selectedDate}
         minDate={new Date()}
+        next2Label={null} 
+        prev2Label={null}
         tileClassName={({ date }) => {
           // Verifica si hay eventos en esta fecha para añadir una clase especial
           if (!events.length) {
