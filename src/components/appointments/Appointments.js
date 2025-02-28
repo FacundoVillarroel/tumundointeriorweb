@@ -29,6 +29,7 @@ const Appointments = () => {
     } catch (error) {
       setLoading(false)
       console.log(error);
+      setEvents([])
     }
   }
 
@@ -43,20 +44,22 @@ const Appointments = () => {
   },[])
 
   useEffect(() => {
-    const eventsForTheDay = events.filter(event => {
-      const eventDate = new Date(event.start.dateTime);
-      return (
-        eventDate.getFullYear() === selectedDate.getFullYear() &&
-        eventDate.getMonth() === selectedDate.getMonth() &&
-        eventDate.getDate() === selectedDate.getDate()
+    if (events.length) {
+      const eventsForTheDay = events.filter(event => {
+        const eventDate = new Date(event.start.dateTime);
+        return (
+          eventDate.getFullYear() === selectedDate.getFullYear() &&
+          eventDate.getMonth() === selectedDate.getMonth() &&
+          eventDate.getDate() === selectedDate.getDate()
+        );
+      });
+      //filter events already taken.
+      const filteredEvents = eventsForTheDay.filter(event =>
+        !savedAppointments.some(appointment => appointment.eventId === event.id)
       );
-    });
-    //filter events already taken.
-    const filteredEvents = eventsForTheDay.filter(event =>
-      !savedAppointments.some(appointment => appointment.eventId === event.id)
-    );
-  
-    setAppointmentsAvailable(filteredEvents);
+    
+      setAppointmentsAvailable(filteredEvents);
+    }
   },[selectedDate, events, savedAppointments])
   const formattedDate = selectedDate.toLocaleDateString('es-ES', {
     weekday: 'long',   // Día de la semana
@@ -70,6 +73,8 @@ const Appointments = () => {
       const nextAppointmentDate = new Date(events[0].start.dateTime);
       setSelectedDate(nextAppointmentDate)
       setAppointmentSelected(events[0])
+    } else {
+      window.alert("No hay citas disponibles.")
     }
   }
 
@@ -99,6 +104,7 @@ const Appointments = () => {
                   } setAppointmentSelected={setAppointmentSelected}/>
                   :<div> 
                     <p> No hay citas para este día </p>
+                    
                     <button className="button" onClick={nextAppointment} >Proxima sesión disponible.</button>
                   </div> 
                 }

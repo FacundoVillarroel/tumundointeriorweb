@@ -2,7 +2,7 @@ import React from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
-const CalendarView = ({ events, selectedDate, setSelectedDate, savedAppointments }) => {
+const CalendarView = ({ events = [], selectedDate, setSelectedDate, savedAppointments }) => {
   
   const handleDayClick = (date) => {
     setSelectedDate(date);
@@ -17,6 +17,9 @@ const CalendarView = ({ events, selectedDate, setSelectedDate, savedAppointments
         minDate={new Date()}
         tileClassName={({ date }) => {
           // Verifica si hay eventos en esta fecha para añadir una clase especial
+          if (!events.length) {
+            return null
+          }
           const hasEvent = events.some(event => {
             if (savedAppointments.length && savedAppointments.some(appointment => appointment.eventId === event.id)){
               return null
