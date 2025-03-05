@@ -15,18 +15,23 @@ const WhatsAppModal = ({isModalOpen,setIsModalOpen, message}) => {
       {isModalOpen && (
         <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h2 className="modal-title">Envía confirmacion a Jorge.</h2>
-            <p className="modal-description">Presiona el botton para enviar un mensaje de whatsapp a Jorge.</p>
+            <h2 className="modal-title">
+              Envía confirmacion al centro 'Tu mundo interior'.
+            </h2>
+            <p className="modal-description">
+              Presiona el botton para enviar un mensaje de whatsapp.
+            </p>
             <div className="button-container">
               <button className="whatsapp-button" onClick={handleWhatsAppClick}>
-                Enviar Mensaje <RiWhatsappFill color="green" fontSize={"1.6rem"}/>
+                Enviar Mensaje{" "}
+                <RiWhatsappFill color="green" fontSize={"1.6rem"} />
               </button>
             </div>
           </div>
         </div>
       )}
     </>
-  )
+  );
 }
 
 export default WhatsAppModal
