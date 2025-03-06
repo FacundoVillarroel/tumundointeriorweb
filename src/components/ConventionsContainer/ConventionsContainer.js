@@ -43,7 +43,7 @@ const ConventionsContainer = ({ closeAnimation, className }) => {
         <div className="itemContainer">
           <BiTransfer fontSize={25} className="icon" color={"a38f85"} />
           <p>
-            <span className="dosisBold">$35.000</span> pago por transferencia
+            <span className="dosisBold">$40.000</span> pago por transferencia
             bancaria <span className="dosisBold">(pago nacional, Chile).</span>
           </p>
         </div>
