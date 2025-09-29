@@ -14,24 +14,26 @@ const Appointments = () => {
   const [loading, setLoading] = useState(true);
   const [savedAppointments, setSavedAppointments] = useState([]);
   
-  const getCalendar = async() => {
+  const getCalendar = async () => {
     try {
-      setLoading(true)
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/events`)
+      setLoading(true);
+      const response = await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}/events`
+      );
       const data = await response.json();
-      
-      if(data){
-        setEvents(data)
+
+      if (data) {
+        setEvents(data);
       } else {
-        setEvents([])
+        setEvents([]);
       }
       setLoading(false)
     } catch (error) {
-      setLoading(false)
+      setLoading(false);
       console.log(error);
-      setEvents([])
+      setEvents([]);
     }
-  }
+  };
 
   useEffect(() => {
     const getSavedAppointments = async () => {
@@ -40,12 +42,12 @@ const Appointments = () => {
     };
 
     getSavedAppointments();
-    getCalendar()
-  },[])
+    getCalendar();
+  }, [selectedDate]);
 
   useEffect(() => {
     if (events.length) {
-      const eventsForTheDay = events.filter(event => {
+      const eventsForTheDay = events.filter((event) => {
         const eventDate = new Date(event.start.dateTime);
         return (
           eventDate.getFullYear() === selectedDate.getFullYear() &&
@@ -54,68 +56,86 @@ const Appointments = () => {
         );
       });
       //filter events already taken.
-      const filteredEvents = eventsForTheDay.filter(event =>
-        !savedAppointments.some(appointment => appointment.eventId === event.id)
+      const filteredEvents = eventsForTheDay.filter(
+        (event) =>
+          !savedAppointments.some(
+            (appointment) => appointment.eventId === event.id
+          )
       );
-    
+
       setAppointmentsAvailable(filteredEvents);
     }
-  },[selectedDate, events, savedAppointments])
-  const formattedDate = selectedDate.toLocaleDateString('es-ES', {
-    weekday: 'long',   // Día de la semana
-    day: 'numeric',    // Día del mes
-    month: 'long'      // Nombre completo del mes
-  })
+  }, [selectedDate, events, savedAppointments]);
+  
+  const formattedDate = selectedDate.toLocaleDateString("es-ES", {
+    weekday: "long", // Día de la semana
+    day: "numeric", // Día del mes
+    month: "long", // Nombre completo del mes
+  });
 
   const nextAppointment = (e) => {
-    e.preventDefault()
-    if (events.length){
+    e.preventDefault();
+    if (events.length) {
       const nextAppointmentDate = new Date(events[0].start.dateTime);
-      setSelectedDate(nextAppointmentDate)
-      setAppointmentSelected(events[0])
+      setSelectedDate(nextAppointmentDate);
+      setAppointmentSelected(events[0]);
     } else {
-      window.alert("No hay citas disponibles.")
+      window.alert("No hay citas disponibles.");
     }
-  }
+  };
 
   const addSavedAppointment = (newAppointment) => {
     setSavedAppointments((prev) => [...prev, newAppointment]);
   };
 
   return (
-    <>
-      { loading 
-        ? 
-        <div className="loadingContainer">
-          <Loading text={"Cargando Horas disponibles..."} color={"#e7d7c9"} />
-        </div> 
-        :
-        <div className='calendarContainer'>
-          <h2 className='title'>
-            Solicitar hora con Psicólogo Jorge Rosende
-          </h2>
-          <div style={{display:'flex', justifyContent:"center", width:"100%"}}>
-            <div className='dateSelectorContainer'>
-              <Calendar selectedDate={selectedDate} setSelectedDate={setSelectedDate} events={events} savedAppointments={savedAppointments}/>
-              <div className='timesAvailableContainer'> 
-                <h3 className='timesAvailableTitle'> Horas disponibles:  {formattedDate}</h3>
-                {appointmentsAvailable.length ?  
-                  <AppointmentList appointmentsAvailable={appointmentsAvailable} appointmentSelected={appointmentSelected
-                  } setAppointmentSelected={setAppointmentSelected}/>
-                  :<div> 
-                    <p> No hay citas para este día </p>
-                    
-                    <button className="button" onClick={nextAppointment} >Proxima sesión disponible.</button>
-                  </div> 
-                }
+    <div className="calendarContainer">
+      <h2 className="title">Solicitar hora con Psicólogo Jorge Rosende</h2>
+      <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
+        <div className="dateSelectorContainer">
+          <Calendar
+            selectedDate={selectedDate}
+            setSelectedDate={setSelectedDate}
+            events={events}
+            savedAppointments={savedAppointments}
+          />
+          <div className="timesAvailableContainer">
+            <h3 className="timesAvailableTitle">
+              {" "}
+              Horas disponibles: {formattedDate}
+            </h3>
+            {loading ? (
+              <Loading
+                text={"Cargando Horas disponibles..."}
+                color={"#e7d7c9"}
+                display={"block"}
+              />
+            ) : appointmentsAvailable.length ? (
+              <AppointmentList
+                appointmentsAvailable={appointmentsAvailable}
+                appointmentSelected={appointmentSelected}
+                setAppointmentSelected={setAppointmentSelected}
+              />
+            ) : (
+              <div>
+                <p> No hay citas para este día </p>
+
+                <button className="button" onClick={nextAppointment}>
+                  Proxima sesión disponible.
+                </button>
               </div>
-              <AppointmentDetails appointmentSelected={appointmentSelected} setSelectedDate={setSelectedDate} setAppointmentSelected={setAppointmentSelected} addSavedAppointment={addSavedAppointment}/>
-            </div>
+            )}
           </div>
+          <AppointmentDetails
+            appointmentSelected={appointmentSelected}
+            setSelectedDate={setSelectedDate}
+            setAppointmentSelected={setAppointmentSelected}
+            addSavedAppointment={addSavedAppointment}
+          />
         </div>
-      }
-    </>
-  )
+      </div>
+    </div>
+  );
 }
 
 

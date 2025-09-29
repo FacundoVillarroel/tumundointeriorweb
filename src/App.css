@@ -1281,6 +1281,9 @@ html a {
       .calendarContainer .dateSelectorContainer .timesAvailableContainer .timesItemsContainer .selected:hover {
         background-color: #006edc;
         color: white; }
+    .calendarContainer .dateSelectorContainer .timesAvailableContainer .loadingContainer {
+      display: block;
+      margin-top: 5rem; }
     .calendarContainer .dateSelectorContainer .detailsContainer .inputContainer {
       display: flex;
       flex-direction: column; }
