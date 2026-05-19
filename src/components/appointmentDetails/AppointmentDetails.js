@@ -51,19 +51,28 @@ const AppointmentDetails = ({appointmentSelected, setSelectedDate, setAppointmen
       Fecha:getAppointmentDate(),
       Hora:getAppointmentTime()
     }
-    const response = await fetch("https://formsubmit.co/ajax/ec4a801838954ab7b039d3eae58c9173", {
+
+    const messageConfig = {
+      access_key: process.env.REACT_APP_WEB3FORMS_ACCESS_KEY,
+      email: values.Email,
+      from_name: "Tu Mundo Interior",
+      subject: "Tu Mundo Interior - ¡Reserva Confirmada!",
+      ...values,
+    };
+
+    const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify(values),
-    })
+      body: JSON.stringify(messageConfig),
+    });
     const data = await response.json();
-    if (data.success === "true") {
+    if (data.success) {
       console.log("Mail de confirmación enviado correctamente.");
     } else {
-      throw new Error("Ocurrió un error al enviar mail de confirmación.")
+      throw new Error("Ocurrió un error al enviar mail de confirmación.");
     }
   }
 

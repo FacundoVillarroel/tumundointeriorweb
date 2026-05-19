@@ -25,7 +25,7 @@ const Footer = ({ toggleSidebar, openConventions }) => {
       </div>
       <div className="footerCopyrightContainer">
         <MdOutlineCopyright fontSize={12} />
-        <h4>2024, Chile | Centro de psicoterapia Tu Mundo Interior.</h4>
+        <h4>2026, Chile | Centro de psicoterapia Tu Mundo Interior.</h4>
       </div>
     </div>
   );

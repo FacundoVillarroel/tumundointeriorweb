@@ -11,7 +11,6 @@ const BookingContainer = ({ toggleSidebar }) => {
     Mensaje: "",
     Profesional: "",
     Hora: "",
-    _captcha: false,
   });
 
   const handleInputChange = (e) => {
@@ -43,17 +42,26 @@ const BookingContainer = ({ toggleSidebar }) => {
     e.preventDefault();
     if (error(values)) return null;
     setLoading(true);
-    fetch("https://formsubmit.co/ajax/ec4a801838954ab7b039d3eae58c9173", {
+
+    const messageConfig = {
+      access_key: process.env.REACT_APP_WEB3FORMS_ACCESS_KEY,
+      email: values.Email,
+      from_name: "Tu Mundo Interior",
+      subject: "Tu Mundo Interior - Petición de Reserva",
+      ...values,
+    };
+
+    fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify(values),
+      body: JSON.stringify(messageConfig),
     })
       .then((response) => response.json())
       .then((data) => {
-        if (data.success === "true") {
+        if (data.success) {
           alert("Tu consulta fue enviada correctamente!");
           toggleSidebar();
           setValues({
@@ -62,16 +70,18 @@ const BookingContainer = ({ toggleSidebar }) => {
             Telefono: "",
             Email: "",
             Mensaje: "",
-            _captcha: false,
+            Profesional: "",
+            Hora: "",
           });
-          setLoading(false);
         }
       })
       .catch((error) => {
         alert(
-          "ocurrió un error al enviar tu consulta, intenta nuevamente por favor!"
+          "ocurrió un error al enviar tu consulta, intenta nuevamente por favor!",
         );
         console.log(error);
+      })
+      .finally(() => {
         setLoading(false);
       });
   };
